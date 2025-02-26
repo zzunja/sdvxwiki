@@ -1,5 +1,6 @@
 export default{
   index: 'Home',
-  gettingstarted: 'Getting Started/Set-up',
-  konasute: 'Konasute コナステ',
+  setup: 'Set-up',
+  controllers: 'Controllers',
+  startingout: 'Starting Out'
 }
