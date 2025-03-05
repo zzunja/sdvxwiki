@@ -1,0 +1,73 @@
+import { Callout } from 'nextra/components'
+
+# Volforce
+Volforce is the main way seen to measure "skill". Of course it's not 100%, but in theory higher volforce = better you are. 
+
+Your volforce is a combination of your best 50 plays. After every play, the game calulates the volforce of that play with this equation.
+
+<Callout>
+This equation is techincally wrong. Voltex doesn't include the .001, it takes it as a whole number and just rounds down to a whole number. It then takes that number, adds it to the best 50, then divides that sum by 1000. I add the .001 to simplify this whole process. It still gives the same answer, just different ways to get to that.
+</Callout>
+<br/>
+<center>
+``(LV*(Score / 10,00,000)*(Grade Coefficient)*(Clear Coefficient)*20)*.001 ``
+
+Grade Coefficient/Factor
+
+| S | AAA+ | AAA | AA+ | AA | A+ | A | B | C | D |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|1.05|1.02|1.00|0.97|0.94|0.91|0.88|0.85|0.82|0.80|
+
+Clear Coefficent/Factor
+
+|PUC|UC|Excessive Rate Clear|Effective rate clear|Crash|
+|:--:|:--:|:--:|:--:|:--:|
+|1.10|1.05|1.02|1.00|0.50|
+</center>
+
+For example, if I got a score of 9,909,432 (S) on a level 18 with a Excessive Rate clear, this is how I would calulate my volforce.
+<br/>
+<center>
+``(18*(9,909,432 / 10,000,000)*(1.05)*(1.02)*20)*.001``
+</center>
+This gives me .38206806. Since voltex doesn't count anything past the 3rd digit, we can just remove that part and we get our answer **.382**.
+
+The important things to note is that the only things taken into consideration is Level of the chart, Score, Clear type, and Grade.
+
+<br/>
+After it calulates this number, it then compares it to your best 50. If this
+number is higher than the lowest volforce play in your best 50, you will gain
+the difference of that volforce. For example, lets look at our last example.
+Lets say I just set that score. Voltex will look at the lowest VF score in my
+best 50. If that was .370, it will replace that volforce with this one and I
+will gain .382-.370=**0.012 volforce**. This will be shown on screen next to
+your volforce if this happens.
+
+You can tell what is in your best 50 if it has what is circled in red.
+![best50](/copendium/volforce/best50.png)
+
+The symbol next to the best 50 will be different depending on what your current VF is.
+
+There is also a best 50 folder, although note that this is not sorted by volforce but rather whatever sort you have selected.
+
+## Skill Ranks
+There are different skill ranks for different milestone in volforce. Here are all of them
+
+![volforceranks](/copendium/volforce/volforceranks.png)
+
+In general, Scarlet (15.000 VF) is when your VF rank starts to be """""important""""". Generally, this is the point where you start to really get into the game.
+
+I say important with heavy quotes as volforce is never really important and constantly chasing it is usually a bad idea. These are all arbitary numbers that are just made up.
+
+At Imperial (20.00 VF), instead of ranking up every 1.000 VF, it changes to
+every 4.000 VF. This is currently the cap on VF rank. There is nobody that is
+past this point because there isn't enough charts to fill up your best 50 enough
+to reach past 24.000 VF.
+
+The two people that are currently max VF are [Mini](https://www.youtube.com/@minisdvx7740) and [Jakads](https://www.youtube.com/@Jakads_realkk). They have PUC every 20 to come out. 
+
+
+
+
+
+
