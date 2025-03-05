@@ -25,12 +25,12 @@ Clear Coefficent/Factor
 |1.10|1.05|1.02|1.00|0.50|
 </center>
 
-For example, if I got a score of 9,909,432 (S) on a level 18 with a Excessive Rate clear, this is how I would calulate my volforce.
+For example, if I got a score of 9,923,042 (S) on a level 18 with a Excessive Rate clear, this is how I would calulate my volforce.
 <br/>
 <center>
-``(18*(9,909,432 / 10,000,000)*(1.05)*(1.02)*20)*.001``
+``(18*(9,923,042 / 10,000,000)*(1.05)*(1.02)*20)*.001``
 </center>
-This gives me .38206806. Since voltex doesn't count anything past the 3rd digit, we can just remove that part and we get our answer **.382**.
+This gives me 0.38259280735. Since voltex rounds down from the 3rd digit, we can just cut everything after the 3rd digit and get our answer **.382**.
 
 The important things to note is that the only things taken into consideration is Level of the chart, Score, Clear type, and Grade.
 
