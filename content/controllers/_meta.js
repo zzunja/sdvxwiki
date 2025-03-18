@@ -1,4 +1,4 @@
 export default{
-  inputs: "What input should I use?",
+  inputs: "Controllers and inputs",
   parts: "Parts",
 }
