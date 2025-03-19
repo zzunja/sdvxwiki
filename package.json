@@ -7,8 +7,13 @@
     "react-dom": "^19.0.0"
   },
   "scripts": {
-  "dev": "next",
-  "build": "next build",
-  "start": "next start"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.14",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.14"
   }
 }

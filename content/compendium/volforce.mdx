@@ -9,27 +9,34 @@ Your volforce is a combination of your best 50 plays. After every play, the game
 This equation is techincally wrong. Voltex doesn't multiply it by .001, it just rounds down to a whole number. It then takes that number, adds it to the best 50, then divides that sum by 1000. I add the .001 to simplify this whole process. It still gives the same answer, just different ways to get to that.
 </Callout>
 <br/>
-<center>
-``(LV*(Score / 10,00,000)*(Grade Coefficient)*(Clear Coefficient)*20)*.001 ``
+<div className="text-center">
+  ``(LV*(Score / 10,00,000)*(Grade Coefficient)*(Clear Coefficient)*20)*.001 ``
 
-Grade Coefficient/Factor
+  Grade Coefficient/Factor
+</div>
 
+<div className="flex items-center justify-center">
 | S | AAA+ | AAA | AA+ | AA | A+ | A | B | C | D |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |1.05|1.02|1.00|0.97|0.94|0.91|0.88|0.85|0.82|0.80|
+</div>
 
+<br/>
+<div className="text-center">
 Clear Coefficent/Factor
+</div>
 
+<div className="flex items-center justify-center">
 |PUC|UC|Excessive Rate Clear|Effective rate clear|Crash|
 |:--:|:--:|:--:|:--:|:--:|
 |1.10|1.05|1.02|1.00|0.50|
-</center>
+</div>
 
 For example, if I got a score of 9,923,042 (S) on a level 18 with a Excessive Rate clear, this is how I would calulate my volforce.
 <br/>
-<center>
+<div className="flex items-center justify-center">
 ``(18*(9,923,042 / 10,000,000)*(1.05)*(1.02)*20)*.001``
-</center>
+</div>
 This gives me 0.38259280735. Since voltex rounds down from the 3rd digit, we can just cut everything after the 3rd digit and get our answer **.382**.
 
 The important things to note is that the only things taken into consideration is Level of the chart, Score, Clear type, and Grade.
@@ -44,9 +51,9 @@ will gain .382-.370=**0.012 volforce**. This will be shown on screen next to
 your volforce if this happens.
 
 You can tell what is in your best 50 if it has what is circled in red.
-<center>
+<div className="flex items-center justify-center">
 ![best50](/copendium/volforce/best50.png)
-</center>
+</div>
 
 The symbol next to the best 50 will be different depending on what your current VF is.
 
@@ -55,9 +62,9 @@ There is also a best 50 folder, although note that this is not sorted by volforc
 ## Skill Ranks
 There are different skill ranks for different milestone in volforce. Here are all of them
 
-<center>
+<div className="flex items-center justify-center">
   <img src='/copendium/volforce/volforceranks.png' width="400"/>
-</center>
+</div>
 
 Every rank has four seperate "gates".
 
