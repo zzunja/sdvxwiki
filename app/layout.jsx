@@ -5,8 +5,8 @@ import 'nextra-theme-docs/style.css'
 import './globals.css'
  
 export const metadata = {
-  // Define your metadata here
-  // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
+  title: 'Sound Voltex Wiki',
+  description: 'A comprehensive wiki for the rhythm game Sound Voltex.',
 }
 
 //cant pass null to lastUpdated even tho docs say u can so just make it an empty div.
@@ -32,13 +32,12 @@ export default async function RootLayout({ children }) {
           saturation: 65
         }}
       >
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
       </Head>
       <body>
         <Layout
           navbar={navbar}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
+          docsRepositoryBase="https://github.com/zzunja/sdvxwiki"
           footer={footer}
           feedback={{content: null}}
           editLink={null}
