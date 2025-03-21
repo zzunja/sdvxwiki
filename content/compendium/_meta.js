@@ -1,5 +1,5 @@
 export default{
-  gamemodes: 'Matching, Skill Analyzer, and other game modes.',
+  gamemodes: 'Gamemodes',
   unlocks: 'Unlocks',
   volforce: 'Volforce',
   rader: 'Rader',
