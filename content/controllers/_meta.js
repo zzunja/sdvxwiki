@@ -1,4 +1,10 @@
 export default{
-  inputs: "Controllers and inputs",
-  parts: "Parts",
+  inputs: {
+    title: 'Controllers and inputs',
+    theme: { timestamp: false },
+  },
+  parts: {
+    title: 'Parts',
+    theme: { timestamp: false },
+  }
 }

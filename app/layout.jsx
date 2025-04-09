@@ -9,9 +9,7 @@ export const metadata = {
   description: 'A comprehensive wiki for the rhythm game Sound Voltex.',
 }
 
-//cant pass null to lastUpdated even tho docs say u can so just make it an empty div.
 const footer = <Footer/>
-const lastUpdated = <div/>
 
 const navbar = (
   <Navbar
@@ -41,7 +39,6 @@ export default async function RootLayout({ children }) {
           footer={footer}
           feedback={{content: null}}
           editLink={null}
-          lastUpdated={lastUpdated}
         >
           {children}
         </Layout>

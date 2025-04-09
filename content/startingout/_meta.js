@@ -1,5 +1,14 @@
 export default{
-  options: 'Song Select/Options',
-  playingscoring: 'Playing and understanding your score',
-  termsandvocab: 'Common used terms'
+  options: {
+    title: 'Song Select/Options',
+    theme: { timestamp: false },
+  },
+  playingscoring: {
+    title: 'Playing and understanding your score',
+    theme: { timestamp: false },
+  },
+  termsandvocab: {
+    title: 'Common used terms',
+    theme: { timestamp: false },
+  }
 }
