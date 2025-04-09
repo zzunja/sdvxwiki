@@ -1,6 +1,6 @@
 export default{
   inputs: {
-    title: 'Controllers and inputs',
+    title: 'Controllers and Inputs',
     theme: { timestamp: false },
   },
   parts: {
