@@ -7,4 +7,16 @@ Every page on the wiki is a [markdown](https://en.wikipedia.org/wiki/Markdown) f
 This project is running on Next.js with Tailwind CSS.
 
 ## Contributing
+
 If you see an error or want to add something, feel free to send a pull request or submit an issue. You can also contact me on Discord at masonm.07.
+
+## Development
+
+If you don't already have an opinion on how to get the project setup and hosted locally, here is one way to do it:
+
+1) Clone the project with `git`.
+2) Download Node.js using the instructions [here](https://nodejs.org/en/download), with settings `v22.14.0 (LTS)`, your operating system, `nvm`, `pnpm`.
+3) Run `pnpm install` in the project folder to install dependencies.
+4) Run `pnpm run build` to build the project.
+5) Run `pnpm run start` to host the project locally; the address to view the site will be listed next to `- Local:`.
+6) Redo steps 4 and 5 after each change.
