@@ -15,5 +15,9 @@ export default{
   compendium: {
     title: 'Compendium',
     theme: { timestamp: false },
-  }
+  },
+  resources: {
+    title: 'Resources',
+    theme: { timestamp: false },
+  },
 }

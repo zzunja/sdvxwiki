@@ -32,7 +32,7 @@ export default{
     theme: { timestamp: false },
   },
   miscellaneous: {
-    title: 'Miscellaneous and Resources',
+    title: 'Miscellaneous',
     theme: { timestamp: false },
   }
 }
