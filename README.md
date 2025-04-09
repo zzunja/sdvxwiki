@@ -24,6 +24,7 @@ For re-running
 1. Pull any changes with `git pull`
 2. Run `npm run dev`
 
+
 For setup with pnpm:
 1) Clone the project with `git`.
 2) Download Node.js using the instructions [here](https://nodejs.org/en/download), with settings `v22.14.0 (LTS)`, your operating system, `nvm`, `pnpm`.
