@@ -2,7 +2,7 @@ export default{
   gamemodes: 'Gamemodes',
   unlocks: 'Unlocks',
   volforce: 'Volforce',
-  rader: 'Rader',
+  radar: 'Radar',
   customization: 'Customization',
   basicpremcourses: 'Basic and Premium Course, Rivals, Downloading your data, Etc.',
   downtime: 'Maintenance and Downtime',
