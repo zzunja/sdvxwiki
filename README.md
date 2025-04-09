@@ -11,24 +11,20 @@ This project is running on Next.js with Tailwind CSS.
 If you see an error or want to add something, feel free to send a pull request or submit an issue. You can also contact me on Discord at masonm.07.
 
 ## Development 
-### To set up locally
+
+To set up locally:
+
 1. Install [git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en/download). Select `v22.14.0 (LTS)` for your operating system using `fnm` with `npm`
-2. Create a folder where you want to store the project and run `git clone https://github.com/zzunja/sdvxwiki.git` in it.
-3. Run `npm i` in the folder.
+2. Run `git clone https://github.com/zzunja/sdvxwiki.git` to download the project to a local folder.
+3. Run `npm install` inside the project folder to install the project's dependencies.
 4. Run `npm run dev` to start a local server of the website.
-5. Go to localhost:3000 on your web browser of choice.
+5. Go to [http://localhost:3000](http://localhost:3000) in your web browser of choice.
 
 You can now change what you want to the website and see it update live.
 
-#### For re-running
+For re-running:
+
 1. Pull any changes with `git pull`
 2. Run `npm run dev`
-<br/>
 
-### For setup with pnpm:
-1) Clone the project with `git`.
-2) Download Node.js using the instructions [here](https://nodejs.org/en/download), with settings `v22.14.0 (LTS)`, your operating system, `nvm`, `pnpm`.
-3) Run `pnpm install` in the project folder to install dependencies.
-4) Run `pnpm run build` to build the project.
-5) Run `pnpm run start` to host the project locally; the address to view the site will be listed next to `- Local:`.
-6) Redo steps 4 and 5 after each change.
+Setup with `pnpm` is very similar; simply substitute `npm` for `pnpm` above.
