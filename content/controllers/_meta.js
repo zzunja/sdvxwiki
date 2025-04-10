@@ -6,5 +6,9 @@ export default{
   parts: {
     title: 'Parts',
     theme: { timestamp: false },
-  }
+  },
+  troubleshooting: {
+    title: 'Controller Troubleshooting',
+    theme: { timestamp: false },
+  },
 }
