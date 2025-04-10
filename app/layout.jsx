@@ -13,7 +13,12 @@ const footer = <Footer/>
 
 const navbar = (
   <Navbar
-    logo={<span style={{ fontWeight: 'bold', fontSize: '25px'}}>SDVX wiki</span>}
+    logo={
+    <>
+    <img src='/logo.webp' className='mr-2 mt-1' width="32"/>
+    <span style={{ fontWeight: 'bold', fontSize: '25px'}}>SDVX wiki</span>
+    </>
+    }
   />
 )
  
