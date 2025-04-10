@@ -19,6 +19,10 @@ export default{
     title: 'Compendium',
     theme: { timestamp: false },
   },
+  terminology: {
+    title: 'Terminology',
+    theme: { timestamp: false },
+  },
   resources: {
     title: 'Resources',
     theme: { timestamp: false },
