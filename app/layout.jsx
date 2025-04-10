@@ -15,8 +15,10 @@ const navbar = (
   <Navbar
     logo={
     <>
-    <img src='/googlesearch/logo.webp' className='mr-2 mt-1' width="32"/>
-    <span style={{ fontWeight: 'bold', fontSize: '25px'}}>SDVX wiki</span>
+    <div className="flex items-center">
+      <img src="/googlesearch/logo.webp" className="mr-2 relative top-1 w-32px h-32px"/>
+      <span style={{ fontWeight: 'bold', fontSize: '25px' }}>sdvx.org</span>
+    </div>
     </>
     }
   />
