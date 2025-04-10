@@ -22,7 +22,6 @@ To set up locally:
 
 You can now change what you want to the website and see it update live.
 
-Note that the search function will not work and show an error. This is because pagefind is only created when built. If you want the search function to work, simply run `npm build` and it will create the `_pagefind` directory in `/public/_pagefind/`
 
 For re-running:
 
@@ -30,3 +29,10 @@ For re-running:
 2. Run `npm run dev`
 
 Setup with `pnpm` is very similar; simply substitute `npm` for `pnpm` above.
+
+## FAQ
+### The search feature doesn't work when I set up locally
+The search function will not work and show an error if you don't build the website. This is because pagefind is only created when built. If you want the search function to work, simply run `npm build` and it will create the `_pagefind` directory in `/public/_pagefind/`. You can then start with `npm run dev`.
+
+### Why have a seperate Table of Contents to most pages
+This is because on mobile the ToC on the right that is normally shown on PC doesn't show. For bigger articles to help people using mobile devices, there is a seperate ToC.
