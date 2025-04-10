@@ -1,5 +1,5 @@
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
-import { Head, Search } from 'nextra/components'
+import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 import './globals.css'
@@ -15,7 +15,7 @@ const navbar = (
   <Navbar
     logo={
     <>
-    <img src='/logo.webp' className='mr-2 mt-1' width="32"/>
+    <img src='/googlesearch/logo.webp' className='mr-2 mt-1' width="32"/>
     <span style={{ fontWeight: 'bold', fontSize: '25px'}}>SDVX wiki</span>
     </>
     }
@@ -35,6 +35,7 @@ export default async function RootLayout({ children }) {
           saturation: 55
         }}
       >
+        <link rel="icon" type="image/png" href="/googlesearch/favicon.png"></link>
       </Head>
       <body>
         <Layout
