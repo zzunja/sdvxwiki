@@ -1,5 +1,8 @@
 export default{
-  index: 'Home',
+  index: {
+    title: 'Home',
+    theme: { timestamp: false },
+  },
   setup: {
     title: 'Set-up',
     theme: { timestamp: false },
