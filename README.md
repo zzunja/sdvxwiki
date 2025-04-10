@@ -22,6 +22,8 @@ To set up locally:
 
 You can now change what you want to the website and see it update live.
 
+Note that the search function will not work and show an error. This is because pagefind is only created when built. If you want the search function to work, simply run `npm build` and it will create the `_pagefind` directory in `/public/_pagefind/`
+
 For re-running:
 
 1. Pull any changes with `git pull`

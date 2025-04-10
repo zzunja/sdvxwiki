@@ -1,5 +1,8 @@
 export default{
-  index: 'Home',
+  index: {
+    title: 'Home',
+    theme: { timestamp: false },
+  },
   setup: {
     title: 'Set-up',
     theme: { timestamp: false },
@@ -14,6 +17,10 @@ export default{
   },
   compendium: {
     title: 'Compendium',
+    theme: { timestamp: false },
+  },
+  terminology: {
+    title: 'Terminology',
     theme: { timestamp: false },
   },
   resources: {

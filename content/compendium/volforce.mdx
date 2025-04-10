@@ -47,24 +47,32 @@ Let's say I just set that score. Voltex will look at the lowest VF score in my
 best 50. If that was `.370`, it would replace that Volforce with this one and I
 will gain 
 <div className="text-center mt-5">
-.382-.370=**0.012 Volforce**. 
+`.382` - `.370`  =  **0.012 Volforce**. 
 </div>
+
 This will be shown on the screen next to your Volforce if this happens.
 
-The important things to note is that the only things taken into consideration is ***Level of the Chart, Score, Clear type, and Grade**.
+The important things to note is that the only things taken into consideration is **Level of the Chart, Score, Clear type, and Grade**.
 
-Also, your volforce is calculated as **your best clear and your best score** on a
-chart. For example if you get a `9,899,320` with a `UC` but already had a
-`9,923,042` with a `Excessive Rate Clear`, it would use the `UC` to calculate the volforce.
+Also, your volforce is calculated as **your best clear and your best score** on
+a chart. For example lets say I play the same chart from the last example, but got a `9,899,320` with a `UC`.
+Voltex would replace the Excesssive clear with a UC but keep my higher score of `9,923,042`.
 
 With the equation it would look like this
 <div className="flex items-center justify-center mt-3">
-``(18*(9,923,042 / 10,000,000)*(1.05)*(1.05)*20)*.001``
+`(18*(9,923,042 / 10,000,000)*(1.05)*(1.05)*20)*.001`
 </div>
-Note the `1.02` has changed to a `1.05`, but it used the better score that I originally had. This means 
-I would gain .393-.382=**.011 Volforce** for just increasing my Excessive to a UC, even with a worse score.
+This would equal `.393` VF.
+
+Note the `1.02` has changed to a `1.05`, but it used the better score that I
+originally had. This means I would gain 
+<div className="text-center mt-5">
+`.393 - .382`  = **.011 Volforce** 
+</div>
+for increasing my Excessive to a UC on this chart, even if my UC was a worse score.
 
 
+### Finding you best 50
 You can tell what is in your best 50 if it has what is circled in red.
 <div className="flex items-center justify-center mt-3">
 ![best50](/compendium/volforce/best50.png)

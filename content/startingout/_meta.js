@@ -7,8 +7,6 @@ export default{
     title: 'Playing and understanding your score',
     theme: { timestamp: false },
   },
-  termsandvocab: {
-    title: 'Common used terms',
-    theme: { timestamp: false },
-  }
+  
+  
 }
