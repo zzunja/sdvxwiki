@@ -1,6 +1,6 @@
 export default{
   inputs: {
-    title: 'Controllers and Inputs',
+    title: 'Purchasing Guide',
     theme: { timestamp: false },
   },
   parts: {
@@ -8,7 +8,7 @@ export default{
     theme: { timestamp: false },
   },
   troubleshooting: {
-    title: 'Controller Troubleshooting',
+    title: 'Troubleshooting',
     theme: { timestamp: false },
   },
 }
