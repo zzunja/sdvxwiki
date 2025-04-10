@@ -34,6 +34,7 @@ export default async function RootLayout({ children }) {
       <body>
         <Layout
           navbar={navbar}
+          sidebar={{ defaultMenuCollapseLevel: 1 }}
           pageMap={await getPageMap()}
           docsRepositoryBase="https://github.com/zzunja/sdvxwiki"
           footer={footer}
