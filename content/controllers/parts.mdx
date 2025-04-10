@@ -2,105 +2,115 @@ import { Callout } from 'nextra/components'
 
 # Parts
 
-## Table of contents
-1. [Parts](/controllers/parts#parts)
-    1. [Buttons](/controllers/parts#buttons)
-    2. [Switches](/controllers/parts#switches)
-    3. [Springs and weight](/controllers/parts#springs-and-weight)
-2. [Where to buy](/controllers/parts#where-to-buy)
+## Table of Contents
+1. [Intro](#intro)
+2. [Parts](#parts)
+    1. [Buttons](#buttons)
+    2. [Switches](#switches)
+    3. [Springs](#springs)
+    4. [Recommendations](#recommendations)
+3. [Where to Buy](#where-to-buy)
 
-
-## Parts
+## Intro
 <Callout>
-  This guide assumes you are talking about an Arcade-size Controller (ASC) that allows customization.
+  This guide assumes you have a customizable Arcade-size Controller (ASC).
 </Callout>
 
+<div className="flex justify-center mt-8">
+  <img src="/controllers/parts/breakdown.png" alt="button assembly breakdown" />
+</div>
+
+The three main things to customize are buttons, switches, and springs. Buttons are what you physically push down to activate a switch and are given weight by a spring inside. Switches have their own weight and provide a tactile click which contribute most to the overall push feel.
+
+Play configurations are commonly presented as `switch weight / spring weight`, both assumed to be in grams. For example, a 100g switch paired with a 20g spring is called a `100/20` configuration.
+
+There are no tools required to swap out any of these parts.
+
+<div className="flex justify-center mt-8">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/jq8qG_f6xfs?si=Cs-V5e7PgaTQxXJh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+## Parts
+
 ### Buttons
-There are two types of buttons: DJDAO and Sanwa. All offical Sound Voltex cabinets use Sanwa buttons. 
-
-Buttons are a one purchase for life. They don't break easily and usually never need to be replaced.
+There are two types of buttons: DJDAO (also known as Chinese buttons) and Sanwa. All official Sound Voltex cabinets use Sanwa buttons. Buttons are a one-time purchase. They rarely, if ever, break or need to be replaced.
 
 
-#### DJDAO
-- Cheaper 
-- More plastic feeling
-- Can't use OBSA switch
+#### DJDAO/Chinese
+\+ Cheaper\
+\- Made of lower quality plastic\
+\- More likely to get stuck
 
 #### Sanwa
-- Expensive [(Around 100$ on BSE)](https://bluespringexpress.net/en-us/collections/all/products/sdvx-sanwa-set)
-- Same buttons as arcade
-- Can use OBSA Switches.
+\+ High quality plastic\
+\+ Same buttons used in arcade cabinets\
+\- Expensive (around $100 for a full set)
 
 
 ### Switches
-Switches make up most of the feel of your controller.
-
-There are 3 different types of switches. Honeywell, Omoron, and OBSA-LHS1F. 
 
 #### Honeywell
-- Cheapest
-- Bad quality, Bad durability
-- Often very light, making it hard to play
+- Cheap
+- Poor quality and durability
+- Often very light which leads to accidental presses
+
 <div className="flex flex-col items-center justify-center mt-5 mb-1">
   <img src='/controllers/parts/honeywell.jpg' width="200"/>
-  <em>[Honeywell V15S05-EZ015-K01](https://www.digikey.com/en/products/detail/honeywell-sensing-and-productivity-solutions/V15S05-EZ015-K01/4950145)</em>
 </div>
 
-#### Omron
-- Most common switch for ASC
-- Good quality, Good durability
-- Comes without lamp holder
+#### OMRON
+- Most common switches for ASCs
+- Good quality and durability
+
 <div className="flex flex-col items-center justify-center mt-5 mb-1">
   <img src='/controllers/parts/omron.webp' width="200"/>
-  <em>[Omron 50g VX-01-1A3](https://bluespringexpress.net/en-us/collections/all/products/vx-50g-omron-micro-switch-vx-01-1a3)</em>
 </div>
 
 #### OBSA-LHS1F
 - Expensive
-- Only work with Sanwa Buttons
-- Same switch as Arcades
-- Known to fail quicker than Omron if given a bad batch
+- Only compatible with Sanwa Buttons
+- Used in arcade cabinets
+- Questionable durability depending on production batch
 - Comes with a lampholder built in
 <div className="flex flex-col items-center justify-center mt-5 mb-1">
   <img src='/controllers/parts/lhs1f.webp' width="200"/>
-  <em>[OBSA-LHS1F](https://bluespringexpress.net/en-us/collections/all/products/vx-50g-omron-micro-switch-vx-01-1a3)</em>
 </div>
 
+### Springs 
 
-[Here](https://www.youtube.com/watch?v=_04T-0zgsy8) is a sound comparision between Omron and OBSA-LHS1F.
+Springs come in various weights between 20g and 100g. Heavier springs rebound the buttons faster which can make certain patterns easier but can get tiring to press. On the other hand, lighter springs do not rebound as fast but take less energy overall.
 
-### Springs and weight 
-Springs are what pushes the button back up after it's pressed down. They come in different weights.
-
-A heavier spring means the faster the rebound of the button, but the more force
-it takes to push down. This can mean that if you get springs too heavy, you
-might notice yourself being more tired than using a lighter spring.
-
-Arcades might use a different Spring/Switch weight. Valkyrie Cabs in Japan and
-USA commonly use 20g Spring with 100g Switches. Korea cabs commonly use 50g
-Springs with 60g Switches.
-
-There are a lot of different options when it comes to weight. Here is a general tier list for Spring/Switch combos found in the [Voltex Discord server](https://discord.com/invite/sdvx).
-
-<div className="flex flex-col items-center justify-center mt-4">
-|Tier |Spring/Switch weight|
-|:--:|:--:|
-|S+|100/20 100/40|
-|S|100/60|
-|A|100/100|
-|B|50/100 50/60|
-|C|50/40 50/20|
-|D|25/anything|
+<div className="flex justify-center mt-8">
+  <img src="/controllers/parts/springs.png" alt="springs" />
 </div>
 
-[comment]: # "not sure on keeping this in, maybe rather just list the usable options?"
+Although these springs are made by Sanwa, they are compatible with both DJDAO/Chinese and Sanwa buttons.
+
+### Recommendations
+
+Switch and spring configuration is ultimately a matter of preference; players have found success with all sorts of combinations. Other factors such as technique matter too, so do not fall into the trap of thinking configuration is everything.
+
+That being said, the easy recommendation is to minimize the difference between home and arcade play by copying the configuration used in Valkyrie Model cabinets:
+  - For most of the world, use 100g switches with 20g springs
+  - For Korea specifically, use 50g switches with anywhere from 60g to 100g springs (it seems to vary depending on the arcade)
+
+Specific switch models:
+  - OMRON V-10-1A4 (100g)
+  - OMRON VX-01-1C23 (50g)
+  - OMRON VX-01-1A3 (50g)
+  - Sanwa OBSA-LHS1F (100g)
+
+All OMRON switches are compatible with both DJDAO/Chinese and Sanwa buttons. Sanwa's OBSA-LHS1F switches are compatible with **Sanwa buttons only** and only recommended for players who want complete arcade accuracy.
 
 
-## Where to buy
-There are a lot of different places where you can buy parts. Here is a list of some
+## Where to Buy
 
-- [Blue Spring Express](https://bluespringexpress.net/en-us) - Has just about everything you would need for an SDVX controller.
-- [Gamo2 Spare Parts](https://www.gamo2.com/en/index.php?dispatch=categories.view&category_id=255) - Has switches springs, and LEDs. Also has a metal plate and different acrylic panels for the Faucetwo.
+The [Rhythm Cons Wiki](https://rhythm-cons.wiki) has exhaustive lists of where to purchase parts:
 
+[Square (BT) Buttons](https://rhythm-cons.wiki/parts/buttons/60-60-square-buttons/)
 
-For a more in-depth guide on parts, where to buy specific parts, and more check out [Rhythm game Cons wiki](https://rhythm-cons.wiki/)
+[Rectangle (FX) Buttons](https://rhythm-cons.wiki/parts/buttons/50-33-rectangle-buttons/)
+
+[Switches](https://rhythm-cons.wiki/parts/microswitches/)
+
+[Springs](https://rhythm-cons.wiki/parts/springs/)
