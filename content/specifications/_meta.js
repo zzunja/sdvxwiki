@@ -1,5 +1,5 @@
 export default{
-  arcadespecs: {
+  cabspecifications: {
     title: 'Arcade Specifications',
     theme: { timestamp: false },
   },
