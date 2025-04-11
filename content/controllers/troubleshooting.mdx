@@ -23,6 +23,12 @@ This guide assumes you are talking about an arcade-size controller that allows c
 
 The manual that came with your freshly arrived controller should contain most of the important information you need, like changing modes or hardware specifications. This guide is dedicated to troubleshooting and explaining procedures not explicitly mentioned in the manual.
 
+If you lost the manual, here are some of the common controllers manuals:
+- [Faucetwo+](https://www.gamo2.com/en/download/F2_plus_manual_en_mobile_20240415.pdf)
+- [Faucetwo](https://www.gamo2.com/en/download/Faucetwo_manual_en_20210106.pdf)
+- [YuanCon SDVX 12 and SDVX LITE 3 Information](https://rhythm-cons.wiki/commercial/yuancon/yuancon/)
+- [YuanCon SDVX LITE 3](https://www.youtube.com/watch?v=hen4Sb7_LIA)
+
 ## Replacing buttons, springs and switches
 
 [Video guide by Sungblox](https://www.youtube.com/watch?v=tisDHA2fXfI)  
@@ -30,7 +36,7 @@ The manual that came with your freshly arrived controller should contain most of
 
 Replacing your buttons, springs, and switches all require you to *open the back plate of your controller*. Most controllers have their back plate screwed to the body, so you will need a screwdriver to remove it. For the Faucetwo controller, the back plate is attached using magnets, so you can simply pinch and pull it out.
 
-![interior](/controllers/interior.jpg)
+<img src="/controllers/interior.jpg" className="mt-3" alt="Interior" />
 
 The interior of the controller might look sophisticated, but it simply consists of a PCB (the board in the middle) connected to 7 buttons and 2 encoders using 4-pin JST wires. More accurately, the PCB is connected to the **microswitches** of the buttons rather than the buttons themselves.
 
@@ -38,12 +44,12 @@ The interior of the controller might look sophisticated, but it simply consists 
 
 While still having the wires attached, you can pull out the switches from the buttons by twisting them anticlockwise (to the left).
 
-For Omron switches, there should be 4 wires connecting to 4 heads — 2 for the switches and 2 for the LEDs. The heads of the LED holders are at the sides of the switches, and the other two heads belong to the switches themselves. Pull out the two wires connecting to these two heads (you don't have to remember which wire belongs to which head). You will also need to separate the LED holders from the switches — [Video link](https://youtu.be/tisDHA2fXfI?t=185). At this point, the switches should be detached and you can swap them with your desired ones. Attaching them back should be simple by reconnecting the wires, the LED holders, and putting them back into the buttons.
+For Omron switches, there should be 4 wires connecting to 4 heads — 2 for the switches and 2 for the LEDs. The heads of the LED holders are at the sides of the switches, and the other two heads belong to the switches themselves. Pull out the two wires connecting to these two heads (you don't have to remember which wire belongs to which head). You will also need to separate the LED holders from the switches — [Video link](https://youtu.be/tisDHA2fXfI?t=185). At this point, the switches should be detached and you can swap them with your desired ones. Attaching them back by reconnecting the wires, the LED holders, and putting them back into the buttons.
 
 For OBSA-LHS1F switches, they should be connected using 4-pin JST connectors, so you can simply pull the connectors out, swap the switches, and put them back, as long as you remember the corresponding pins.
 
 <Callout type="warning">
-If your controllers didn't come with dedicated wires for OBSA-LHS1F switches, you will need to learn which pins are connected to which between the switches and the PCB [here](https://rhythm-cons.wiki/getting-started/connector-pinouts/#button-pins-2). After that, purchase a set of 4-pin female to female JST wires and rearrange the pins. Messing up this part can cause short circuit.
+If your controllers didn't come with dedicated wires for OBSA-LHS1F switches, you will need to learn which pins are connected to which between the switches and the PCB [here](https://rhythm-cons.wiki/getting-started/connector-pinouts/#button-pins-2). After that, purchase a set of 4-pin female to female JST wires and rearrange the pins. Messing up this part can cause a short circuit.
 </Callout>
 
 ### Replacing buttons and springs
@@ -60,7 +66,7 @@ Usually, buttons are stuck due to misplaced springs or dust preventing the butto
 
 ## My switches are double clicking!
 
-There is a chance that your switches are malfunctioning and should be replaced. But from my experience, try pulling them out, detaching the wires, and firmly cleaning the head using a cloth!
+There is a chance that your switches are malfunctioning and should be replaced. Often though, it is just dust or gunk. Before getting new switches try pulling them out, detaching the wires, and firmly cleaning the head using a cloth!
 
 I also want to point out that OBSA-LHS1F switches seem to be more prone to double clicking than Omron ones.
 
@@ -88,7 +94,7 @@ It's recommended to just contact the manufacturers for replacement parts. If not
 
 ## Known software-related issues
 
-**Faucetwo USC Compatibility:** Any Keyboard Modes were reported to have input issues, therefore using HID Mode (BT-B Mode) is encouraged.
+**Faucetwo USC Compatibility:** Any Keyboard Modes were reported to have input issues, therefore using mainly eAcloud Mode (BT-A Mode) is encouraged for Konasute, USC, and KSM use. If issues arise, you can also use HID Joystick mode (BT-B mode)
 
 **Yuancon Konasute Compatibility:** As of writing, only BT-C Mode is encouraged.
 
