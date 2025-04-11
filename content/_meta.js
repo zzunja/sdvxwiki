@@ -23,8 +23,13 @@ export default{
     title: 'Terminology',
     theme: { timestamp: false },
   },
+  specifications: {
+    title: 'Specifications and Hardware',
+    theme: { timestamp: false },
+  },
   resources: {
     title: 'Resources',
     theme: { timestamp: false },
   },
+
 }
