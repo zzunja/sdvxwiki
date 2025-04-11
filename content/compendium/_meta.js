@@ -24,7 +24,7 @@ export default{
     theme: { timestamp: false },
   },
   insaneksm: {
-    title: 'Insane KSM',
+    title: 'Insane KSM and OS/US scale',
     theme: { timestamp: false },
   },
   downtime: {
