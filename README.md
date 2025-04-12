@@ -36,6 +36,3 @@ The search function will not work and show an error if you don't build the websi
 
 ### Why have a seperate Table of Contents?
 This is because on mobile the ToC on the right that is normally shown on PC doesn't show. For bigger articles to help people using mobile devices, there is a seperate ToC.
-
-### Can I reference/share this website?
-Please do! It was made to be used by everyone who is interested in SDVX.
