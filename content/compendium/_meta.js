@@ -38,5 +38,9 @@ export default {
   miscellaneous: {
     title: 'Miscellaneous',
     theme: { timestamp: false },
+  },
+  'timing-windows': {
+    title: 'Timing Windows',
+    theme: { timestamp: false },
   }
 }
