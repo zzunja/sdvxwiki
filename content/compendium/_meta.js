@@ -27,6 +27,10 @@ export default {
     title: 'Basic and Premium Course, Rivals, Downloading your data, Etc.',
     theme: { timestamp: false },
   },
+  insaneksm: {
+    title: 'Insane KSM and OS/US scale',
+    theme: { timestamp: false },
+  },
   downtime: {
     title: 'Maintenance and Downtime',
     theme: { timestamp: false },
