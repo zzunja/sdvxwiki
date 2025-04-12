@@ -1,6 +1,10 @@
-export default{
+export default {
   gamemodes: {
     title: 'Gamemodes',
+    theme: { timestamp: false },
+  },
+  'gauge-options': {
+    title: 'Gauge Options',
     theme: { timestamp: false },
   },
   unlocks: {
