@@ -14,15 +14,169 @@
 This page is for information about the various gauge types available in SDVX. The 2 main gauge types are EFFECTIVE RATE and EXCESSIVE RATE which are available during normal play. The other gauge types are only available in certain gamemodes or unlock systems.
 
 ## EFFECTIVE RATE
+Starts at 0% and requires completing the chart at 70% or greater to clear.
+
+Also referred to as normal gauge.
 
 ## EXCESSIVE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear.
+
+Also referred to as hard gauge.
 
 ## PERMISSIVE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear. Notably easier than EXCESSIVE RATE as it carries over across 3 charts. The charts played with this gauge will not be granted a clear medal.
+
+Only available during [SKILL ANALYZER](/compendium/gamemodes#skill-analyzer).
 
 ## DIVINE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear. Notable for only increasing on S-CRITICALs and decreasing on NEARs.
+
+Only available during [SKILL ANALYZER](/compendium/gamemodes#skill-analyzer).
 
 ## HEXATIVE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear. Difficulty of this gauge can be adjusted by selecting a [HEXA RANK](/compendium/unlocks#hexadiver) which ranges from 1-5. Rank 3 is only slightly easier than EXCESSIVE RATE with 4 and 5 being more difficult.
+
+Only available during [HEXA DIVER](/compendium/unlocks#hexadiver).
 
 ## Alternative Rate System (ARS)
+An option used in combination with EXCESSIVE RATE or HEXATIVE RATE under certain conditions. Prevents failing out from a chart by switching to EFFECTIVE RATE upon reaching 0%. The gauge amount given in this scenario will be the same as if you played with EFFECTIVE RATE to begin with.
 
 ## Gain/Loss Breakdown
+
+- Chips are BT and FX chip objects
+- Hold and laser objects have ticks which are judged individually
+- **T**: Unknown but fixed value regardless of chart
+- **n**: Varies per chart: `(total chain amount) + (# of chips and slams) * 3`
+- **H**: [HEXA RANK](/compendium/unlocks#hexadiver)
+
+<table className="border w-full mt-4 text-center align-middle">
+  <thead>
+    <tr>
+      <th></th>
+      <th className="border" colSpan="2">S-CRITICAL</th>
+      <th className="border" colSpan="2">CRITICAL</th>
+      <th className="border">NEAR</th>
+      <th className="border" colSpan="2">ERROR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr className="text-xs leading-4 border-b-3">
+      <td className="text-base font-bold">Gauge Type</td>
+      <td className="border">
+        <p>Chips</p>
+        <p>Slams</p>
+      </td>
+      <td className="border">
+        <p>Holds</p>
+        <p>Lasers</p>
+      </td>
+      <td className="border">
+        <p>Chips</p>
+        <p>Slams</p>
+      </td>
+      <td className="border">
+        <p>Holds</p>
+        <p>Lasers</p>
+      </td>
+
+      <td>Chips</td>
+
+      <td className="border">
+        <p>Chips</p>
+        <p>Slams</p>
+      </td>
+      <td className="border">
+        <p>Holds</p>
+        <p>Lasers</p>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>EFFECTIVE</td>
+
+      <td className="border" rowSpan="5">
+        <pre>+4T/n</pre>
+      </td>
+
+      <td className="border" rowSpan="5">
+        <pre>+T/n</pre>
+      </td>
+
+      <td className="border" rowSpan="4">
+        <pre>+4T/n</pre>
+      </td>
+
+      <td className="border" rowSpan="4">
+        <pre>+T/n</pre>
+      </td>
+
+      <td className="border" rowSpan="3">
+        <pre>+4T/3n</pre>
+      </td>
+
+      <td className="border">
+        <pre>-2.00%</pre>
+      </td>
+
+      <td className="border">
+        <pre>-0.50%</pre>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>EXCESSIVE</td>
+
+      <td className="border">
+        <pre>-9.00%</pre>
+      </td>
+
+      <td className="border">
+        <pre>-2.25%</pre>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>PERMISSIVE</td>
+
+      <td className="border">
+        <pre>-3.40%</pre>
+      </td>
+
+      <td className="border">
+        <pre>-0.85%</pre>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>HEXATIVE</td>
+
+      <td className="border leading-6">
+        <p><pre>H = 5: -1.00%</pre></p>
+        <p><pre>H ≤ 4: +4T/3n</pre></p>
+      </td>
+
+      <td className="border">
+        <pre>-2.00% * H</pre>
+      </td>
+
+      <td className="border">
+        <pre>-0.50% * H</pre>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>DIVINE</td>
+      <td className="border">-</td>
+      <td>-</td>
+      <td className="border">
+        <pre>-1.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-5.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-1.25%</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
