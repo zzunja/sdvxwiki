@@ -1,6 +1,10 @@
-export default{
+export default {
   gamemodes: {
     title: 'Gamemodes',
+    theme: { timestamp: false },
+  },
+  'gauge-options': {
+    title: 'Gauge Options',
     theme: { timestamp: false },
   },
   unlocks: {
@@ -23,6 +27,10 @@ export default{
     title: 'Basic and Premium Course, Rivals, Downloading your data, Etc.',
     theme: { timestamp: false },
   },
+  insaneksm: {
+    title: 'Insane KSM and os/us scale',
+    theme: { timestamp: false },
+  },
   downtime: {
     title: 'Maintenance and Downtime',
     theme: { timestamp: false },
@@ -33,6 +41,10 @@ export default{
   },
   miscellaneous: {
     title: 'Miscellaneous',
+    theme: { timestamp: false },
+  },
+  'timing-windows': {
+    title: 'Timing Windows',
     theme: { timestamp: false },
   }
 }

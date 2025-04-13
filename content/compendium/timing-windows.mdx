@@ -1,0 +1,66 @@
+# Timing Windows
+
+## Table of Contents
+- [Intro](#intro)
+- [Arcade/Konasute (コナステ)](#arcadekonasute-コナステ)
+- [Simulators](#simulators)
+  - [Unnamed SDVX clone (USC)](#unnamed-sdvx-clone-usc)
+  - [K-Shoot MANIA (KSM)](#k-shoot-mania-ksm)
+
+## Intro
+This page is for information about the timing windows of the official SDVX game and its simulators. All of these versions have `CRITICAL`, `NEAR`, and `ERROR` judgements, but only the official game supports `S-CRITICAL`. Note that this information is for chip objects only as the timing windows of laser slams and starts/ends of holds are unknown.
+
+These values are measured in milliseconds (ms) and are **windows** (indicated by ±), meaning a judgement with a timing window of ± 40 ms allows you to hit within 40 ms on both sides (early or late):
+
+<div className="flex justify-center w-full mt-8">
+  <table className="w-120">
+    <thead className="border-b-2 h-8">
+      <tr>
+        <th className="border"><pre>-40</pre></th>
+        <th className="border"><pre>-30</pre></th>
+        <th className="border"><pre>-20</pre></th>
+        <th className="border"><pre>-10</pre></th>
+        <th className="border"><pre>0</pre></th>
+        <th className="border"><pre>+10</pre></th>
+        <th className="border"><pre>+20</pre></th>
+        <th className="border"><pre>+30</pre></th>
+        <th className="border"><pre>+40</pre></th>
+      </tr>
+    </thead>
+    <tbody className="border h-8">
+      <tr>
+        <td className="text-center" colSpan="9">Any hit within this window is valid</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Arcade/Konasute (コナステ)
+
+| Judgement | Window |
+|-----------|--------|
+|S-CRITICAL|± 20.8 ms|
+|CRITICAL|± 41.6 ms|
+|NEAR|± 150.0 ms|
+|ERROR|?|
+
+
+## Simulators
+
+### Unnamed SDVX clone (USC)
+
+| Judgement | Window |
+|-----------|--------|
+|CRITICAL|± 46 ms|
+|NEAR|± 150 ms|
+|ERROR|± 300 ms|
+
+These are the default timing windows but they can be adjusted in-game.
+
+### K-Shoot MANIA (KSM)
+
+| Judgement | Window |
+|-----------|-------------|
+|CRITICAL|± 43 ms|
+|NEAR|± 113 ms|
+|ERROR|± 260 ms|
