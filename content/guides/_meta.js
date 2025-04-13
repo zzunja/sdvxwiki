@@ -1,6 +1,6 @@
 export default {
-  "ksm-faucetwo-setup": {
-    title: 'KSM FAUCETWO Setup',
+  "ksm-controller-setup": {
+    title: 'KSM Controller Setup',
     theme: { timestamp: false },
   },
 }
