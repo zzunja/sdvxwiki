@@ -28,7 +28,7 @@ export default {
     theme: { timestamp: false },
   },
   insaneksm: {
-    title: 'Insane KSM and OS/US scale',
+    title: 'Insane KSM and os/us scale',
     theme: { timestamp: false },
   },
   downtime: {
@@ -41,6 +41,10 @@ export default {
   },
   miscellaneous: {
     title: 'Miscellaneous',
+    theme: { timestamp: false },
+  },
+  'timing-windows': {
+    title: 'Timing Windows',
     theme: { timestamp: false },
   }
 }
