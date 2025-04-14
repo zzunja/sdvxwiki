@@ -1,16 +1,8 @@
-export function Video({ src, types, caption, size = "max-w-2xl" }) {
-  return (
-    <div className="flex flex-col items-center justify-center mt-4 mb-4">
-      <video 
-        className={`w-full ${size}`} 
-        playsInline 
-        muted 
-        loop 
-        controls
-      >
-        <source src={src} type={types} />
-      </video>
-      {caption && <em>{caption}</em>}
-    </div>
-  );
+export function Video({ src, types, caption }) {
+  return <div className="flex flex-col items-center justify-center mt-4 mb-4">
+    <video playsInline={true} muted loop controls>
+      <source src={src} types={types} />
+    </video>
+    {caption && <em>{caption}</em>}
+  </div>
 }
