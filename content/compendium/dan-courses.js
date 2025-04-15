@@ -118,7 +118,7 @@ const COURSES = {
     {
       title: "All for One",
       artist: "CANVAS feat. Quimär",
-      diff: "GRV 18",
+      diff: "MXM 18",
       unlock: "HEXA DIVER (XHRONOXAPSULΞ)"
     }
   ],
