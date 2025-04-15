@@ -1,5 +1,5 @@
 export default{
-  inputs: {
+  'purchasing-guide': {
     title: 'Purchasing Guide',
     theme: { timestamp: false },
   },
