@@ -1,4 +1,5 @@
-import { Callout } from 'nextra/components'
+import { Callout } from "nextra/components";
+import { Image } from "../../components/Image";
 
 # Parts
 
@@ -21,9 +22,7 @@ import { Callout } from 'nextra/components'
   This guide assumes you have a customizable Arcade-size Controller (ASC).
 </Callout>
 
-<div className="flex justify-center mt-8">
-  <img src="/controllers/parts/breakdown.png" alt="button assembly breakdown" />
-</div>
+<Image src="/controllers/parts/breakdown.png" alt="button assembly breakdown" />
 
 The three main things to customize are buttons, switches, and springs. Buttons are what you physically push down to activate a switch and are given weight by a spring inside. Switches have their own weight and provide a tactile click which contribute most to the overall push feel.
 
@@ -59,35 +58,33 @@ There are two types of buttons: DJDAO (also known as Chinese buttons) and Sanwa.
 - Poor quality and durability
 - Often very light which leads to accidental presses
 
-<div className="flex flex-col items-center justify-center mt-5 mb-1">
-  <img src='/controllers/parts/honeywell.jpg' width="200"/>
-</div>
+<Image className="w-48" src="/controllers/parts/honeywell.jpg" alt="honeywell switch" />
 
 #### OMRON
 - Most common switches for ASCs
 - Good quality and durability
 
-<div className="flex flex-col items-center justify-center mt-5 mb-1">
-  <img src='/controllers/parts/omron.webp' width="200"/>
-</div>
+<Image className="w-48" src="/controllers/parts/omron.webp" alt="omron switch" />
 
 #### OBSA-LHS1F
 - Expensive
 - Only compatible with Sanwa Buttons
 - Used in arcade cabinets
-- Questionable durability depending on production batch
-- Comes with a lampholder built in
-<div className="flex flex-col items-center justify-center mt-5 mb-1">
-  <img src='/controllers/parts/lhs1f.webp' width="200"/>
-</div>
+- Inconsistent durability depending on production batch
+
+<Image className="w-48" src="/controllers/parts/lhs1f.webp" alt="obsa-lhs1f switch" />
+
+These are commonly referred to as "integrated" switches as the switch is housed (somewhat permanently) inside of the lampholder:
+
+<Image src="/controllers/parts/integrated_switch.png" alt="integrated switch" />
+
+Unfortunately this means you have to buy an entire replacement instead of just replacing the switch if one dies.
 
 ### Springs 
 
 Springs come in various weights between 20g and 100g. Heavier springs rebound the buttons faster which can make certain patterns easier but can get tiring to press. On the other hand, lighter springs do not rebound as fast but take less energy overall.
 
-<div className="flex justify-center mt-8">
-  <img src="/controllers/parts/springs.png" alt="springs" />
-</div>
+<Image src="/controllers/parts/springs.png" alt="springs" />
 
 Although these springs are made by Sanwa, they are compatible with both DJDAO/Chinese and Sanwa buttons.
 
