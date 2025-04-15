@@ -1,4 +1,8 @@
 export default {
+  'dan-courses': {
+    title: 'Dan Courses',
+    theme: { timestamp: false },
+  },
   gamemodes: {
     title: 'Gamemodes',
     theme: { timestamp: false },
