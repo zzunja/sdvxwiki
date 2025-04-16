@@ -1,6 +1,6 @@
 export default{
   songselect: {
-    title: 'Song Select, Matching, and In Song screens.',
+    title: 'Song Select, Matching, In song, and Score Screen.',
     theme: { timestamp: false },
   },
   options: {
