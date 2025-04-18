@@ -7,6 +7,20 @@ import './globals.css'
 export const metadata = {
   title: 'Sound Voltex Wiki',
   description: 'A comprehensive wiki for the rhythm game Sound Voltex.',
+  icons:{
+    icon: '/googlesearch/favicon.png',
+    apple: '/googlesearch/favicon.png'
+  } ,
+  //mostly auto generated
+  keywords: [
+    'Sound Voltex',
+    'SDVX',
+    'SDVX wiki',
+    'SDVX guide',
+    'Sound Voltex Guide',
+    'SDVX gameplay',
+    'SDVX mechanics',
+  ],
 }
 
 const footer = <Footer/>
@@ -41,7 +55,6 @@ export default async function RootLayout({ children, params }) {
           saturation: 55
         }}
       >
-        <link rel="icon" type="image/png" href="/favicon.png"></link>
       </Head>
       <body>
         <Layout
@@ -58,11 +71,8 @@ export default async function RootLayout({ children, params }) {
           editLink={null}
           i18n={[
             {locale: 'en', name: 'English'},
-            {locale: 'jp', name: 'Japanese'},
-            {locale: 'ko', name:'Korean'}
           ]}
         >
-          <LocaleSwitch/>
           {children}
         </Layout>
       </body>
