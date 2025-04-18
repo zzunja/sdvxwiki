@@ -1,0 +1,105 @@
+import { Callout } from 'nextra/components'
+
+# Volforce
+Volforce is the main way seen to measure "skill". Of course, it's not 100%, but in theory, higher Volforce = better you are. 
+
+Your Volforce is a combination of your best 50 plays. After every play, the game calculates the Volforce of that play with this equation.
+
+<Callout>
+This equation is technically wrong. Voltex doesn't multiply it by .001, it just rounds down to a whole number. It then takes that number, adds it to the best 50, then divides that sum by 1000. I add the .001 to simplify this whole process. It still gives the same answer, just different ways to get to that.
+</Callout>
+<br/>
+<div className="text-center">
+ ``(LV*(Score / 10,00,000)*(Grade Coefficient)*(Clear Coefficient)*20)*.001 ``
+
+ **Grade Coefficient/Factor**
+</div>
+
+<div className="flex items-center justify-center mt-2">
+| S | AAA+ | AAA | AA+ | AA | A+ | A | B | C | D |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|1.05|1.02|1.00|0.97|0.94|0.91|0.88|0.85|0.82|0.80|
+</div>
+
+<br/>
+<div className="text-center">
+  **Clear Coefficient/Factor**
+</div>
+
+<div className="flex items-center justify-center mt-2">
+|PUC|UC|Excessive Rate Clear|Effective rate clear|Crash|
+|:--:|:--:|:--:|:--:|:--:|
+|1.10|1.05|1.02|1.00|0.50|
+</div>
+
+For example, if I got a score of `9,923,042 (S)` on a `level 18` with an `Excessive Rate clear`, this is how I would calculate my Volforce.
+<br/>
+<div className="flex items-center justify-center">
+``(18*(9,923,042 / 10,000,000)*(1.05)*(1.02)*20)*.001``
+</div>
+This gives me `0.38259280735`. Since voltex rounds down from the 3rd digit, we can just cut everything after the 3rd digit and get our answer `.382`.
+<br/>
+
+After it calculates this number, it then compares it to your best 50. If this
+number is higher than the lowest Volforce play in your best 50, you will gain
+the difference of that Volforce. For example, let's look at our last example.
+Let's say I just set that score. Voltex will look at the lowest VF score in my
+best 50. If that was `.370`, it would replace that Volforce with this one and I
+will gain 
+<div className="text-center mt-5">
+`.382` - `.370`  =  **0.012 Volforce**. 
+</div>
+
+This will be shown on the screen next to your Volforce if this happens.
+
+The important things to note is that the only things taken into consideration is **Level of the Chart, Score, Clear type, and Grade**.
+
+Also, your volforce is calculated as **your best clear and your best score** on
+a chart. For example lets say I play the same chart from the last example, but got a `9,899,320` with a `UC`.
+Voltex would replace the Excesssive clear with a UC but keep my higher score of `9,923,042`.
+
+With the equation it would look like this
+<div className="flex items-center justify-center mt-3">
+`(18*(9,923,042 / 10,000,000)*(1.05)*(1.05)*20)*.001`
+</div>
+This would equal `.393` VF.
+
+Note the `1.02` has changed to a `1.05`, but it used the better score that I
+originally had. This means I would gain 
+<div className="text-center mt-5">
+`.393 - .382`  = **.011 Volforce** 
+</div>
+for increasing my Excessive to a UC on this chart, even if my UC was a worse score.
+
+
+### Finding you best 50
+You can tell what is in your best 50 if it has what is circled in red.
+<div className="flex items-center justify-center mt-3">
+![best50](/compendium/volforce/best50.png)
+</div>
+
+The symbol next to the best 50 will be different depending on what your current VF is.
+
+There is also a Best 50 folder, although note that this is not sorted by Volforce but rather by whatever sort you have selected.
+
+## Skill Ranks
+There are different skill ranks for different milestones in Volforce. Here are all of them
+
+<div className="flex items-center justify-center">
+ <img src='/compendium/volforce/volforceranks.png' width="400"/>
+</div>
+
+Every rank has four separate "gates".
+
+At Imperial `20.00 VF`, instead of ranking up every `1.000 VF`, it changes to
+every `4.000 VF`. This is currently the cap on VF rank. There is nobody that is
+past this point because there aren't enough charts to fill up your best 50 enough
+to reach past `24.000 VF`.
+
+The two people that are currently max VF are [Mini](https://www.youtube.com/@minisdvx7740) and [Jakads](https://www.youtube.com/@Jakads_realkk). They have PUC every 20 to come out. 
+
+
+
+
+
+

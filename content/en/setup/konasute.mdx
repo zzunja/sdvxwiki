@@ -1,0 +1,243 @@
+import { Callout } from "nextra/components";
+
+# Setting up Konasute
+
+## Table of Contents
+- [Intro](#intro)
+  - [Pros](#pros)
+  - [Cons](#cons)
+- [Setup](#setup)
+  - [Creating a Konami account](#creating-a-konami-account)
+  - [Downloading Konasute](#downloading-konasute)
+  - [Options](#options)
+- [Purchasing Konasute and Packs](#purchasing-konasute-and-packs)
+  - [Purchasing Basic Course](#purchasing-basic-course)
+  - [Song packs](#song-packs)
+- [References](#references)
+
+## Intro
+
+<Callout>
+  There is a really good guide
+  [here](https://voltexes.com/setting-up-sound-voltex-konasute-exceed-gear/)
+  that talks about setting up Konasute. While some small things has changed, this
+  takes a lot of information from there.
+</Callout>
+<Callout>
+  For setting up e-amusement, there is a good website
+  [here](https://3icecream.com/tutorial/check-eamuse) that helps you set it up.
+  While it is for DDR, most of it still applies here.
+</Callout>
+This section will cover setting up Konasute which is the official PC port of
+SDVX made by Konami.
+
+#### Pros
+
+- Uses the same engine as the arcade version
+- 120Hz support
+- Infinite quick retries
+- Quick crash out
+- Ability to see scores from arcade
+
+#### Cons
+
+- Monthly subscription fee of 1,628 yen
+- Expensive song packs (although there are occasional 50% off sales)
+- Daily scheduled maintenance that prevents you from launching the game during that time
+
+If you want to know what songs are included with the basic course or each song
+pack, you can check [here](https://www.myshkin.io/sdvx/songlist).
+Every couple months, Konami will add new songs to the basic course.
+
+## Setup
+### Creating a Konami account
+
+The first thing is setting up your Konami account. This account will let you
+customize your games, buy Konasute and song packs, and store all your data among
+other things.
+
+First, you want to head to the [My Konami](https://my.konami.net/en_US) website
+and click register. Fill out all your information and make sure to select Japan
+for your region otherwise you will be locked out of purchasing Konasute. You can
+also change your region [here](https://my1.konami.net/ja/personal-info) if you
+accidentally didn't select Japan.
+
+### Downloading Konasute
+
+Head to the [Konasute website](https://p.eagate.573.jp/game/eacsdvx/vi/index.html) and click install in the top right. If you are not logged in, you won't see this button and instead it will be replaced by a login button.
+Click `同意してインストーラーをダウンロード` to download the launcher.
+
+<div className="flex items-center justify-center">
+   <img src="/konasute/launcher.png" width="600" />
+</div>
+
+This will start the download for the launcher. Upon opening the launcher, it will all be in Japanese. To go through it
+
+- Click `次へ` (Next)
+- Accept the terms with the checkbox and click `次へ` (Next)
+- Change the game data install or leave it as default and click `次へ` (Next)
+- Click `インストール` (Install)
+- Click `終了` (Finish)
+
+You can now open the game. By default it is installed at `C:/Games/SOUND VOLTEX EXCEED GEAR`.
+From there you can head to `/game/modules` and run `sv6c.exe`. You can also open the launcher by heading to [this
+site](https://p.eagate.573.jp/game/konasteapp/API/login/login.html?game_id=sdvx).
+
+The launcher will take you to a website in which you will have to login. This
+acts as a launcher for the game. You have to go through this website to start up
+Konasute. You can bookmark this website as a way to launch the game.
+Pressing `ゲーム起動` will start the game.
+
+<Callout emoji="⚠️" type="warning">
+  Konasute and Konami services are always down between 5 AM to 7 AM JST every
+  day. You will be unable to launch the game or access the website during these
+  times. Read more [here](/compendium/downtime)
+</Callout>
+<br />
+<div className="flex items-center justify-center">
+   <img src="/konasute/starting1.png" width="600" />
+</div>
+
+If you just recently opened the website then closed it, it might think you are
+opening it twice and show you a different screen. Press `起動処理を続ける` to
+continue.
+
+This will open the launcher. You will get a notification that you need to
+download the game. Click `OK` and you will go to another menu in which you press
+`UPDATE` to start downloading the game. If this doesn't pop up, you can also
+press the button in the top right called `ファイル確認` to get to the menu.
+
+You will now install Konasute which is known to take some time as Konami limits
+how fast you can download.
+
+When it is done another menu will open showing you it's done. If you check the
+box in the middle and press close, the launcher will reopen. You can now start
+the game with `GAME START` but you might want to configure some options first.
+
+### Options
+
+Pressing the `SETTING` button will open the options for the game. All of it is in Japanese. Here is a translation of everything.
+
+<br />
+<div className="flex items-center justify-center">
+  <img src="/konasute/settings1.png" width="500" />
+</div>
+
+- **Windows options, from top to bottom:**
+  - Fullscreen `フルスクリーン`
+  - Fit window (borderless windowed) `フイツトウインドウ`
+  - Windowed `ウインドウ`
+
+- **Monitor:** Which monitor you want the game to launch on
+
+- **Game rotation:** Choose which way you want the game rotated. If
+  you want to play portrait and you set your monitor portrait in Windows settings,
+  keep it on the top left option. Otherwise, select the bottom right.
+
+- **Resolution:** Resolution of the game. Note that the game will automatically scale to 1080p no matter what you choose.
+
+- **Frame rate:** 120hz and 60hz.
+
+<br />
+<div className="flex items-center justify-center">
+  <img src="/konasute/settings2.png" width="500" />
+</div>
+
+If you are using a FauceTwo or YuanCon, you should not touch this. It should
+work by default assuming you are in eAC mode (check your controller's manual to
+see how to change modes). If it doesn't press the `デフォルトに戻す` button.
+
+<br />
+<div className="flex items-center justify-center">
+   <img src="/konasute/settings3.png" width="500" />
+</div>
+
+These are the audio settings.
+
+- **DirectSound:** Highest latency. Doesn't take over audio driver.
+- **WASAPI Exclusive:** Lower latency than WASAPI shared, about the same as ASIO. Takes over audio driver.
+- **WASAPI Shared:** Higher latency than WASAPI exclusive. Doesn't take over audio driver
+- **ASIO:** The best option if available, can provide very low latency while still allowing other apps to play audio.
+
+An important thing to note is to make sure your audio devices are set to 44.1khz sample rate.
+
+[Here](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Voicemeeter/How%20to%20setup%20Voicemeeter%20for%20Rhythm%20Games.md)
+is a good guide for setting up ASIO and getting the best latency. If you don't
+care too much, WASAPI shared should be good enough.
+
+If you find your game running poorly or seem to have delay,
+[here](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Sound%20Voltex%20コナステ/Sound%20Voltex%20Optimisations.md) 
+is a Konasute optimisations guide.
+
+Once you have your settings how you want them, you can press `保存` (save) and `終
+了` (finish). Finally, you can press `GAME START` to finally launch the game.
+
+Since you haven't purchased the basic course, you will only have 5 songs available and
+are limited to one play before it kicks you out. Use this to test if
+the game works for you. If you encounter any problems, try to resolve them before purchasing the basic course.
+
+## Purchasing Konasute and Packs
+
+### Purchasing Basic Course
+
+To play Konasute, you have to subscribe to the basic course of the game. This
+comes with around 688 default songs with more being added occasionally. You can check out the default song list [here](https://www.myshkin.io/sdvx/songlist).
+
+The recommended way to purchase the basic course is to use Paseli. You can also link it
+to a credit card if you want, but it's recommended to just use Paseli since you
+have to use Paseli to purchase song packs. You also get points back.
+
+Head to the [Paseli website](https://paseli.konami.net/charge/top.html) and log
+in. Click the green button in the center named `ここをクリックしてチャージ方法を
+選択` and press `クレジットカード` for credit card. You can use a debit card
+with the credit card option.
+
+<div className="flex items-center justify-center">
+  ![paseli](/konasute/paseli.png)
+</div>
+
+After, you have to add the Paseli to your account. You need a total of 1,628 円
+(roughly $10.52 USD at the time of writing). Select how much Paseli you want and click
+the red checkmark and button at the bottom should turn green. Press it to finish
+your payment.
+
+Everything will be in Japanese, so here is a rough translation of everything that you need to fill out. Press `確認` to finish.
+
+<div className="flex items-center justify-center">
+  ![paseli2](/konasute/paseli2.png)
+</div>
+
+After that you can now purchase the basic course for Konasute. Go
+[here](https://p.eagate.573.jp/payment/p/course_detail.html?course=eac_sdvx_basic)
+and click `了承する` at the bottom. Check Paseli and click `次へ`. This should
+start your subscription and you should now be able to play Konasute. Simply boot
+up the game how you did before and play!
+
+### Song packs
+
+To get more songs, and specifically level 20 charts, you will need to buy song packs. These
+can be pretty expensive and it is recommended to wait for a sale where most of
+the packs go 50% off. These sales can happen anytime and usually last for about
+a week or so. To know when a sale happens, you can either follow:
+
+- [@SOUNDVOLTEX573](https://twitter.com/SOUNDVOLTEX573) - Offical Sound Voltex account where all announcements are made. Twitter/X
+- [@sdvx_english](https://twitter.com/sdvx_english) - All the announcements but in english. Twitter/X
+- [SDVX Community Discord](https://discord.com/invite/sdvx) - Announcements get posted here with a channel you can follow to track the Twitter account.
+
+To see and purchase all the song packs head to [the e-amusement
+shop](https://p.eagate.573.jp/gate/p/eamusement/coop/mall.html?fromlist&dt=%2F%E3%82%B3%E3%83%8A%E3%82%B9%E3%83%86%20SOUND%20VOLTEX%2F%E6%A5%BD%E6%9B%B2%E3%83%91%E3%83%83%E3%82%AF%2F).
+Here is where you can see and purchase all the song packs. To know what's in
+each pack, you can head to [this website](https://www.myshkin.io/sdvx/songlist)
+and sort by song pack in the `Availability (PC)` dropdown, or head to
+[here](https://p.eagate.573.jp/game/eacsdvx/vi/music/index.html) and sort with
+the `プレー条件` drop down.
+
+## References
+
+- [voltexes.com guide](https://voltexes.com/setting-up-sound-voltex-konasute-exceed-gear/)
+- [3icecream.com e-amusement set-up](https://3icecream.com/tutorial/check-eamuse)
+- [Offical Sound Voltex Twitter/X](https://twitter.com/SOUNDVOLTEX573)
+- [myshkin.io Konasute songlist](https://www.myshkin.io/sdvx/songlist)
+- [Offical Konasute Website](https://p.eagate.573.jp/game/eacsdvx/vi/index.html)
+- [Voicemeeter Set-up by Sakif](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Voicemeeter/How%20to%20setup%20Voicemeeter%20for%20Rhythm%20Games.md)
+- [Konasute Optimisations by Sakif](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Sound%20Voltex%20コナステ/Sound%20Voltex%20Optimisations.md)
