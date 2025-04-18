@@ -1,6 +1,6 @@
 export default{
   songselect: {
-    title: 'Song Select, Matching, In song, and Score Screen.',
+    title: 'Song Select, Matching, In song, and Score Screen',
     theme: { timestamp: false },
   },
   options: {
@@ -8,7 +8,7 @@ export default{
     theme: { timestamp: false },
   },
   playingscoring: {
-    title: 'Playing and understanding your score',
+    title: 'Score, Grades, and Reading Score',
     theme: { timestamp: false },
   },
 }
