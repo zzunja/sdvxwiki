@@ -1,4 +1,4 @@
-import { Footer, Layout, Navbar } from 'nextra-theme-docs'
+import { Footer, Layout, LocaleSwitch, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
@@ -24,10 +24,14 @@ const navbar = (
   />
 )
  
-export default async function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
+  const {lang} = await params
+  let pageMap = await getPageMap(`/${lang}`)
+
+
   return (
     <html
-      lang="en"
+      lang={lang}
       dir="ltr"
       suppressHydrationWarning
     >
@@ -37,18 +41,28 @@ export default async function RootLayout({ children }) {
           saturation: 55
         }}
       >
-        <link rel="icon" type="image/png" href="/googlesearch/favicon.png"></link>
+        <link rel="icon" type="image/png" href="/favicon.png"></link>
       </Head>
       <body>
         <Layout
           navbar={navbar}
-          sidebar={{ defaultMenuCollapseLevel: 1 }}
-          pageMap={await getPageMap()}
+          sidebar={{ 
+            defaultMenuCollapseLevel: 1 
+          }}
+          pageMap={pageMap}
           docsRepositoryBase="https://github.com/zzunja/sdvxwiki"
           footer={footer}
-          feedback={{content: null}}
+          feedback={{
+            content: null
+          }}
           editLink={null}
+          i18n={[
+            {locale: 'en', name: 'English'},
+            {locale: 'jp', name: 'Japanese'},
+            {locale: 'ko', name:'Korean'}
+          ]}
         >
+          <LocaleSwitch/>
           {children}
         </Layout>
       </body>
