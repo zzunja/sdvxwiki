@@ -3,7 +3,7 @@ import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 import './globals.css'
- 
+
 export const metadata = {
   title: 'Sound Voltex Wiki',
   description: 'A comprehensive wiki for the rhythm game Sound Voltex.',
@@ -22,6 +22,7 @@ export const metadata = {
     'SDVX mechanics',
   ],
 }
+export const dynamicParams = false
 
 const footer = <Footer/>
 
