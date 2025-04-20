@@ -1,8 +1,8 @@
-export {middleware} from 'nextra/locales'
+
+export { middleware } from 'nextra/locales'
 
 export const config = {
-  //this is for exlcuding what gets redirected with language. if you have anything to add, add it here. ".*\\..*" is for the whole public folder
   matcher: [
-    '/((?!api|public/|_next|_pagefind|favicon.ico|sitemap.xml|.*\\..*).*)',
-  ]
-}
+    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\..*).*)'
+  ],
+};
