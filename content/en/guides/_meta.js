@@ -3,6 +3,10 @@ export default {
     title: 'Hand Positioning',
     theme: { timestamp: false },
   },
+  'pattern-simplification': {
+    title: 'Pattern Simlification and Cheese',
+    theme: { timestamp: false },
+  },
   'ksm-controller-setup': {
     title: 'KSM Controller Setup',
     theme: { timestamp: false },
