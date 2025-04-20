@@ -4,7 +4,7 @@ export default {
     theme: { timestamp: false },
   },
   'pattern-simplification': {
-    title: 'Pattern Simlification and Cheese',
+    title: 'Pattern Simplification and Cheese',
     theme: { timestamp: false },
   },
   'ksm-controller-setup': {
