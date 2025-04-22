@@ -4,6 +4,7 @@
 - [Intro](#intro)
 - [EFFECTIVE RATE](#effective-rate)
 - [EXCESSIVE RATE](#excessive-rate)
+- [MAXXIVE RATE](#maxxive-rate)
 - [PERMISSIVE RATE](#permissive-rate)
 - [DIVINE RATE](#divine-rate)
 - [HEXATIVE RATE](#hexative-rate)
@@ -23,6 +24,11 @@ Starts at 100% and requires completing the chart without reaching 0% to clear.
 
 Also referred to as hard gauge.
 
+## MAXXIVE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear. Notable for only increasing on S-CRITICALs and decreasing on NEARs.
+
+Only available when [S-CRITICAL](/startingout/options#s-critical) is enabled.
+
 ## PERMISSIVE RATE
 Starts at 100% and requires completing the chart without reaching 0% to clear. Notably easier than EXCESSIVE RATE as it carries over across 3 charts. The charts played with this gauge will not be granted a clear medal.
 
@@ -39,7 +45,11 @@ Starts at 100% and requires completing the chart without reaching 0% to clear. D
 Only available during [HEXA DIVER](/compendium/unlocks#hexadiver).
 
 ## Alternative Rate System (ARS)
-An option used in combination with EXCESSIVE RATE or HEXATIVE RATE under certain conditions. Prevents failing out from a chart by switching to EFFECTIVE RATE upon reaching 0%. The gauge amount given in this scenario will be the same as if you played with EFFECTIVE RATE to begin with.
+An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE (under certain conditions). Prevents failing out from a chart by switching to the next lowest gauge upon reaching 0%. The gauge amount given in this scenario will be the same as if you played with the gauge that is swapped to from the start. The gauge order is as follows:
+
+- MAXXIVE RATE -> EXCESSIVE RATE -> EFFECTIVE RATE
+- HEXATIVE RATE -> EFFECTIVE RATE
+
 
 ## Gain/Loss Breakdown
 
@@ -94,11 +104,11 @@ An option used in combination with EXCESSIVE RATE or HEXATIVE RATE under certain
     <tr className="border">
       <td>EFFECTIVE</td>
 
-      <td className="border" rowSpan="5">
+      <td className="border" rowSpan="6">
         <pre>+4T/n</pre>
       </td>
 
-      <td className="border" rowSpan="5">
+      <td className="border" rowSpan="6">
         <pre>+T/n</pre>
       </td>
 
@@ -166,7 +176,9 @@ An option used in combination with EXCESSIVE RATE or HEXATIVE RATE under certain
 
     <tr className="border">
       <td>DIVINE</td>
-      <td className="border">-</td>
+      <td className="border">
+        <pre>±0.00%</pre>
+      </td>
       <td>-</td>
       <td className="border">
         <pre>-1.00%</pre>
@@ -176,6 +188,23 @@ An option used in combination with EXCESSIVE RATE or HEXATIVE RATE under certain
       </td>
       <td className="border">
         <pre>-1.25%</pre>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>MAXXIVE</td>
+      <td className="border">
+        <pre>±0.00%</pre>
+      </td>
+      <td>-</td>
+      <td className="border">
+        <pre>-4.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-20.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-5.00%</pre>
       </td>
     </tr>
   </tbody>
