@@ -11,6 +11,7 @@
 - [VARIATIVE RATE](#variative-rate)
 - [Alternative Rate System (ARS)](#alternative-rate-system-ars)
 - [Gain/Loss Breakdown](#gainloss-breakdown)
+  - [VARIATIVE RATE](#variative-rate-breakdown)
 
 ## Intro
 This page is for information about the various gauge types available in SDVX. The 2 main gauge types are EFFECTIVE RATE and EXCESSIVE RATE which are available during normal play. The other gauge types are only available in certain gamemodes or unlock systems.
@@ -63,8 +64,6 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
 - **T**: Unknown but fixed value regardless of chart
 - **n**: Varies per chart: `(total chain amount) + (# of chips and slams) * 3`
 - **H**: [HEXA RANK](/compendium/unlocks#hexadiver)
-- **For EXCESSIVE, PERMISSIVE, and HEXATIVE RATE**: Error reduction is decreased when gauge is below 30%
-- **For MAXXIVE RATE**: NEAR cannot reduce gauge below 0%
 
 <table className="border w-full mt-4 text-center align-middle">
   <thead>
@@ -144,11 +143,11 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
       <td>EXCESSIVE</td>
 
       <td className="border">
-        <pre>-9.00%</pre>
+        <pre>-9.00% <sup>1</sup></pre>
       </td>
 
       <td className="border">
-        <pre>-2.25%</pre>
+        <pre>-2.25% <sup>1</sup></pre>
       </td>
     </tr>
 
@@ -156,11 +155,11 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
       <td>PERMISSIVE</td>
 
       <td className="border">
-        <pre>-3.40%</pre>
+        <pre>-3.40% <sup>1</sup></pre>
       </td>
 
       <td className="border">
-        <pre>-0.85%</pre>
+        <pre>-0.85% <sup>1</sup></pre>
       </td>
     </tr>
 
@@ -173,11 +172,11 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
       </td>
 
       <td className="border">
-        <pre>-2.00% × H</pre>
+        <pre>-2.00% × H <sup>1</sup></pre>
       </td>
 
       <td className="border">
-        <pre>-0.50% × H</pre>
+        <pre>-0.50% × H <sup>1</sup></pre>
       </td>
     </tr>
 
@@ -191,10 +190,10 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
         <pre>-1.00%</pre>
       </td>
       <td className="border">
-        <pre>-5.00%</pre>
+        <pre>-5.00% <sup>1</sup></pre>
       </td>
       <td className="border">
-        <pre>-1.25%</pre>
+        <pre>-1.25% <sup>1</sup></pre>
       </td>
     </tr>
 
@@ -205,29 +204,149 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
       </td>
       <td>-</td>
       <td className="border">
-        <pre>-4.00%</pre>
+        <pre>-4.00% <sup>2</sup></pre>
       </td>
-      <td className="border" rowSpan="2">
+      <td className="border">
         <pre>-20.00%</pre>
       </td>
-      <td className="border" rowSpan="2">
-        <pre>-5.00%</pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>VARIATIVE (V)</td>
-      <td className="border">
-        <pre>±0.00%</pre>
-      </td>
-      <td>-</td>
-      <td className="border">
-        <pre>-1.00%</pre>
-      </td>
-      <td>-</td>
       <td className="border">
         <pre>-5.00%</pre>
       </td>
     </tr>
   </tbody>
 </table>
+
+<sup>1</sup> Reduced when gauge is below 30%\
+<sup>2</sup> Cannot reduce gauge below 0%
+
+[Source](https://bemaniwiki.com/index.php?SOUND+VOLTEX+EXCEED+GEAR/%A5%B7%A5%B9%A5%C6%A5%E0#rate_style)
+
+### VARIATIVE RATE [#variative-rate-breakdown]
+
+<table className="border w-full mt-4 text-center align-middle">
+  <thead>
+    <tr>
+      <th></th>
+      <th className="border">S-CRITICAL</th>
+      <th className="border">CRITICAL</th>
+      <th className="border">NEAR</th>
+      <th className="border" colSpan="2">ERROR</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr className="text-xs leading-4 border-b-3">
+      <td className="text-base font-bold">Rank</td>
+      <td className="border">Chips</td>
+      <td className="border">Chips</td>
+      <td className="border">Chips</td>
+      <td className="border">
+        <p>Chips</p>
+        <p>Slams</p>
+      </td>
+      <td className="border">
+        <p>Holds</p>
+        <p>Lasers</p>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>V</td>
+      <td className="border">
+        <pre>±0.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-1.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-7.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-10.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-5.00%</pre>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>IV</td>
+      <td className="border">
+        <pre>?</pre>
+      </td>
+      <td className="border">
+        <pre>-</pre>
+      </td>
+      <td className="border">
+        <pre>-3.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-15.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-3.75%</pre>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>III</td>
+      <td className="border">
+        <pre>?</pre>
+      </td>
+      <td className="border">
+        <pre>-</pre>
+      </td>
+      <td className="border">
+        <pre>-</pre>
+      </td>
+      <td className="border">
+        <pre>-9.50%</pre>
+      </td>
+      <td className="border">
+        <pre>-2.38% <sup>1</sup></pre>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>II</td>
+      <td className="border">
+        <pre>?</pre>
+      </td>
+      <td className="border">
+        <pre>-</pre>
+      </td>
+      <td className="border">
+        <pre>-</pre>
+      </td>
+      <td className="border">
+        <pre>-6.00%</pre>
+      </td>
+      <td className="border">
+        <pre>-1.50%</pre>
+      </td>
+    </tr>
+
+    <tr className="border">
+      <td>I</td>
+      <td className="border">
+        <pre>?</pre>
+      </td>
+      <td className="border">
+        <pre>-</pre>
+      </td>
+      <td className="border">
+        <pre>-</pre>
+      </td>
+      <td className="border">
+        <pre>-2.50%</pre>
+      </td>
+      <td className="border">
+        <pre>-0.63% <sup>2</sup></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<sup>1</sup> Decreased by 33.3% after 14 errors\
+<sup>2</sup> Decreased by 8.8% after 14 errors
+
+[Source](https://bemaniwiki.com/?SOUND+VOLTEX+EXCEED+GEAR/VARIANT+GATE#VARIATIVE_RATE)
