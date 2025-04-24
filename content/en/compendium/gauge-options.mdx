@@ -1,3 +1,5 @@
+import { Table, Row, Header, Data } from "../../../components/Table";
+
 # Gauge Options
 
 ## Table of Contents
@@ -65,156 +67,91 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
 - **n**: Varies per chart: `(total chain amount) + (# of chips and slams) * 3`
 - **H**: [HEXA RANK](/compendium/unlock-systems#hexadiver)
 
-<table className="border w-full mt-4 text-center align-middle">
+<Table className="w-full mt-4 mb-4 text-center align-middle">
   <thead>
-    <tr>
-      <th></th>
-      <th className="border" colSpan="2">S-CRITICAL</th>
-      <th className="border" colSpan="2">CRITICAL</th>
-      <th className="border">NEAR</th>
-      <th className="border" colSpan="2">ERROR</th>
-    </tr>
+    <Row>
+      <Header rowSpan="2">Gauge Type</Header>
+      <Header colSpan="2">S-CRITICAL</Header>
+      <Header colSpan="2">CRITICAL</Header>
+      <Header >NEAR</Header>
+      <Header colSpan="2">ERROR</Header>
+    </Row>
+    <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+      <Data>Chips</Data>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+    </Row>
   </thead>
   <tbody>
-    <tr className="text-xs leading-4 border-b-3">
-      <td className="text-base font-bold">Gauge Type</td>
-      <td className="border">
-        <p>Chips</p>
-        <p>Slams</p>
-      </td>
-      <td className="border">
-        <p>Holds</p>
-        <p>Lasers</p>
-      </td>
-      <td className="border">
-        <p>Chips</p>
-        <p>Slams</p>
-      </td>
-      <td className="border">
-        <p>Holds</p>
-        <p>Lasers</p>
-      </td>
-
-      <td>Chips</td>
-
-      <td className="border">
-        <p>Chips</p>
-        <p>Slams</p>
-      </td>
-      <td className="border">
-        <p>Holds</p>
-        <p>Lasers</p>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>EFFECTIVE</td>
-
-      <td className="border" rowSpan="6">
-        <pre>+4T/n</pre>
-      </td>
-
-      <td className="border" rowSpan="6">
-        <pre>+T/n</pre>
-      </td>
-
-      <td className="border" rowSpan="4">
-        <pre>+4T/n</pre>
-      </td>
-
-      <td className="border" rowSpan="4">
-        <pre>+T/n</pre>
-      </td>
-
-      <td className="border" rowSpan="3">
-        <pre>+4T/3n</pre>
-      </td>
-
-      <td className="border">
-        <pre>-2.00%</pre>
-      </td>
-
-      <td className="border">
-        <pre>-0.50%</pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>EXCESSIVE</td>
-
-      <td className="border">
-        <pre>-9.00% <sup>1</sup></pre>
-      </td>
-
-      <td className="border">
-        <pre>-2.25% <sup>1</sup></pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>PERMISSIVE</td>
-
-      <td className="border">
-        <pre>-3.40% <sup>1</sup></pre>
-      </td>
-
-      <td className="border">
-        <pre>-0.85% <sup>1</sup></pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>HEXATIVE</td>
-
-      <td className="border leading-6">
+    <Row>
+      <Data>EFFECTIVE</Data>
+      <Data rowSpan="6"><pre>+4T/n</pre></Data>
+      <Data rowSpan="6"><pre>+T/n</pre></Data>
+      <Data rowSpan="4"><pre>+4T/n</pre></Data>
+      <Data rowSpan="4"><pre>+T/n</pre></Data>
+      <Data rowSpan="3"><pre>+4T/3n</pre></Data>
+      <Data><pre>-2.00%</pre></Data>
+      <Data><pre>-0.50%</pre></Data>
+    </Row>
+    <Row>
+      <Data>EXCESSIVE</Data>
+      <Data><pre>-9.00% <sup>1</sup></pre></Data>
+      <Data><pre>-2.25% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>PERMISSIVE</Data>
+      <Data><pre>-3.40% <sup>1</sup></pre></Data>
+      <Data><pre>-0.85% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>HEXATIVE</Data>
+      <Data className="leading-6">
         <div><pre>H = 5: -1.00%</pre></div>
         <div><pre>H ≤ 4: +4T/3n</pre></div>
-      </td>
-
-      <td className="border">
-        <pre>-2.00% × H <sup>1</sup></pre>
-      </td>
-
-      <td className="border">
-        <pre>-0.50% × H <sup>1</sup></pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>DIVINE</td>
-      <td className="border">
-        <pre>±0.00%</pre>
-      </td>
-      <td>-</td>
-      <td className="border">
-        <pre>-1.00%</pre>
-      </td>
-      <td className="border">
-        <pre>-5.00% <sup>1</sup></pre>
-      </td>
-      <td className="border">
-        <pre>-1.25% <sup>1</sup></pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>MAXXIVE</td>
-      <td className="border">
-        <pre>±0.00%</pre>
-      </td>
-      <td>-</td>
-      <td className="border">
-        <pre>-4.00% <sup>2</sup></pre>
-      </td>
-      <td className="border">
-        <pre>-20.00%</pre>
-      </td>
-      <td className="border">
-        <pre>-5.00%</pre>
-      </td>
-    </tr>
+      </Data>
+      <Data><pre>-2.00% × H <sup>1</sup></pre></Data>
+      <Data><pre>-0.50% × H <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>DIVINE</Data>
+      <Data><pre>±0.00%</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-1.00%</pre></Data>
+      <Data><pre>-5.00% <sup>1</sup></pre></Data>
+      <Data><pre>-1.25% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>MAXXIVE</Data>
+      <Data><pre>±0.00%</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-4.00% <sup>2</sup></pre></Data>
+      <Data><pre>-20.00%</pre></Data>
+      <Data><pre>-5.00%</pre></Data>
+    </Row>
   </tbody>
-</table>
+</Table>
 
 <sup>1</sup> Reduced when gauge is below 30%\
 <sup>2</sup> Cannot reduce gauge below 0%
@@ -223,128 +160,72 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
 
 ### VARIATIVE RATE [#variative-rate-breakdown]
 
-<table className="border w-full mt-4 text-center align-middle">
+<Table className="w-full mt-4 mb-4 text-center align-middle">
   <thead>
-    <tr>
-      <th></th>
-      <th className="border">S-CRITICAL</th>
-      <th className="border">CRITICAL</th>
-      <th className="border">NEAR</th>
-      <th className="border" colSpan="2">ERROR</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr className="text-xs leading-4 border-b-3">
-      <td className="text-base font-bold">Rank</td>
-      <td className="border">Chips</td>
-      <td className="border">Chips</td>
-      <td className="border">Chips</td>
-      <td className="border">
+    <Row>
+      <Header rowSpan="2">Rank</Header>
+      <Header>S-CRITICAL</Header>
+      <Header>CRITICAL</Header>
+      <Header>NEAR</Header>
+      <Header colSpan="2">ERROR</Header>
+    </Row>
+    <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
+      <Data>Chips</Data>
+      <Data>Chips</Data>
+      <Data>Chips</Data>
+      <Data>
         <p>Chips</p>
         <p>Slams</p>
-      </td>
-      <td className="border">
+      </Data>
+      <Data>
         <p>Holds</p>
         <p>Lasers</p>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>V</td>
-      <td className="border">
-        <pre>±0.00%</pre>
-      </td>
-      <td className="border">
-        <pre>-1.00%</pre>
-      </td>
-      <td className="border">
-        <pre>-7.00%</pre>
-      </td>
-      <td className="border">
-        <pre>-10.00%</pre>
-      </td>
-      <td className="border">
-        <pre>-5.00%</pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>IV</td>
-      <td className="border">
-        <pre>?</pre>
-      </td>
-      <td className="border">
-        <pre>-</pre>
-      </td>
-      <td className="border">
-        <pre>-3.00%</pre>
-      </td>
-      <td className="border">
-        <pre>-15.00%</pre>
-      </td>
-      <td className="border">
-        <pre>-3.75%</pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>III</td>
-      <td className="border">
-        <pre>?</pre>
-      </td>
-      <td className="border">
-        <pre>-</pre>
-      </td>
-      <td className="border">
-        <pre>-</pre>
-      </td>
-      <td className="border">
-        <pre>-9.50%</pre>
-      </td>
-      <td className="border">
-        <pre>-2.38% <sup>1</sup></pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>II</td>
-      <td className="border">
-        <pre>?</pre>
-      </td>
-      <td className="border">
-        <pre>-</pre>
-      </td>
-      <td className="border">
-        <pre>-</pre>
-      </td>
-      <td className="border">
-        <pre>-6.00%</pre>
-      </td>
-      <td className="border">
-        <pre>-1.50%</pre>
-      </td>
-    </tr>
-
-    <tr className="border">
-      <td>I</td>
-      <td className="border">
-        <pre>?</pre>
-      </td>
-      <td className="border">
-        <pre>-</pre>
-      </td>
-      <td className="border">
-        <pre>-</pre>
-      </td>
-      <td className="border">
-        <pre>-2.50%</pre>
-      </td>
-      <td className="border">
-        <pre>-0.63% <sup>2</sup></pre>
-      </td>
-    </tr>
+      </Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>V</Data>
+      <Data><pre>±0.00%</pre></Data>
+      <Data><pre>-1.00%</pre></Data>
+      <Data><pre>-7.00%</pre></Data>
+      <Data><pre>-10.00%</pre></Data>
+      <Data><pre>-5.00%</pre></Data>
+    </Row>
+    <Row>
+      <Data>IV</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-3.00%</pre></Data>
+      <Data><pre>-15.00%</pre></Data>
+      <Data><pre>-3.75%</pre></Data>
+    </Row>
+    <Row>
+      <Data>III</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-9.50%</pre></Data>
+      <Data><pre>-2.38% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>II</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-6.00%</pre></Data>
+      <Data><pre>-1.50%</pre></Data>
+    </Row>
+    <Row>
+      <Data>I</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-2.50%</pre></Data>
+      <Data><pre>-0.63% <sup>2</sup></pre></Data>
+    </Row>
   </tbody>
-</table>
+</Table>
 
 <sup>1</sup> Decreased by 33.3% after 14 errors\
 <sup>2</sup> Decreased by 8.8% after 14 errors
