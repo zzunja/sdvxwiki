@@ -15,10 +15,6 @@ export default {
     title: 'Effect Radar',
     theme: { timestamp: false },
   },
-  'ex-score': {
-    title: 'EX-Score',
-    theme: { timestamp: false },
-  },
   'game-modes': {
     title: 'Game Modes',
     theme: { timestamp: false },

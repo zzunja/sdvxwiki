@@ -1,4 +1,4 @@
-export default{
+export default {
   songselect: {
     title: 'Song Select, Matching, In song, and Score Screen',
     theme: { timestamp: false },
@@ -7,8 +7,8 @@ export default{
     title: 'Options Menu',
     theme: { timestamp: false },
   },
-  playingscoring: {
-    title: 'Score, Grades, and Reading Score',
+  scoring: {
+    title: 'Scoring',
     theme: { timestamp: false },
   },
 }
