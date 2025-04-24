@@ -15,4 +15,8 @@ export default {
     title: 'Pattern Simplification and Cheese',
     theme: { timestamp: false },
   },
+  'tama-adventure-guide': {
+    title: 'Tama Adventure Guide',
+    theme: { timestamp: false },
+  },
 }
