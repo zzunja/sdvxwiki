@@ -1,3 +1,5 @@
+import { Table, Header, Row, Data } from "../../../components/Table";
+
 const IMG_BASE_PATH = "/compendium/dan-courses";
 
 const COURSES = {
@@ -611,57 +613,39 @@ const COURSES = {
   }
 }
 
-function TableHead({ text }) {
-  return <th className="x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:font-semibold x:dark:border-gray-600">
-    {text}
-  </th>
-}
-
-function TableRow({ children }) {
-  return <tr className="x:m-0 x:border-t x:border-gray-300 x:p-0 x:dark:border-gray-600 x:even:bg-gray-100 x:even:dark:bg-gray-600/20">
-    { children }
-  </tr>
-}
-
-function TableData({ children }) {
-  return <td className="x:m-0 x:border x:border-gray-300 x:px-4 x:py-2 x:dark:border-gray-600">
-    {children}
-  </td>
-}
-
 export function Course({ cat, name }) {
   if (!COURSES[cat] || !COURSES[cat][name]) {
     return;
   }
 
   return <div className="mt-4 mb-4">
-    <table className="w-full x:overflow-x-auto nextra-scrollbar x:not-first:mt-6 x:p-0">
+    <Table className="w-full text-center">
       <thead>
-        <TableRow>
-          <TableHead text="Song" />
-          <TableHead text="Difficulty" />
-          <TableHead text="Unlock Condition" />
-        </TableRow>
+        <Row>
+          <Header>Song</Header>
+          <Header>Difficulty</Header>
+          <Header>Unlock Condition</Header>
+        </Row>
       </thead>
       <tbody>
         {COURSES[cat][name].map(({ title, artist, diff, unlock}, i) => {
           const jacketName = `${name}_${(i + 1).toString().padStart(2, '0')}.jpg`
 
-          return (<TableRow key={`${cat}_${name} entry ${i + 1}`}>
-            <TableData>
-              <div className="flex flex-row items-center gap-x-4">
+          return (<Row key={`${cat}_${name} entry ${i + 1}`}>
+            <Data>
+              <div className="flex flex-row items-center gap-x-4 text-left">
                 <img className="w-16" src={`${IMG_BASE_PATH}/${cat}/${jacketName}`} alt={`${cat}_${jacketName}`} />
                 <div>
                   <p>{title}</p>
                   <p className="text-sm">{artist}</p>
                 </div>
               </div>
-            </TableData>
-            <TableData>{diff}</TableData>
-            <TableData>{unlock}</TableData>
-          </TableRow>);
+            </Data>
+            <Data>{diff}</Data>
+            <Data>{unlock}</Data>
+          </Row>);
         })}
       </tbody>
-    </table>
+    </Table>
   </div>;
 }
