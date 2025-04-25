@@ -17,6 +17,6 @@ export default {
   },
   'tama-adventure-guide': {
     title: 'Tama Adventure Guide',
-    theme: { timestamp: false },
+    theme: { timestamp: false},
   },
 }
