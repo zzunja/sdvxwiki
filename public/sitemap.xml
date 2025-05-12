@@ -4,161 +4,167 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://www.sdvx.org/en</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/setup</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/setup/arcade</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/setup/konasute</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/setup/simulators</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/controllers/purchasing-guide</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/controllers/parts</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/controllers/troubleshooting</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.sdvx.org/en/startingout/songselect</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <loc>https://www.sdvx.org/en/startingout/gameplay-screens</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/startingout/options</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.sdvx.org/en/startingout/playingscoring</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <loc>https://www.sdvx.org/en/startingout/scoring</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.sdvx.org/en/compendium/dan-courses</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.sdvx.org/en/compendium/gamemodes</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.sdvx.org/en/compendium/gauge-options</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.sdvx.org/en/compendium/unlocks</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.sdvx.org/en/compendium/volforce</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.sdvx.org/en/compendium/radar</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <loc>https://www.sdvx.org/en/compendium/basic-premium-courses</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/compendium/customization</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.sdvx.org/en/compendium/basicpremcourses</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <loc>https://www.sdvx.org/en/compendium/dan-courses</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.sdvx.org/en/compendium/insaneksm</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <loc>https://www.sdvx.org/en/compendium/effect-radar</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.sdvx.org/en/compendium/downtime</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <loc>https://www.sdvx.org/en/compendium/game-modes</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.sdvx.org/en/compendium/exscore</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <loc>https://www.sdvx.org/en/compendium/gauge-options</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/en/compendium/insane-ksm</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/en/compendium/maintenance-downtime</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/compendium/miscellaneous</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/compendium/timing-windows</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/en/compendium/unlock-systems</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/en/compendium/volforce</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/guides/hand-positioning</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/guides/ksm-controller-setup</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/en/guides/laser-simplifications</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/en/guides/pattern-simplification</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/terminology/termsandvocab</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/terminology/patterns</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/specifications/cabspecifications</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/specifications/valkandnemsys</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.sdvx.org/en/resources</loc>
-  <lastmod>2025-04-18T18:07:48+00:00</lastmod>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
