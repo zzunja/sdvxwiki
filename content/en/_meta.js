@@ -3,9 +3,13 @@ export default{
     title: 'Home',
     theme: { timestamp: false },
   },
+  'current-events':{
+    title: 'Current Events',
+    theme: { timestamp: false, toc: false},
+  },
   setup: {
     title: 'Set-up',
-    theme: { timestamp: false },
+    theme: { timestamp: false, toc: false},
   },
   controllers: {
     title: 'Controllers',
@@ -15,12 +19,12 @@ export default{
     title: 'Starting Out',
     theme: { timestamp: false },
   },
-  compendium: {
-    title: 'Compendium',
+    guides: {
+    title: 'Guides',
     theme: { timestamp: false },
   },
-  guides: {
-    title: 'Guides',
+  compendium: {
+    title: 'Compendium',
     theme: { timestamp: false },
   },
   terminology: {
@@ -33,7 +37,7 @@ export default{
   },
   resources: {
     title: 'Resources',
-    theme: { timestamp: false },
+    theme: { timestamp: false, toc: false},
   },
 
 }
