@@ -1,4 +1,6 @@
 # SDVX WIKI
+[sdvx.org](https://sdvx.org)
+
 This is a wiki page for the game Sound Voltex made mainly with [Nextra](https://nextra.site/). 
 ![2025-04-09 12_04_08-](https://github.com/user-attachments/assets/9fd5a93c-603c-4775-8138-af93bd65e2f1)
 
@@ -34,8 +36,13 @@ Setup with `pnpm` is very similar; simply substitute `npm` for `pnpm` above.
 ### The search feature doesn't work when I set up locally.
 The search function will not work and show an error if you don't build the website. This is because pagefind is only created when built. If you want the search function to work, simply run `npm build` and it will create the `_pagefind` directory in `/public/_pagefind/`. You can then start with `npm run dev`.
 
-### Why have a seperate Table of Contents?
-This is because on mobile the ToC on the right that is normally shown on PC doesn't show. For bigger articles to help people using mobile devices, there is a seperate ToC.
+### Nextra has a built in ToC, why not use that?
+This is because on mobile, the ToC on the right that is normally shown on PC doesn't show. For bigger articles to help people using mobile devices, there is a seperate ToC.
+
+Also, Nextra ToC is broken on some mobile devices.
 
 ### Can I reference/share this website?
 Please do! It was made to be used by everyone who is interested in SDVX.
+
+## Additional Notes
+sdvx.org does not allow discussion about distributing or using copyrighted game data. Information on this topic is not permitted on the wiki and will be automatically rejected if submitted.
