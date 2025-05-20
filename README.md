@@ -1,7 +1,7 @@
 # SDVX WIKI
-[sdvx.org](https://sdvx.org)
 
 This is a wiki page for the game Sound Voltex made mainly with [Nextra](https://nextra.site/). 
+[sdvx.org](https://sdvx.org)
 ![2025-04-09 12_04_08-](https://github.com/user-attachments/assets/9fd5a93c-603c-4775-8138-af93bd65e2f1)
 
 Every page on the wiki is a [markdown](https://en.wikipedia.org/wiki/Markdown) file. Tagged with .mdx, each page is essentially just a notepad with markdown features. For information on how to use markdown see [here](https://www.markdownguide.org/)
@@ -43,6 +43,9 @@ Also, Nextra ToC is broken on some mobile devices.
 
 ### Can I reference/share this website?
 Please do! It was made to be used by everyone who is interested in SDVX.
+
+## License
+Content licensed under CC BY-SA 4.0. Code licensed under the MIT License.
 
 ## Additional Notes
 sdvx.org does not allow discussion about distributing or using copyrighted game data. Information on this topic is not permitted on the wiki and will be automatically rejected if submitted.
