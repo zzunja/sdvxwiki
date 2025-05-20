@@ -1,6 +1,7 @@
 # SDVX WIKI
 
 This is a wiki page for the game Sound Voltex made mainly with [Nextra](https://nextra.site/). 
+
 [sdvx.org](https://sdvx.org)
 ![2025-04-09 12_04_08-](https://github.com/user-attachments/assets/9fd5a93c-603c-4775-8138-af93bd65e2f1)
 
