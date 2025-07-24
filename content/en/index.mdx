@@ -1,3 +1,5 @@
+import { Button } from "../../components/Button";
+
 # Welcome to sdvx.org, the Sound Voltex wiki/guide.
 
 This website was made to try and help people learn more about Sound Voltex
@@ -10,8 +12,21 @@ players or a refresher on various topics.
 On the left you can see all the topics that are on this website. There is also a
 search bar if you need to find something specific.
 
-If you are a complete beginner, it is recommended to start [here](/setup).
-
-If you are interested in contributing, you can head to the [GitHub](https://github.com/zzunja/sdvxwiki) to learn more.
-
 Feel free to share or reference this website anywhere you want.
+
+<div className="flex gap-4 flex-col md:gap-2 md:flex-row md:items-stretch mt-8">
+  <Button href="/setup" icon="rocket" theme="blue">
+    Complete beginners start here
+  </Button>
+  <Button href="/current-events" icon="clock" theme="sky">
+    SDVX Current Events
+  </Button>
+  <Button
+    href="https://github.com/zzunja/sdvxwiki"
+    icon="github"
+    theme="cyan"
+    external={true}
+  >
+    Learn more on our Github
+  </Button>
+</div>
