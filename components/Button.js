@@ -29,15 +29,15 @@ export function Button({
       className={`w-full flex flex-col gap-3 cursor-pointer py-3 px-4 rounded border
         ${
           theme === "blue" &&
-          "border-blue-200/30 bg-blue-900/30 text-blue-200 hover:bg-blue-800/30 transition-colors duration-200"
+          "border-blue-200/30 bg-blue-900/30 hover:bg-blue-800/30 transition-colors duration-200"
         }
         ${
           theme === "sky" &&
-          "border-sky-200/30 bg-sky-900/30 text-sky-200 hover:bg-sky-800/30 transition-colors duration-200"
+          "border-sky-200/30 bg-sky-900/30 hover:bg-sky-800/30 transition-colors duration-200"
         }
         ${
           theme === "cyan" &&
-          "border-cyan-200/30 bg-cyan-900/30 text-cyan-200 hover:bg-cyan-800/30 transition-colors duration-200"
+          "border-cyan-200/30 bg-cyan-900/30 hover:bg-cyan-800/30 transition-colors duration-200"
         }
         ${className}`}
       target={external ? "_blank" : undefined}
@@ -89,7 +89,7 @@ export function Clock() {
       fill="none" 
       stroke="currentColor" 
       strokeWidth="2" 
-      stroke-Linecap="round" 
+      strokeLinecap="round" 
       strokeLinejoin="round"
     >
       <path d="M12 6v6l4 2"/>
