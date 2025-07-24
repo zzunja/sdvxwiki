@@ -2,8 +2,9 @@ import Link from "next/link";
 
 /**
  *
- *  Button / Link component for internal or external navigation (currently only used on homepage).
+ *  Button / Link component for internal or external navigation.
  *  Icons are implemented as SVGs so no additional dependencies are needed.
+ *  SVGs can be found at lucide.dev.
  *
  *  @param {Object} props
  *  @param {string} props.href - The URL to navigate to when the button is clicked
@@ -11,7 +12,7 @@ import Link from "next/link";
  *  @param {string} [props.className] - Additional tailwind classes
  *  @param {"github" | "rocket"} [props.icon] - The icon displayed above the text
  *  @param {boolean} [props.external=false] - If true, the link will open in a new tab
- *  @param {"blue" | "green"} [props.theme='blue'] - Color of the button
+ *  @param {"blue" | "sky" | "cyan"} [props.theme='blue'] - Color of the button
  */
 
 export function Button({
@@ -31,14 +32,22 @@ export function Button({
           "border-blue-200/30 bg-blue-900/30 text-blue-200 hover:bg-blue-800/30 transition-colors duration-200"
         }
         ${
-          theme === "green" &&
-          "border-green-200/30 bg-green-900/30 text-green-200 hover:bg-green-800/30 transition-colors duration-200"
+          theme === "sky" &&
+          "border-sky-200/30 bg-sky-900/30 text-sky-200 hover:bg-sky-800/30 transition-colors duration-200"
+        }
+        ${
+          theme === "cyan" &&
+          "border-cyan-200/30 bg-cyan-900/30 text-cyan-200 hover:bg-cyan-800/30 transition-colors duration-200"
         }
         ${className}`}
       target={external ? "_blank" : undefined}
     >
       {icon === "github" && <Github />}
       {icon === "rocket" && <Rocket />}
+      {icon === "joystick" && <Joystick />}
+      {icon === "laptop" && <Laptop />}
+      {icon === "appwindow" && <AppWindow />}
+      {icon === "clock" && <Clock />}
       <div className="flex items-center font-medium">
         {children}
         {external && <ArrowUpRight />}
@@ -46,6 +55,88 @@ export function Button({
     </Link>
   );
 }
+
+// SVGs Exports
+
+export function Joystick() {
+  return(
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    >
+      <path d="M21 17a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2Z"/>
+      <path d="M6 15v-2"/>
+      <path d="M12 15V9"/>
+      <circle cx="12" cy="6" r="3"/>
+    </svg>
+  )
+}
+
+export function Clock() {
+  return(
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      stroke-Linecap="round" 
+      strokeLinejoin="round"
+    >
+      <path d="M12 6v6l4 2"/>
+      <circle cx="12" cy="12" r="10"/>
+    </svg>
+  )
+}
+
+export function Laptop() {
+  return(
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+    >
+      <rect width="18" height="12" x="3" y="4" rx="2" ry="2"/>
+      <line x1="2" x2="22" y1="20" y2="20"/>
+    </svg>
+  )
+}
+
+export function AppWindow() {
+  return(
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      width="24" 
+      height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+      >
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <path d="M10 4v4"/><path d="M2 8h20"/>
+        <path d="M6 4v4"/>
+    </svg>
+  )
+}
+
 
 export function Github() {
   return (

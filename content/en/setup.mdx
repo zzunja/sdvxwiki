@@ -1,3 +1,5 @@
+import { Button } from "../../components/Button";
+
 # Getting Started
 
 This guide assumes you already know what Sound Voltex is or are interested in
@@ -6,8 +8,7 @@ recommended to check out [Leviern's GDQ showcase of
 SDVX](https://www.youtube.com/watch?v=NePZzIFKW_s).
 
 To start, choose how you want to play. If you are new and have no clue, it is
-recommended to head to an arcade. More information about how to find an arcade
-with an SDVX cab can be found [here](/setup/arcade).
+recommended to head to an [arcade](/setup/arcade). 
 
 If you don't have access to an arcade, your next best option is [Konasute (コナ
 ステ)](/setup/konasute) which requires a monthly fee. Otherwise, there are
@@ -15,6 +16,14 @@ If you don't have access to an arcade, your next best option is [Konasute (コ�
 
 ## Table of Contents
 
-- [Arcade](/setup/arcade)
-- [Konasute コナステ](/setup/konasute)
-- [Simulators](/setup/simulators)
+<div className="flex gap-4 flex-col md:gap-2 md:flex-row md:items-stretch mt-8">
+  <Button href="/setup/arcade" icon="joystick" theme="cyan">
+    Arcade
+  </Button>
+  <Button href="/setup/konasute" icon="laptop" theme="sky">
+    Konasute/コナステ
+  </Button>
+  <Button href="/setup/simulators" icon="appwindow" theme="blue">
+    Simulators (USC/KSM)
+  </Button>
+</div>
