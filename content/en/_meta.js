@@ -35,6 +35,10 @@ export default{
     title: 'Specifications and Hardware',
     theme: { timestamp: false },
   },
+  charting: {
+    title: 'KSM and Charting',
+    theme: { timestamp: false },
+  },
   resources: {
     title: 'Resources',
     theme: { timestamp: false, toc: false},
