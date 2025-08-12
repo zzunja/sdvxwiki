@@ -1,6 +1,17 @@
 import {Image} from '../../../components/Media'
 
-# .ksh Files
+# .ksh Files 
+## Table of Contents
+- [.ksh Format](#ksh-format)
+- [Syntax of .ksh](#syntax-of-ksh)
+  - [Metadata](#metadata)
+  - [Chart and Notes](#chart-and-notes)
+    - [Laser](#laser)
+  - [Measures](#measures)
+  - [Slams and other small things](#slams-and-other-small-things)
+<br/>
+
+# .ksh Format
 `.ksh` files are essentially just text that any text editor can read. Upon opening a `.ksh` file, you will be greeted with something like this.
 ```jsx
 title=1001 -ESCAPE-
@@ -47,14 +58,14 @@ beat=4/4
 
 This is what the first part of the chart [1001 escape](https://ksm.dev/songs/1e1da020-5a8c-11f0-89fb-a5d5f06ca3c8) looks like. There is a lot of information here, so let's break it down.
 
-
+<br/>
 # Syntax of .ksh
 Let's first break down how `.ksh` files work. Every `.ksh` is broken off into sections. This is shown by a line that only has `--`. When there is a new line with `--`, that means that you are at the end of the old section and entering a new section. Excluding the first section, all sections can be different lengths and as long or short as they need to be (to a limit that most likely won't be reached). 
 
 In every `.ksh` file, the first section is always metadata about the chart.
 
 
-# Metadata
+## Metadata
 For right now, we will look at this section of the data
 ```jsx
 title=1001 -ESCAPE-
@@ -94,7 +105,7 @@ Most of this is all metadata that is set in the editor for each chart. While mos
 It's important to note that you can leave metadata blank, and it will be ok. For example, this chart does not have an illustrator attached, but is still fine.
 
 
-# Chart
+## Chart and Notes
 The next section of the file is where the chart starts. From here on out, most of the file will look the same. Let's start with the first section.
 
 ```jsx
@@ -136,7 +147,7 @@ So, for example, if a line looked like `1000|00`, there would be one note in the
 4. `0000|20`
 5. `1100|02`
 
-# Laser
+### Laser
 Before explaining lasers, I'd like to explain more about how the KSM editor works. Lasers have a set point where you can put them in the KSM editor. Meaning, you can't just place a laser anywhere you want. Each laser has to start or end at one of these "points". These points go from left to right and are represented by a character in the `.ksh` file. Starting at `0`, which is the farthest left point, it goes 0-9, then A-Z uppercase, and then a-o lowercase, with `o` being the farthest right.
 
 
@@ -192,7 +203,7 @@ Let's look at the right laser now. This starts at `o` or the farthest right and 
 Here is what the above example looks like in the editor.
 <Image src="/charting/kshfile/example2.png" width={150} height={300} alt=""/>
 
-# Measures
+### Measures
 Let's talk more about sections and the format of `.ksh`. Each `.ksh` file is divided into sections, divided by `--`. You may have noticed this in the original example. For now, let's look at this.
 
 
@@ -228,7 +239,7 @@ Here is what the above example looks like in the editor
 
 In the editor, each measure is separated by the yellow line. So, the bottom half is the 4-line part, and the top half is the 8-line part.
 
-# Slams and other small things
+## Slams and other small things
 There are a couple of other things to note. First slams. In KSM, a slam is a laser that goes from one point to the other as fast or faster than a 32nd of a second. So, for example:
 ```jsx
 ...
