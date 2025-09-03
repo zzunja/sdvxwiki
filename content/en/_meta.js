@@ -6,6 +6,7 @@ export default{
   'current-events':{
     title: 'Current Events',
     theme: { timestamp: false, toc: false},
+    display: 'hidden'
   },
   setup: {
     title: 'Set-up',
