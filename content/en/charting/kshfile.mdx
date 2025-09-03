@@ -115,7 +115,7 @@ beat=4/4
 --
 ```
 
-Here, we have two lines: `beat=4/4` and `0000|00|--|`. The first line is simple; it defines the current time signature. If the time signature were to change, there would be a `beat=` to signify this change. This goes the same with `t=` (BPM) as well. If there is a BPM change, it will be signified in the file like this. You can change the BPM and time signature as much as you want.
+Here, we have two lines: `beat=4/4` and `0000|00|--|`. The first line is simple; it defines the current [time signature](/terminology/termsandvocab#time-signatures). If the time signature were to change, there would be a `beat=` to signify this change. This goes the same with `t=` (BPM) as well. If there is a BPM change, it will be signified in the file like this. You can change the BPM and time signature as much as you want.
 
 
 The next time is what's placed in the chart. Here, each line has 3 sections divided by `|`. The first section, or the 4 numbers, represent the BT/White notes. The next section represents the FX/Orange notes. This only has 2 numbers. The last section is the laser. For now, let's look at the first 2 since they are very similar.
@@ -225,10 +225,10 @@ Let's talk more about sections and the format of `.ksh`. Each `.ksh` file is div
 --
 ```
 
-As you can see, this part has 2 sections. One with 4 lines and one with 8 lines. These sections represent measures. So, each section is a measure. In this example, I am showing 2 measures of this chart. We are also going to assume that this is using a standard 4/4 time signature, meaning every measure has 4 beats.
+As you can see, this part has 2 sections. One with 4 lines and one with 8 lines. These sections represent [measures](/terminology/termsandvocab#measures). So, each section is a measure. In this example, I am showing 2 measures of this chart. We are also going to assume that this is using a standard 4/4 time signature, meaning every measure has 4 beats.
 
 
-Each measure can have a different number of lines. How many lines it is is determined by whatever measure is the highest `x`-th note. For example, let's look at the first measure. There are 4 lines. This means that the highest `x`-th notes that are used in this measure are 4th notes (i.e, a note can be placed on the beat). Here, using the knowledge that we know, we can know that this measure has 4 notes in a staircase pattern, with each note being at the beginning of every beat.
+Each measure can have a different number of lines. How many lines it is is determined by whatever measure is the highest [`x`-th note](/terminology/termsandvocab#n-th-notes). For example, let's look at the first measure. There are 4 lines. This means that the highest `x`-th notes that are used in this measure are 4th notes (i.e, a note can be placed on the beat). Here, using the knowledge that we know, we can know that this measure has 4 notes in a staircase pattern, with each note being at the beginning of every beat.
 
 
 The next section has 8 lines instead of 4. This means that the highest `x`-th note is 8th notes (i.e, a note can be placed on the beat and halfway through the beat). Here, we see that there is also a staircase, but it is a bit faster since they are being played as 8th notes. 
