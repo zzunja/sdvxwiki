@@ -1,4 +1,5 @@
 import { Callout } from 'nextra/components'
+import { Image } from '../../../components/Media'
 
 # Game Modes
 ## Table of Contents
@@ -12,6 +13,7 @@ import { Callout } from 'nextra/components'
 - [Premium Time](#premium-time)
 - [Blaster Start](#blaster-start)
 - [Skill Analyzer](#skill-analyzer)
+- [Training Mode](#training-mode)
 
 
 ## Intro
@@ -178,5 +180,58 @@ There are different styles of frames you can obtain.
 Having a higher dan will increase your restriction level in normal light start.
 
 
+## Training Mode
+<Callout type="error" emoji="⚠️">
+This is a **[Konasute](/setup/konasute) exclusive** setting, requiring the purchase of the [Premium Pass](/setup/konasute#premium-pass)
+</Callout>
 
+Training mode is a mode exclusive to Konasute. This allows for extensive practicing of charts or sections of charts. In training mode you can
+- Select certain measures to practice
+- Change speed 
+- Remove Camera effects and lane speed changes
+- and more
+
+Training mode is not available on certain charts, mainly all license charts. This includes BMS, Touhou, and Vocaloid charts.
+
+To start, you must first own [Konasute](/setup/konasute) and the [Premium Pass](/setup/konasute#premium-pass). Open Konasute and select `Training` from the gamemode options.
+
+<Image src="/compendium/game-modes/trainingmodefirstscreen.webp" className="w-90"/>
+
+Upon starting a chart, you will get a screen like this. Here is the translation.
+
+The controls are
+- `FX-L` or `ESC`: Open options
+- `Knob` or Left and Right arrow keys: Scroll through the start. Holding `FX` will let you scroll faster
+- `BT-A`: Set starting measure for loop
+- `BT-D`: Set ending measure for loop
+- `FX-L + FX-R + START` or `.` (Numpad): for starting the loop. Hold to start at the starting measure
+
+At the top, it shows the current spread of hits and average ms difference between the spread. 
+
+On the left you can see your current S-Crit, Crit, Near, and Error.
+
+Below that is the current play speed, if repeat is on, and if autoplay is on. You can adjust the Play Speed by either using the options menu or using the Up and Down arrow keys.
+
+Opening the options menu will give you a screen like this.
+
+<Image src="/compendium/game-modes/trainingmodeoptions.webp" className="w-90"/>
+
+- `PLAY SPEED`: Current speed of the chart. Can go to .5 - 1.5
+- `REPEAT`: If it will automatically repeat upon reaching the ending measure
+- `AUTOPLAY`: Automatically plays the chart
+- `Fix Lane Speed`: Removes any lane speed changes caused by BPM changes
+- `Fix Camera/Lane`: Removes any camera/lane effects.
+- `Starting Gauge`: Sets where the gauge starts at
+
+Pressing `FX-L` again will close this menu.
+
+
+Upon pressing `FX-L + FX-R + START` or `.` the chart will start playing. Holding `FX-L + FX-R + START` or `.` will restart the chart. Pressing `FX-L + FX-R + START` or `.` just once will pause the chart.
+
+The same keyboard shortcuts also work here. `ESC` to open menu, Up and Down arrow keys to adjust play speed, Left and Right keys to move through the chart.
+
+
+When you have selected a section and play it, your score will be of that section. So, if you select 5 measures than PUC that measure, your score will be `10000000` or a PUC.
+
+Scores made will not be submitted or shown anywhere, even if started from the beginning of the chart. You will never go to the score results screen.
 
