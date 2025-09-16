@@ -1,8 +1,7 @@
 export default {
   guide: {
-    title: "guide",
+    title: 'Charting Guide',
     theme: { timestamp: false, toc: false},
-    display: 'hidden'
   },
   kshfile: {
     title: '.ksh file format',
