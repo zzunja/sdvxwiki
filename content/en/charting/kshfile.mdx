@@ -1,4 +1,5 @@
 import {Image} from '../../../components/Media'
+import { Callout } from "nextra/components"
 
 # .ksh Files 
 ## Table of Contents
@@ -12,6 +13,7 @@ import {Image} from '../../../components/Media'
 <br/>
 
 # .ksh Format
+<Callout>For more details and specifics, you can look at [masaka offical writeup](https://github.com/kshootmania/ksm-chart-format/blob/master/ksh_format.md) on the format</Callout>
 `.ksh` files are essentially just text that any text editor can read. Upon opening a `.ksh` file, you will be greeted with something like this.
 ```jsx
 title=1001 -ESCAPE-
@@ -279,3 +281,10 @@ The `laserrange` only applies for as long as the laser goes. Once the laser ends
 
 This doesn't only apply to `laserrange`. Camera effects, FX effects, BPM changes, and other things are done in the middle of the chart. If you understand the format well enough, you can use it to create certain effects that are too hard/impossible to create in the editor.
 
+
+### Footer
+There is also can be a footer in a chart. This is simply where custom effects and filters for FX are defined. These looks like:
+```jsx
+#define_fx
+#define_filter
+```
