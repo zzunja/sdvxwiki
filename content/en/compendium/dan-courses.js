@@ -528,6 +528,106 @@ const COURSES = {
         unlock: "Music Pack Vol.19"
       },
     ],
+    "04": [
+      {
+        title: "Lost Parliament",
+        artist: "Juggernaut.",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.19"
+      },
+      {
+        title: "Imperator",
+        artist: "Xe (αirlemoneX)",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.19"
+      },
+      {
+        title: "Sayonara Planet Wars",
+        artist: "黒魔",
+        diff: "EXH 18",
+        unlock: "None"
+      },
+    ],
+    "05": [
+      {
+        title: "BLISS",
+        artist: "ミハイル + K.key",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.21"
+      },
+      {
+        title: "Enter The Rave",
+        artist: "Tatsunoshin",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.21"
+      },
+      {
+        title: "MEGALOVANIA",
+        artist: "Toby Fox",
+        diff: "MXM 18",
+        unlock: "None"
+      },
+    ],
+    "06": [
+      {
+        title: "リュミレイラ",
+        artist: "後藤 feat. nayuta",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.21"
+      },
+      {
+        title: "XROSS THE XOUL",
+        artist: "BlackY vs. Yooh",
+        diff: "GRV 18",
+        unlock: "None"
+      },
+      {
+        title: "劇場版ムーニャポヨポヨスッポコニャーゴ~侵略だいず帝国！ドラマティック宇宙大戦争~",
+        artist: "打打だいず",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.21"
+      },
+    ],
+    "07": [
+      {
+        title: "ドリームエンド・サバイバー(Hidra-Xjeil Remix)",
+        artist: "Hidra-Xjeil",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.22"
+      },
+      {
+        title: "White Stream",
+        artist: "BEMANI Sound Team ”ZAQUVA”",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.22"
+      },
+      {
+        title: "=∴NOMADE∵OTION=",
+        artist: "qfeileadh + yuichi NAGAO",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.22"
+      },
+    ],
+    "08": [
+      {
+        title: "ミュージックプレイヤー （J-pop Remix）",
+        artist: "technoplanet feat. Risa Yuzuki",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.24"
+      },
+      {
+        title: "Imitated Visions",
+        artist: "荒谷サトル",
+        diff: "MXM 18",
+        unlock: "Music Pack vol.24"
+      },
+      {
+        title: "Doppelganger",
+        artist: "LeaF",
+        diff: "MXM 18",
+        unlock: "None"
+      },
+    ],
   },
   "eac_inf": {
     "02a": [
@@ -608,6 +708,86 @@ const COURSES = {
         artist: 'Silentroom as "少年R"',
         diff: "MXM 20",
         unlock: "Music Pack Vol.19"
+      },
+    ],
+    "04": [
+      {
+        title: "BLACK or WHITE?",
+        artist: "BlackYooh vs. siromaru",
+        diff: "GRV 19",
+        unlock: "None"
+      },
+      {
+        title: "Spectacular“V”Adventure!",
+        artist: "Enterskip",
+        diff: "MXM 19",
+        unlock: "Music Pack Vol.21"
+      },
+      {
+        title: "APØCALYPSE RAY",
+        artist: 'xi',
+        diff: "MXM 20",
+        unlock: "Music Pack Vol.21"
+      },
+    ],
+    "05": [
+      {
+        title: "Breakneck Pursuit",
+        artist: "Ashrount",
+        diff: "MXM 19",
+        unlock: "Music Pack Vol.21"
+      },
+      {
+        title: "and After the Merry BADEND",
+        artist: "polysha",
+        diff: "MXM 19",
+        unlock: "Music Pack Vol.21"
+      },
+      {
+        title: "HeaveИ's Rain",
+        artist: 'モリモリあつし',
+        diff: "MXM 20",
+        unlock: "Music Pack Vol.21"
+      },
+    ],
+    "06": [
+      {
+        title: "OVEЯ+TUЯE",
+        artist: "kanone VS nora2r",
+        diff: "MXM 19",
+        unlock: "Music Pack Vol.22"
+      },
+      {
+        title: "perditus†paradisus",
+        artist: "iconoclasm",
+        diff: "MXM 19",
+        unlock: "Music Pack Vol.22"
+      },
+      {
+        title: "Λkasha",
+        artist: 'BlackY feat. Risa Yuzuki',
+        diff: "MXM 20",
+        unlock: "Music Pack Vol.22"
+      },
+    ],
+    "07": [
+      {
+        title: "Xinca",
+        artist: " 隣の庭は青い(庭師+Aoi)",
+        diff: "MXM 19",
+        unlock: "Music Pack Vol.24"
+      },
+      {
+        title: "Bad Elixir",
+        artist: "xi",
+        diff: "MXM 19",
+        unlock: "None"
+      },
+      {
+        title: "Don't you dare play GOD",
+        artist: 'technoplanet feat. Tamako Kinoshita',
+        diff: "MXM 20",
+        unlock: "Music Pack Vol.24"
       },
     ],
   }
