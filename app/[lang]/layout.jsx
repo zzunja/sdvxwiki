@@ -1,5 +1,5 @@
 import { Footer, Layout, LocaleSwitch, Navbar } from 'nextra-theme-docs'
-import { Head } from 'nextra/components'
+import { Head, Banner } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import 'nextra-theme-docs/style.css'
 import './globals.css'
@@ -74,6 +74,11 @@ export default async function RootLayout({ children, params }) {
             {locale: 'en', name: 'English'},
           ]}
         >
+          <Banner storageKey="2.0-release">
+            <a href="https://nextra.site" target="_blank">
+              🎉 Happy Nabla release! 🎉 The wiki is still in the process of being updated with new information so some information/photos may be out of date.
+            </a>
+          </Banner>
           {children}
         </Layout>
       </body>
