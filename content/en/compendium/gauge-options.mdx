@@ -10,11 +10,11 @@ import { Callout } from 'nextra/components'
 - [MAXXIVE RATE](#maxxive-rate)
 - [PERMISSIVE RATE](#permissive-rate)
 - [DIVINE RATE](#divine-rate)
-- [HEXATIVE RATE](#hexative-rate)
 - [VARIATIVE RATE](#variative-rate)
 - [Alternative Rate System (ARS)](#alternative-rate-system-ars)
 - [Gain/Loss Breakdown](#gainloss-breakdown)
   - [VARIATIVE RATE](#variative-rate-breakdown)
+- [HEXATIVE RATE](#hexative-rate)
 
 ## Intro
 This page is for information about the various gauge types available in SDVX. The 2 main gauge types are EFFECTIVE RATE and EXCESSIVE RATE which are available during normal play. The other gauge types are only available in certain gamemodes or unlock systems.
@@ -44,21 +44,15 @@ Starts at 100% and requires completing the chart without reaching 0% to clear. N
 
 Only available during [SKILL ANALYZER](/compendium/game-modes#skill-analyzer).
 
-## HEXATIVE RATE
-Starts at 100% and requires completing the chart without reaching 0% to clear. Difficulty of this gauge can be adjusted by selecting a [HEXA RANK](/compendium/unlock-systems#hexadiver) which ranges from 1-5. Rank 3 is only slightly easier than EXCESSIVE RATE with 4 and 5 being more difficult.
-
-Only available during [HEXA DIVER](/compendium/unlock-systems#hexadiver).
-
 ## VARIATIVE RATE
 Starts at 100% and requires completing the chart without reaching 0% to clear. Starts at `RANK V` and goes down in difficulty with Ranks IV-I. There is no recovery on `RANK V`.
 
 Only accessible during [Variant Gate](/compendium/unlock-systems#variant-gate).
 
 ## Alternative Rate System (ARS)
-An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE (under certain conditions). Prevents failing out from a chart by switching to the next lowest gauge upon reaching 0%. The gauge amount given in this scenario will be the same as if you played with the gauge that is swapped to from the start. The gauge order is as follows:
+An option used in combination with MAXXIVE RATE, EXCESSIVE RATE. Prevents failing out from a chart by switching to the next lowest gauge upon reaching 0%. The gauge amount given in this scenario will be the same as if you played with the gauge that is swapped to from the start. The gauge order is as follows:
 
 - MAXXIVE RATE -> EXCESSIVE RATE -> EFFECTIVE RATE
-- HEXATIVE RATE -> EFFECTIVE RATE
 
 ## Gain/Loss Breakdown
 
@@ -66,7 +60,6 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
 - Hold and laser objects have ticks which are judged individually
 - **T**: Unknown but fixed value regardless of chart
 - **n**: Varies per chart: `(total chain amount) + (# of chips and slams) * 3`
-- **H**: [HEXA RANK](/compendium/unlock-systems#hexadiver)
 
 <Table className="w-full mt-4 mb-4 text-center align-middle">
   <thead>
@@ -108,10 +101,10 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
   <tbody>
     <Row>
       <Data>EFFECTIVE</Data>
-      <Data rowSpan="6"><pre>+4T/n</pre></Data>
-      <Data rowSpan="6"><pre>+T/n</pre></Data>
-      <Data rowSpan="4"><pre>+4T/n</pre></Data>
-      <Data rowSpan="4"><pre>+T/n</pre></Data>
+      <Data rowSpan="5"><pre>+4T/n</pre></Data>
+      <Data rowSpan="5"><pre>+T/n</pre></Data>
+      <Data rowSpan="3"><pre>+4T/n</pre></Data>
+      <Data rowSpan="3"><pre>+T/n</pre></Data>
       <Data rowSpan="3"><pre>+4T/3n</pre></Data>
       <Data><pre>-2.00%</pre></Data>
       <Data><pre>-0.50%</pre></Data>
@@ -126,15 +119,7 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
       <Data><pre>-3.40% <sup>1</sup></pre></Data>
       <Data><pre>-0.85% <sup>1</sup></pre></Data>
     </Row>
-    <Row>
-      <Data>HEXATIVE</Data>
-      <Data className="leading-6">
-        <div><pre>H = 5: -1.00%</pre></div>
-        <div><pre>H ≤ 4: +4T/3n</pre></div>
-      </Data>
-      <Data><pre>-2.00% × H <sup>1</sup></pre></Data>
-      <Data><pre>-0.50% × H <sup>1</sup></pre></Data>
-    </Row>
+
     <Row>
       <Data>DIVINE</Data>
       <Data><pre>±0.00%</pre></Data>
@@ -232,3 +217,65 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE or HEXATIVE RATE
 <sup>2</sup> Decreased by 8.8% after 14 errors
 
 [Source](https://bemaniwiki.com/?SOUND+VOLTEX+EXCEED+GEAR/VARIANT+GATE#VARIATIVE_RATE)
+
+## HEXATIVE RATE
+<Callout type="warning">These systems do not exist in Nabla</Callout>
+
+Starts at 100% and requires completing the chart without reaching 0% to clear. Difficulty of this gauge can be adjusted by selecting a [HEXA RANK](/compendium/unlock-systems#hexadiver) which ranges from 1-5. Rank 3 is only slightly easier than EXCESSIVE RATE with 4 and 5 being more difficult.
+
+Only available during [HEXA DIVER](/compendium/unlock-systems#hexadiver).
+- **H**: [HEXA RANK](/compendium/unlock-systems#hexadiver)
+
+<Table className="w-full mt-4 mb-4 text-center align-middle">
+  <thead>
+    <Row>
+      <Header rowSpan="2">Gauge Type</Header>
+      <Header colSpan="2">S-CRITICAL</Header>
+      <Header colSpan="2">CRITICAL</Header>
+      <Header >NEAR</Header>
+      <Header colSpan="2">ERROR</Header>
+    </Row>
+    <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+      <Data>Chips</Data>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>HEXATIVE</Data>
+      <Data rowSpan="1"><pre>+4T/n</pre></Data>
+      <Data rowSpan="1"><pre>+T/n</pre></Data>
+      <Data rowSpan="1"><pre>+4T/n</pre></Data>
+      <Data rowSpan="1"><pre>+T/n</pre></Data>
+      <Data className="leading-6">
+        <div><pre>H = 5: -1.00%</pre></div>
+        <div><pre>H ≤ 4: +4T/3n</pre></div>
+      </Data>
+      <Data><pre>-2.00% × H <sup>1</sup></pre></Data>
+      <Data><pre>-0.50% × H <sup>1</sup></pre></Data>
+    </Row>
+  </tbody>
+</Table>

@@ -3,11 +3,6 @@ export default{
     title: 'Home',
     theme: { timestamp: false },
   },
-  'current-events':{
-    title: 'Current Events',
-    theme: { timestamp: false, toc: false},
-    display: 'hidden'
-  },
   setup: {
     title: 'Set-up',
     theme: { timestamp: false, toc: false},

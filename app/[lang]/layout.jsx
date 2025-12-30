@@ -52,8 +52,9 @@ export default async function RootLayout({ children, params }) {
     >
       <Head
         color={{
-          hue: 210,
-          saturation: 55
+          hue: 88,
+          saturation: 85,
+          lightness: 60
         }}
       >
       </Head>
