@@ -75,11 +75,6 @@ export default async function RootLayout({ children, params }) {
             {locale: 'en', name: 'English'},
           ]}
         >
-          <Banner storageKey="2.0-release">
-            <a href="https://nextra.site" target="_blank">
-              🎉 Happy Nabla release! 🎉 The wiki is still in the process of being updated with new information so some information/photos may be out of date.
-            </a>
-          </Banner>
           {children}
         </Layout>
       </body>
