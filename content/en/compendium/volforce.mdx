@@ -40,10 +40,11 @@ This equation is technically wrong. Voltex doesn't multiply it by .001, it just 
 <div className="flex justify-center mt-2">
 |PUC|UC|Maxxive Rate Clear|Excessive Rate Clear|Effective rate clear|Crash|
 |:--:|:--:|:--:|:--:|:--:|:--:|
-|1.10|1.05|1.04|1.02|1.00|0.50|
+|1.10|1.06\*|1.04|1.02|1.00|0.50|
 </div>
+\* For Konasute, UC is worth 1.05
 
-For example, if I got a score of `9,923,042 (S)` on a `level 18` with an `Excessive Rate clear`, this is how I would calculate my Volforce.
+For example, if I got a score of `9,923,042 (S)` on a `level 18.3` with an `Excessive Rate clear`, this is how I would calculate my Volforce.
 <div className="text-center mt-3">
  ```
 (Level*(Score / 10,000,000)*(Grade Coefficient)*(Clear Coefficient)*20)*.001
@@ -51,17 +52,17 @@ For example, if I got a score of `9,923,042 (S)` on a `level 18` with an `Excess
 </div>
 <div className="mt-3">
 ```
-Level             = 18
+Level             = 18.3
 Score             = 9,923,042
 Grade Coefficient = S = 1.05
 Clear Coefficient = Excessive Rate = 1.02
  
-  (18*(9,923,042 / 10,000,000)*(1.05)*(1.02)*20)*.001 
-                  = 0.38259280735
+  (18.3*(9,923,042 / 10,000,000)*(1.05)*(1.02)*20)*.001 
+                  = 0.388969354141
 
 ```
 </div>
-This gives me `0.38259280735`. Since voltex rounds down from the 3rd digit, we can just cut everything after the 3rd digit and get our answer `.382`.
+This gives me `0.388969354141`. Since Voltex rounds down from the 3rd digit, we can just cut everything after the 3rd digit and get our answer `.388`.
 <br/>
 
 After it calculates this number, it then compares it to your best 50. If this
@@ -72,7 +73,7 @@ best 50. If that was `.370`, it would replace that Volforce with this one and I
 will gain 
 <div className="flex justify-center mt-3">
 ```
-.382 - .370 = 0.012 Volforce 
+.388 - .370 = 0.018 Volforce 
 ```
 </div>
 
@@ -87,23 +88,23 @@ Voltex would replace the Excesssive clear with a UC but keep my higher score of 
 With the equation it would look like this
 <div className="mt-3">
 ```
-Level             = 18
+Level             = 18.3
 Score             = 9,923,042 # This keeps the best score
 Grade Coefficient = S = 1.05
-Clear Coefficient = UC = 1.05 # This has changed 
+Clear Coefficient = UC = 1.06 # This has changed 
  
-  (18*(9,923,042 / 10,000,000)*(1.05)*(1.05)*20)*.001 
-                  = 0.39384553698
+  (18.3*(9,923,042 / 10,000,000)*(1.05)*(1.06)*20)*.001 
+                  = 0.404223054304
 
 ```
 </div>
-This would equal `.393` VF.
+This would equal `.404` VF.
 
-Note the `1.02` has changed to a `1.05`, but it used the better score that I
+Note the `1.02` has changed to a `1.06`, but it used the better score that I
 originally had. This means I would gain 
 <div className="flex justify-center mt-3">
 ```
-.393 - .382  = .011 Volforce
+.404 - .388  = .016 Volforce
 ```
 </div>
 for increasing my Excessive to a UC on this chart, even if my UC was a worse score.
@@ -133,13 +134,30 @@ to reach past `24.000 VF`.
 
 The two people that are currently max VF are [Mini](https://www.youtube.com/@minisdvx7740) and [Jakads](https://www.youtube.com/@Jakads_realkk). They have PUC every 20 to come out. 
 
+## Volforce Potential Folder
+Upon playing Nabla for the first time, A new folder called "Volforce Potential" may appear.
+<Image src="/compendium/volforce/volforcepotential.png"/>
+
+The Volforce Potential folder contains scores that could be in your best 50 but currently is not in it. Since Nabla doesn't recalculate your Volforce upon starting, there may be charts that could be in your best 50 that you haven't recalculated.
+
+For example, lets say you had a best 50 filled with 19 S Excessive Clears in your best 50 before exceed gear. In Exceed Gear, this was worth `.402` VF. That means, you need a score worth over `.402` VF to gain VF. 
+
+Upon starting Nabla, since decimal system is now in place, an 18.6 UC is now worth `.409`. This would be bigger then `.402` VF and could be in your Best 50 if you played it again and let the game recalculate it. So if you had a UC on a 18.6 song, this would appear in your best 50.
 
 ## Notes
 Volforce is calculated on the machine. Meaning, if you set a play that raises
-your volforce on a new song, and than play a cab that doesn't have that song,
+your Volforce on a new song, and than play a cab that doesn't have that song,
 your Volforce will be calculate as if you hadn't played that song.
 
-Essentially, when carding in, all scores are sent over and seen on the cab. It than calculates your volforce using what it has.
+Essentially, when carding in, all scores are sent over and seen on the cab. It than calculates your Volforce using what it has.
 
+Volforce for your score is calculate upon getting the score. After every chart, the game will calculate the Volforce for that and put it with the score. This is why in Nabla, you have to recalculate your Volforce as Nabla doesn't recalculate each scores Volforce again, only what it knows.
+
+### Nabla
+In Nabla, your highest Volforce isn't calculated upon login. If you transfer your data from Exceed Gear to nabla, it will not recalculate your VF and your VF may be lower then what it could be. Since Nabla added Decimals, Some of your scores may be worth more VF then how it was in Exceed Gear. You will have to recalculate these scores by playing them one time. It doesn't matter what score you get, just need to play it once to recalculate.
+
+For example, if you had a S on an 18 in your Best 50 in Exceed Gear, then in Nabla, that 18 became a 18.4, you can replay that 18 to get the Volforce for it being increased by .4.
+
+Nabla also buffed UC multiplier by .01
 
 
