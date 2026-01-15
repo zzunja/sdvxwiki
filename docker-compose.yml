@@ -1,0 +1,19 @@
+services:
+  sdvxwiki:
+    image: sdvxwiki
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"      
+      CHOKIDAR_INTERVAL: 10             
+      WATCHPACK_POLLING: "true"
+      WATCHPACK_POLL_INTERVAL: 10      
+    volumes:
+      - .:/sdvxwiki
+      - sdvxwiki_node_modules:/sdvxwiki/node_modules
+    stdin_open: true
+    tty: true
+
+volumes:
+  sdvxwiki_node_modules:
