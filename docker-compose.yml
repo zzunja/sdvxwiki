@@ -12,8 +12,10 @@ services:
     volumes:
       - .:/sdvxwiki
       - sdvxwiki_node_modules:/sdvxwiki/node_modules
+      - pagefind_cache:/sdvxwiki/public/_pagefind
     stdin_open: true
     tty: true
 
 volumes:
   sdvxwiki_node_modules:
+  pagefind_cache:

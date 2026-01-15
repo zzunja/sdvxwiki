@@ -16,6 +16,9 @@ RUN npm install
 # Copy the rest of the source code
 COPY . .
 
+# Build the website 
+RUN npm run build
+
 # Expose Next.js default development port
 EXPOSE 3000
 
