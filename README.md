@@ -15,7 +15,7 @@ If you see an error or want to add something, feel free to send a pull request o
 
 ## Development 
 
-To set up locally:
+#### To set up locally:
 
 1. Install [git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en/download). Select `v22.14.0 (LTS)` for your operating system using `fnm` with `npm`
 2. Run `git clone https://github.com/zzunja/sdvxwiki.git` to download the project to a local folder.
@@ -32,6 +32,22 @@ For re-running:
 2. Run `npm run dev`
 
 Setup with `pnpm` is very similar; simply substitute `npm` for `pnpm` above.
+
+
+#### To set up using docker:
+1. Install [git](https://git-scm.com/downloads) and [Docker](https://www.docker.com/get-started/)
+2. Run `git clone https://github.com/zzunja/sdvxwiki.git`
+3. Change current directory with `cd sdvxwiki`
+4. Build the Docker image `docker build --no-cache -t sdvxwiki .`
+5. Create the container `docker compose up --abort-on-container-exit && docker compose down -v`
+5. Go to [http://localhost:3000](http://localhost:3000) in your web browser of choice.
+   
+You can now change what you want to the website and see it update live.
+
+For re-running:
+1. Pull any changes with `git pull`
+2. Rebuild the docker image `docker build --no-cache -t sdvxwiki .`
+5. Create a new container `docker compose up --abort-on-container-exit && docker compose down -v`
 
 ## FAQ
 ### The search feature doesn't work when I set up locally.
