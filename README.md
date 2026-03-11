@@ -36,18 +36,20 @@ Setup with `pnpm` is very similar; simply substitute `npm` for `pnpm` above.
 
 #### To set up using docker:
 1. Install [git](https://git-scm.com/downloads) and [Docker](https://www.docker.com/get-started/)
-2. Run `git clone https://github.com/zzunja/sdvxwiki.git`
+2. Run `git clone https://github.com/zzunja/sdvxwiki.git` to download the project to a local folder.
 3. Change current directory with `cd sdvxwiki`
 4. Build the Docker image `docker build --no-cache -t sdvxwiki .`
-5. Create the container `docker compose up --abort-on-container-exit && docker compose down -v`
-5. Go to [http://localhost:3000](http://localhost:3000) in your web browser of choice.
+5. Create the container `docker compose run --rm --service-ports sdvxwiki`
+6. Go to [http://localhost:3000](http://localhost:3000) in your web browser of choice.
    
 You can now change what you want to the website and see it update live.
 
 For re-running:
 1. Pull any changes with `git pull`
 2. Rebuild the docker image `docker build --no-cache -t sdvxwiki .`
-5. Create a new container `docker compose up --abort-on-container-exit && docker compose down -v`
+3. Create a new container `docker compose run --rm --service-ports sdvxwiki`
+
+Setup with `podman` is very similar; simply substitute `docker` for `podman` above.
 
 ## FAQ
 ### The search feature doesn't work when I set up locally.
