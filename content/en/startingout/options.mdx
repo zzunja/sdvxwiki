@@ -69,17 +69,16 @@ dependent on a lot of different factors.
 ### Offset
 <Image src="/startingout/options/Offset.png"/>
 
-There are 2 offsets. Draw (`判定タイミング(描画)`) and Judge (`判定タイミング(音)`). Draw is visual offset and Judge is audio offset.
-Draw moves the judgment line either up (+) or down (-). It doesn't do this
-visually, the judgment line will still look like it's in the same spot but it has moved. Here is a visualization of Draw Offset
+There are 2 offsets. Draw (`判定タイミング(描画)`) and Judge (`判定タイミング(音)`). Judge moves both the judgement line **and** audio while Draw **only** affects the judgement line. While this might seem complicated, you can think of it as Judge affects both visually when to hit the note and the time to hit the note, while Draw only affects visually when to hit the note. 
+
+So, if you were to want only audio offset of `+8ms` with your judgement line at default, you would adjust your Judge to `+8ms` and your Draw `-8ms`.
 
 <Image src="/startingout/options/draw-example.png" className="w-100"/>
 
 The line at the top would represent where the judgment line would be heading to
-for `+` draw. The bottom line would represent where the judgment line would be
-heading to for `-` draw. The line in between is the default judgment line.
+for `+` offset. The bottom line would represent where the judgment line would be
+heading to for `-` offset. The line in between is the default judgment line.
 
-Judge adds an offset to the music.
 
 You can press the following numpad button to change the offset:
 - `8`: Judge +
@@ -88,6 +87,8 @@ You can press the following numpad button to change the offset:
 - `3`: Draw -
 
 If you are on a Valkyrie Cabinet, pressing the offset number on the touchscreen will change it to ms. Pressing `6` will also do this on Konasute.
+
+For a visual representation of what each does, you can use [this video](https://www.youtube.com/watch?v=hp-0K3FR7FU).
 
 #### Theory
 
