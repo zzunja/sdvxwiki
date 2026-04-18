@@ -1,5 +1,5 @@
 
-export { middleware } from 'nextra/locales'
+export { proxy } from 'nextra/locales'
 
 export const config = {
   matcher: [
