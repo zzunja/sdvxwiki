@@ -20,6 +20,9 @@ export const metadata = {
     'Sound Voltex Guide',
     'SDVX gameplay',
     'SDVX mechanics',
+    'Sound Voltex Wiki',
+    'Nabla',
+    'Sound Voltex Nabla',
   ],
 }
 export const dynamicParams = false
