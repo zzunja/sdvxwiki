@@ -1,10 +1,10 @@
 export default{
   index: {
-    title: 'Home',
+    title: '首頁',
     theme: { timestamp: false },
   },
   setup: {
-    title: 'Set-up',
+    title: '遊玩之前',
     theme: { timestamp: false, toc: false},
   },
   controllers: {

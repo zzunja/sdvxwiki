@@ -1,292 +1,245 @@
 import { Callout } from "nextra/components";
 
-# Setting up Konasute
+<a id="setting-up-konasute"></a>
+# 家用版 - Konasute
 
-## Table of Contents
-- [Intro](#intro)
-  - [Pros](#pros)
-  - [Cons](#cons)
-- [Setup](#setup)
-  - [Creating a Konami account](#creating-a-konami-account)
-  - [Downloading Konasute](#downloading-konasute)
-    - [Installing the game](#installing-the-game)
-    - [Avoiding Rate Limit](#avoiding-rate-limit) 
-  - [Options](#options)
-- [Purchasing Konasute and Packs](#purchasing-konasute-and-packs)
-  - [Purchasing Basic Course](#purchasing-basic-course)
-  - [Song packs](#song-packs)
-  - [Premium Pass](#premium-pass)
-- [Linking Arcade and Konasute Data](#linking-arcade-and-konasute-data)
-  - [Setup](#setup-1)
-- [References](#references)
+<a id="table-of-contents"></a>
+## 目錄
+- [簡介](#intro)
+  - [優點](#pros)
+  - [缺點](#cons)
+- [設定](#setup)
+  - [建立 Konami 帳號](#creating-a-konami-account)
+  - [下載 Konasute](#downloading-konasute)
+    - [安裝遊戲](#installing-the-game)
+    - [避免速率限制](#avoiding-rate-limit)
+  - [選項](#options)
+- [購買 Konasute 與歌曲包](#purchasing-konasute-and-packs)
+  - [購買 Basic Course](#purchasing-basic-course)
+  - [歌曲包](#song-packs)
+- [Premium Pass（高級通行證）](#premium-pass)
+- [連結街機與 Konasute 資料](#linking-arcade-and-konasute-data)
+  - [設定](#setup-1)
+- [參考資料](#references)
 
-## Intro
+<a id="intro"></a>
+## 簡介
 
 <Callout>
-  There is a really good guide
-  [here](https://voltexes.com/setting-up-sound-voltex-konasute-exceed-gear/)
-  that talks about setting up Konasute. While some small things has changed, this
-  takes a lot of information from there.
+  這裡有一份很不錯的指南：[連結](https://voltexes.com/setting-up-sound-voltex-konasute-exceed-gear/)。它有詳細介紹 Konasute 的設定。雖然有些細節已經改變，但本頁仍大量參考了那份指南。
 </Callout>
 <Callout>
-  For setting up e-amusement, there is a good website
-  [here](https://3icecream.com/tutorial/check-eamuse) that helps you set it up.
-  While it is for DDR, most of it still applies here.
+  關於 e-amusement 的設定，也可以參考這個網站：[連結](https://3icecream.com/tutorial/check-eamuse)。雖然它是以 DDR 為例，但大部分內容在這裡同樣適用。
 </Callout>
-This section will cover setting up Konasute which is the official PC port of
-SDVX made by Konami.
+這一節會介紹 Konasute 的設定，也就是 Konami 製作的 SDVX 官方 PC 版。
 
-#### Pros
+<a id="pros"></a>
+#### 優點
 
-- Uses the same engine as the arcade version
-- 120Hz support
-- Infinite quick retries
-- Quick crash out
-- Ability to see scores from arcade
-- Ability to use [Training Mode](/compendium/game-modes#training-mode)
+- 與街機版使用相同引擎
+- 支援 120Hz
+- 可無限快速重試
+- 可快速 crash out
+- 能查看街機分數
+- 可使用 [訓練模式](/compendium/game-modes#training-mode)
 
-#### Cons
+<a id="cons"></a>
+#### 缺點
 
-- Monthly subscription fee of 1,628 yen
-- Expensive song packs (although there are occasional 50% off sales)
-- Daily scheduled maintenance that prevents you from launching the game during that time
-- [Training Mode](/compendium/game-modes#training-mode) and [Maxxive Rate](/compendium/gauge-options#maxxive-rate) is locked behind an additional paywall of 500 yen per month.
+- 每月訂閱費 1,628 日圓
+- 歌曲包很貴，雖然偶爾會有 5 折特賣
+- 每日固定維護時間會無法啟動遊戲
+- [訓練模式](/compendium/game-modes#training-mode) 和 [Maxxive Rate](/compendium/gauge-options#maxxive-rate) 需另外支付每月 500 日圓
 
-If you want to know what songs are included with the basic course or each song
-pack, you can check [here](https://sdvx-song-info.web.app/).
-Every couple months, Konami will add new songs to the basic course.
+如果你想知道 Basic Course 或各歌曲包包含哪些歌曲，可以查 [這裡](https://sdvx-song-info.web.app/)。
+Konami 每隔幾個月就會把新歌曲加入 Basic Course。
 
-## Setup
-### Creating a Konami account
+<a id="setup"></a>
+## 設定
+<a id="creating-a-konami-account"></a>
+### 建立 Konami 帳號
 
-The first thing is setting up your Konami account. This account will let you
-customize your games, buy Konasute and song packs, and store all your data among
-other things.
+第一步是先設定你的 Konami 帳號。這個帳號可以讓你自訂遊戲、購買 Konasute 與歌曲包，並保存你的所有資料等。
 
-If you already have a e-Amusement/Konami account, you can skip this step as long as your account region is set to Japan.
+如果你已經有 e-Amusement/Konami 帳號，只要帳號地區設成日本，就可以直接跳過這一步。
 
-First, you want to head to the [My Konami](https://my.konami.net/en_US) website
-and click register. Fill out all your information and make sure to select Japan
-for your region otherwise you will be locked out of purchasing Konasute. You can
-also change your region [here](https://my1.konami.net/ja/personal-info) if you
-accidentally didn't select Japan.
+首先前往 [My Konami](https://my.konami.net/en_US) 網站並點選註冊。填好所有資料時，務必把地區選成日本，否則你會無法購買 Konasute。如果你不小心沒選日本，也可以在 [這裡](https://my1.konami.net/ja/personal-info) 修改地區。
 
-### Downloading Konasute
+<a id="downloading-konasute"></a>
+### 下載 Konasute
 
-Head to the [Konasute website](https://p.eagate.573.jp/game/eacsdvx/vi/index.html) and click install in the top right. If you are not logged in, you won't see this button and instead it will be replaced by a login button.
-Click `同意してインストーラーをダウンロード` to download the launcher.
+前往 [Konasute 網站](https://p.eagate.573.jp/game/eacsdvx/vi/index.html)，然後點右上角的安裝。如果你尚未登入，就不會看到這個按鈕，而會改成登入按鈕。
+點選 `同意してインストーラーをダウンロード` 以下載啟動器。
 
 <div className="flex items-center justify-center">
    <img src="/konasute/launcher.png" width="600" />
 </div>
 
-This will start the download for the launcher. Upon opening the launcher, it will all be in Japanese. To go through it
+這樣就會開始下載啟動器。打開啟動器後，介面會全部是日文。操作方式如下：
 
-- Click `次へ` (Next)
-- Accept the terms with the checkbox and click `次へ` (Next)
-- Change the game data install or leave it as default and click `次へ` (Next)
-- Click `インストール` (Install)
-- Click `終了` (Finish)
+- 點 `次へ`（下一步）
+- 勾選同意條款後點 `次へ`（下一步）
+- 修改遊戲資料安裝位置，或維持預設後點 `次へ`（下一步）
+- 點 `インストール`（安裝）
+- 點 `終了`（完成）
 
-You can now open the game. Using [this
-site](https://p.eagate.573.jp/game/konasteapp/API/login/login.html?game_id=sdvx) you can open the launcher. You have to navigate to this website to open the game, so it might be a good idea to keep it bookmarked.
+現在你已經可以開遊戲了。你可以透過 [這個網站](https://p.eagate.573.jp/game/konasteapp/API/login/login.html?game_id=sdvx) 開啟啟動器。因為你必須先進到這個網站才能啟動遊戲，所以很適合把它加入書籤。
 
-By default the game installs to `C:/Games/SOUND VOLTEX EXCEED GEAR`.
+遊戲預設安裝路徑是 `C:/Games/SOUND VOLTEX EXCEED GEAR`。
 
-The launcher will take you to a website in which you will have to login. This
-acts as a launcher for the game. You have to go through this website to start up
-Konasute. You can bookmark this website as a way to launch the game.
-Pressing `ゲーム起動` will start the game.
+啟動器會把你帶到另一個網站，並要求你登入。這個網站本身就是遊戲啟動器。你必須經由這個網站才能啟動 Konasute，因此也可以把它加入書籤作為開遊戲的方法。
+按下 `ゲーム起動` 就會啟動遊戲。
 
 <Callout emoji="⚠️" type="warning">
-  Konasute and Konami services are always down between 5 AM to 7 AM JST every
-  day. You will be unable to launch the game or access the website during these
-  times. Read more [here](/compendium/maintenance-downtime)
+  Konasute 和 Konami 服務每天都會在日本時間凌晨 5 點到 7 點維護停機。這段時間內你無法啟動遊戲或進入網站。更多資訊請見 [這裡](/compendium/maintenance-downtime)。
 </Callout>
 <br />
 <div className="flex items-center justify-center">
    <img src="/konasute/starting1.png" width="600" />
 </div>
 
-If you just recently opened the website then closed it, it might think you are
-opening it twice and show you a different screen. Press `起動処理を続ける` to
-continue.
+如果你才剛開過網站又立刻關掉，它可能會誤以為你重複開啟，並顯示另一個畫面。按下 `起動処理を続ける` 繼續即可。
 
 
-#### Installing the Game
-Once opening the launcher you may get a notification that you need to
-download the game. Click `OK` and you will go to another menu in which you press
-`UPDATE` to start downloading the game. If this doesn't pop up, you can also
-press the button in the top right called `ファイル確認` to get to the menu.
+<a id="installing-the-game"></a>
+#### 安裝遊戲
+打開啟動器後，你可能會看到需要下載遊戲的通知。點 `OK` 之後會進入另一個選單，再按 `UPDATE` 開始下載遊戲。如果沒有跳出通知，也可以按右上角的 `ファイル確認` 按鈕進入同樣的選單。
 
-Konami rate limits how fast you can install Konasute, so this could take a long time. If you would like to avoid this, head to [Avoiding Rate Limit](#avoiding-rate-limit)
+Konami 會限制 Konasute 的下載速度，所以安裝可能會花很久。如果你想避免這個問題，請看 [避免速率限制](#avoiding-rate-limit)。
 
-When it is done another menu will open showing you it's done. If you check the
-box in the middle and press close, the launcher will reopen. You can now start
-the game with `GAME START` but you might want to configure some options first.
+下載完成後會再開一個畫面告訴你已完成。如果你勾選中間的方框再按關閉，啟動器就會重新打開。現在你可以按 `GAME START` 啟動遊戲，但你可能會想先設定一些選項。
 
-#### Avoiding Rate Limit
-Konami rate limits download speed which can make the install for the game much longer. If you would like to avoid most of this rate limit, follow the instructions below.
+<a id="avoiding-rate-limit"></a>
+#### 避免速率限制
+Konami 會限制下載速度，這會讓遊戲安裝時間大幅拉長。如果你想避開大部分限制，請照下面步驟操作。
 
-Download this file [here](https://drive.google.com/file/d/1o6R0uw0bxywoX3EJ9Y5ZUj-xTdY5qeKT/view) and move it to `C:/Games/`. This is the base version of the game that is the same as if you downloaded it from the installer. Replace any files if needed.
+先下載 [這個檔案](https://drive.google.com/file/d/1o6R0uw0bxywoX3EJ9Y5ZUj-xTdY5qeKT/view)，然後把它移到 `C:/Games/`。這是遊戲的基礎版本，內容和從安裝器下載的一樣。如果需要，請覆蓋任何同名檔案。
 
-### Options
+<a id="options"></a>
+### 選項
 
-Pressing the `SETTING` button will open the options for the game. All of it is in Japanese. Here is a translation of everything.
+按下 `SETTING` 按鈕會打開遊戲選項。全部都是日文，下面是完整翻譯。
 
 <br />
 <div className="flex items-center justify-center">
   <img src="/konasute/settings1.png" width="500" />
 </div>
 
-- **Windows options, from top to bottom:**
-  - Fullscreen `フルスクリーン`
-  - Fit window (borderless windowed) `フイツトウインドウ`
-  - Windowed `ウインドウ`
+- **Windows 選項，由上到下：**
+  - 全螢幕 `フルスクリーン`
+  - 適合視窗（無邊框視窗） `フイツトウインドウ`
+  - 視窗模式 `ウインドウ`
 
-- **Monitor:** Which monitor you want the game to launch on
+- **螢幕：** 遊戲要開在哪個螢幕上
 
-- **Game rotation:** Choose which way you want the game rotated. If
-  you want to play portrait and you set your monitor portrait in Windows settings,
-  keep it on the top left option. Otherwise, select the bottom right.
+- **遊戲旋轉：** 選擇遊戲的旋轉方向。如果你想直向遊玩，且已在 Windows 設定中把螢幕設為直向，就維持左上角選項。否則選右下角。
 
-- **Resolution:** Resolution of the game. Note that the game will automatically scale to 1080p no matter what you choose.
+- **解析度：** 遊戲解析度。要注意的是，不管你選什麼，遊戲都會自動縮放到 1080p。
 
-- **Frame rate:** 120hz and 60hz.
+- **幀率：** 120Hz 或 60Hz。
 
 <br />
 <div className="flex items-center justify-center">
   <img src="/konasute/settings2.png" width="500" />
 </div>
 
-If you are using a FauceTwo or YuanCon, you should not touch this. It should
-work by default assuming you are in eAC mode (check your controller's manual to
-see how to change modes). If it doesn't press the `デフォルトに戻す` button.
+如果你使用的是 FauceTwo 或 YuanCon，這裡不要亂動。只要你在 eAC 模式下，它應該就能直接正常運作（詳細切換方式請看控制器說明書）。如果不行，就按 `デフォルトに戻す` 按鈕。
 
 <br />
 <div className="flex items-center justify-center">
    <img src="/konasute/settings3.png" width="500" />
 </div>
 
-These are the audio settings.
+這些是音訊設定。
 
-- **DirectSound:** Highest latency. Doesn't take over audio driver.
-- **WASAPI Exclusive:** Lower latency than WASAPI shared, about the same as ASIO. Takes over audio driver.
-- **WASAPI Shared:** Higher latency than WASAPI exclusive. Doesn't take over audio driver
-- **ASIO:** The best option if available, can provide very low latency while still allowing other apps to play audio.
+- **DirectSound：** 延遲最高，不會接管音訊驅動。
+- **WASAPI Exclusive：** 比 WASAPI Shared 低延遲，和 ASIO 大致相近，會接管音訊驅動。
+- **WASAPI Shared：** 比 WASAPI Exclusive 延遲更高，不會接管音訊驅動。
+- **ASIO：** 如果可用，這通常是最好的選擇，能提供非常低的延遲，同時仍可讓其他程式播放音訊。
 
-An important thing to note is to make sure your audio devices are set to 44.1khz sample rate.
+要特別注意的是，請確認你的音訊裝置取樣率設為 44.1 kHz。
 
-[Here](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Voicemeeter/How%20to%20setup%20Voicemeeter%20for%20Rhythm%20Games.md)
-is a good guide for setting up ASIO and getting the best latency. If you don't
-care too much, WASAPI shared should be good enough.
+[這裡](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Voicemeeter/How%20to%20setup%20Voicemeeter%20for%20Rhythm%20Games.md) 有一份設定 ASIO 和取得最佳延遲的好指南。如果你沒那麼在意，WASAPI Shared 通常就夠用了。
 
-If you find your game running poorly or seem to have delay,
-[here](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Sound%20Voltex%20コナステ/Sound%20Voltex%20Optimisations.md) 
-is a Konasute optimisations guide.
+如果你覺得遊戲跑得不順或有延遲，[這裡](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Sound%20Voltex%20コナステ/Sound%20Voltex%20Optimisations.md) 有一份 Konasute 優化指南。
 
-Once you have your settings how you want them, you can press `保存` (save) and `終
-了` (finish). Finally, you can press `GAME START` to finally launch the game.
+設定都調整好後，按 `保存`（儲存）和 `終了`（完成）。最後按 `GAME START` 就能正式啟動遊戲。
 
-Since you haven't purchased the basic course, you will only have 5 songs available and
-are limited to one play before it kicks you out. Use this to test if
-the game works for you. If you encounter any problems, try to resolve them before purchasing the basic course.
+由於你還沒有購買 Basic Course，所以目前只能玩 5 首歌，而且打一局就會被踢出。你可以先用這個狀態測試遊戲是否正常。如果遇到問題，請先解決再購買 Basic Course。
 
-## Purchasing Konasute and Packs
+<a id="purchasing-konasute-and-packs"></a>
+## 購買 Konasute 與歌曲包
 
-### Purchasing Basic Course
+<a id="purchasing-basic-course"></a>
+### 購買 Basic Course
 
-To play Konasute, you have to subscribe to the basic course of the game. This
-comes with around 688 default songs with more being added occasionally. You can check out the default song list [here](https://sdvx-song-info.web.app/).
+要玩 Konasute，你必須訂閱遊戲的 Basic Course。它會附帶大約 688 首預設歌曲，之後也會偶爾新增。你可以在 [這裡](https://sdvx-song-info.web.app/) 查看預設歌曲清單。
 
-The recommended way to purchase the basic course is to use Paseli. You can also link it
-to a credit card if you want, but it's recommended to just use Paseli since you
-have to use Paseli to purchase song packs. You also get points back.
+建議使用 Paseli 購買 Basic Course。你也可以綁定信用卡，但還是建議直接用 Paseli，因為購買歌曲包也需要用 Paseli，而且還能拿回點數回饋。
 
-Head to the [Paseli website](https://paseli.konami.net/charge/top.html) and log
-in. Click the green button in the center named `ここをクリックしてチャージ方法を
-選択` and press `クレジットカード` for credit card. You can use a debit card
-with the credit card option.
+前往 [Paseli 網站](https://paseli.konami.net/charge/top.html) 並登入。點選中央綠色按鈕 `ここをクリックしてチャージ方法を選択`，再選 `クレジットカード` 作為充值方式。即使是簽帳金融卡，也可以使用信用卡選項。
 
 <div className="flex items-center justify-center">
   ![paseli](/konasute/paseli.png)
 </div>
 
-After, you have to add the Paseli to your account. You need a total of 1,628 円
-(roughly $10.52 USD at the time of writing). Select how much Paseli you want and click
-the red checkmark and button at the bottom should turn green. Press it to finish
-your payment.
+接著你要把 Paseli 加到你的帳號中。你需要總共 1,628 日圓（撰文當下約為 10.52 美元）。選好要儲值的 Paseli 金額後，點紅色勾勾，下面的按鈕就會變成綠色。按下去完成付款。
 
-Everything will be in Japanese, so here is a rough translation of everything that you need to fill out. Press `確認` to finish.
+畫面會全部是日文，所以這裡提供一份大略翻譯。最後按 `確認` 完成。
 
 <div className="flex items-center justify-center">
   ![paseli2](/konasute/paseli2.png)
 </div>
 
-After that you can now purchase the basic course for Konasute. Go
-[here](https://p.eagate.573.jp/payment/p/course_detail.html?course=eac_sdvx_basic)
-and click `了承する` at the bottom. Check Paseli and click `次へ`. This should
-start your subscription and you should now be able to play Konasute. Simply boot
-up the game how you did before and play!
+之後你就可以購買 Konasute 的 Basic Course 了。前往 [這裡](https://p.eagate.573.jp/payment/p/course_detail.html?course=eac_sdvx_basic)，然後點底部的 `了承する`。選擇 Paseli 並按 `次へ`。這樣就會開始訂閱，你現在應該已經能玩 Konasute 了。照之前的方法啟動遊戲即可。
 
-### Song packs
+<a id="song-packs"></a>
+### 歌曲包
 
-To get more songs, and specifically level 20 charts, you will need to buy song packs. These
-can be pretty expensive and it is recommended to wait for a sale where most of
-the packs go 50% off. These sales can happen anytime and usually last for about
-a week or so. To know when a sale happens, you can either follow:
+如果你想取得更多歌曲，尤其是 20 級譜面，就需要購買歌曲包。這些通常不便宜，建議等特價時再入手，大部分歌曲包常常會打 5 折。特價可能隨時出現，通常會持續約一週左右。要知道何時特價，可以追蹤：
 
-- [@SOUNDVOLTEX573](https://twitter.com/SOUNDVOLTEX573) - Official Sound Voltex account where all announcements are made. Twitter/X
-- [@sdvx_english](https://twitter.com/sdvx_english) - All the announcements but in english. Twitter/X
-- [SDVX Community Discord](https://discord.com/invite/sdvx) - Announcements get posted here with a channel you can follow to track the Twitter account.
+- [@SOUNDVOLTEX573](https://twitter.com/SOUNDVOLTEX573) - 官方 Sound Voltex 帳號，所有公告都會在這裡發布。Twitter/X
+- [@sdvx_english](https://twitter.com/sdvx_english) - 所有公告的英文版。Twitter/X
+- [SDVX Community Discord](https://discord.com/invite/sdvx) - 公告會貼在這裡，也有頻道可以追蹤 Twitter 帳號。
 
-To see and purchase all the song packs head to [the e-amusement
-shop](https://p.eagate.573.jp/gate/p/eamusement/coop/mall.html?fromlist&dt=%2F%E3%82%B3%E3%83%8A%E3%82%B9%E3%83%86%20SOUND%20VOLTEX%2F%E6%A5%BD%E6%9B%B2%E3%83%91%E3%83%83%E3%82%AF%2F).
-Here is where you can see and purchase all the song packs. To know what's in
-each pack, you can head to [this website](https://sdvx-song-info.web.app/)
-and filter by song pack in the `Unlock Condition (Konasute)` dropdown, or head to
-[here](https://p.eagate.573.jp/game/eacsdvx/vi/music/index.html) and sort with
-the `プレー条件` drop down.
+如果要查看與購買所有歌曲包，請前往 [e-amusement 商店](https://p.eagate.573.jp/gate/p/eamusement/coop/mall.html?fromlist&dt=%2F%E3%82%B3%E3%83%8A%E3%82%B9%E3%83%86%20SOUND%20VOLTEX%2F%E6%A5%BD%E6%9B%B2%E3%83%91%E3%83%83%E3%82%AF%2F)。你可以在這裡查看並購買所有歌曲包。若想知道每包有哪些內容，可以到 [這個網站](https://sdvx-song-info.web.app/) 並在 `Unlock Condition (Konasute)` 下拉選單中依歌曲包篩選，或者前往 [這裡](https://p.eagate.573.jp/game/eacsdvx/vi/music/index.html) 並用 `プレー条件` 下拉選單排序。
 
-### Premium Pass 
-To access [Training Mode](/compendium/game-modes#training-mode) and [Maxxive Rate](/compendium/gauge-options#maxxive-rate) you need the Premium Pass. The Premium Pass is either 500 yen a month or 2500 yen or 180 days. The 180 days will save you a month, or 500 yen. You can buy this pass [here](https://p.eagate.573.jp/gate/p/eamusement/coop/mall.html?category=41&fromlist) (konasute category) or [here](https://p.eagate.573.jp/gate/p/eamusement/coop/mall.html?fromlist&dt=%2F%E3%82%B3%E3%83%8A%E3%82%B9%E3%83%86%20SOUND%20VOLTEX%2F%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%E3%83%91%E3%82%B9%2F) (direct link to konasute premium pass subcategory).
+<a id="premium-pass"></a>
+### Premium Pass（高級通行證）
+若要使用 [訓練模式](/compendium/game-modes#training-mode) 和 [Maxxive Rate](/compendium/gauge-options#maxxive-rate)，你需要 Premium Pass。Premium Pass 的價格是每月 500 日圓，或 180 天 2,500 日圓。買 180 天會比按月購買省下一個月，也就是 500 日圓。你可以在 [這裡](https://p.eagate.573.jp/gate/p/eamusement/coop/mall.html?category=41&fromlist)（konasute 分類）或 [這裡](https://p.eagate.573.jp/gate/p/eamusement/coop/mall.html?fromlist&dt=%2F%E3%82%B3%E3%83%8A%E3%82%B9%E3%83%86%20SOUND%20VOLTEX%2F%E3%83%97%E3%83%AC%E3%83%9F%E3%82%A2%E3%83%A0%E3%83%91%E3%82%B9%2F)（konasute premium pass 子分類直連）購買。
 
-Buying this pass allows for you to use
+購買這個通行證後，你可以使用
 - [Maxxive Rate](/compendium/gauge-options#maxxive-rate)
-- [Training Mode](/compendium/game-modes#training-mode)
-- 3x Blaster Gauge Boost
-- Blaster Gate songs will unlock after one play/attempt. Notably, this bypasses the normally enforced 20 play/pity unlock mechanic.
+- [訓練模式](/compendium/game-modes#training-mode)
+- 3 倍 Blaster Gauge Boost
+- Blaster Gate 歌曲在遊玩/嘗試一次後就會解鎖。這會繞過原本通常需要 20 次遊玩或保底才會解鎖的機制。
 
 
-## Linking Arcade and Konasute Data
-You can link your arcade and Konasute data together. This allows you to see your
-scores from from Konasute at the Arcade and visa versa. Scores set on one
-are not counted for Volforce on the other, as Arcade and Konasute Volforce is
-separate. 
+<a id="linking-arcade-and-konasute-data"></a>
+## 連結街機與 Konasute 資料
+你可以把街機與 Konasute 資料連在一起。這樣你就能在街機上看到 Konasute 的分數，反之亦然。兩邊設定的分數不會互相計入 Volforce，因為街機與 Konasute 的 Volforce 是分開計算的。
 
-If you didn't setup a e-Amusement account and had one already with a card linked, your scores should be linked as long as you used your already existing e-Amusement account to setup Konasute.
+如果你沒有另外建立 e-Amusement 帳號，而是直接使用原本已經綁卡的帳號來設定 Konasute，那麼你的分數應該會自動連在一起。
 
-Konami doesn't allow you to combine two account together. For example, if you already have arcade data and setup Konasute on a separate account, you will not be able to combine/link these two.
+Konami 不允許你把兩個帳號合併。例如，如果你已經有街機資料，卻用另一個帳號設定 Konasute，那這兩者就無法合併或連結。
 
-### Setup
-First, get a fresh e-Amusement card, make sure it has no data on it meaning you have not swiped it on an Sound Voltex arcade machine.
+<a id="setup-1"></a>
+### 設定
+首先，準備一張全新的 e-Amusement 卡，確保卡片上沒有資料，也就是你還沒有在任何 Sound Voltex 街機上刷過它。
 
-Head to [this website](https://p.eagate.573.jp/gate/eapass/menu.html) and press
-`この e-amusement pass のデータを引き継ぐ`. Type the 16 numbers on the back of
-your card into this to move your Konasute data on to the card. 
+前往 [這個網站](https://p.eagate.573.jp/gate/eapass/menu.html)，然後按下 `この e-amusement pass のデータを引き継ぐ`。接著輸入卡片背面的 16 位數字，就能把你的 Konasute 資料轉移到這張卡上。
 
-If you get a `7171 にすでにデータが入っているため、引き継ぎ先として利用することができません。` error, this means the card you have already has data and cannot
-be transfered. This is most likely because you login and create an account on
-arcade. You will most likely have to get another blank e-Amusement card or have serperate accounts.
+如果你看到 `7171 にすでにデータが入っているため、引き継ぎ先として利用することができません。` 這個錯誤，代表這張卡片已經有資料，不能作為轉移目標。這通常表示你曾經登入並在街機上建立帳號。你大概需要另一張全新的 e-Amusement 卡，或者乾脆分開使用不同帳號。
 
-Now, your new e-Amusement card should be linked to your Konasute data. 
+現在你的新 e-Amusement 卡應該已經和 Konasute 資料連結好了。
 
-## References
+<a id="references"></a>
+## 參考資料
 
-- [voltexes.com guide](https://voltexes.com/setting-up-sound-voltex-konasute-exceed-gear/)
-- [3icecream.com e-amusement set-up](https://3icecream.com/tutorial/check-eamuse)
-- [Offical Sound Voltex Twitter/X](https://twitter.com/SOUNDVOLTEX573)
-- [SDVX song info web app by Karen/cosmopolitan093 on discord](https://sdvx-song-info.web.app/)
-- [Offical Konasute Website](https://p.eagate.573.jp/game/eacsdvx/vi/index.html)
-- [Voicemeeter Set-up by Sakif](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Voicemeeter/How%20to%20setup%20Voicemeeter%20for%20Rhythm%20Games.md)
-- [Konasute Optimisations by Sakif](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Sound%20Voltex%20コナステ/Sound%20Voltex%20Optimisations.md)
+- [voltexes.com 指南](https://voltexes.com/setting-up-sound-voltex-konasute-exceed-gear/)
+- [3icecream.com e-amusement 設定](https://3icecream.com/tutorial/check-eamuse)
+- [Sound Voltex 官方 Twitter/X](https://twitter.com/SOUNDVOLTEX573)
+- [Karen/cosmopolitan093 在 Discord 製作的 SDVX 歌曲資訊網頁應用](https://sdvx-song-info.web.app/)
+- [官方 Konasute 網站](https://p.eagate.573.jp/game/eacsdvx/vi/index.html)
+- [Sakif 的 Voicemeeter 設定](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Voicemeeter/How%20to%20setup%20Voicemeeter%20for%20Rhythm%20Games.md)
+- [Sakif 的 Konasute 優化](https://github.com/SakifX9/Rhythm-Game-Optimisations/blob/main/Sound%20Voltex%20コナステ/Sound%20Voltex%20Optimisations.md)

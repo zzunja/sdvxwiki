@@ -1,14 +1,14 @@
 export default{
   arcade: {
-    title: 'Arcade',
+    title: '街機',
     theme: { timestamp: false, toc: false},
   },
   konasute: {
-    title: 'Konasute コナステ',
+    title: '家用版 - Konasute',
     theme: { timestamp: false, toc: false},
   },
   simulators: {
-    title: 'Simulators',
+    title: '模擬器',
     theme: { timestamp: false, toc: false},
   },
 }
