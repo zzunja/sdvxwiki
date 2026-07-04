@@ -76,6 +76,7 @@ export default async function RootLayout({ children, params }) {
           editLink={null}
           i18n={[
             {locale: 'en', name: 'English'},
+            {locale: 'zh-tw', name: '繁體中文'},
           ]}
         >
           {children}

@@ -1,0 +1,103 @@
+import { Callout } from 'nextra/components'
+
+# Controller Troubleshooting
+
+## Table of Contents
+- [Check the manual!](#check-the-manual)
+- [Replacing buttons, springs and switches](#replacing-buttons-springs-and-switches)
+  - [Replacing switches](#replacing-switches)
+  - [Replacing buttons and springs](#replacing-buttons-and-springs)
+- [My buttons are stuck!](#my-buttons-are-stuck)
+- [My switches are double clicking!](#my-switches-are-double-clicking)
+- [Bonus: Adding stickers to your buttons!](#bonus-adding-stickers-to-your-buttons)
+- [(Yuancon) My knobs feel too loose/tight!](#yuancon-my-knobs-feel-too-loosetight)
+- [(Yuancon) My USB-C port malfunctioned!](#yuancon-my-usb-c-port-malfunctioned)
+- [Known software-related issues](#known-software-related-issues)
+- [Resources](#resources)
+
+<Callout>
+This guide assumes you are talking about an arcade-size controller that allows customization.
+</Callout>
+
+## Check the manual!
+
+The manual that came with your freshly arrived controller should contain most of the important information you need, like changing modes or hardware specifications. This guide is dedicated to troubleshooting and explaining procedures not explicitly mentioned in the manual.
+
+If you lost the manual, here are some of the common controllers manuals:
+- [Faucetwo+](https://www.gamo2.com/en/download/F2_plus_manual_en_mobile_20240415.pdf)
+- [Faucetwo](https://www.gamo2.com/en/download/Faucetwo_manual_en_20210106.pdf)
+- [YuanCon SDVX 12 and SDVX LITE 3 Information](https://rhythm-cons.wiki/commercial/yuancon/yuancon/)
+- [YuanCon SDVX LITE 3](https://www.youtube.com/watch?v=hen4Sb7_LIA)
+
+## Replacing buttons, springs and switches
+
+[Video guide by Sungblox](https://www.youtube.com/watch?v=tisDHA2fXfI)  
+[Video guide by Tokaku](https://www.youtube.com/watch?v=d3ThWetHoFM)
+
+Replacing your buttons, springs, and switches all require you to *open the back plate of your controller*. Most controllers have their back plate screwed to the body, so you will need a screwdriver to remove it. For the Faucetwo controller, the back plate is attached using magnets, so you can simply pinch and pull it out.
+
+<img src="/controllers/interior.jpg" className="mt-3" alt="Interior" />
+
+The interior of the controller might look sophisticated, but it simply consists of a PCB (the board in the middle) connected to 7 buttons and 2 encoders using 4-pin JST wires. More accurately, the PCB is connected to the **microswitches** of the buttons rather than the buttons themselves.
+
+### Replacing switches
+
+While still having the wires attached, you can pull out the switches from the buttons by twisting them anticlockwise (to the left).
+
+For Omron switches, there should be 4 wires connecting to 4 heads — 2 for the switches and 2 for the LEDs. The heads of the LED holders are at the sides of the switches, and the other two heads belong to the switches themselves. Pull out the two wires connecting to these two heads (you don't have to remember which wire belongs to which head). You will also need to separate the LED holders from the switches — [Video link](https://youtu.be/tisDHA2fXfI?t=185). At this point, the switches should be detached and you can swap them with your desired ones. Attaching them back by reconnecting the wires, the LED holders, and putting them back into the buttons.
+
+For OBSA-LHS1F switches, they should be connected using 4-pin JST connectors, so you can simply pull the connectors out, swap the switches, and put them back, as long as you remember the corresponding pins.
+
+<Callout type="warning">
+If your controllers didn't come with dedicated wires for OBSA-LHS1F switches, you will need to learn which pins are connected to which between the switches and the PCB [here](https://rhythm-cons.wiki/getting-started/connector-pinouts/#button-pins-2). After that, purchase a set of 4-pin female to female JST wires and rearrange the pins. Messing up this part can cause a short circuit.
+</Callout>
+
+### Replacing buttons and springs
+
+This section requires you to again pull the switches out, but you can keep the wires attached. The buttons are generally secured using threaded rings, so you need to unscrew them to remove and replace the buttons.
+
+[Replacing springs is harder to explain using words, so here's a video instruction](https://youtu.be/tisDHA2fXfI?t=73).
+
+## My buttons are stuck!
+
+[Video guide by Yuancon](https://www.youtube.com/watch?v=Aft059Kdayo)
+
+Usually, buttons are stuck due to misplaced springs or dust preventing the buttons from moving smoothly. Either way, you will need to remove the white parts of the buttons (similar to the step where you remove the springs) and reposition the springs, as well as remove any dust or residue by cleaning with a cloth.
+
+## My switches are double clicking!
+
+There is a chance that your switches are malfunctioning and should be replaced. Often though, it is just dust or gunk. Before getting new switches try pulling them out, detaching the wires, and firmly cleaning the head using a cloth!
+
+I also want to point out that OBSA-LHS1F switches seem to be more prone to double clicking than Omron ones.
+
+## Bonus: Adding stickers to your buttons!
+
+[Video guide by Yuancon](https://www.youtube.com/watch?v=tuDYFqFrKyM)
+
+Since the "stickers" can be secured by the buttons themselves, you can design your own sets and print them out using normal paper. For most buttons in the market, the dimensions are as follows:
+
+1. BT: 44×44 mm to 45×45 mm
+2. FX: 44×22 mm to 45×22 mm
+3. Start: 22×22 mm to 23×23 mm
+
+## (Yuancon) My knobs feel too loose/tight!
+
+[Video guide by Yuancon](https://youtu.be/hen4Sb7_LIA?t=181)
+
+You will need a hex screwdriver, which should have come with your controller. If not, you can easily find one in any electronics shop.
+
+Unscrew the nuts on the side of the knobs to remove them from the encoders. You should see a rubber ring wrapped around the stud, gripping the plate to create friction. Slightly raise it to loosen and press it to tighten.
+
+## (Yuancon) My USB-C port malfunctioned!
+
+It's recommended to just contact the manufacturers for replacement parts. If not, you can get a generic USB-C daughterboard which supports 4-pin JST connection.
+
+## Known software-related issues
+
+**Faucetwo USC Compatibility:** Any Keyboard Modes were reported to have input issues, therefore using mainly eAcloud Mode (BT-A Mode) is encouraged for Konasute, USC, and KSM use. If issues arise, you can also use HID Joystick mode (BT-B mode)
+
+**Yuancon Konasute Compatibility:** As of writing, only BT-C Mode is encouraged.
+
+## Resources
+
+[Rhythm game controller wiki](https://rhythm-cons.wiki/). Contains useful and comprehensive controller information.

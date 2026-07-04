@@ -1,0 +1,155 @@
+import { Image } from "../../../components/Media";
+import { Table, Row, Header, Data } from "../../../components/Table";
+
+# Scoring
+
+## Table of Contents
+- [Normal Score](#normal-score)
+  - [Grades](#grades)
+- [EX SCORE](#ex-score)
+- [How should I be scoring?](#how-should-i-be-scoring)
+
+
+## Normal Score
+
+The default scoring system that ranges from `0 - 10,000,000` for every chart. It is occasionally referred to as "money" score and affects both your [VOLFORCE](/compendium/volforce) and [PLAYER RADAR](/compendium/effect-radar). Score is calculated by the formula:
+
+<div className="text-center mt-4">
+```
+10,000,000 * [ (# CRITICAL + [# NEAR * 0.5]) / TOTAL ]
+```
+</div>
+
+- [S-CRITICAL](/compendium/timing-windows#arcade-konasute) hits are counted as CRITICAL hits
+- `TOTAL` refers to the total number of `CHIP`, `LONG` and `TSUMAMI` objects
+
+### Example Calculation
+
+<Image src="/startingout/scoring/normal_score.png" alt="normal score" />
+
+```
+# CRITICAL = # S-CRITICAL + # CRITICAL
+           = (829 + 451 + 305) + (149)
+           = 1734
+    
+# NEAR = 11
+    
+TOTAL = # CHIP + # LONG + # TSUMAMI
+      = (829 + 149 + 11) + (451) + (305)
+      = 1745
+    
+10,000,000 * [ (1734 + [11 * 0.5]) / 1745 ] = 9,968,481
+```
+
+### Grades
+
+Grades are assigned according to the following score ranges:
+
+<div className="flex justify-center mt-4">
+| Grade | Score |
+|:-:|:-:|
+| S | <pre>9,900,000 - 10,000,000</pre> |
+| AAA+ | <pre>9,800,000 - 9,899,999</pre> |
+| AAA | <pre>9,700,000 - 9,799,999</pre> |
+| AA+ | <pre>9,500,000 - 9,699,999</pre> |
+| AA | <pre>9,300,000 - 9,499,999</pre> |
+| A+ | <pre>9,000,000 - 9,299,999</pre> |
+| A | <pre>8,700,000 - 8,999,999</pre> |
+| B | <pre>7,500,000 - 8,699,999</pre> |
+| C | <pre>6,500,000 - 7,499,999</pre> |
+| D | <pre>0 - 6,499,999</pre> |
+</div>
+
+## EX SCORE
+
+An alternate scoring system that does not have a fixed range, every chart has a different maximum EX SCORE value. It has no effect on your [VOLFORCE](/compendium/volforce) but greatly affects your [PLAYER RADAR](/compendium/effect-radar). Unlike normal score, EX SCORE is affected by [S-CRITICAL](/compendium/timing-windows#arcade-konasute) hits, and each judgement is worth different amounts:
+
+<div className="flex justify-center mt-4">
+  <Table className="w-96 table-fixed text-center">
+    <thead>
+      <Row>
+        <Header rowSpan="2">Judgement</Header>
+        <Header colSpan="2">Score</Header>
+      </Row>
+      <Row className="text-xs font-semibold" noColor={true}>
+        <Header>CHIP</Header>
+        <Header>
+          <p>LONG</p>
+          <p>TSUMAMI</p>
+        </Header>
+      </Row>
+    </thead>
+    <tbody>
+      <Row>
+        <Data>S-CRITICAL</Data>
+        <Data><pre>5</pre></Data>
+        <Data><pre>2</pre></Data>
+      </Row>
+      <Row>
+        <Data>CRITICAL</Data>
+        <Data><pre>4</pre></Data>
+        <Data><pre>-</pre></Data>
+      </Row>
+      <Row>
+        <Data>NEAR</Data>
+        <Data><pre>2</pre></Data>
+        <Data><pre>-</pre></Data>
+      </Row>
+      <Row>
+        <Data>ERROR</Data>
+        <Data><pre>0</pre></Data>
+        <Data><pre>0</pre></Data>
+      </Row>
+    </tbody>
+  </Table>
+</div>
+
+Using the S-CRITICAL score values, the maximum EX SCORE value for a chart is calculated by the formula:
+
+<div className="text-center mt-4">
+```
+(# CHIP * 5) + ([# LONG + # TSUMAMI] * 2)
+```
+</div>
+
+Related to EX SCORE is the `MAX` metric which is what percentage of the maximum value were S-CRITICAL hits. For percentages above 98%, it is presented as `MAX-X` instead, where `X` is the amount of non-S-CRITICAL hits.
+
+### Example Calculation
+
+<Image src="/startingout/scoring/ex_score.png" alt="ex score" />
+
+``` 
+CHIP EX SCORE = (# S-CRITICAL * 5) + (# CRITICAL * 4) + (# NEAR * 2)
+              = (829 * 5) + (149 * 4) + (11 * 2)
+              = 4763
+    
+LONG & TSUMAMI EX SCORE = # S-CRITICAL * 2
+                        = (451 + 305) * 2
+                        = 1512
+    
+TOTAL EX SCORE = CHIP EX SCORE + LONG & TSUMAMI EX SCORE
+               = 4759 + 1512
+               = 6275
+    
+MAX EX SCORE = (# CHIP * 5) + ([# LONG + # TSUMAMI] * 2)
+             = ([829 + 149 + 11] * 5) + ([451 + 305] * 2)
+             = 6457
+    
+MAX = (TOTAL / MAX) * 100%
+    = (6275 / 6457) * 100%
+    = 97.1%
+```
+
+## How should I be scoring?
+
+This section is for normal score only.
+
+How you score depends on many factors, but the main one is how difficult charts are relative to your skill. Chart difficulty is commonly categorized three ways:
+
+1. Charts you encounter when breaking into a new level, expect to score `9,000,000 - 9,500,000`
+2. Charts you find moderately difficult, expect to score `9,500,000 - 9,800,000`
+3. Charts in your "comfort zone", expect to score `9,800,000+`
+
+Other factors such as skillset differences and chart composition (charts with high long or tsumami counts are easier to score) may skew scores high or low, but **consider how you score on average**. If you feel like most of the charts you play fall into category 2 or 3, it is probably safe to try the next level. On the other hand, if you *consistently* score poorly (on the low end of category 1 or lower), you may not be ready.
+
+These are general baseline scores, it goes without saying that you should try to score as high as you can. Aiming to raise scores or get new grades on charts you've played is a good way to stay motivated.

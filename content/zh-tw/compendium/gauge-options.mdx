@@ -1,0 +1,281 @@
+import { Table, Row, Header, Data } from "../../../components/Table";
+import { Callout } from 'nextra/components'
+
+# Gauge Options
+
+## Table of Contents
+- [Intro](#intro)
+- [EFFECTIVE RATE](#effective-rate)
+- [EXCESSIVE RATE](#excessive-rate)
+- [MAXXIVE RATE](#maxxive-rate)
+- [PERMISSIVE RATE](#permissive-rate)
+- [DIVINE RATE](#divine-rate)
+- [VARIATIVE RATE](#variative-rate)
+- [Alternative Rate System (ARS)](#alternative-rate-system-ars)
+- [Gain/Loss Breakdown](#gainloss-breakdown)
+  - [VARIATIVE RATE](#variative-rate-breakdown)
+- [HEXATIVE RATE](#hexative-rate)
+
+## Intro
+This page is for information about the various gauge types available in SDVX. The 2 main gauge types are EFFECTIVE RATE and EXCESSIVE RATE which are available during normal play. The other gauge types are only available in certain gamemodes or unlock systems.
+
+## EFFECTIVE RATE
+Starts at 0% and requires completing the chart at 70% or greater to clear.
+
+Also referred to as normal gauge.
+
+## EXCESSIVE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear.
+
+Also referred to as hard gauge.
+
+## MAXXIVE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear. Notable for only increasing on S-CRITICALs and decreasing on NEARs.
+
+Only available when [S-CRITICAL](/startingout/options#s-critical) is enabled.
+
+## PERMISSIVE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear. Notably easier than EXCESSIVE RATE as it carries over across 3 charts. The charts played with this gauge will not be granted a clear medal.
+
+Only available during [SKILL ANALYZER](/compendium/game-modes#skill-analyzer).
+
+## DIVINE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear. Notable for only increasing on S-CRITICALs and decreasing on NEARs.
+
+Only available during [SKILL ANALYZER](/compendium/game-modes#skill-analyzer).
+
+## VARIATIVE RATE
+Starts at 100% and requires completing the chart without reaching 0% to clear. Starts at `RANK V` and goes down in difficulty with Ranks IV-I. There is no recovery on `RANK V`.
+
+Only accessible during [Variant Gate](/compendium/unlock-systems#variant-gate).
+
+## Alternative Rate System (ARS)
+An option used in combination with MAXXIVE RATE, EXCESSIVE RATE. Prevents failing out from a chart by switching to the next lowest gauge upon reaching 0%. The gauge amount given in this scenario will be the same as if you played with the gauge that is swapped to from the start. The gauge order is as follows:
+
+- MAXXIVE RATE -> EXCESSIVE RATE -> EFFECTIVE RATE
+
+## Gain/Loss Breakdown
+
+- Chips are BT and FX chip objects
+- Hold and laser objects have ticks which are judged individually
+- **T**: Unknown but fixed value regardless of chart
+- **n**: Varies per chart: `(total chain amount) + (# of chips and slams) * 3`
+
+<Table className="w-full mt-4 mb-4 text-center align-middle">
+  <thead>
+    <Row>
+      <Header rowSpan="2">Gauge Type</Header>
+      <Header colSpan="2">S-CRITICAL</Header>
+      <Header colSpan="2">CRITICAL</Header>
+      <Header >NEAR</Header>
+      <Header colSpan="2">ERROR</Header>
+    </Row>
+    <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+      <Data>Chips</Data>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>EFFECTIVE</Data>
+      <Data rowSpan="5"><pre>+4T/n</pre></Data>
+      <Data rowSpan="5"><pre>+T/n</pre></Data>
+      <Data rowSpan="3"><pre>+4T/n</pre></Data>
+      <Data rowSpan="3"><pre>+T/n</pre></Data>
+      <Data rowSpan="3"><pre>+4T/3n</pre></Data>
+      <Data><pre>-2.00%</pre></Data>
+      <Data><pre>-0.50%</pre></Data>
+    </Row>
+    <Row>
+      <Data>EXCESSIVE</Data>
+      <Data><pre>-9.00% <sup>1</sup></pre></Data>
+      <Data><pre>-2.25% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>PERMISSIVE</Data>
+      <Data><pre>-3.40% <sup>1</sup></pre></Data>
+      <Data><pre>-0.85% <sup>1</sup></pre></Data>
+    </Row>
+
+    <Row>
+      <Data>DIVINE</Data>
+      <Data><pre>±0.00%</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-1.00%</pre></Data>
+      <Data><pre>-5.00% <sup>1</sup></pre></Data>
+      <Data><pre>-1.25% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>MAXXIVE</Data>
+      <Data><pre>±0.00%</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-4.00% <sup>2</sup></pre></Data>
+      <Data><pre>-20.00%</pre></Data>
+      <Data><pre>-5.00%</pre></Data>
+    </Row>
+  </tbody>
+</Table>
+
+<sup>1</sup> Reduced when gauge is below 30%\
+<sup>2</sup> Cannot reduce gauge below 0%
+
+[Source](https://bemaniwiki.com/index.php?SOUND+VOLTEX+EXCEED+GEAR/%A5%B7%A5%B9%A5%C6%A5%E0#rate_style)
+
+### VARIATIVE RATE [#variative-rate-breakdown]
+
+<Table className="w-full mt-4 mb-4 text-center align-middle">
+  <thead>
+    <Row>
+      <Header rowSpan="2">Rank</Header>
+      <Header>S-CRITICAL</Header>
+      <Header>CRITICAL</Header>
+      <Header>NEAR</Header>
+      <Header colSpan="2">ERROR</Header>
+    </Row>
+    <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
+      <Data>Chips</Data>
+      <Data>Chips</Data>
+      <Data>Chips</Data>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>V</Data>
+      <Data><pre>±0.00%</pre></Data>
+      <Data><pre>-1.00%</pre></Data>
+      <Data><pre>-7.00%</pre></Data>
+      <Data><pre>-10.00%</pre></Data>
+      <Data><pre>-5.00%</pre></Data>
+    </Row>
+    <Row>
+      <Data>IV</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-3.00%</pre></Data>
+      <Data><pre>-15.00%</pre></Data>
+      <Data><pre>-3.75%</pre></Data>
+    </Row>
+    <Row>
+      <Data>III</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-9.50%</pre></Data>
+      <Data><pre>-2.38% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>II</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-6.00%</pre></Data>
+      <Data><pre>-1.50%</pre></Data>
+    </Row>
+    <Row>
+      <Data>I</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-2.50%</pre></Data>
+      <Data><pre>-0.63% <sup>2</sup></pre></Data>
+    </Row>
+  </tbody>
+</Table>
+
+<sup>1</sup> Decreased by 33.3% after 14 errors\
+<sup>2</sup> Decreased by 8.8% after 14 errors
+
+[Source](https://bemaniwiki.com/?SOUND+VOLTEX+EXCEED+GEAR/VARIANT+GATE#VARIATIVE_RATE)
+
+## HEXATIVE RATE
+<Callout type="warning">These systems do not exist in Nabla</Callout>
+
+Starts at 100% and requires completing the chart without reaching 0% to clear. Difficulty of this gauge can be adjusted by selecting a [HEXA RANK](/compendium/unlock-systems#hexadiver) which ranges from 1-5. Rank 3 is only slightly easier than EXCESSIVE RATE with 4 and 5 being more difficult.
+
+Only available during [HEXA DIVER](/compendium/unlock-systems#hexadiver).
+- **H**: [HEXA RANK](/compendium/unlock-systems#hexadiver)
+
+<Table className="w-full mt-4 mb-4 text-center align-middle">
+  <thead>
+    <Row>
+      <Header rowSpan="2">Gauge Type</Header>
+      <Header colSpan="2">S-CRITICAL</Header>
+      <Header colSpan="2">CRITICAL</Header>
+      <Header >NEAR</Header>
+      <Header colSpan="2">ERROR</Header>
+    </Row>
+    <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+      <Data>Chips</Data>
+      <Data>
+        <p>Chips</p>
+        <p>Slams</p>
+      </Data>
+      <Data>
+        <p>Holds</p>
+        <p>Lasers</p>
+      </Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>HEXATIVE</Data>
+      <Data rowSpan="1"><pre>+4T/n</pre></Data>
+      <Data rowSpan="1"><pre>+T/n</pre></Data>
+      <Data rowSpan="1"><pre>+4T/n</pre></Data>
+      <Data rowSpan="1"><pre>+T/n</pre></Data>
+      <Data className="leading-6">
+        <div><pre>H = 5: -1.00%</pre></div>
+        <div><pre>H ≤ 4: +4T/3n</pre></div>
+      </Data>
+      <Data><pre>-2.00% × H <sup>1</sup></pre></Data>
+      <Data><pre>-0.50% × H <sup>1</sup></pre></Data>
+    </Row>
+  </tbody>
+</Table>
