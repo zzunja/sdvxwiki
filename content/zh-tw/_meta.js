@@ -28,7 +28,7 @@ export default{
     theme: { timestamp: false },
   },
   specifications: {
-    title: 'Specifications and Hardware',
+    title: '硬體規格',
     theme: { timestamp: false },
   },
   charting: {
