@@ -1,14 +1,14 @@
 export default{
   'purchasing-guide': {
-    title: 'Purchasing Guide',
+    title: '如何購買',
     theme: { timestamp: false, toc: false},
   },
   parts: {
-    title: 'Parts',
+    title: '零件',
     theme: { timestamp: false, toc: false},
   },
   troubleshooting: {
-    title: 'Troubleshooting',
+    title: '疑難排解',
     theme: { timestamp: false, toc: false},
   },
 }

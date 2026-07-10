@@ -8,7 +8,7 @@ export default{
     theme: { timestamp: false, toc: false},
   },
   controllers: {
-    title: 'Controllers',
+    title: '控制器',
     theme: { timestamp: false },
   },
   startingout: {
@@ -36,7 +36,7 @@ export default{
     theme: { timestamp: false },
   },
   resources: {
-    title: 'Resources',
+    title: '實用連結',
     theme: { timestamp: false, toc: false},
   },
 
