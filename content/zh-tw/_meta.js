@@ -15,8 +15,8 @@ export default{
     title: '開始遊玩',
     theme: { timestamp: false },
   },
-    guides: {
-    title: 'Guides',
+  guides: {
+    title: '技巧與攻略',
     theme: { timestamp: false },
   },
   compendium: {

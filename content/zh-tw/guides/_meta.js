@@ -1,21 +1,21 @@
 export default {
   'hand-positioning': {
-    title: 'Hand Positioning',
+    title: '手部姿態',
     theme: { timestamp: false, toc: false},
   },
   'ksm-controller-setup': {
-    title: 'KSM Controller Setup',
+    title: 'KSM 控制器設定',
     theme: { timestamp: false, toc: false},
   },
   'laser-simplifications': {
-    title: 'Laser Simplifications',
-   theme: { timestamp: false, toc: false},
-  },
-  'pattern-simplification': {
-    title: 'Pattern Simplification and Cheese',
+    title: '旋鈕簡化',
     theme: { timestamp: false, toc: false},
   },
-    'tama-adventure-guide': {
+  'pattern-simplification': {
+    title: '譜面簡化技巧',
+    theme: { timestamp: false, toc: false},
+  },
+  'tama-adventure-guide': {
     title: 'Tama Adventure Guide',
     theme: { timestamp: false, toc: false},
   },
