@@ -1,20 +1,24 @@
 import {Image} from '../../../components/Media'
 import { Callout } from "nextra/components"
 
-# .ksh Files 
-## Table of Contents
-- [.ksh Format](#ksh-format)
-- [Syntax of .ksh](#syntax-of-ksh)
-  - [Metadata](#metadata)
-  - [Chart and Notes](#chart-and-notes)
-    - [Laser](#laser)
-  - [Measures](#measures)
-  - [Slams and other small things](#slams-and-other-small-things)
+# .ksh 檔案
+
+## 目錄
+
+- [.ksh 格式](#ksh-format)
+- [.ksh 語法](#syntax-of-ksh)
+  - [metadata](#metadata)
+  - [譜面與音符](#chart-and-notes)
+    - [旋鈕](#laser)
+  - [小節](#measures)
+  - [旋鈕直角與其他細節](#slams-and-other-small-things)
 <br/>
 
-# .ksh Format
-<Callout>For more details and specifics, you can look at [masaka offical writeup](https://github.com/kshootmania/ksm-chart-format/blob/master/ksh_format.md) on the format</Callout>
-`.ksh` files are essentially just text that any text editor can read. Upon opening a `.ksh` file, you will be greeted with something like this.
+## .ksh 格式 [#ksh-format]
+
+<Callout>如需更詳細的格式說明，請參閱 [masaka 的官方文件](https://github.com/kshootmania/ksm-chart-format/blob/master/ksh_format.md)。</Callout>
+
+`.ksh` 檔本質上是任何文字編輯器都能讀取的純文字檔。開啟 `.ksh` 檔後，會看到像這樣的內容：
 ```jsx
 title=1001 -ESCAPE-
 artist=SOUND HOLIC feat. Nana Takahashi
@@ -58,17 +62,19 @@ beat=4/4
 0010|00|--
 ```
 
-This is what the first part of the chart [1001 escape](https://ksm.dev/songs/1e1da020-5a8c-11f0-89fb-a5d5f06ca3c8) looks like. There is a lot of information here, so let's break it down.
+這是譜面 [1001 escape](https://ksm.dev/songs/1e1da020-5a8c-11f0-89fb-a5d5f06ca3c8) 開頭的內容。資訊很多，以下逐一說明。
 
 
-## Syntax of .ksh
-Let's first break down how `.ksh` files work. Every `.ksh` is broken off into sections. This is shown by a line that only has `--`. When there is a new line with `--`, that means that you are at the end of the old section and entering a new section. Excluding the first section, all sections can be different lengths and as long or short as they need to be (to a limit that most likely won't be reached). 
+## .ksh 語法 [#syntax-of-ksh]
 
-In every `.ksh` file, the first section is always metadata about the chart.
+先了解 `.ksh` 檔的結構。每個 `.ksh` 檔都由數個區段組成，僅含 `--` 的一行就是區段分隔符。出現新的 `--` 時，代表前一個區段結束並進入下一個區段。除了第一個區段外，其餘區段的長度都可不同，並可依需求增減。
+
+每個 `.ksh` 檔的第一個區段都是譜面的 metadata。
 
 
-## Metadata
-For right now, we will look at this section of the data
+## metadata [#metadata]
+
+先來看這段資料：
 ```jsx
 title=1001 -ESCAPE-
 artist=SOUND HOLIC feat. Nana Takahashi
@@ -92,23 +98,24 @@ chokkakuvol=50
 ver=171
 ```
 
-Most of this is all metadata that is set in the editor for each chart. While most are self-explanatory, some ones aren't as easy to understand.
+大部分都是可在編輯器中設定的譜面 metadata；其中有些欄位較不直觀：
 
-- `t` = The starting BPM of the song. This does not account for changes in BPM.
-- `o` = Millisecond offset of the song. 
-- `layer` = Foreground layer, not background
-- `po` = Sample offset. This is not the offset of the song, but rather just the offset of the sample that plays when you hover over the song.
-- `plength` = Sample length
-- `pfiltergain` = Sample filter
-- `ver` = Version of the editor/KSM that this chart was made for or made on.
-
-
-
-It's important to note that you can leave metadata blank, and it will be ok. For example, this chart does not have an illustrator attached, but is still fine.
+- `t`：歌曲的起始 BPM，不包含 BPM 變化。
+- `o`：歌曲的毫秒 offset。
+- `layer`：前景圖層，不是背景。
+- `po`：試聽片段的 offset，不是歌曲本身的 offset；此片段會在游標停在歌曲上時播放。
+- `plength`：試聽片段長度。
+- `pfiltergain`：試聽片段的濾鏡。
+- `ver`：製作此譜面所使用或對應的編輯器／KSM 版本。
 
 
-## Chart and Notes
-The next section of the file is where the chart starts. From here on out, most of the file will look the same. Let's start with the first section.
+
+請注意，metadata 可以留白，譜面仍能正常運作。例如這張譜面沒有填寫繪師，依然沒有問題。
+
+
+## 譜面與音符 [#chart-and-notes]
+
+檔案的下一個區段就是譜面開始處。從這裡起，檔案大部分內容的結構都相同；先從第一個區段開始。
 
 ```jsx
 --
@@ -117,29 +124,31 @@ beat=4/4
 --
 ```
 
-Here, we have two lines: `beat=4/4` and `0000|00|--|`. The first line is simple; it defines the current [time signature](/terminology/termsandvocab#time-signatures). If the time signature were to change, there would be a `beat=` to signify this change. This goes the same with `t=` (BPM) as well. If there is a BPM change, it will be signified in the file like this. You can change the BPM and time signature as much as you want.
+這裡有兩行：`beat=4/4` 與 `0000|00|--|`。第一行用來定義目前的 [拍號](/terminology/termsandvocab#time-signatures)。若拍號改變，會以新的 `beat=` 表示；`t=`（BPM）也是同樣道理。你可以在譜面中任意變更 BPM 與拍號。
 
 
-The next time is what's placed in the chart. Here, each line has 3 sections divided by `|`. The first section, or the 4 numbers, represent the BT/White notes. The next section represents the FX/Orange notes. This only has 2 numbers. The last section is the laser. For now, let's look at the first 2 since they are very similar.
+下一行則是放入譜面的內容。每行由 `|` 分成 3 個欄位：前 4 個數字代表 BT／白色音符；接著 2 個數字代表 FX／橘色音符；最後一欄是旋鈕。先看結構相近的前兩欄。
 
 
 ```jsx
 0000|00
 ```
 
-A note is represented by each number. Each number can either be a 0 or a 1.
-- 0 represents nothing. Meaning there are no notes.
-- 1 represents a bt note. Meaning there is a bt note.
-- 2 represents a bt hold note. Meaning there is a bt hold.
+每個數字代表一個音符位置：
+
+- `0`：沒有音符。
+- `1`：BT 音符。
+- `2`：BT LONG。
 
 
-FX are slightly different
-- 0 represents nothing. Meaning there are no notes.
-- 1 represents a fx **hold**. Meaning there is a fx **hold**.
-- 2 represents a fx **note**. Meaning there is a fx **note**.
+FX 的定義稍有不同：
+
+- `0`：沒有音符。
+- `1`：FX LONG。
+- `2`：FX 音符。
 
 
-So, for example, if a line looked like `1000|00`, there would be one note in the first lane. This is the same thing for FX as well, except there are only 2 positions a FX note can be in. Here are some more examples.
+例如 `1000|00` 代表第一條 BT 軌有一個音符。FX 的原理相同，只是 FX 只有 2 個位置。以下是更多範例：
 
 <Image src="/charting/kshfile/examples.png" width={1000} height={1000} alt=""/>
 
@@ -149,14 +158,15 @@ So, for example, if a line looked like `1000|00`, there would be one note in the
 4. `0000|20`
 5. `1100|02`
 
-### Laser
-Before explaining lasers, I'd like to explain more about how the KSM editor works. Lasers have a set point where you can put them in the KSM editor. Meaning, you can't just place a laser anywhere you want. Each laser has to start or end at one of these "points". These points go from left to right and are represented by a character in the `.ksh` file. Starting at `0`, which is the farthest left point, it goes 0-9, then A-Z uppercase, and then a-o lowercase, with `o` being the farthest right.
+### 旋鈕 [#laser]
+
+在說明旋鈕前，先補充 KSM 編輯器的運作方式。旋鈕只能放在預設位置，不能任意擺放；每條旋鈕都必須在其中一個「位置」開始或結束。這些位置由左至右以 `.ksh` 檔內的字元表示：最左側為 `0`，接著是 `0-9`、大寫 `A-Z`、小寫 `a-o`，最右側為 `o`。
 
 
-You can think of this as a long number line with `0` being the last number on the number line or farthest left, and `o` being the last number on the line or the farthest right.
+你可以把它想成一條很長的數線：`0` 在最左，`o` 在最右。
 
 
-There are 2 characters that represent the left/blue laser and the right/red laser respectively in a line. For now, let's look at this.
+每行有兩個字元，分別代表左側藍色旋鈕與右側紅色旋鈕。先看以下範例：
 
 
 ```jsx
@@ -188,25 +198,27 @@ There are 2 characters that represent the left/blue laser and the right/red lase
 0000|00|--
 ```
 
-I have removed the section indicators (`--`) to make it a bit easier to read. 
+為了便於閱讀，這裡省略了區段分隔符（`--`）。
 
 
-There are 2 characters we haven't gone over yet when it comes to lasers. These are the `-` and `:`.
-- `-` represents that there is no laser currently. 
-- `:` represents that there is a laser.
+旋鈕還有兩個尚未說明的字元：`-` 與 `:`。
+
+- `-`：目前沒有旋鈕。
+- `:`：旋鈕正在持續。
 
 
-Let's look at the left laser for now. To start a laser, there has to be a starting point. For this example, this is `0`. This means that the laser starts at the farthest left point. The next line is a `:` which means the laser is continuing/exist. This continues until we reach an `o`. This is the farthest right point, meaning the laser is now at the farthest right. The next line shows a `-`, meaning the laser has ended. All in all, that means this laser goes `0` or the farthest left to the farthest right or `o` in a straight line.
+先看左側旋鈕。旋鈕必須有起點；此例的起點是 `0`，也就是最左側。下一行是 `:`，代表旋鈕持續存在，直到出現 `o`；`o` 是最右側位置。再下一行的 `-` 代表旋鈕結束。換言之，這條旋鈕由最左側的 `0` 直線移動至最右側的 `o`。
 
 
-Let's look at the right laser now. This starts at `o` or the farthest right and then goes `P`. While we don't know exactly where this is, we can assume this is around the middle. This means the laser makes a straight line to the middle. The next line is a `:` meaning that this laser is continuing and not ending. A couple more lines later, we get an `o` meaning the laser has returned to the far right. The line after this is a `-`, meaning the laser has ended. All in all, we can assume this laser starts on the right, heads to around the middle, and then heads back to the right.
+再看右側旋鈕。它由最右側的 `o` 開始，接著移至 `P`；雖然無法精確得知 `P` 的位置，可視為接近中央。接下來的 `:` 表示旋鈕仍在持續，數行後的 `o` 則表示它回到最右側，後面的 `-` 代表結束。因此，這條旋鈕由右側移向中央附近，再回到右側。
 
 
-Here is what the above example looks like in the editor.
+以下是上述範例在編輯器中的樣子。
 <Image src="/charting/kshfile/example2.png" width={150} height={300} alt=""/>
 
-### Measures
-Let's talk more about sections and the format of `.ksh`. Each `.ksh` file is divided into sections, divided by `--`. You may have noticed this in the original example. For now, let's look at this.
+### 小節 [#measures]
+
+再來看區段與 `.ksh` 格式。每個 `.ksh` 檔都由 `--` 分隔成數個區段，前面的範例應已看過這種結構。請看以下內容：
 
 
 ```jsx
@@ -227,22 +239,23 @@ Let's talk more about sections and the format of `.ksh`. Each `.ksh` file is div
 --
 ```
 
-As you can see, this part has 2 sections. One with 4 lines and one with 8 lines. These sections represent [measures](/terminology/termsandvocab#measures). So, each section is a measure. In this example, I am showing 2 measures of this chart. We are also going to assume that this is using a standard 4/4 time signature, meaning every measure has 4 beats.
+如你所見，這裡有兩個區段：一個有 4 行，另一個有 8 行。這些區段代表[小節](/terminology/termsandvocab#measures)，也就是每個區段各是一小節。本例展示了譜面的 2 個小節，並假設使用標準的 4/4 拍，每小節有 4 拍。
 
 
-Each measure can have a different number of lines. How many lines it is is determined by whatever measure is the highest [`x`-th note](/terminology/termsandvocab#n-th-notes). For example, let's look at the first measure. There are 4 lines. This means that the highest `x`-th notes that are used in this measure are 4th notes (i.e, a note can be placed on the beat). Here, using the knowledge that we know, we can know that this measure has 4 notes in a staircase pattern, with each note being at the beginning of every beat.
+每小節的行數可以不同，取決於該小節使用的最細[分音符](/terminology/termsandvocab#n-th-notes)。例如第一小節有 4 行，代表最細為 4 分音符，也就是每拍可放一個音符。因此可知這個小節有 4 個階梯狀音符，分別位於每拍的開頭。
 
 
-The next section has 8 lines instead of 4. This means that the highest `x`-th note is 8th notes (i.e, a note can be placed on the beat and halfway through the beat). Here, we see that there is also a staircase, but it is a bit faster since they are being played as 8th notes. 
+下一個區段有 8 行而非 4 行，代表最細為 8 分音符，也就是每拍的拍點與拍點之間都可放音符。這裡同樣是階梯狀配置，但因為使用 8 分音符，所以速度更快。
 
 
-Here is what the above example looks like in the editor
+以下是上述範例在編輯器中的樣子：
 <Image src="/charting/kshfile/example3.png" width={150} height={100} alt=""/>
 
-In the editor, each measure is separated by the yellow line. So, the bottom half is the 4-line part, and the top half is the 8-line part.
+在編輯器中，每小節以黃色線分隔，因此下半部是 4 行的部分，上半部則是 8 行的部分。
 
-## Slams and other small things
-There are a couple of other things to note. First slams. In KSM, a slam is a laser that goes from one point to the other as fast or faster than a 32nd of a second. So, for example:
+## 旋鈕直角與其他細節 [#slams-and-other-small-things]
+
+還有一些其他細節，先從旋鈕直角開始。在 KSM 中，旋鈕若在 32 分音符或更短的時間內從一個位置移至另一個位置，就會成為旋鈕直角。例如：
 ```jsx
 ...
 0000|00|--
@@ -252,12 +265,12 @@ There are a couple of other things to note. First slams. In KSM, a slam is a las
 ...
 ```
 
-Let's assume that this measure had 32 lines, meaning that it was in 32nd notes. This laser would go from the left side to the right side in a 32nd. This would become a slam as a laser that moves from one point to another as fast or faster than a 32nd turns into a slam.
+假設這個小節有 32 行，即使用 32 分音符。這條旋鈕會在一個 32 分音符內由左移至右，因此會成為旋鈕直角。
 
-<Image src="/charting/kshfile/example4.png" width={100} height={100} caption="Above example in editor" alt=""/>
+<Image src="/charting/kshfile/example4.png" width={100} height={100} caption="上述範例在編輯器中的樣子" alt=""/>
 
 
-Lasers can also be extended beyond their normal range. Normally, the farthest left it can be is right next to the lane. But, this can be extended much farther. Note that there aren't more points, just that the points are now extended and farther apart.
+旋鈕也能延伸至正常範圍外。正常情況下，最左側只能到軌道旁；啟用延伸後可移得更遠。請注意，這不會增加位置數量，只會把位置之間的距離拉大。
 
 ```jsx
 --
@@ -273,17 +286,18 @@ laserrange_r=2x
 0000|00|-o
 --
 ```
-Let's look at this. The first measure is a normal blue laser using a normal range. The next measure has a line `laserrange_r=2x`. This means that the laser range for the right laser is extended. Even though these lasers start and end with the same movement, the right one will be longer. It might be hard to visualize this, so here is what this looks like.
+來看這個範例。第一小節是正常範圍的藍色旋鈕；下一小節加入 `laserrange_r=2x`，代表右側旋鈕的範圍已延伸。雖然兩條旋鈕的起訖位置與走向相同，右側旋鈕會更長。以下是實際效果：
 
 <Image src="/charting/kshfile/example5.png" width={150} height={100} alt=""/>
 
-The `laserrange` only applies for as long as the laser goes. Once the laser ends, the range will be back to normal. Also, changing 2x to 4x or something else doesn't increase the range further.
+`laserrange` 僅在旋鈕持續期間有效；旋鈕結束後，範圍會恢復正常。此外，將 `2x` 改成 `4x` 或其他值不會再進一步延伸範圍。
 
-This doesn't only apply to `laserrange`. Camera effects, FX effects, BPM changes, and other things are done in the middle of the chart. If you understand the format well enough, you can use it to create certain effects that are too hard/impossible to create in the editor.
+這不只適用於 `laserrange`。鏡頭效果、FX 效果、BPM 變化及其他設定都能寫在譜面中段。只要充分理解格式，就能做出在編輯器中難以或無法製作的效果。
 
 
-### Footer
-There is also can be a footer in a chart. This is simply where custom effects and filters for FX are defined. These looks like:
+### 頁尾 [#footer]
+
+譜面也可以有頁尾，用來定義自訂 FX 效果與濾鏡，格式如下：
 ```jsx
 #define_fx
 #define_filter

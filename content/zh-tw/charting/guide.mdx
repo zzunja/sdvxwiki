@@ -1,167 +1,172 @@
 import { Callout } from "nextra/components"
 import { Image, Video } from "../../../components/Media"
 
-# Charting Guide
+# 譜面製作指南
 
-## Table of Contents
-- [Syncing Audio](#syncing-audio)
-- [Starting with KSM Editor](#starting-with-ksm-editor)
-- [Creating a Chart](#creating-a-chart)
-    - [Metadata](#metadata)
-    - [Using the Editor](#using-the-editor)
-    - [Lasers](#lasers)
-        - [Curve Generator](#curve-generator)
-    - [Camera](#camera)
-        - [Tilt](#tilt)
-    - [Bonus effects](#bonus-effects)
-        - [Lane split](#lane-split)
-        - [Invisible Lane (USC ONLY)](#invisible-lane-usc-only)
-- [Illegal patterns and charting practices](#illegal-patterns-and-charting-practices)
-- [References](#references)
+## 目錄
 
-## Syncing Audio
-<Callout>This guide takes a lot of stuff from [Teds guide](https://docs.google.com/document/d/1rDpndXsPxBsGQi_DkUmqAxq0PrmXjrPCWnK_zk639kQ/edit?tab=t.0#heading=h.z7y5vobdqtty). If you find you are confused, it might be easier to read that guide as he syncs his songs slightly differently </Callout>
+- [同步音訊](#syncing-audio)
+- [開始使用 KSM Editor](#starting-with-ksm-editor)
+- [製作譜面](#creating-a-chart)
+  - [metadata](#metadata)
+  - [使用編輯器](#using-the-editor)
+  - [旋鈕](#lasers)
+    - [曲線產生器](#curve-generator)
+  - [鏡頭](#camera)
+    - [傾斜](#tilt)
+  - [額外效果](#bonus-effects)
+    - [軌道分離](#lane-split)
+    - [隱藏軌道（僅 USC）](#invisible-lane-usc-only)
+- [非法的譜面配置與製作方式](#illegal-patterns-and-charting-practices)
+- [參考資料](#references)
 
-Before starting to chart, we have to sync the audio for the chart. This guide will be using [Audacity](https://www.audacityteam.org/) but feel free to use whatever audio editor you want.
+## 同步音訊 [#syncing-audio]
 
-Open your song in Audacity and create a new track. Go to the top -> Generate -> Rhythm Track. In the Tempo (bpm), change it to the song BPM. If you don't know, use a tap the bpm website and figure out.
+<Callout>本指南大量參考 [Ted 的指南](https://docs.google.com/document/d/1rDpndXsPxBsGQi_DkUmqAxq0PrmXjrPCWnK_zk639kQ/edit?tab=t.0#heading=h.z7y5vobdqtty)。若對此處說明感到困惑，建議閱讀該指南；它採用稍有不同的歌曲同步方式。</Callout>
+
+開始製作譜面前，必須先同步歌曲音訊。本指南使用 [Audacity](https://www.audacityteam.org/)，但你可以使用任何音訊編輯器。
+
+在 Audacity 開啟歌曲並建立新音軌，依序選擇上方選單的「產生」→「節奏音軌」。將 Tempo（BPM）設為歌曲 BPM；若不清楚 BPM，可使用 Tap BPM 網站測量。
 <Video src="/charting/guide/firstpart.webm"/>
 
-Then, create space in the track and head to the top - Generate - Silence. Generate around 15-30 seconds of silence. Move the song and the silence next to each other.
+接著在音軌中騰出空間，依序選擇「產生」→「靜音」，產生約 15 至 30 秒的靜音，並將歌曲與靜音片段排在一起。
 <Video src="/charting/guide/secondpart.webm"/>
-Now, you need to line up the 2nd measure to the first downbeat of the song. The 2nd measure is the 2nd big tick in BPM track. You can zoom in holding Alt to get really close line it up perfectly. If you find that the 2nd measure is not enough, you can use the 3rd measure as well. The video below uses 
+現在要將第 2 小節對齊歌曲的第一個強拍。第 2 小節是 BPM 音軌上的第二個大刻度；按住 Alt 可放大檢視，以精準對齊。若第 2 小節不夠用，也可改用第 3 小節。
 <Video src="/charting/guide/thirdpart.webm"/>
-Then, delete the silence in the beginning so the rhythm track is at the start. After it is lined up with your song, you can now delete the rhythm track and export as a **WAV or OGG**. Also, export as 44100Hz or else chart effects will be messed up. Do not use MP4
+接著刪除開頭的靜音，讓節奏音軌位於起點。對齊歌曲後，即可刪除節奏音軌，並匯出為 **WAV 或 OGG**。請使用 44100 Hz 匯出，否則譜面效果會出錯；不要使用 MP4。
 <Video src="/charting/guide/fourpart.webm"/>
 
 
-If done correctly, you should now have a measure of silence into the start of your song. It should be timed perfectly so no need to mess with offset.
+若操作正確，歌曲開頭現在會有一小節靜音。時序應已精準對齊，因此不必再調整 offset。
 
-## Starting with KSM Editor
-Upon opening the KSM editor, there are some settings you will most likely want to change. Firstly, if your editor is in gibberish (random symbols), you have to set your language options in KSM to English. You can do this by opening KSM and heading to `Options` -> `Display/Sound settings` -> `Language`.
+## 開始使用 KSM Editor [#starting-with-ksm-editor]
 
-Under the `View` menu in the editor, you can change how the editor looks. You can play around with these, but at the minimum is it recommended to have `Increase spacing between lanes` as it makes it easier to use lasers.
+開啟 KSM Editor 後，通常會想先調整幾項設定。若介面顯示亂碼，需將 KSM 的語言設為英文：`Options` → `Display/Sound settings` → `Language`。
 
-
-## Creating a Chart
-Now its time to setup creating the chart. First, press `File` -> `Save` and when asked about song title, just click yes. Save your chart into a folder. In this folder, make sure to put the song file and jacket file you want to use. If you want to use different effects, you would also place the effects in this folder. 
-
-<Image src="/charting/guide/examplefoldersetup.png" caption="Example Folder Setup"/>
-
-### Metadata
-Head to `Edit` -> `Chart metadata - General`. In here, you can change the Metadata of your chart
-
-<Image src="/charting/guide/blankmetadata.png" caption="Blank Metadata General"/>
-
-- `Song Title`: Title of the Song
-- `Artist`: Artist of the Song
-- `Effected by:` Who made the chart
-- `Jacket illust filepath`: Path to the photo of the jacket. If it's in your folder, you can just put the file name, no need to put the path.
-- `Illustrated by`: Who illustrated the jacket
-- `Difficulty`: Difficulty category of the chart. Light = NOV, Challenge = ADV, Extended = EXH, Infinite = MXM
-- `Level [1-20]`: What level of difficulty your chart is
-- `BPM`: **Initial** BPM of the song
-- `Song filename`: Filename of your song, must include .ogg or .wav extension and song must be in the same folder as the chart
-- `Song volume`: How loud the song is
-- `Offset[ms]`: Milisecond offset that gets added to the chart. Negative shifts song later, positive shift song earlier
-- `Sample start[ms]`: Where the sample (the song that plays when you hover over the chart) starts in miliseconds
-- `Sample length[ms]`: How long the sample last till it loops again in miliseconds
-- `Background`: Background of your chart
-- `Foreground layer`: The images on the side of the lane that passes by
-
-It is important to note that you don't need to fill out everything here for the chart to work. The only essiential ones are BPM and Song filename.
+編輯器的 `View` 選單可調整介面顯示。你可自行嘗試各項設定，但至少建議啟用 `Increase spacing between lanes`，讓旋鈕更容易編輯。
 
 
-There is also more metadata options in `Edit` -> `Chart metadata - Detail`
-<Image src="/charting/guide/blankmetadatadetail.png" caption="Blank Metadata Detail"/>
+## 製作譜面 [#creating-a-chart]
 
-- `Comments`: A comment that shows up in song select on KSM
-- `Standard BPM of HiSpeed`: Set the baseline BPM where hispeed changes from if there are BPM changes
-- `Reduce volume for narrow Laser slams`: Since slam sound effects can overlap, you can use this to reduce the volume
-- `Peaking filter delay`: Sets how long the delay is on PEAK filter for lasers
-- `Total`: Sets the total amount of HP in your chart
-- `Genre icon filename`: Path to the genre icon. Mostly used for if you are making a folder pack and have a icon for all the charts in that folder
+現在開始建立譜面。先按 `File` → `Save`，詢問歌曲標題時按確認。將譜面存入一個資料夾，並把要使用的歌曲檔與 jacket 檔放進同一資料夾；若要使用其他效果檔，也應放在這裡。
 
-Most of these settings you will not have to mess with and are fine on default. 
+<Image src="/charting/guide/examplefoldersetup.png" caption="資料夾配置範例"/>
 
-### Using the Editor
-First, press space to play your chart. Make sure the song plays. If there is no song, check if the chart and the song are in the same folder, and the filename is correct in the metadata.
+### metadata [#metadata]
 
-<Image src="/charting/guide/modes.png" caption="Modes"/>
-There are 3 modes in the editor that you can be in. These are
-- Select `P`: Highlight and select objects. Holding `CTRL` allows you to select multiple objects
-- Edit `N`: Allows to place objects with left click and remove objects with right click
-- Delete `E`: Delete objects with left click
+依序選擇 `Edit` → `Chart metadata - General`，可在此修改譜面的 metadata。
 
-You can press the hotkeys to swap between these or just click them
+<Image src="/charting/guide/blankmetadata.png" caption="空白的一般 metadata"/>
 
-<Image src="/charting/guide/selections.png" caption="Selections"/>
+- `Song Title`：歌曲名稱。
+- `Artist`：歌曲作曲者／演出者。
+- `Effected by`：譜面製作者。
+- `Jacket illust filepath`：jacket 圖片路徑。若在同一資料夾，只填檔名即可。
+- `Illustrated by`：jacket 繪師。
+- `Difficulty`：譜面難度類別；Light = NOV、Challenge = ADV、Extended = EXH、Infinite = MXM。
+- `Level [1-20]`：譜面等級。
+- `BPM`：歌曲的**起始** BPM。
+- `Song filename`：歌曲檔名，必須包含 `.ogg` 或 `.wav` 副檔名，且歌曲檔須與譜面放在同一資料夾。
+- `Song volume`：歌曲音量。
+- `Offset[ms]`：加入譜面的毫秒 offset；負值使歌曲延後，正值使歌曲提前。
+- `Sample start[ms]`：試聽片段（游標停在譜面上時播放的歌曲）開始的位置，單位為毫秒。
+- `Sample length[ms]`：試聽片段重新循環前的長度，單位為毫秒。
+- `Background`：譜面背景。
+- `Foreground layer`：從軌道側邊掠過的圖片。
 
-These are the selections for objects that you can place or manipulate. 
-- BPM `O`: Set BPM. Also sets the starting point when using test play or previewing. 
-- BT-Chip `H`: Manipulates BT-Chips
-- BT-Long `J`: Manipulates BT-Longs
-- FX-Chip `K`: Manipulates FX-Chips. Holding `CTRL` and clicking will put a SFX on it
-- FX-Long `L`: Manipulates FX-Longs. Holding `CTRL` and clicking will add a filter to it. Holding `Shift` will allow you to change the parameters for it
-- Laser-L `Q`: Manipulates The left (blue) laser
-- Laser-R `W`: Manipulates the right (red) laser
-
-Pressing the down arrow will reveal more options
-- Laser sounds/gain type `G`: Set laser volume. Holding `CTRL` will change the filter
-- Laser slam sounds volume/sample `V`: Set slam volume. Holding `CTRL` will change the filter
-- Lane spin effect `S`: Adds spin effect. Holding `CTRL` changes spin type. Holding `CTRL` and pressing arrow keys will change how fast or slow the spin is
-- Lane tilt effect type `R`: Sets the tilt for the chart. Pressing `CTRL` lets you set custom values
-- Lane zoom (Top) `Z`: Sets the zoom/camera for the top of the lane. Higher value is closer, lower value is farther. Can go negative
-- Lane zoom (Bottom) `X`: Sets the zoom/camera for the bottom of the lane. Higher value is closer, lower value is farther. Can go negative
-- Horizontal lane movement `C`: Moves the lane left or right. Positive moves right, negative moves left.
-- Pause `F`: Sets a scroll speed stop. Same as stops in [Spatiotemporal ShockWAVE Syndrome...?](https://sdvx.in/05/05153m.htm)
+請注意，不必填完所有欄位，譜面依然能運作；唯一必要的欄位是 BPM 與 Song filename。
 
 
-Pressing the middle mouse button will allow you to select where the preview starts. Holding the middle mouse button and moving your mouse will allow you to select a portion of the chart.
+在 `Edit` → `Chart metadata - Detail` 中還有更多 metadata 選項。
 
-Selected objects can be moved with arrow keys, Mirrored with `CTRL` + `R`, and randomized `CTRL` + `Shift` + `R`. You can press the edit dropdown and select `Reverse selected notes` or `Randomize selected notes`
+<Image src="/charting/guide/blankmetadatadetail.png" caption="空白的詳細 metadata"/>
 
-If you want to add custom SFX to a FX-Note, you can put the FX-Note sound effect in the folder with the chart and it will show up for you to use in the dropdown. [Here](https://cdn.discordapp.com/attachments/547411265677557771/660121945488228363/sfx.rar?ex=68c8c6b8&is=68c77538&hm=e5e214ac87a2cfd85d1b7b72883d2f2e7594d241471525a193fc2f091ca2a7ce&) is a link to general common SFX that are used for FX. You can just extract inside your chart folder if you want.
+- `Comments`：在 KSM 選曲畫面顯示的備註。
+- `Standard BPM of HiSpeed`：若歌曲有 BPM 變化，設定 HiSpeed 計算的基準 BPM。
+- `Reduce volume for narrow Laser slams`：旋鈕直角音效可能重疊，可用此選項降低音量。
+- `Peaking filter delay`：設定旋鈕的 PEAK 濾鏡延遲長度。
+- `Total`：設定譜面的總血量。
+- `Genre icon filename`：曲風圖示的路徑，主要用於資料夾曲包中所有譜面共用同一圖示的情況。
 
-### Lasers
-Using the laser selection, left clicking anywhere will create a laser slam from the direction the laser normally comes from. You can adjust the head of the laser by holding `CTRL` and pressing the arrow keys. Holding `Shift` and pressing the arrow keys will adjust the starting position of the laser
+大部分設定維持預設值即可，不必調整。
+
+### 使用編輯器 [#using-the-editor]
+
+先按空白鍵播放譜面，確認歌曲能正常播放。若沒有聲音，請檢查譜面與歌曲是否位於同一資料夾，以及 metadata 中的檔名是否正確。
+
+<Image src="/charting/guide/modes.png" caption="模式"/>
+
+編輯器有 3 種模式：
+
+- Select `P`：反白並選取物件；按住 `CTRL` 可選取多個物件。
+- Edit `N`：左鍵放置物件，右鍵移除物件。
+- Delete `E`：左鍵刪除物件。
+
+可按快捷鍵切換，也可直接點擊按鈕。
+
+<Image src="/charting/guide/selections.png" caption="工具選項"/>
+
+以下是可放置或操作物件的工具：
+
+- BPM `O`：設定 BPM，也會設定測試播放與預覽的起始位置。
+- BT-Chip `H`：操作 BT CHIP。
+- BT-Long `J`：操作 BT LONG。
+- FX-Chip `K`：操作 FX CHIP；按住 `CTRL` 點擊可加入 SFX。
+- FX-Long `L`：操作 FX LONG；按住 `CTRL` 點擊可加入濾鏡，按住 `Shift` 可修改其參數。
+- Laser-L `Q`：操作左側（藍色）旋鈕。
+- Laser-R `W`：操作右側（紅色）旋鈕。
+
+按下向下箭頭會顯示更多選項：
+
+- Laser sounds/gain type `G`：設定旋鈕音量；按住 `CTRL` 可變更濾鏡。
+- Laser slam sounds volume/sample `V`：設定旋鈕直角的音量；按住 `CTRL` 可變更濾鏡。
+- Lane spin effect `S`：加入軌道旋轉效果；按住 `CTRL` 可變更旋轉類型，按住 `CTRL` 再按方向鍵可調整旋轉速度。
+- Lane tilt effect type `R`：設定譜面傾斜；按住 `CTRL` 可設定自訂值。
+- Lane zoom (Top) `Z`：設定軌道上端的縮放／鏡頭；數值越高越近、越低越遠，也可為負值。
+- Lane zoom (Bottom) `X`：設定軌道下端的縮放／鏡頭；數值越高越近、越低越遠，也可為負值。
+- Horizontal lane movement `C`：左右移動軌道；正值向右，負值向左。
+- Pause `F`：設定停止下落效果，與 [Spatiotemporal ShockWAVE Syndrome...?](https://sdvx.in/05/05153m.htm) 中的停止效果相同。
+
+
+按下滑鼠中鍵可選擇預覽起始位置；按住中鍵並移動滑鼠，可選取一段譜面。
+
+選取的物件可用方向鍵移動，按 `CTRL` + `R` 可鏡像，按 `CTRL` + `Shift` + `R` 可隨機化。也可從 Edit 下拉選單選擇 `Reverse selected notes` 或 `Randomize selected notes`。
+
+若要為 FX 音符加入自訂 SFX，將音效檔放進譜面資料夾後，就會出現在下拉選單中。[此處](https://cdn.discordapp.com/attachments/547411265677557771/660121945488228363/sfx.rar?ex=68c8c6b8&is=68c77538&hm=e5e214ac87a2cfd85d1b7b72883d2f2e7594d241471525a193fc2f091ca2a7ce&)提供常用 FX SFX；需要的話可直接解壓縮到譜面資料夾。
+
+### 旋鈕 [#lasers]
+
+選擇旋鈕工具後，在任意位置按左鍵會依旋鈕通常進入的方向建立旋鈕直角。按住 `CTRL` 並按方向鍵可調整旋鈕頭；按住 `Shift` 並按方向鍵可調整旋鈕起始位置。
 
 <Video src="/charting/guide/editinglasers.webm" vertical="true" size="h-50"/>
 
-Holding left click and dragging will allow you to create a long laser from the direction the laser normally comes from. Holding `CTRL` will allow you to start a laser from anywhere.
+按住左鍵拖曳可依旋鈕通常進入的方向建立長旋鈕；按住 `CTRL` 可從任意位置開始旋鈕。
 <Video src="/charting/guide/placinglasers.webm" vertical="true" size="h-75"/>
 
-You can give a laser extended range by holding `CTRL` and `Shift` while placing the laser. You can also make a laser have extended range by holding `CTRL` and `Shift` then left clicking on a laser
+放置旋鈕時按住 `CTRL` 與 `Shift` 可啟用延伸範圍；也可按住這兩鍵再左鍵點擊既有旋鈕來啟用。
 <Video src="/charting/guide/extendedlaser.webm" vertical="true" size="h-75"/>
 
-#### Curve Generator
-There is a curve generator that you can use to easily make curves. While it is mostly in japanese, it is pretty easy to use once you understand it.
+#### 曲線產生器 [#curve-generator]
 
-First, head to the [curve generator website](http://64bitosx.web.fc2.com/easeinout/run_ja.html)
+曲線產生器可輕鬆製作曲線。雖然介面大多是日文，但理解後不難使用。
+
+先前往 [曲線產生器網站](http://64bitosx.web.fc2.com/easeinout/run_ja.html)。
 
 <Image src="/charting/guide/curvegenerator.png"/>
 
-Above is a translation of how this works. If you don't understand how lasers work in KSM, I would recommend reading a little bit [here](/charting/kshfile#laser) before continuing. 
+上圖說明各項功能。若不了解 KSM 中旋鈕的運作方式，建議繼續前先閱讀[此處](/charting/kshfile#laser)。
 
-At the top you can see the laser range. The first section, or range, is the range/how far left and right the laser goes. For example, in this image, the laser will start at `0`, or the far left and go to `o` or the far right. If I would want it to end in the middle, I would change the `o` to something around `P`.
+上方可見旋鈕範圍。第一個欄位決定旋鈕能延伸至左右多遠；例如圖中旋鈕由最左側的 `0` 移至最右側的 `o`。若想讓它在中央結束，可將 `o` 改為接近 `P` 的字元。
 
-Length is the subdivision of the notes and how many notes it will last. In this image, the 24 represents that the laser is on a 24th note. The next number, 12, says how many notes the laser will last. So, in this example, the laser would last half the measure, since its 12 notes of the 24th.
+Length 代表分音符細度與持續長度。圖中的 `24` 表示旋鈕以 24 分音符為單位，後面的 `12` 表示持續 12 個單位，因此本例會持續半小節（24 分音符中的 12 個）。
 
-Time sig is the time signature of the laser.
+Time sig 是旋鈕的拍號。Shape 是旋鈕形狀。若希望曲線完整收尾，勾選 Ending 即可建立圖示所示的完整形狀。Knob 用來選擇要使用哪一側旋鈕。完成設定後，按 Generate 與 Copy。
 
-Shape is the shape of the laser.
+回到譜面，在想放置旋鈕的位置新增註解。選擇 BPM 工具後，按住 `Shift` 與 `CTRL` 點擊目標位置會開啟註解視窗。寫下容易辨識的註解，作為 KSH 檔內的「標記」。
 
-Ending is if you want the curve to end/fully curve, you can check this box to create the full shape (as shown in the icon).
+<Image src="/charting/guide/lanecomment.png" caption="註解在 KSH 編輯器中的樣子"/>
 
-Knob decides which knob to use.
-
-Once you have your settings setup, press Generate and Copy.
-
-Head to your chart and make a comment where you would like to put this laser. Using the edit tool with the BPM selection, holding `Shift` and `CTRL` and clicking on where you want the laser will open the comment window. Write a comment that you will remember. This will be your "mark" in the KSH file.
-
-<Image src="/charting/guide/lanecomment.png" caption="What the comment will look like in KSH editor"/>
-
-Now, open your .ksh chart in a text editor. It should look something like this 
+現在以文字編輯器開啟 `.ksh` 譜面，內容應類似下方：
 
 ```jsx
 title=sdvx.org
@@ -191,7 +196,7 @@ beat=4/4
 ...
 ```
 
-You can ignore most of this and press `CTRL` + `F` or whatever hotkey your find is and search for your comment.
+可忽略大部分內容，按 `CTRL` + `F`（或你的搜尋快捷鍵）搜尋剛才的註解。
 ```jsx
 --
 //Mark here!
@@ -205,42 +210,46 @@ You can ignore most of this and press `CTRL` + `F` or whatever hotkey your find 
 0000|02|--
 --
 ```
-Heres what mine looks like. Now, copy and paste what you got from the website into here. This will replace this whole measure with this laser. Note that anything else you placed in these measures will be replaced.
+這是範例結果。將網站產生的內容複製並貼到此處，整個小節會被這條旋鈕取代；請注意，該小節內原本放置的其他內容也會被取代。
 
-### Camera
-In KSM you can adjust the Top or Bottom of the camera. The top moves the camera around the edge of the circle. Positive moves clockwise while negative moves counter clockwise. Bottom changes the size of the circle, or the radius. A negative value increases the radius while portative decreases the radius. Here is a photo demonstration and videos of how this works.
+### 鏡頭 [#camera]
 
-<Image src="/charting/guide/camera.png" caption="From Ted's guide"/>
+KSM 可調整鏡頭的 Top 與 Bottom。Top 會讓鏡頭沿圓周移動，正值順時針、負值逆時針；Bottom 會改變圓的大小，也就是半徑，負值增加半徑、正值減少半徑。以下圖片與影片展示其效果。
 
-Top camera going from -100:100
+<Image src="/charting/guide/camera.png" caption="取自 Ted 的指南"/>
+
+Top 鏡頭由 -100 到 100：
 <Video src="/charting/guide/topcamera.webm"/>
 
-Bottom camera going from -100:100
+Bottom 鏡頭由 -100 到 100：
 <Video src="/charting/guide/bottomcamera.webm"/>
 
-While I use the range -100:100 in the video, you can use numbers much bigger then that if you need.
+影片使用 -100 至 100 的範圍，但需要時可使用更大的數值。
 
-#### Tilt
-There is also tilt. Upon just left clicking you will have 7 options. The `KEEP` options just hold the current position of the tilt, so the tilt isn't effected by new lasers. 
-<Image src="/charting/guide/normaltilt.png" caption="Normal tilt"/>
-<Image src="/charting/guide/biggertilt.png" caption="Bigger tilt"/>
-<Image src="/charting/guide/biggesttilt.png" caption="Biggest tilt"/>
+#### 傾斜 [#tilt]
 
-Upon holding `CTRL` and left clicking, you can add a custom value to the tilt. This works similar to the camera.
+另外還有傾斜效果。直接左鍵點擊時有 7 個選項；`KEEP` 選項會保持目前傾斜位置，使新旋鈕不會影響傾斜。
+<Image src="/charting/guide/normaltilt.png" caption="一般傾斜"/>
+<Image src="/charting/guide/biggertilt.png" caption="較大傾斜"/>
+<Image src="/charting/guide/biggesttilt.png" caption="最大傾斜"/>
 
-For what the values of manual tilt mean:
+按住 `CTRL` 再左鍵點擊可輸入自訂傾斜值，操作方式與鏡頭類似。
 
-- Normal tilt = 100
-- Bigger tilt = 175
-- Biggest tilt = 250
+手動傾斜值如下：
 
-### Bonus effects
-#### Lane split
-You can create a lane split effect similar to [666](https://sdvx.in/05/05186m.htm). Using the edit tool with the BPM selection, holding `Shift` and `CTRL` and clicking on where you want the lane split will open the comment window. Write a comment that you will remember. This will be your "mark" in the KSH file.
+- 一般傾斜 = 100
+- 較大傾斜 = 175
+- 最大傾斜 = 250
 
-<Image src="/charting/guide/lanecomment.png" caption="What the comment will look like in KSH editor"/>
+### 額外效果 [#bonus-effects]
 
-Now, open your .ksh chart in a text editor. It should look something like this 
+#### 軌道分離 [#lane-split]
+
+可建立類似 [666](https://sdvx.in/05/05186m.htm) 的軌道分離效果。選擇 BPM 工具後，按住 `Shift` 與 `CTRL` 點擊想分離軌道的位置，會開啟註解視窗。寫下容易辨識的註解，作為 KSH 檔內的標記。
+
+<Image src="/charting/guide/lanecomment.png" caption="註解在 KSH 編輯器中的樣子"/>
+
+現在以文字編輯器開啟 `.ksh` 譜面，內容應類似下方：
 
 ```jsx
 title=sdvx.org
@@ -270,7 +279,7 @@ beat=4/4
 ...
 ```
 
-You can ignore most of this and press `CTRL` + `F` or whatever hotkey your find is and search for your comment.
+可忽略大部分內容，按 `CTRL` + `F`（或你的搜尋快捷鍵）搜尋剛才的註解。
 ```jsx
 --
 //Mark here!
@@ -284,7 +293,7 @@ You can ignore most of this and press `CTRL` + `F` or whatever hotkey your find 
 0000|02|--
 --
 ```
-Heres what mine looks like. Under the comment, place `center_split=(value)` replacing `(value)` with whatever number you want. The bigger the number the bigger the lane split. So, for example, if I wanted a 50 lane split it would look like 
+這是範例結果。在註解下方加入 `center_split=(value)`，將 `(value)` 換成所需數值；數字越大，軌道分離程度越大。例如要設為 50：
 ```jsx
 --
 //Mark here!
@@ -299,14 +308,15 @@ center_split=50
 0000|02|--
 --
 ```
-This will not show up in the editor, but will be there when you test play. Your comment will mark where it is in the editor, but you can also remove the comment line if you like.
+此效果不會在編輯器中顯示，但測試播放時會生效。註解能在編輯器中標示位置；不需要時也可刪除註解行。
 
-#### Invisible Lane (USC ONLY)
-You can add a invisible lane similar to [Lachryma](https://sdvx.in/03/03242m.htm). This is a USC only effect and will not show in KSM. Using the edit tool with the BPM selection, holding `Shift` and `CTRL` and clicking on where you want the invisible lane will open the comment window. Write a comment that you will remember. This will be your "mark" in the KSH file.
+#### 隱藏軌道（僅 USC） [#invisible-lane-usc-only]
 
-<Image src="/charting/guide/lanecomment.png" caption="What the comment will look like in KSH editor"/>
+可加入類似 [Lachryma](https://sdvx.in/03/03242m.htm) 的隱藏軌道。這是僅限 USC 的效果，不會在 KSM 中顯示。選擇 BPM 工具後，按住 `Shift` 與 `CTRL` 點擊想隱藏軌道的位置，會開啟註解視窗。寫下容易辨識的註解，作為 KSH 檔內的標記。
 
-Now, open your .ksh chart in a text editor. It should look something like this 
+<Image src="/charting/guide/lanecomment.png" caption="註解在 KSH 編輯器中的樣子"/>
+
+現在以文字編輯器開啟 `.ksh` 譜面，內容應類似下方：
 
 ```jsx
 title=sdvx.org
@@ -336,7 +346,7 @@ beat=4/4
 ...
 ```
 
-You can ignore most of this and press `CTRL` + `F` or whatever hotkey your find is and search for your comment.
+可忽略大部分內容，按 `CTRL` + `F`（或你的搜尋快捷鍵）搜尋剛才的註解。
 ```jsx
 --
 //Mark here!
@@ -350,7 +360,7 @@ You can ignore most of this and press `CTRL` + `F` or whatever hotkey your find 
 0000|02|--
 --
 ```
-Heres what mine looks like. Under the comment, place `lane_toggle=(value)` replacing `(value)` with whatever number you want. Placing another one of these comments will make the lane reappear. The value is how long it takes to disappear or reappear. Lower means it will disappear quicker
+這是範例結果。在註解下方加入 `lane_toggle=(value)`，將 `(value)` 換成所需數值。再放置另一個相同設定，軌道就會重新出現。數值決定消失或出現所需時間；數值越小，消失越快。
 ```jsx
 --
 //Mark here!
@@ -365,27 +375,29 @@ lane_toggle=50
 0000|02|--
 --
 ```
-This will not show up in the editor, but will be there when you test play. Your comment will mark where it is in the editor, but you can also remove the comment line if you like.
+此效果不會在編輯器中顯示，但測試播放時會生效。註解能在編輯器中標示位置；不需要時也可刪除註解行。
 
-## Illegal patterns and charting practices
-Since you can do (mostly) anything in KSM, you can accidentally (or purposely) make patterns that are [illegal](terminology/patterns#illegal) or questionable. In general, anything that is using both lasers and buttons at the same time is illegal. 
+## 非法的譜面配置與製作方式 [#illegal-patterns-and-charting-practices]
+
+由於 KSM 幾乎可做任何事，你可能無意或刻意製作出 [非法](/terminology/patterns#illegal) 或有爭議的配置。一般而言，同時要求操作兩個旋鈕與按鍵的配置都不合法。
 
 <Image src="/charting/guide/illegal.png"/>
 
-While you *can* do this, note that, in general, it's a bad idea.
+雖然技術上可以這樣做，但通常不是好主意。
 
-Sometime you can make a pattern that is too fast for your hands to get to the knobs comfortably. For example:
+有時也可能做出手部來不及舒適地移到旋鈕的配置，例如：
 <Image src="/charting/guide/illegal2.png"/>
 
-These are uncomfortable to play because the transition from the note to the laser is too fast. The rule of thumb is
+這些配置不好操作，因為從按鍵移至旋鈕的轉換太快。經驗法則是：
 <div className="text-center">
-**Every 125 BPM, double the spacing required**
+**每增加 125 BPM，所需間隔加倍**
 </div>
 
-So, for example: 0-125 = 16th minimum, 125-250BPM = 8th minimum.
+例如：0 至 125 BPM 最少需要 16 分音符的間隔；125 至 250 BPM 最少需要 8 分音符的間隔。
 
-This isn't a hard set rule and just depends on the situation. The best way to know if you have a bad pattern is to play it if you can.
+這不是硬性規則，仍須視情況而定。要判斷配置是否不佳，最好的方法是在可行時實際遊玩。
 
-## References
-- [Teds guide](https://docs.google.com/document/d/1rDpndXsPxBsGQi_DkUmqAxq0PrmXjrPCWnK_zk639kQ/edit?tab=t.0#heading=h.z7y5vobdqtty)
-- [Curve Generator](http://64bitosx.web.fc2.com/easeinout/run_ja.html)
+## 參考資料 [#references]
+
+- [Ted 的指南](https://docs.google.com/document/d/1rDpndXsPxBsGQi_DkUmqAxq0PrmXjrPCWnK_zk639kQ/edit?tab=t.0#heading=h.z7y5vobdqtty)
+- [曲線產生器](http://64bitosx.web.fc2.com/easeinout/run_ja.html)

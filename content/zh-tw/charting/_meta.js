@@ -1,10 +1,10 @@
 export default {
   guide: {
-    title: 'Charting Guide',
+    title: '譜面製作指南',
     theme: { timestamp: false, toc: false},
   },
   kshfile: {
-    title: '.ksh file format',
+    title: '.ksh 檔案格式',
     theme: { timestamp: false, toc: false},
   },
 }

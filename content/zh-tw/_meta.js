@@ -32,7 +32,7 @@ export default{
     theme: { timestamp: false },
   },
   charting: {
-    title: 'KSM and Charting',
+    title: 'KSM 與譜面製作',
     theme: { timestamp: false },
   },
   resources: {
