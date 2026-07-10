@@ -1,152 +1,138 @@
 import { Image } from '../../../components/Media'
 
-# Gameplay Screens
+# 遊戲畫面
 
-## Table of Contents
-- [Song Select](#song-select)
-   - [Sorting](#song-select-sorting)
-   - [Folders](#song-select-folders)
-   - [Controls](#song-select-controls)
-- [Matching](#matching)
-   - [Controls](#matching-controls)
-- [Main Gameplay](#main-gameplay)
-   - [Controls](#main-gameplay-controls)
-- [Results](#results)
+## 目錄
+- [選歌畫面](#song-select)
+   - [排序](#song-select-sorting)
+   - [資料夾](#song-select-folders)
+   - [快捷鍵](#song-select-controls)
+- [配對](#matching)
+   - [快捷鍵](#matching-controls)
+- [主遊戲畫面](#main-gameplay)
+   - [快捷鍵](#main-gameplay-controls)
+- [結算畫面](#results)
 
-## Song Select
-When starting the game, you will be brought to song selection. Song selection is where you select the chart you would like to play.
+## 選歌畫面 [#song-select]
+開始遊戲後，會先進入選歌畫面，在這裡選擇想要遊玩的譜面。
 
-Move vertically through the charts with the `VOL-R` knob. Change the difficulty of the chart with `VOL-L`. Pressing start will select the song you are hovering.
+用 `VOL-R`（右側旋鈕）上下捲動選擇歌曲，用 `VOL-L`（左側旋鈕）切換難度。選定歌曲後按下 `START` 進入確認畫面。
 <Image src="/startingout/gameplay-screens/chartpreview.png" className="w-150"/>
 
-Here you can also select what difficulty you want to set the chart as. Change the difficulty with `VOL-L`. You can also see what gauge you are using as well as if you are using mirror, random, or S-RAN. Press start to begin the chart.
+可以在此確認目前使用的血條，以及是否有開啟 MIRROR、RANDOM 或 S-RANDOM 選項。在這裡也可以用 `VOL-L` 切換難度。再按一次 `START` 就會開始遊玩。
 
-### Sorting [#song-select-sorting]
+### 排序 [#song-select-sorting]
 
-Pressing `FX-R` (right) will open the sorting menu. Here is a general translation of what everything
-means.
+按下 `FX-R`（右側橘鍵）會打開排序選單。下圖是各項目的大致翻譯。
 
 <Image src="/startingout/gameplay-screens/Sort.png" className="w-100"/>
 
-These sorts apply to the folder you select. So, if you select `Score Grade` and go into the `LEVEL 17` folder, you will see all level 17s sorted by your score.
+排序方式會套用到你選擇的資料夾內。所以如果選擇「照分數排序」後再進入 `LEVEL 17` 資料夾，就會看到所有 17 級譜面依照你的分數排序。
 
-### Folders [#song-select-folders]
+### 資料夾 [#song-select-folders]
 <Image src="/startingout/gameplay-screens/folders.png"/>
 
-Folders allow you to sort through songs more easily.
-- **x行** will sort by the hiragana of the song
-- **Score Grade** will sort by your grades on charts
-- **ALMOST** will show charts that you're about to reach the next grade threshold
-- **Clear Mark** will sort by your clear on charts
-- **Search by Genre** will sort charts into genres
-- **Search by Contest** will search charts by contest. These are KAC, BPL, and other contests they do
-- **Search by Version** will search by each version of the game. Booth, Infinite Infection, Gravity Wars etc.
-- **Released** will be sorted by release date. Top is the oldest, bottom is the newest.
-- **SKILL LEVEL** will be songs from the [Dan Courses](/compendium/dan-courses)
-- **Favorites** will be sorted by your favorites. Can hold up to 50 songs.
-- **VOLFORCE** will sort by what is in your best 50. This does not sort by what is giving you the highest VF, but rather by what sorting mode you are currently on.
-- **VOLFORCE POTENTIAL** See more [here](/compendium/volforce#volforce-potential-folder)
-- **EFFECT RADAR** will sort charts by what their highest part of the radar is. More information about radar on the [Radar page](/compendium/effect-radar)
-- **PLAYER RADAR** will sort by what's on your player radar.
-- **BLASTER GATE, HEXADIVER**. This is the Blaster Gate, Omega Dimension, and HEXADIVER folders. Note that the first HEXADIVER has multiple HEXADIVERS in it. You will only see BLASTER GATE on Konasute.
+資料夾讓你可以更容易尋找歌曲。
+- **～行** 依照歌曲名稱的日文假名分類
+- **Score Grade** 依照分數評級分類
+- **ALMOST** 會顯示接近下一個分數門檻的譜面
+- **Clear Mark** 依照通關標記分類
+- **Search by Genre** 依照風格分類
+- **Search by Contest** 依照比賽分類搜尋譜面，包含 KAC、BPL 和其他相關比賽
+- **Search by Version** 依照遊戲版本分類，例如 Booth、Infinite Infection、Gravity Wars 等
+- **Released** 依照公開日期分類，由上至下是由舊到新。
+- **SKILL LEVEL** 會顯示 [段位系統](/compendium/dan-courses) 裡的歌曲
+- **Favorites** 你收藏的歌曲，最多可以收藏 50 首
+- **VOLFORCE** VF 值最高的 50 首。注意資料夾中的排序不是依照 VF，而是依照你目前選定的排序方式
+- **VOLFORCE POTENTIAL** 詳見 [這裡](/compendium/volforce#volforce-potential-folder)
+- **EFFECT RADAR** 依照譜面在雷達圖中最高的項目分類。更多資訊可見 [雷達圖](/compendium/effect-radar)
+- **PLAYER RADAR** 依照玩家雷達圖上的項目得分分類
+- **BLASTER GATE, Ω Dimension, HEXADIVER**\
+    指的是 Blaster Gate、Omega Dimension 和 HEXADIVER 資料夾。許多歌曲需要由這些資料夾解鎖。注意第一個 HEXADIVER 內還有多個 HEXADIVER。Konasute 中只會顯示 BLASTER GATE
 
-### Controls [#song-select-controls]
-- Pressing both `FX` buttons will open the options menu. See more about options on the [Options page.](/startingout/options)
-- Pressing `FX-L` will close the current open folder. 
-- Holding `FX-L` or `FX-R` and scrolling will scroll through the sorting you have. 
-- When hovering over a song, you can press `0` to favorite it. This will add it to a separate folder. You can have up to 50 songs favorited.
-- Pressing `8` while on this screen will open the Rival leaderboard and Location/National best Leaderboard. 
-- Pressing `3` will choose a random chart in the folder selected.
-- If in premium time, Pressing all the `BT` buttons will give you the option to leave premium time.
+### 快捷鍵 [#song-select-controls]
+- 同時按下兩個 `FX` 鍵會打開遊戲選項。更多內容請見 [選項頁面](/startingout/options)
+- 按下 `FX-L` 會關閉目前開啟的資料夾
+- 按住 `FX-L` 或 `FX-R` 再轉動旋鈕，可以切換目前的排序方式
+- 按 `0` 可以把當前歌曲加入收藏，會另外放進一個資料夾，最多可收藏 50 首
+- 按 `8` 會打開 Rival 排行與地區／全國最高分排行榜
+- 按下 `3` 會從目前所在的資料夾中隨機選一張譜面
+- 如果是在 premium time，按下所有 `BT` 按鍵會出現離開 premium time 的選項
 
-### Tips for moving around folders
-If you want to access a song in Blaster Gate or Omega Dimension but don't want to go through the whole song you can
-- Hover over the locked song
-- Close the folder with `FX-L`
-- Go to the Blaster Gate or Omega Dimension folder and open it
+### 資料夾切換小技巧 [#song-select-tips-for-moving-around-folders]
+如果你想選擇 Blaster Gate 或 Omega Dimension 的歌曲，但又不想一路捲過去，可以：
+- 先停在那首被鎖住的歌曲上
+- 用 `FX-L` 關閉資料夾
+- 再前往 Blaster Gate 或 Omega Dimension 資料夾並打開它
 
-You will be put onto the songs you had hovered
+你就會直接停在原本選擇的歌曲位置。
 
-If you want to go to the top of a level folder quickly
-- Switch to a different difficulty on what song you are hovering
-- Press `FX-L` twice to close and reopen the folder
+如果想快速回到某個等級資料夾的最上方：
+- 先把目前的歌曲切到另一個難度
+- 連按兩次 `FX-L` 關閉再重新打開資料夾
 
 
-## Matching
-After selecting a song, you will go into matching. This is where you can match with other players playing the same song. Note that these players don't have to be playing the same difficulty to match together.
+## 配對 [#matching]
+選完歌曲後就會進入配對畫面。這裡可以和其他正在玩同一首歌的玩家配對。注意，配對的玩家不一定是玩同一個難度。
 
-Pressing both FX buttons at the same time will send a request to skip. If you have other players in your lobby, you will have to wait for either everyone to skip or the time to run out.
+同時按下兩個 `FX` 鍵會送出跳過請求。如果配對到了其他玩家，就必須等大家都跳過，或等時間跑完。
 
-You can also adjust your lane speed here by holding `START` and moving either knob. 
+你也可以在這裡按住 `START` 並轉動任一旋鈕來調整下落速度，或是以觸控螢幕調整其他遊戲選項。
 
 <Image src="/startingout/gameplay-screens/matching.png" className="w-100"/>
 
 
-On Konasute or Premium Time, you will not enter the matching screen and will go straight to the chart.
+在 Konasute 或 premium time 中，不會進入配對畫面，而是會直接開始譜面。
 
-### Controls [#matching-controls]
-- Pressing both `FX` at the same time will skip.
-- Holding `START` and moving either knob will change lane speed
-- Double tapping and holding `START` will allow for finer control of lane speed.
+### 快捷鍵 [#matching-controls]
+- 同時按下兩個 `FX` 會跳過
+- 按住 `START` 並轉動任一旋鈕可以調整下落速度
+- 連按兩下並按住 `START` 可以更細微地調整下落速度
 
-## Main Gameplay
-When you load into a song, you will be greeted with this screen. This is where you will play the chart you selected.
+## 主遊戲畫面 [#main-gameplay]
+載入歌曲後，會看到這個畫面。這裡就是你實際遊玩所選譜面的地方。
 
 <Image src="/startingout/gameplay-screens/ingame.jpg" className="w-100"/>
 
 
-- **Title, Cover, and difficulty of song:** Shows current information about what you are currently playing. Bar below title is the progress bar. 
+- **歌曲標題、封面圖與難度：** 顯示目前正在遊玩的歌曲資訊，標題下方的橫條是進度條
 <Image src="/startingout/gameplay-screens/title.png" className="h-60"/>
 
-- **Current BPM and current lane speed:** Shows lane speed, Current BPM, Offsets, and locked lane speed if on Konasute. If the chart changes BPM, it will be displayed here with what lane speed it is changing to.
+- **BPM 與下落速度：** 顯示當前的下落速度、BPM、offset，以及鎖定的下落速度（Konasute）。如果譜面的 BPM 有變化，也會在這裡顯示下落速度變化。
 <Image src="/startingout/gameplay-screens/bpm-and-lanespeed.png" className="h-100"/>
 
-- **Your profile data:** Shows current crew member, appeal card, rank, dan, volforce, and other things depending on what you have. If you are matching or have target score on, this will also show the difference in score.
+- **個人資訊：** 顯示目前的領航員、appeal card、對戰級別、段位、volforce 等資訊。如果你正在與其他玩家配對，或者有開啟目標分數功能，這裡也會顯示分數差距
 <Image src="/startingout/gameplay-screens/player-profile.png" className="h-100"/>
-- **Challenge and quick retry:** Only appears during premium time or on Konasute. Shows the current challenge set. Pressing `00` on the numpad will enable auto-quick retry, making it so that the moment you fail out, you will automatically
- retry.
+- **Challenge 與快速重試：** 只會在 premium time 或 Konasute 中顯示。這裡會顯示目前的 challenge 設定。按下小鍵盤的 `00` 會啟用自動快速重試，讓你在失敗出局的瞬間自動重新挑戰
 <Image src="/startingout/gameplay-screens/challenge.png" className="h-100"/>
-- **Current score, EX SCORE, and highest chain you have had:** If you are using
- EX SCORE, this will look slightly different. See below for the difference
+- **目前分數、EX SCORE 與最高連鎖：** 如果選擇顯示 EX SCORE，這裡會稍微不同。差異請見下方
 <Image src="/startingout/gameplay-screens/scoredifference.png" />
 
-See [here](/startingout/scoring#ex-score) to learn more about EX SCORE.
+更多 EX SCORE 說明請見 [這裡](/startingout/scoring#ex-score)。
 
-- **Life Gauge:** This is your gauge. It might look different depending on your
- settings. To learn more about gauge, see [Gauge Options](/compendium/gauge-options) page.
+- **血條（Gauge）：** 這就是你的血條，外觀可能會因設定而不同。想了解更多請參考 [這裡](/compendium/gauge-options)
 <Image src="/startingout/gameplay-screens/gauge.png" className="w-40"/>
 
-### Controls [#main-gameplay-controls]
-- Pressing `00` on the numpad will toggle quick retry
-- Holding `START` and moving either knob will change lane speed
-- Double tapping and holding `START` will allow for finer control of lane speed.
+### 快捷鍵 [#main-gameplay-controls]
+- 按下小鍵盤 `00` 可以開關「快速重試」功能
+- 按住 `START` 並轉動任一旋鈕可以調整下落速度
+- 連按兩下並按住 `START` 可以更細微地調整下落速度
 
-## Results
+## 結算畫面 [#results]
 
 <Image src="/startingout/gameplay-screens/scoreScreen.jpg" className="w-120"/>
 
-1. **What the challenge was and how many quick retries you did:** Only counts quick
- retries that happened during the score. So if you fully backed out and saw
- the score screen, it reset. Only seen on premium time or Konasute
+1. **challenge 與快速重試次數：** 只會顯示本輪嘗試中快速重試被觸發的次數，完全退出後就會重置。只會在 premium time 或 Konasute 中顯示
 <Image src="/startingout/gameplay-screens/quick-retry.png" className="w-80"/>
-2. **Title, Score, compare to personal best, and Ex-Score:** Shows your score compared to personal best and your Ex-Score. If you were using
- Ex-Score this would look slightly different. 
+2. **歌曲名稱、分數、個人最高分及 EX SCORE 比較：** 顯示你目前的分數與個人最高分的比較，以及你的 EX SCORE。如果選擇顯示 EX SCORE，這裡會稍微不同
 <Image src="/startingout/gameplay-screens/clear-title.png" className="w-100"/>
-3. **S-Crit, Crit, Near, and Error count:** Shows you how many S-Crits, Crits,
- Nears, and Errors you got. `CHIP` means note, `HOLD` means hold/long notes,
- and `TSUMAMI` means laser. Note that only chips have crit or nears.
+3. **S-Critical、Critical、Near 與 Error 數量：** 顯示你拿到多少 S-Critical、Critical、Near 和 Error。`CHIP` 代表按鍵，`HOLD` 代表長條（長按音符），`TSUMAMI` 代表旋鈕。注意只有 CHIP 才會有 Critical 或 Near
 <Image src="/startingout/gameplay-screens/count.png" className="w-100"/>
-4. **Profile:** If you gained Volforce, it will pop up at the bottom next to your
- Volforce. If you are playing at an Arcade, the stars at the bottom will also
- show what current arcade you are at. Each star represents how many scores you
- hold at your arcade currently. 1 star means you have at least one top score
- at your arcade, 3 is you have the most, and 2 is somewhere in between (does
- not mean 2nd most).
+4. **個人資訊：** 如果 Volforce 增加了，會在這裡跳出增加幅度。如果你是在街機遊玩，底部的星星旁也會顯示你目前所在的街機地點。每一顆星代表你在那台特定的機台持有多少高分。1 顆星表示你至少在該街機有一個高分，3 顆表示最多，2 顆則介於中間（不代表第二多）
 <Image src="/startingout/gameplay-screens/profile-after.png" className="w-110"/>
-5. **Spread of Accuracy:** Shows you details about how late or early you were. For example, this screenshot shows I hit 4 nears early and 10 nears late. Generally, you want this to be as even as possible, but depending
- on a lot of factors, it might sway one side or the other.
+5. **準度分布：** 顯示偏離判定的詳細狀況。例如這張截圖顯示我有 4 個 near 偏早、10 個 near 偏晚。一般來說你會希望分布盡量平均，但依照很多因素，也可能偏向某一邊
 <Image src="/startingout/gameplay-screens/spread.png" className="w-100"/>
-6. **Blaster gauge:** Shows you your current blaster gauge percentage or varient gauge percentage.
+6. **Blaster 量表：** 以百分比顯示目前的 blaster 量表或 variant 量表
 <Image src="/startingout/gameplay-screens/blaster.png" className="w-100"/>
 
-Note that this was a screenshot from Konasute, so things will look slightly different if you are at the arcade.
+以上是 Konasute 的截圖，街機遊玩畫面可能有所不同。

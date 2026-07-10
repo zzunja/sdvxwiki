@@ -1,257 +1,230 @@
 import { Image, Video } from '../../../components/Media'
 import { Callout } from "nextra/components"
 
-# Song Select and Options
-## Table of Contents
-- [Options](#options)
-    - [Lane Speed](#lane-speed)
-        - [Theory](#theory)
-    - [Offset](#offset)
-        - [Theory](#theory-1)
-    - [Early Late adjustment](#early-late-adjustment)
+# 遊戲選項
+## 目錄
+- [選項](#options)
+    - [下落速度](#lane-speed)
+        - [理論](#theory)
+    - [Offset（判定時機調整）](#offset)
+        - [理論](#theory-1)
+    - [early/late 判定顯示](#early-late-adjustment)
     - [S-Critical](#s-critical)
-    - [Lane preview](#lane-preview)
-    - [System Voice](#system-voice)
-    - [Show SDVX Konasute/Arcade scores](#show-sdvx-konasutearcade-scores)
-    - [Valkyrie Effect](#valkyrie-effect)
-    - [Early Late Color](#early-late-color)
-    - [Laser Colors](#laser-colors)
-    - [Display Brightness](#display-brightness)
-    - [Score Difference](#score-difference)
-    - [Normal Scoring and Ex Scoring](#normal-scoring-and-ex-scoring)
-    - [Random and Mirror](#random-and-mirror)
-    - [Effective/Excessive Clear](#effectiveexcessive-clear)
-    - [Volume](#volume)
-    - [Challenge Options](#challenge-options)
-    - [Target Score](#target-score)
-- [Additional things to note](#additional-things-to-note)
+    - [預覽](#lane-preview)
+    - [系統語音](#system-voice)
+    - [顯示 SDVX Konasute／街機分數](#show-sdvx-konasutearcade-scores)
+    - [Valkyrie 特效](#valkyrie-effect)
+    - [early/late 顏色](#early-late-color)
+    - [旋鈕顏色](#laser-colors)
+    - [背景亮度](#display-brightness)
+    - [分數差距](#score-difference)
+    - [一般分數與 EX SCORE](#normal-scoring-and-ex-scoring)
+    - [RANDOM 與 MIRROR](#random-and-mirror)
+    - [血條](#effectiveexcessive-clear)
+    - [音量](#volume)
+    - [challenge 選項](#challenge-options)
+    - [目標分數](#target-score)
+- [其他注意事項](#additional-things-to-note)
 
 
+## 選項 [#options]
+在選歌畫面時，同時按下 `FX-L` 和 `FX-R` 會叫出遊戲選項的選單。所有設定也都能透過觸控螢幕選單操作，在 Konasute 中可按 `F1` 開啟。這份指南會介紹所有選項、它們的作用，以及建議設定。
 
-## Options
-While on the song select screen, pressing `FX-L` and `FX-R` will bring up the
-options menu. All settings are also accessible through the Touchscreen menu, which can be accessed by pressing `F1` on Konasute. This
-guide will go over all the options, what they do, and recommended settings.
+這裡介紹的是按下 `FX-L` 和 `FX-R` 時顯示的選單，所以版面可能和你看到的略有不同，但說明內容是一樣的。
 
-This will go over the menu that is shown when pressing `FX-L` and `FX-R`, so the layout might be different. The explanations are the same.
-
-### Lane Speed
+### 下落速度 [#lane-speed]
 <Image src="/startingout/options/LaneSpeed.png"/>
 
-Lane Speed is how fast the notes take to reach the bottom of the screen from when they appear. This setting goes from 1-10 with two decimal places. 
+下落速度是指音符從出現到抵達畫面底部的速度。又稱流速。設定範圍是 1 到 10，精確到兩位小數。
 
-Lane speed is not how fast the chart is. If you play `1.00` lane speed you are playing the same chart and same speed as someone playing at `10.00` lane speed. Lane speed is just visual. For a demonstration of this, see the video below.
+下落速度並不是譜面本身的速度。就算你用 `1.00` 的下落速度，玩到的譜面和用 `10.00` 下落速度的人是一樣的，差別只在視覺呈現。想看示範可以參考下面的影片。
 
 <Video src="/startingout/options/lanespeedcomparision.webm"/>
 <div className="flex justify-center">
-<em>From left to right, [JiminP 1.00 Lane Speed,](https://www.youtube.com/watch?v=rjY1itUxA0s) [DDX 6.90 Lane Speed,](https://www.youtube.com/watch?v=HewBZrjtuDU) and [Mini 9.50 Lane Speed](https://www.youtube.com/watch?v=iLjAC0NUJAg)</em>
+<em>由左至右分別是 [JiminP 1.00 下落速度](https://www.youtube.com/watch?v=rjY1itUxA0s)，[DDX 6.90 下落速度](https://www.youtube.com/watch?v=HewBZrjtuDU) 與 [Mini 9.50 下落速度](https://www.youtube.com/watch?v=iLjAC0NUJAg)</em>
 </div>
 
-Even though they look different, they are playing the same chart. It isn't a "faster" or "slower" chart. 
+雖然看起來不同，但他們玩的都是同樣的一張譜面，並不是「比較快」或「比較慢」的譜面。
 
-In the beginning, you will likely start around 2-4. As your reading skill gets better you will generally start to increase this to make things easier to read. 
+一開始下落速度通常會設 2 到 4 左右。隨著你的讀譜能力提升，通常會慢慢調高數值，讓畫面更容易閱讀。
 
-Pressing `Numpad 6` will lock your lane speed. This will make it so that every time you start the game or go to song select, your lane speed will set back to what you have it locked to.
+按下數字鍵 `6` 可以鎖定下落速度。這樣每次重新開始遊戲或回到選歌畫面時，下落速度都會自動設定為鎖定的數值。
 
-#### Theory
-In general, 
+#### 理論 [#theory]
+一般來說，
 <div className="text-center mt-3">
-**The higher the lane speed = The fewer notes on the screen = The easier it is to read**
+**下落速度越高 = 畫面上的音符越少 = 越容易閱讀**
 </div>
-**However**, you don't want to increase it to the point where you are reacting and not reading. 
+**不過**，你也不會想把它調到變成「在反應」而不是「在閱讀」。
 
-Lane speed is preference. While in theory, you should push it higher, this
-doesn't matter if you are unable to read high lane speeds. Some people read
-9+ lane speed while others stay between 6 to 8. How fast you can read is
-dependent on a lot of different factors.
+下落速度很看個人偏好。理論上應該把它往上調，但如果你看不懂高速譜面，那也沒有意義。有的人能適應 9 以上，有的人則維持在 6 到 8。能讀多快，取決於很多不同因素。
 
 
-### Offset
+### Offset（判定時機調整） [#offset]
 <Image src="/startingout/options/Offset.png"/>
 
-There are 2 offsets. Draw (`判定タイミング(描画)`) and Judge (`判定タイミング(音)`). Judge moves both the judgement line **and** audio while Draw **only** affects the judgement line. While this might seem complicated, you can think of it as Judge affects both visually when to hit the note and the time to hit the note, while Draw only affects visually when to hit the note. 
+有兩種 offset：Draw（`判定タイミング(描画)`）和 Judge（`判定タイミング(音)`）。Judge 會同時移動判定線**和**音訊，Draw 則**只**影響判定線。雖然看起來有點複雜，但你可以理解成：Judge 同時影響視覺上的打點時間和實際打點時間，而 Draw 只影響視覺上的打點時間。
 
-So, if you were to want only audio offset of `+8ms` with your judgement line at default, you would adjust your Judge to `+8ms` and your Draw `-8ms`.
+所以如果你想要只把音訊 offset 調成 `+2`、而判定線維持預設，就要把 Judge 調成 `+2`、Draw 調成 `-2`。
 
 <Image src="/startingout/options/draw-example.png" className="w-100"/>
 
-The line at the top would represent where the judgment line would be heading to
-for `+` offset. The bottom line would represent where the judgment line would be
-heading to for `-` offset. The line in between is the default judgment line.
+`+` offset 時判定線會往上移，`-` offset 時判定線會往下移，中間是預設判定線。
 
 
-You can press the following numpad button to change the offset:
-- `8`: Judge +
-- `2`: Judge -
-- `9`: Draw +
-- `3`: Draw -
+你可以按以下小鍵盤按鍵來調整 offset：
+- `8`：Judge +
+- `2`：Judge -
+- `9`：Draw +
+- `3`：Draw -
 
-If you are on a Valkyrie Cabinet, pressing the offset number on the touchscreen will change it to ms. Pressing `6` will also do this on Konasute.
+Valkyrie 機台上，可以直接在觸控螢幕上修改 offset 數值。
 
-For a visual representation of what each does, you can use [this video](https://www.youtube.com/watch?v=hp-0K3FR7FU).
+相關的實機演示可以參考 [這部影片](https://www.youtube.com/watch?v=hp-0K3FR7FU)。
 
-#### Theory
+#### 理論 [#theory-1]
 
-Your offset can sometimes change day-to-day setup-to-setup chart-to-chart. Sometimes, you have to decide whether to change offset or your own internal timing.
+offset 有時會因為每天、不同設備、不同譜面而改變。有時你得判斷究竟是要調 offset，還是要調整自己的內在拍點。
 
-An important thing to note is that a lot of times it isn't your offset but
-rather your lane speed/reading ability. If you notice you are hitting a lot of
-lates or earlies, you might be playing a chart that is difficult for you to read
-or your lane speed is wrong. 
+有一件很重要的事要注意：很多時候問題不在 offset，而是在下落速度或你的讀譜能力。如果你發現自己一直打出很多 late 或 early，可能是你正在玩一張不容易讀的譜，或者下落速度設錯了。
 
-If you are having trouble finding your offset or just want to learn more about offset [here is JiminP guide.](https://r-g.kr/article/sync) This is a very detailed guide for all your offset needs.
+若你在設定 offset 時遇到困難，或者想更了解 offset，可以參考 [JiminP 的指南](https://r-g.kr/article/sync)。這是一份非常詳細的 offset 參考。
 
-### Early Late adjustment
+### early/late 判定顯示 [#early-late-adjustment]
 <Image src="/startingout/options/Earlylate.png"/>
 
-The next 3 are adjustments to the early late or ms that show up when you press something off-timing. 
+接下來的三項是當你打點偏離判定時，early/late 判定以及 ±ms 顯示的調整。
 
 <Image src="/startingout/options/Earlyexample.png"/>
 
-The first one adjusts when the early/late shows up. (Pictured above) Critical will make it so that every time you hit a crit or below it will show up. Near will make it so only nears and below it will show up. Off means it never shows up.
+第一項是調整 early/late 何時顯示。（如上圖）選擇 Critical 會在每次打到 Critical 或更差時都顯示；Near 會讓它只在 Near 或更差時顯示；Off 則是不顯示。
 
 <Image src="/startingout/options/msexmaple.png"/>
-The second one adjusts when the ms shows up. (Pictured above) All will show it for everything, even S-Crit. Note that if you hit a S-Crit, it will be grey. Critical will make it so that every time you hit a Crit or below it will show up. Near will make it so only Nears and below it will show up. Off means it never shows up.
+第二項是調整 ±ms 何時顯示。（如上圖）All 會在所有判定都顯示，連 S-Critical 也會出現。注意 S-Critical 顯示的會是灰色。Critical 會在打到 Critical 或更差時顯示；Near 會讓它只在 Near 或更差時顯示；Off 則是不顯示。
 
-The final option adjust where they show up on the screen. Upper is most common.
+最後一項是調整它們在畫面上的顯示位置。Upper 是最常見的選擇。
 
-In general, it is a good idea to have one of them only show up for nears and the
-other show up for all or just crits. That way you know if you hit a nearby if one shows up.
+一般來說，建議讓其中一個只在 near 時顯示，另一個則在全部情況或至少 critical 時顯示。這樣比較容易看出是否有出現 near 或者只是小幅度偏離。
 
-### S-Critical
+### S-Critical [#s-critical]
 <Image src="/startingout/options/SCrit.png"/>
 
-This adds an extra judgment that is stricter than Crit. This does not affect normal scoring. For information on the timing, see [Timing Windows page](/compendium/timing-windows)
+啟用一個比 Critical 更嚴格的判定。S-Critical 不會影響一般分數。關於判定時機，請參考 [這個頁面](/compendium/timing-windows)
 
-Note that if you are using light start this will not be accessible. This does not matter for Konasute. In general, it is recommended to always have this on if you can.
+注意 light start 中無法使用此選項。不過這對 Konasute 沒差。一般來說，可以的話建議都把它開著。
 
-### Lane preview
+### 預覽 [#lane-preview]
 <Image src="/startingout/options/Preview.png"/>
-Here you can preview the changes you just made. It will play a simple chart with a simple song where you can see your lane speed, offsets, and early/late adjustments. It is recommend using this to figure out what you like.
+可以在這裡預覽剛剛做的設定。系統會提供一張簡單的譜面，讓你看到自己的下落速度、offset 與 early/late 判定調整。建議善用預覽來找出自己喜歡的設定。
 
-### System Voice
+### 系統語音 [#system-voice]
 <Image src="/startingout/options/SystemVoice.png"/>
 
-You can choose to disable or enable the voice from your navigator that plays around the menus. For example, the voice that plays when you complete a chart.
+選擇要不要啟用導航員在選單中的語音，例如打完一張譜面時播放的語音。
 
-### Show SDVX Konasute/Arcade scores
+### 顯示 SDVX Konasute／街機分數 [#show-sdvx-konasutearcade-scores]
 <Image src="/startingout/options/ShowScores.png"/>
 
-This setting changes whether or not you can see your best scores overall from Arcade and Konasute. If enabled, it will combine your Arcade and Konasute scores and show you what you have the highest of. So, if you have a score of `9,978,132` on Konasute and a `9,942,612` on Arcade, it will display the Konasute score.
+決定是否顯示街機和 Konasute 的綜合最高分。啟用後，它會把街機與 Konasute 的分數合併，並顯示其中較高的那個。比如你在 Konasute 有 `9,978,132`，在街機有 `9,942,612`，它就會顯示 Konasute 的分數。
 
-Note that Volforce and the actual score are separate between the two. 
+請注意，Volforce 在兩邊是分開計算的。
 
-You can tell which scores are from Konasute or Arcade by if this light at the
-the top is lit.
+可以看結算頁面的標記，判斷這個分數是來自 Konasute 還是街機。
 
 <Image src="/startingout/options/ShowKonasuteScores.png"/>
-Here it shows that this score was from the arcade because the Arcade is lit up.
+這裡顯示這個分數來自街機，因為 `ARCADE` 的標示亮著。
 
-If you don't have your Konasute and Arcade data linked, this option will not show up.
+如果你沒有把 Konasute 和街機資料連結，這個選項就不會出現。
 
-### Valkyrie Effect
+### Valkyrie 特效 [#valkyrie-effect]
 <Image src="/startingout/options/ValkyrieEffect.png"/>
 
-This changes how the lasers look. Enabling it adds a bit more effect to lasers. For an example, see the video below.
+這個選項會改變旋鈕特效的外觀。開啟後特效會更明顯一點。範例請見下面的影片。
 
 <Video src="/startingout/options/valkeffect.mp4"/>
 <em className="flex justify-center">[Inevitable Magic MXM 18](https://sdvx.in/06/06450m.htm)</em>
 
-### Early Late Color
+### early/late 顏色 [#early-late-color]
 <Image src="/startingout/options/Earlylateflip.png"/>
 
-This flips the early and late colors. Normally, Late are blue and Early is pink/red. This flips them. 
+交換 early 和 late 的顏色。預設設定下 Late 是藍色、Early 是粉紅／紅色，開啟後會互換。
 
-### Laser Colors
+### 旋鈕顏色 [#laser-colors]
 <Image src="/startingout/options/lasercolors.png"/>
 
-These change the laser colors. The first one is the left laser and the second one is the right laser. Most people don't change these. Although notably Mini has his left laser (Normally blue) as green.
+更改旋鈕顏色。第一個是左旋鈕，第二個是右旋鈕。大多數人不會去改這些，不過 Mini 的左旋鈕是綠色（預設是藍色）。
 
-### Display Brightness
+### 背景亮度 [#display-brightness]
 <Image src="/startingout/options/displaybrightness.png"/>
 
-This is how bright the background is. If you want a good example, look at the Lane Speed video above. Mini plays on a brighter background compared to JiminP and DDX.
+調整背景的亮度。不同的背景亮度可以參考前面下落速度的影片。和 JiminP、DDX 相比，Mini 使用的背景更亮。
 
-### Score Difference
+### 分數差距 [#score-difference]
 <Image src="/startingout/options/scoredifference.png" className="w-50"/>
-If you are in matching or have [Target Score](#target-score) on, this will show
-the difference in score between you and your opponent/target score. Example below.
+決定要不要顯示你和對手（如果你正在配對中）或者你和 [目標分數](#target-score) 之間的差距，顯示的範例如下圖。
 <Image src="/startingout/options/scoredifference-example.png" className="w-100"/>
 
-Note that Target Score takes over opponent, so if you have Target Score on and you are
-matching, you will see your Target Score difference instead of opponent
-difference.
+注意目標分數優先於對手分數，所以如果你開著目標分數又正在配對，你看到的會是目標分數差距，而不是對手分數差距。
 
-### Normal Scoring and Ex Scoring
+### 一般分數與 EX SCORE [#normal-scoring-and-ex-scoring]
 <Image src="/startingout/options/normalscoreexscore.png"/>
 
-This switches between Normal Scoring and EX-Scoring. Normal Scoring is the score
-that is graded and used for Volforce. It has a max of 10,000,000 on every chart
-and is based on Crit, Nears, and errors. EX-Scoring is based on S-Crits, Crits,
-Nears, and Errors. See [here](/startingout/scoring) to learn more about scoring.
+切換一般分數和 EX SCORE 的顯示。一般分數會決定評級，也會用於計算 Volforce。每張譜面的上限都是 10,000,000，基於 Critical、Near 和 Error 計算。EX SCORE 則是依照 S-Critical、Critical、Near 和 Error 計算。更多說明請見 [這裡](/startingout/scoring)。
 
-Ex-Score will not be available if you have S-Crits disabled.
+你必須啟用 S-Critical 功能才能啟用 EX SCORE。
 
-Even if you use EX-score, your normal score is still calculated and same vice
-versa (as long as you have s-crits enabled). You can see your EX-Score right
-under your score on any chart.
+即使在這裡選擇顯示 EX SCORE，一般分數仍然會被計算，反之亦然（前提是 S-Critical 有開啟）。你可以在任何譜面的分數下方看到自己的 EX SCORE。
 
-If you are just starting, it is recommended to keep Normal Scoring.
+若你才剛開始玩，建議先維持顯示一般分數。
 
-### Random and Mirror
+### RANDOM 與 MIRROR [#random-and-mirror]
 <Image src="/startingout/options/RandomMirror.png"/>
 
-This changes how the chart is.
-- Mirror flips the chart. For example, a chart that is normally a 1-2-3-4 staircase is now a 4-3-2-1 staircase.
-- Random randomizes the lanes the notes come down. For example, a 1-2-3-4 staircase now can become 3-2-4-1.
-- S-Random completely randomizes the notes as well, so any note can be anything
+這會改變音符的排列方式。
+- MIRROR 會把譜面左右翻轉。比如原本是 1-2-3-4 的階梯，會變成 4-3-2-1
+- RANDOM 會隨機打亂音符落下的軌道。比如原本是 1-2-3-4 的階梯，可能變成 3-2-4-1
+- S-RANDOM 連音符本身也會完全隨機化，所以任何音符都可能出現在任何位置
 
 <Video src="/startingout/options/normalran.mp4"/>
 
-In general, Mirror is the only useable option. Random and S-Ran often make charts have [illegal patterns](/terminology/patterns#illegal).
+一般來說，MIRROR 是唯一比較實用的選項。RANDOM 和 S-RANDOM 很常讓譜面出現 [非法配置](/terminology/patterns#illegal)。
 
-### Effective/Excessive Clear
+### 血條 [#effectiveexcessive-clear]
 <Image src="/startingout/options/ClearType.png"/>
 
-These are the clear type options.
+在不同的血條下通關會得到不同的通關標記。
 
-- **Effective Rate:** Start at 0% and work up to above 70% gauge to clear
-- **Excessive Rate:** Start at 100% and survive the whole chart without it dropping to 0 to clear. Errors take more off the gauge and are harder to build up compared to Effective.
-- **Excessive + ARS:** Starts Excessive Rate and if you fail out of Excessive, then go to Effective. Your Effective Gauge is still calculated as you play so you won't start at 0% if you die in Excessive.
+- **Effective Rate：** 從 0% 開始累積，血條上升到 70% 以上就算通關
+- **Excessive Rate：** 一開始是 100%，一旦途中掉到 0 就算失敗，維持到歌曲結束才算通關。和 Effective 相比，Error 扣的血量更多，也更難回補
+- **Excessive + ARS：** 一開始是 Excessive Rate，若血量見底，則會自動降為 Effective Rate。切換血條時，系統會當作一開始就是 Effective Rate 來計算即時的血量，不會從 0% 重新開始累積
 
-Clear type will affect your Volforce. Excessive is harder so it is worth more Volforce. 
+通關標記會影響你的 Volforce。Excessive 較難，所以給的 Volforce 也比較多。
 
-Excessive + ARS is not available on light start. This does not matter if you play Konasute. 
+light start 模式無法使用 Excessive + ARS。不過如果你玩的是 Konasute，就沒有這個問題。
 
-In general, you should always play with Excessive + ARS if you have the option. 
+一般來說，可以的話建議都使用 Excessive + ARS。
 
-For more information on Gauge, see [Gauge Options page.](/compendium/gauge-options)
+更多血條說明請見 [此頁面](/compendium/gauge-options)。
 
-### Volume
+### 音量 [#volume]
 <Image src="/startingout/options/audiolevels.png"/>
 
-This is Volume. If you are playing on Konasute, this will be the game
-volume (like in the screenshot). If you are at an arcade, this will be headset
-volume. If you don't have a headset plugged in at the arcade this will do
-nothing. 
+音量設定。Konasute 中，這裡會是遊戲音量（如截圖所示）。街機則會是耳機音量。若街機沒有插耳機，這個設定就不會起作用。
 
-### Challenge Options
+### challenge 選項 [#challenge-options]
 <Image src="/startingout/options/challenge.png"/>
 
-These are the challenge options. During a run, if you fall below the
-point to get the grade that you have selected you will automatically fail out.
-For example, if I selected UC and I missed a note, it would auto-fail me out. 
+設定 challenge 選項。在遊玩過程中，如果已經不可能達成選定的門檻，就會自動失敗出局。例如若選擇 UC challenge，那麼只要漏打一個音符，就會自動判定失敗。
 
-### Target Score
+### 目標分數 [#target-score]
 <Image src="/startingout/options/target-score.png" className="w-50"/>
 
-This is your target score. You can set what you would like to target. It will then show the difference of that score while playing so you can know how close or far you are from it.
+目標分數。你可以設定想要追求的數值，遊玩時就會顯示與目標分數的差距，讓你知道自己還差多少。
 
-This will not show if you have [Score Difference](#score-difference) turned off.
+如果關閉了 [分數差距](#score-difference)，就不會顯示。
 
-## Additional things to note
+## 其他注意事項 [#additional-things-to-note]
 
-Most of these settings are completely preference. There are general recommended settings but nothing is concrete. Try out things and see if you like them. 
+這些設定大多都是個人偏好。雖然有一些通用的建議，但沒有絕對標準。多試幾種，看看自己喜歡哪一種。
 
-Not all Valkyrie settings are on Konasute, and not all Konasute settings are on Valkyrie. 
-
+不是所有 Valkyrie 的設定都有在 Konasute 上，也不是所有 Konasute 的設定都能在 Valkyrie 上使用。

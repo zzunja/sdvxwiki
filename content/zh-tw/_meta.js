@@ -12,7 +12,7 @@ export default{
     theme: { timestamp: false },
   },
   startingout: {
-    title: 'Starting Out',
+    title: '開始遊玩',
     theme: { timestamp: false },
   },
     guides: {

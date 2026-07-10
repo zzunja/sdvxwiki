@@ -1,14 +1,14 @@
 export default {
   'gameplay-screens': {
-    title: 'Gameplay Screens',
+    title: '遊戲畫面',
     theme: { timestamp: false, toc: false},
   },
   options: {
-    title: 'Options Menu',
+    title: '遊戲選項',
     theme: { timestamp: false, toc: false},
   },
   scoring: {
-    title: 'Scoring',
+    title: '計分方式',
     theme: { timestamp: false, toc: false},
   },
 }
