@@ -24,7 +24,7 @@ export default{
     theme: { timestamp: false },
   },
   terminology: {
-    title: 'Terminology',
+    title: '術語',
     theme: { timestamp: false },
   },
   specifications: {

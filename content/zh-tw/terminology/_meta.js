@@ -1,10 +1,10 @@
 export default{
   termsandvocab: {
-    title: 'Common',
+    title: '常用術語',
     theme: { timestamp: false, toc: false},
   },
   patterns: {
-    title: 'Charting Patterns',
+    title: '譜面配置',
     theme: { timestamp: false, toc: false},
   },
 }
