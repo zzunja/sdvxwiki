@@ -40,11 +40,11 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'unlock-systems': {
-    title: '解鎖系統（WIP）',
+    title: '歌曲解鎖（WIP）',
     theme: { timestamp: false, toc: false},
   },
   volforce: {
-    title: 'Volforce（WIP）',
+    title: 'Volforce',
     theme: { timestamp: false, toc: false},
   },
 }
