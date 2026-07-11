@@ -1,100 +1,100 @@
 import { Table, Row, Header, Data } from "../../../components/Table";
 import { Callout } from 'nextra/components'
 
-# Gauge Options
+# 量表選項
 
-## Table of Contents
-- [Intro](#intro)
+## 目錄
+- [簡介](#intro)
 - [EFFECTIVE RATE](#effective-rate)
 - [EXCESSIVE RATE](#excessive-rate)
 - [MAXXIVE RATE](#maxxive-rate)
 - [PERMISSIVE RATE](#permissive-rate)
 - [DIVINE RATE](#divine-rate)
 - [VARIATIVE RATE](#variative-rate)
-- [Alternative Rate System (ARS)](#alternative-rate-system-ars)
-- [Gain/Loss Breakdown](#gainloss-breakdown)
+- [Alternative Rate System（ARS）](#alternative-rate-system-ars)
+- [量表增減拆解](#gainloss-breakdown)
   - [VARIATIVE RATE](#variative-rate-breakdown)
 - [HEXATIVE RATE](#hexative-rate)
 
-## Intro
-This page is for information about the various gauge types available in SDVX. The 2 main gauge types are EFFECTIVE RATE and EXCESSIVE RATE which are available during normal play. The other gauge types are only available in certain gamemodes or unlock systems.
+## 簡介 [#intro]
+本頁介紹 SOUND VOLTEX 中可使用的各種量表。一般遊玩可使用的主要量表有 EFFECTIVE RATE 與 EXCESSIVE RATE；其他量表僅能在特定遊戲模式或解鎖系統中使用。
 
 ## EFFECTIVE RATE
-Starts at 0% and requires completing the chart at 70% or greater to clear.
+從 0% 開始，結束譜面時需達 70% 以上才算通關。
 
-Also referred to as normal gauge.
+也稱為一般量表。
 
 ## EXCESSIVE RATE
-Starts at 100% and requires completing the chart without reaching 0% to clear.
+從 100% 開始，量表降至 0% 前完成譜面即可通關。
 
-Also referred to as hard gauge.
+也稱為硬量表。
 
 ## MAXXIVE RATE
-Starts at 100% and requires completing the chart without reaching 0% to clear. Notable for only increasing on S-CRITICALs and decreasing on NEARs.
+從 100% 開始，量表降至 0% 前完成譜面即可通關。量表只會因 S-Critical 增加，因 NEAR 減少。
 
-Only available when [S-CRITICAL](/startingout/options#s-critical) is enabled.
+只有啟用 [S-Critical](/startingout/options#s-critical) 時才能使用。
 
 ## PERMISSIVE RATE
-Starts at 100% and requires completing the chart without reaching 0% to clear. Notably easier than EXCESSIVE RATE as it carries over across 3 charts. The charts played with this gauge will not be granted a clear medal.
+從 100% 開始，量表降至 0% 前完成譜面即可通關。量表會延續 3 張譜面，因此比 EXCESSIVE RATE 容易；使用此量表遊玩的譜面不會獲得通關徽章。
 
-Only available during [SKILL ANALYZER](/compendium/game-modes#skill-analyzer).
+僅能在 [SKILL ANALYZER](/compendium/game-modes#skill-analyzer) 中使用。
 
 ## DIVINE RATE
-Starts at 100% and requires completing the chart without reaching 0% to clear. Notable for only increasing on S-CRITICALs and decreasing on NEARs.
+從 100% 開始，量表降至 0% 前完成譜面即可通關。量表只會因 S-Critical 增加，因 NEAR 減少。
 
-Only available during [SKILL ANALYZER](/compendium/game-modes#skill-analyzer).
+僅能在 [SKILL ANALYZER](/compendium/game-modes#skill-analyzer) 中使用。
 
 ## VARIATIVE RATE
-Starts at 100% and requires completing the chart without reaching 0% to clear. Starts at `RANK V` and goes down in difficulty with Ranks IV-I. There is no recovery on `RANK V`.
+從 100% 開始，量表降至 0% 前完成譜面即可通關。從 `RANK V` 開始，隨著等級降至 IV～I，難度會降低；`RANK V` 無法回復量表。
 
-Only accessible during [Variant Gate](/compendium/unlock-systems#variant-gate).
+僅能在 [Variant Gate](/compendium/unlock-systems#variant-gate) 中使用。
 
-## Alternative Rate System (ARS)
-An option used in combination with MAXXIVE RATE, EXCESSIVE RATE. Prevents failing out from a chart by switching to the next lowest gauge upon reaching 0%. The gauge amount given in this scenario will be the same as if you played with the gauge that is swapped to from the start. The gauge order is as follows:
+## Alternative Rate System（ARS） [#alternative-rate-system-ars]
+這項選項可搭配 MAXXIVE RATE 與 EXCESSIVE RATE 使用。量表降至 0% 時會切換至下一個較低階的量表，避免譜面挑戰失敗；切換後的量表值，會與一開始就使用該量表時相同。量表順序如下：
 
 - MAXXIVE RATE -> EXCESSIVE RATE -> EFFECTIVE RATE
 
-## Gain/Loss Breakdown
+## 量表增減拆解 [#gainloss-breakdown]
 
-- Chips are BT and FX chip objects
-- Hold and laser objects have ticks which are judged individually
-- **T**: Unknown but fixed value regardless of chart
-- **n**: Varies per chart: `(total chain amount) + (# of chips and slams) * 3`
+- CHIP 是 BT 與 FX 的短音符物件。
+- LONG 與旋鈕物件包含會個別判定的 tick。
+- **T**：意義不明，但不受譜面影響，是固定值。
+- **n**：依譜面變化，計算式為 `(連鎖總數) + (CHIP 與瞬間轉向的數量) × 3`。
 
 <Table className="w-full mt-4 mb-4 text-center align-middle">
   <thead>
     <Row>
-      <Header rowSpan="2">Gauge Type</Header>
-      <Header colSpan="2">S-CRITICAL</Header>
+      <Header rowSpan="2">量表類型</Header>
+      <Header colSpan="2">S-Critical</Header>
       <Header colSpan="2">CRITICAL</Header>
       <Header >NEAR</Header>
       <Header colSpan="2">ERROR</Header>
     </Row>
     <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
       <Data>
-        <p>Chips</p>
-        <p>Slams</p>
+        <p>CHIP</p>
+        <p>瞬間轉向</p>
       </Data>
       <Data>
-        <p>Holds</p>
-        <p>Lasers</p>
+        <p>LONG</p>
+        <p>旋鈕</p>
       </Data>
       <Data>
-        <p>Chips</p>
-        <p>Slams</p>
+        <p>CHIP</p>
+        <p>瞬間轉向</p>
       </Data>
       <Data>
-        <p>Holds</p>
-        <p>Lasers</p>
+        <p>LONG</p>
+        <p>旋鈕</p>
       </Data>
-      <Data>Chips</Data>
+      <Data>CHIP</Data>
       <Data>
-        <p>Chips</p>
-        <p>Slams</p>
+        <p>CHIP</p>
+        <p>瞬間轉向</p>
       </Data>
       <Data>
-        <p>Holds</p>
-        <p>Lasers</p>
+        <p>LONG</p>
+        <p>旋鈕</p>
       </Data>
     </Row>
   </thead>
@@ -139,8 +139,8 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE. Prevents failin
   </tbody>
 </Table>
 
-<sup>1</sup> Reduced when gauge is below 30%\
-<sup>2</sup> Cannot reduce gauge below 0%
+<sup>1</sup> 量表低於 30% 時減少量會降低
+<sup>2</sup> 量表最低為 0%
 
 [Source](https://bemaniwiki.com/index.php?SOUND+VOLTEX+EXCEED+GEAR/%A5%B7%A5%B9%A5%C6%A5%E0#rate_style)
 
@@ -149,23 +149,23 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE. Prevents failin
 <Table className="w-full mt-4 mb-4 text-center align-middle">
   <thead>
     <Row>
-      <Header rowSpan="2">Rank</Header>
-      <Header>S-CRITICAL</Header>
+      <Header rowSpan="2">等級</Header>
+      <Header>S-Critical</Header>
       <Header>CRITICAL</Header>
       <Header>NEAR</Header>
       <Header colSpan="2">ERROR</Header>
     </Row>
     <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
-      <Data>Chips</Data>
-      <Data>Chips</Data>
-      <Data>Chips</Data>
+      <Data>CHIP</Data>
+      <Data>CHIP</Data>
+      <Data>CHIP</Data>
       <Data>
-        <p>Chips</p>
-        <p>Slams</p>
+        <p>CHIP</p>
+        <p>瞬間轉向</p>
       </Data>
       <Data>
-        <p>Holds</p>
-        <p>Lasers</p>
+        <p>LONG</p>
+        <p>旋鈕</p>
       </Data>
     </Row>
   </thead>
@@ -213,53 +213,53 @@ An option used in combination with MAXXIVE RATE, EXCESSIVE RATE. Prevents failin
   </tbody>
 </Table>
 
-<sup>1</sup> Decreased by 33.3% after 14 errors\
-<sup>2</sup> Decreased by 8.8% after 14 errors
+<sup>1</sup> 14 次 ERROR 後減少 33.3%
+<sup>2</sup> 14 次 ERROR 後減少 8.8%
 
 [Source](https://bemaniwiki.com/?SOUND+VOLTEX+EXCEED+GEAR/VARIANT+GATE#VARIATIVE_RATE)
 
-## HEXATIVE RATE
-<Callout type="warning">These systems do not exist in Nabla</Callout>
+## HEXATIVE RATE [#hexative-rate]
+<Callout type="warning">這些系統在 Nabla 中不存在。</Callout>
 
-Starts at 100% and requires completing the chart without reaching 0% to clear. Difficulty of this gauge can be adjusted by selecting a [HEXA RANK](/compendium/unlock-systems#hexadiver) which ranges from 1-5. Rank 3 is only slightly easier than EXCESSIVE RATE with 4 and 5 being more difficult.
+從 100% 開始，量表降至 0% 前完成譜面即可通關。可選擇 1～5 級的 [HEXA RANK](/compendium/unlock-systems#hexadiver) 調整量表難度；第 3 級只比 EXCESSIVE RATE 稍簡單，第 4、5 級則更難。
 
-Only available during [HEXA DIVER](/compendium/unlock-systems#hexadiver).
-- **H**: [HEXA RANK](/compendium/unlock-systems#hexadiver)
+僅能在 [HEXA DIVER](/compendium/unlock-systems#hexadiver) 中使用。
+- **H**：[HEXA RANK](/compendium/unlock-systems#hexadiver)
 
 <Table className="w-full mt-4 mb-4 text-center align-middle">
   <thead>
     <Row>
-      <Header rowSpan="2">Gauge Type</Header>
-      <Header colSpan="2">S-CRITICAL</Header>
+      <Header rowSpan="2">量表類型</Header>
+      <Header colSpan="2">S-Critical</Header>
       <Header colSpan="2">CRITICAL</Header>
       <Header >NEAR</Header>
       <Header colSpan="2">ERROR</Header>
     </Row>
     <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
       <Data>
-        <p>Chips</p>
-        <p>Slams</p>
+        <p>CHIP</p>
+        <p>瞬間轉向</p>
       </Data>
       <Data>
-        <p>Holds</p>
-        <p>Lasers</p>
+        <p>LONG</p>
+        <p>旋鈕</p>
       </Data>
       <Data>
-        <p>Chips</p>
-        <p>Slams</p>
+        <p>CHIP</p>
+        <p>瞬間轉向</p>
       </Data>
       <Data>
-        <p>Holds</p>
-        <p>Lasers</p>
+        <p>LONG</p>
+        <p>旋鈕</p>
       </Data>
-      <Data>Chips</Data>
+      <Data>CHIP</Data>
       <Data>
-        <p>Chips</p>
-        <p>Slams</p>
+        <p>CHIP</p>
+        <p>瞬間轉向</p>
       </Data>
       <Data>
-        <p>Holds</p>
-        <p>Lasers</p>
+        <p>LONG</p>
+        <p>旋鈕</p>
       </Data>
     </Row>
   </thead>

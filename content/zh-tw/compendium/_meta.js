@@ -8,23 +8,23 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'dan-courses': {
-    title: 'Dan Courses',
+    title: '段位曲目',
     theme: { timestamp: false, toc: false},
   },
   'effect-radar': {
-    title: 'Effect Radar',
+    title: '效果雷達（WIP）',
     theme: { timestamp: false, toc: false},
   },
   'game-modes': {
-    title: 'Game Modes',
+    title: '遊戲模式',
     theme: { timestamp: false, toc: false},
   },
   'gauge-options': {
-    title: 'Gauge Options',
+    title: '量表選項',
     theme: { timestamp: false, toc: false},
   },
   'insane-ksm': {
-    title: 'Insane KSM and os/us scale',
+    title: '發狂 KSM 與 OS／US 難度表（WIP）',
     theme: { timestamp: false, toc: false},
   },
   'maintenance-downtime': {
@@ -40,11 +40,11 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'unlock-systems': {
-    title: 'Unlock Systems',
+    title: '解鎖系統（WIP）',
     theme: { timestamp: false, toc: false},
   },
   volforce: {
-    title: 'Volforce',
+    title: 'Volforce（WIP）',
     theme: { timestamp: false, toc: false},
   },
 }

@@ -3,27 +3,27 @@ import { Image } from '../../../components/Media'
 
 # Volforce
 
-## Table of Contents
+## 目錄
 - [Volforce](#volforce)
-- [Finding your best 50](#finding-you-best-50)
-- [Skill ranks](#skill-ranks)
-- [Notes](#notes)
+- [尋找最佳 50](#finding-your-best-50)
+- [段位](#skill-ranks)
+- [Volforce 潛力資料夾](#volforce-potential-folder)
+- [注意事項](#notes)
 
-## Volforce
-Volforce is the main way seen to measure "skill". Of course, it's not 100%, but in theory, higher Volforce = better you are. 
+## Volforce [#volforce]
+Volforce 是衡量「實力」的主要方式。當然，這不是百分之百準確，但理論上 Volforce 越高，實力就越強。
 
-Your Volforce is a combination of your best 50 plays. After every play, the game calculates the Volforce of that play with this equation.
+你的 Volforce 由最佳 50 次遊玩紀錄組成。每次遊玩後，遊戲會使用以下公式計算該次遊玩的 Volforce。
 
 <Callout>
-This equation is technically wrong. Voltex doesn't multiply it by .001, it just rounds down to a whole number. It then takes that number, adds it to the best 50, then divides that sum by 1000. I add the .001 to simplify this whole process. It still gives the same answer, just different ways to get to that.
+嚴格來說，這個公式並不正確。Voltex 不會乘以 0.001，而是先無條件捨去至整數，再將該數值加入最佳 50 的總和，最後除以 1000。為了簡化流程，我在公式中加入 0.001；結果相同，只是計算方式不同。
 </Callout>
-<br/>
 <div className="text-center">
- ```
+```
 (Level*(Score / 10,000,000)*(Grade Coefficient)*(Clear Coefficient)*20)*.001
 ```
 
- **Grade Coefficient/Factor**
+**等級係數／倍率**
 </div>
 
 <div className="flex justify-center mt-2">
@@ -32,21 +32,20 @@ This equation is technically wrong. Voltex doesn't multiply it by .001, it just 
 |1.05|1.02|1.00|0.97|0.94|0.91|0.88|0.85|0.82|0.80|
 </div>
 
-<br/>
 <div className="text-center">
-  **Clear Coefficient/Factor**
+**通關係數／倍率**
 </div>
 
 <div className="flex justify-center mt-2">
-|PUC|UC|Maxxive Rate Clear|Excessive Rate Clear|Effective rate clear|Crash|
+|PUC|UC|MAXXIVE RATE 通關|EXCESSIVE RATE 通關|EFFECTIVE RATE 通關|Crash|
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |1.10|1.06\*|1.04|1.02|1.00|0.50|
 </div>
-\* For Konasute, UC is worth 1.05
+\* Konasute 的 UC 為 1.05
 
-For example, if I got a score of `9,923,042 (S)` on a `level 18.3` with an `Excessive Rate clear`, this is how I would calculate my Volforce.
+例如，在 `18.3 級` 譜面以 `EXCESSIVE RATE` 通關並取得 `9,923,042（S）`，Volforce 的計算方式如下：
 <div className="text-center mt-3">
- ```
+```
 (Level*(Score / 10,000,000)*(Grade Coefficient)*(Clear Coefficient)*20)*.001
 ```
 </div>
@@ -56,108 +55,87 @@ Level             = 18.3
 Score             = 9,923,042
 Grade Coefficient = S = 1.05
 Clear Coefficient = Excessive Rate = 1.02
- 
-  (18.3*(9,923,042 / 10,000,000)*(1.05)*(1.02)*20)*.001 
-                  = 0.388969354141
 
+  (18.3*(9,923,042 / 10,000,000)*(1.05)*(1.02)*20)*.001
+                  = 0.388969354141
 ```
 </div>
-This gives me `0.388969354141`. Since Voltex rounds down from the 3rd digit, we can just cut everything after the 3rd digit and get our answer `.388`.
-<br/>
+結果為 `0.388969354141`。由於 Voltex 會從小數第 3 位開始無條件捨去，因此去除第 3 位之後的數字，答案就是 `.388`。
 
-After it calculates this number, it then compares it to your best 50. If this
-number is higher than the lowest Volforce play in your best 50, you will gain
-the difference of that Volforce. For example, let's look at our last example.
-Let's say I just set that score. Voltex will look at the lowest VF score in my
-best 50. If that was `.370`, it would replace that Volforce with this one and I
-will gain 
+計算出這個數值後，遊戲會將它與最佳 50 比較。如果這個數值高於最佳 50 中 Volforce 最低的遊玩紀錄，就會獲得兩者的差值。假設最佳 50 中最低的 VF 是 `.370`，遊戲就會以這筆紀錄取代原本的 Volforce，並獲得：
 <div className="flex justify-center mt-3">
 ```
-.388 - .370 = 0.018 Volforce 
+.388 - .370 = 0.018 Volforce
 ```
 </div>
 
-This will be shown on the screen next to your Volforce if this happens.
+發生這種情況時，增加的數值會顯示在畫面上的 Volforce 旁邊。
 
-The important things to note is that the only things taken into consideration is **Level of the Chart, Score, Clear type, and Grade**.
+要注意的是，計算時只會考慮 **譜面等級、分數、通關類型與等級**。
 
-Also, your volforce is calculated as **your best clear and your best score** on
-a chart. For example lets say I play the same chart from the last example, but got a `9,899,320` with a `UC`.
-Voltex would replace the Excesssive clear with a UC but keep my higher score of `9,923,042`.
+此外，Volforce 會使用同一張譜面的 **最佳通關類型與最高分數** 計算。例如再次遊玩上一個例子中的譜面，以 `UC` 取得 `9,899,320` 分，Voltex 會將 EXCESSIVE RATE 通關替換為 UC，但保留較高的 `9,923,042` 分。
 
-With the equation it would look like this
+套用公式後如下：
 <div className="mt-3">
 ```
 Level             = 18.3
-Score             = 9,923,042 # This keeps the best score
+Score             = 9,923,042 # 保留最高分
 Grade Coefficient = S = 1.05
-Clear Coefficient = UC = 1.06 # This has changed 
- 
-  (18.3*(9,923,042 / 10,000,000)*(1.05)*(1.06)*20)*.001 
-                  = 0.404223054304
+Clear Coefficient = UC = 1.06 # 已變更
 
+  (18.3*(9,923,042 / 10,000,000)*(1.05)*(1.06)*20)*.001
+                  = 0.404223054304
 ```
 </div>
-This would equal `.404` VF.
+結果為 `.404` VF。
 
-Note the `1.02` has changed to a `1.06`, but it used the better score that I
-originally had. This means I would gain 
+注意 `1.02` 已變為 `1.06`，但分數仍使用原本較高的分數。因此將這張譜面的 EXCESSIVE RATE 提升為 UC，即使 UC 分數較低，仍可獲得：
 <div className="flex justify-center mt-3">
 ```
-.404 - .388  = .016 Volforce
+.404 - .388 = .016 Volforce
 ```
 </div>
-for increasing my Excessive to a UC on this chart, even if my UC was a worse score.
 
-
-### Finding your best 50
-You can tell what is in your best 50 if it has what is circled in red.
+### 尋找最佳 50 [#finding-your-best-50]
+畫面上被紅圈標示的部分，就是最佳 50 中的遊玩紀錄。
 
 <Image src='/compendium/volforce/best50.png'/>
 
-The symbol next to the best 50 will be different depending on what your current VF is.
+最佳 50 旁的符號會依目前 VF 不同而改變。
 
-There is also a Best 50 folder, although note that this is not sorted by Volforce but rather by whatever sort you have selected.
+遊戲中也有 Best 50 資料夾，但它並不是依 Volforce 排序，而是依你選擇的排序方式排列。
 
-## Skill Ranks
-There are different skill ranks for different milestones in Volforce. Here are all of them:
+## 段位 [#skill-ranks]
+Volforce 的不同里程碑會對應不同的段位，完整列表如下：
 
 <Image src='/compendium/volforce/volforceranks.png' className="w-100"/>
 
+每個段位都有 4 個獨立的「門檻」。
 
-Every rank has four separate "gates".
+到達 Imperial 的 `20.00 VF` 後，升段所需的增量會從每 `1.000 VF` 改為每 `4.000 VF`。這是目前 VF 段位的上限；由於可用譜面不足以填滿最佳 50，目前還沒有人能超過 `24.000 VF`。
 
-At Imperial `20.00 VF`, instead of ranking up every `1.000 VF`, it changes to
-every `4.000 VF`. This is currently the cap on VF rank. There is nobody that is
-past this point because there aren't enough charts to fill up your best 50 enough
-to reach past `24.000 VF`.
+目前達到 VF 上限的兩位玩家是 [Mini](https://www.youtube.com/@minisdvx7740) 與 [Jakads](https://www.youtube.com/@Jakads_realkk)。他們幾乎每次推出 20 級譜面都能取得 PUC。
 
-The two people that are currently max VF are [Mini](https://www.youtube.com/@minisdvx7740) and [Jakads](https://www.youtube.com/@Jakads_realkk). They have PUC every 20 to come out. 
-
-## Volforce Potential Folder
-Upon playing Nabla for the first time, A new folder called "Volforce Potential" may appear.
+## Volforce 潛力資料夾 [#volforce-potential-folder]
+首次遊玩 Nabla 後，可能會出現名為「Volforce Potential」的新資料夾。
 <Image src="/compendium/volforce/volforcepotential.png"/>
 
-The Volforce Potential folder contains scores that could be in your best 50 but currently is not in it. Since Nabla doesn't recalculate your Volforce upon starting, there may be charts that could be in your best 50 that you haven't recalculated.
+Volforce 潛力資料夾會列出原本有機會進入最佳 50、但目前尚未列入的分數。由於 Nabla 啟動時不會重新計算 Volforce，可能有些譜面具備進入最佳 50 的條件，卻還沒有重新計算。
 
-For example, lets say you had a best 50 filled with 19 S Excessive Clears in your best 50 before exceed gear. In Exceed Gear, this was worth `.402` VF. That means, you need a score worth over `.402` VF to gain VF. 
+例如，在 Exceed Gear 時，最佳 50 全部都是 19 級 S 的 EXCESSIVE RATE 通關，當時每筆紀錄價值 `.402` VF。也就是說，必須取得高於 `.402` VF 的分數才能增加 VF。
 
-Upon starting Nabla, since decimal system is now in place, an 18.6 UC is now worth `.409`. This would be bigger then `.402` VF and could be in your Best 50 if you played it again and let the game recalculate it. So if you had a UC on a 18.6 song, this would appear in your best 50.
+啟動 Nabla 後，由於加入小數等級，18.6 級 UC 現在價值 `.409` VF，高於 `.402` VF。只要重新遊玩並讓遊戲計算，就有機會進入最佳 50。因此，如果你在 18.6 級歌曲上取得 UC，該紀錄就會顯示在最佳 50 中。
 
-## Notes
-Volforce is calculated on the machine. Meaning, if you set a play that raises
-your Volforce on a new song, and than play a cab that doesn't have that song,
-your Volforce will be calculate as if you hadn't played that song.
+## 注意事項 [#notes]
+Volforce 是在機台上計算的。也就是說，如果你在新歌曲上取得提升 Volforce 的紀錄，之後在沒有該歌曲的機台遊玩，Volforce 會按照尚未遊玩該歌曲的狀態計算。
 
-Essentially, when carding in, all scores are sent over and seen on the cab. It than calculates your Volforce using what it has.
+基本上，刷卡登入時，所有分數都會傳送至機台並顯示，機台再根據收到的資料計算 Volforce。
 
-Volforce for your score is calculate upon getting the score. After every chart, the game will calculate the Volforce for that and put it with the score. This is why in Nabla, you have to recalculate your Volforce as Nabla doesn't recalculate each scores Volforce again, only what it knows.
+每筆分數的 Volforce 會在取得分數時計算。每完成一張譜面，遊戲就會計算該次遊玩的 Volforce 並與分數一起儲存。因此在 Nabla 中必須重新計算 Volforce，因為 Nabla 不會重新計算每筆分數的 Volforce，只會使用已知資料。
 
-### Nabla
-In Nabla, your highest Volforce isn't calculated upon login. If you transfer your data from Exceed Gear to nabla, it will not recalculate your VF and your VF may be lower then what it could be. Since Nabla added Decimals, Some of your scores may be worth more VF then how it was in Exceed Gear. You will have to recalculate these scores by playing them one time. It doesn't matter what score you get, just need to play it once to recalculate.
+### Nabla [#nabla]
+在 Nabla 中，登入時不會計算最高 Volforce。如果將資料從 Exceed Gear 轉移至 Nabla，系統不會重新計算 VF，因此 VF 可能低於應有數值。由於 Nabla 加入小數等級，部分分數的 VF 價值可能高於 Exceed Gear 時的數值；只要重新遊玩一次即可重新計算，取得什麼分數並不重要。
 
-For example, if you had a S on an 18 in your Best 50 in Exceed Gear, then in Nabla, that 18 became a 18.4, you can replay that 18 to get the Volforce for it being increased by .4.
+例如，你在 Exceed Gear 的最佳 50 中有一筆 18 級 S；如果 Nabla 將該譜面調整為 18.4 級，只要重新遊玩一次，就能重新計算因等級增加 0.4 而提升的 Volforce。
 
-Nabla also buffed UC multiplier by .01
-
-
+Nabla 也將 UC 乘數提高了 0.01。

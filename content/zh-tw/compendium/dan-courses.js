@@ -9,13 +9,13 @@ const COURSES = {
       title: "Ok!! Hug Me",
       artist: "はるなば",
       diff: "MXM 18",
-      unlock: "Default"
+      unlock: "預設"
     },
     {
       title: "Imitated Visions",
       artist: "荒谷サトル",
       diff: "MXM 18",
-      unlock: "Default"
+      unlock: "預設"
     },
     {
       title: "天鯨譚",
@@ -29,19 +29,19 @@ const COURSES = {
       title: "Kontrol Line",
       artist: "Yooh",
       diff: "MXM 18",
-      unlock: "Default"
+      unlock: "預設"
     },
     {
       title: "Break Through Δpex",
       artist: "Halv feat.Kuroa*",
       diff: "MXM 18",
-      unlock: "Default"
+      unlock: "預設"
     },
     {
       title: "ムーニャポヨポヨスッポコニャーゴ",
       artist: "全日本スッポコニャーゴ親衛隊",
       diff: "VVD 18",
-      unlock: "Default"
+      unlock: "預設"
     }
   ],
   },
@@ -51,13 +51,13 @@ const COURSES = {
         title: "αzalea",
         artist: "BlackY",
         diff: "MXM 19",
-        unlock: "Default"
+        unlock: "預設"
       },
       {
         title: "シュレーディンガーの猫",
         artist: "Cait Sith",
         diff: "GRV 19",
-        unlock: "Default"
+        unlock: "預設"
       },
       {
         title: "You Are My Best RivaL!!",
@@ -77,13 +77,13 @@ const COURSES = {
         title: "卑弥呼",
         artist: "朱雀 VS 玄武",
         diff: "MXM 19",
-        unlock: "Default"
+        unlock: "預設"
       },
       {
         title: "I",
         artist: "黒魔",
         diff: "MXM 20",
-        unlock: "Default"
+        unlock: "預設"
       },
     ],
   },
@@ -93,19 +93,19 @@ const COURSES = {
         title: "Electric Injury",
         artist: "siqlo",
         diff: "VVD 18",
-        unlock: "None"
+        unlock: "無"
       },
       {
         title: "Wings to fly high",
         artist: "Noah",
         diff: "MXM 18",
-        unlock: "Music Pack Vol.17"
+        unlock: "歌曲包 Vol.17"
       },
       {
         title: "PUPA",
         artist: "モリモリあつし",
         diff: "MXM 18",
-        unlock: "None"
+        unlock: "無"
       },
     ],
     "02b": [
@@ -113,19 +113,19 @@ const COURSES = {
         title: "SACRIFICE feat.ayame",
         artist: "Alstroemeria Records",
         diff: "MXM 18",
-        unlock: "None"
+        unlock: "無"
       },
       {
         title: "refluxio",
         artist: "Juggernaut.",
         diff: "MXM 18",
-        unlock: "Music Pack Vol.17"
+        unlock: "歌曲包 Vol.17"
       },
       {
         title: "Over The Top",
         artist: "Ashrount",
         diff: "VVD 18",
-        unlock: "None"
+        unlock: "無"
       },
     ],
     "03a": [
@@ -133,19 +133,19 @@ const COURSES = {
         title: "Lost Parliament",
         artist: "Juggernaut.",
         diff: "MXM 18",
-        unlock: "Music Pack Vol.19"
+        unlock: "歌曲包 Vol.19"
       },
       {
         title: "Imperator",
         artist: "Xe (αirlemoneX)",
         diff: "MXM 18",
-        unlock: "Music Pack Vol.19"
+        unlock: "歌曲包 Vol.19"
       },
       {
         title: "Sayonara Planet Wars",
         artist: "黒魔",
         diff: "EXH 18",
-        unlock: "None"
+        unlock: "無"
       },
     ],
     "03b": [
@@ -153,19 +153,19 @@ const COURSES = {
         title: "極彩天奏",
         artist: "かゆき",
         diff: "MXM 18",
-        unlock: "None"
+        unlock: "無"
       },
       {
         title: "夢幻泡影",
         artist: "wa.",
         diff: "MXM 18",
-        unlock: "Music Pack Vol.19"
+        unlock: "歌曲包 Vol.19"
       },
       {
         title: "光風霽月",
         artist: "影虎。",
         diff: "MXM 18",
-        unlock: "Music Pack Vol.19"
+        unlock: "歌曲包 Vol.19"
       },
     ],
     "04": [
@@ -173,19 +173,19 @@ const COURSES = {
         title: "Lost Parliament",
         artist: "Juggernaut.",
         diff: "MXM 18",
-        unlock: "Music Pack vol.19"
+        unlock: "歌曲包 Vol.19"
       },
       {
         title: "Imperator",
         artist: "Xe (αirlemoneX)",
         diff: "MXM 18",
-        unlock: "Music Pack vol.19"
+        unlock: "歌曲包 Vol.19"
       },
       {
         title: "Sayonara Planet Wars",
         artist: "黒魔",
         diff: "EXH 18",
-        unlock: "None"
+        unlock: "無"
       },
     ],
     "05": [
@@ -193,19 +193,19 @@ const COURSES = {
         title: "BLISS",
         artist: "ミハイル + K.key",
         diff: "MXM 18",
-        unlock: "Music Pack vol.21"
+        unlock: "歌曲包 Vol.21"
       },
       {
         title: "Enter The Rave",
         artist: "Tatsunoshin",
         diff: "MXM 18",
-        unlock: "Music Pack vol.21"
+        unlock: "歌曲包 Vol.21"
       },
       {
         title: "MEGALOVANIA",
         artist: "Toby Fox",
         diff: "MXM 18",
-        unlock: "None"
+        unlock: "無"
       },
     ],
     "06": [
@@ -213,19 +213,19 @@ const COURSES = {
         title: "リュミレイラ",
         artist: "後藤 feat. nayuta",
         diff: "MXM 18",
-        unlock: "Music Pack vol.21"
+        unlock: "歌曲包 Vol.21"
       },
       {
         title: "XROSS THE XOUL",
         artist: "BlackY vs. Yooh",
         diff: "GRV 18",
-        unlock: "None"
+        unlock: "無"
       },
       {
         title: "劇場版ムーニャポヨポヨスッポコニャーゴ~侵略だいず帝国！ドラマティック宇宙大戦争~",
         artist: "打打だいず",
         diff: "MXM 18",
-        unlock: "Music Pack vol.21"
+        unlock: "歌曲包 Vol.21"
       },
     ],
     "07": [
@@ -233,19 +233,19 @@ const COURSES = {
         title: "ドリームエンド・サバイバー(Hidra-Xjeil Remix)",
         artist: "Hidra-Xjeil",
         diff: "MXM 18",
-        unlock: "Music Pack vol.22"
+        unlock: "歌曲包 Vol.22"
       },
       {
         title: "White Stream",
         artist: "BEMANI Sound Team ”ZAQUVA”",
         diff: "MXM 18",
-        unlock: "Music Pack vol.22"
+        unlock: "歌曲包 Vol.22"
       },
       {
         title: "=∴NOMADE∵OTION=",
         artist: "qfeileadh + yuichi NAGAO",
         diff: "MXM 18",
-        unlock: "Music Pack vol.22"
+        unlock: "歌曲包 Vol.22"
       },
     ],
     "08": [
@@ -253,19 +253,19 @@ const COURSES = {
         title: "ミュージックプレイヤー （J-pop Remix）",
         artist: "technoplanet feat. Risa Yuzuki",
         diff: "MXM 18",
-        unlock: "Music Pack vol.24"
+        unlock: "歌曲包 Vol.24"
       },
       {
         title: "Imitated Visions",
         artist: "荒谷サトル",
         diff: "MXM 18",
-        unlock: "Music Pack vol.24"
+        unlock: "歌曲包 Vol.24"
       },
       {
         title: "Doppelganger",
         artist: "LeaF",
         diff: "MXM 18",
-        unlock: "None"
+        unlock: "無"
       },
     ],
   },
@@ -275,19 +275,19 @@ const COURSES = {
         title: "Everlasting Message",
         artist: "ぺのれり",
         diff: "GRV 19",
-        unlock: "None"
+        unlock: "無"
       },
       {
         title: "For UltraPlayers",
         artist: "cosMo@暴走P",
         diff: "HVN 19",
-        unlock: "None"
+        unlock: "無"
       },
       {
         title: "XHRONOXAPSULΞ",
         artist: "Silentroom",
         diff: "MXM 20",
-        unlock: "Music Pack Vol.17"
+        unlock: "歌曲包 Vol.17"
       },
     ],
     "02b": [
@@ -295,19 +295,19 @@ const COURSES = {
         title: "AμreoLe ~for Triumph~",
         artist: "Ashrount",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.17"
+        unlock: "歌曲包 Vol.17"
       },
       {
         title: "EncorE & cALL",
         artist: "CHUBAY",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.17"
+        unlock: "歌曲包 Vol.17"
       },
       {
         title: "MixxioN",
         artist: "MisoilePunch♪",
         diff: "MXM 20",
-        unlock: "Music Pack Vol.17"
+        unlock: "歌曲包 Vol.17"
       },
     ],
     "03a": [
@@ -315,19 +315,19 @@ const COURSES = {
         title: "Avalanx",
         artist: "隣の庭は青い(庭師+Aoi)",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.19"
+        unlock: "歌曲包 Vol.19"
       },
       {
         title: "紫焔双穿",
         artist: "かめりあ",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.19"
+        unlock: "歌曲包 Vol.19"
       },
       {
         title: "Bl∞min'",
         artist: "MisoilePunch♪ -Forever-",
         diff: "MXM 20",
-        unlock: "Music Pack Vol.19"
+        unlock: "歌曲包 Vol.19"
       },
     ],
     "03b": [
@@ -335,19 +335,19 @@ const COURSES = {
         title: "Black Emperor",
         artist: "黒魔",
         diff: "GRV 19",
-        unlock: "None"
+        unlock: "無"
       },
       {
         title: "赫焉",
         artist: "打打だいず vs. siromaru",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.19"
+        unlock: "歌曲包 Vol.19"
       },
       {
         title: "いまきみに",
         artist: 'Silentroom as "少年R"',
         diff: "MXM 20",
-        unlock: "Music Pack Vol.19"
+        unlock: "歌曲包 Vol.19"
       },
     ],
     "04": [
@@ -355,19 +355,19 @@ const COURSES = {
         title: "BLACK or WHITE?",
         artist: "BlackYooh vs. siromaru",
         diff: "GRV 19",
-        unlock: "None"
+        unlock: "無"
       },
       {
         title: "Spectacular“V”Adventure!",
         artist: "Enterskip",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.21"
+        unlock: "歌曲包 Vol.21"
       },
       {
         title: "APØCALYPSE RAY",
         artist: 'xi',
         diff: "MXM 20",
-        unlock: "Music Pack Vol.21"
+        unlock: "歌曲包 Vol.21"
       },
     ],
     "05": [
@@ -375,19 +375,19 @@ const COURSES = {
         title: "Breakneck Pursuit",
         artist: "Ashrount",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.21"
+        unlock: "歌曲包 Vol.21"
       },
       {
         title: "and After the Merry BADEND",
         artist: "polysha",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.21"
+        unlock: "歌曲包 Vol.21"
       },
       {
         title: "HeaveИ's Rain",
         artist: 'モリモリあつし',
         diff: "MXM 20",
-        unlock: "Music Pack Vol.21"
+        unlock: "歌曲包 Vol.21"
       },
     ],
     "06": [
@@ -395,19 +395,19 @@ const COURSES = {
         title: "OVEЯ+TUЯE",
         artist: "kanone VS nora2r",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.22"
+        unlock: "歌曲包 Vol.22"
       },
       {
         title: "perditus†paradisus",
         artist: "iconoclasm",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.22"
+        unlock: "歌曲包 Vol.22"
       },
       {
         title: "Λkasha",
         artist: 'BlackY feat. Risa Yuzuki',
         diff: "MXM 20",
-        unlock: "Music Pack Vol.22"
+        unlock: "歌曲包 Vol.22"
       },
     ],
     "07": [
@@ -415,19 +415,19 @@ const COURSES = {
         title: "Xinca",
         artist: " 隣の庭は青い(庭師+Aoi)",
         diff: "MXM 19",
-        unlock: "Music Pack Vol.24"
+        unlock: "歌曲包 Vol.24"
       },
       {
         title: "Bad Elixir",
         artist: "xi",
         diff: "MXM 19",
-        unlock: "None"
+        unlock: "無"
       },
       {
         title: "Don't you dare play GOD",
         artist: 'technoplanet feat. Tamako Kinoshita',
         diff: "MXM 20",
-        unlock: "Music Pack Vol.24"
+        unlock: "歌曲包 Vol.24"
       },
     ],
   }
@@ -442,9 +442,9 @@ export function Course({ cat, name }) {
     <Table className="w-full text-center">
       <thead>
         <Row>
-          <Header>Song</Header>
-          <Header>Difficulty</Header>
-          <Header>Unlock Condition</Header>
+          <Header>歌曲</Header>
+          <Header>難度</Header>
+          <Header>解鎖條件</Header>
         </Row>
       </thead>
       <tbody>
