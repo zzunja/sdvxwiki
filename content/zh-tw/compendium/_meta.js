@@ -28,15 +28,15 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'maintenance-downtime': {
-    title: 'Maintenance and Downtime',
+    title: '維護與停機',
     theme: { timestamp: false, toc: false},
   },
   miscellaneous: {
-    title: 'Miscellaneous',
+    title: '其他',
     theme: { timestamp: false, toc: false},
   },
   'timing-windows': {
-    title: 'Timing Windows',
+    title: '判定範圍',
     theme: { timestamp: false, toc: false},
   },
   'unlock-systems': {
