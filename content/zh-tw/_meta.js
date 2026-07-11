@@ -20,7 +20,7 @@ export default{
     theme: { timestamp: false },
   },
   compendium: {
-    title: 'Compendium',
+    title: '遊戲機制',
     theme: { timestamp: false },
   },
   terminology: {

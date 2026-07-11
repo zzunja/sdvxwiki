@@ -1,10 +1,10 @@
 export default {
   'basic-premium-courses': {
-    title: 'Basic and Premium Courses, Rivals, Play Data, etc.',
+    title: '訂閱型課金',
     theme: { timestamp: false, toc: false},
   },
   customization: {
-    title: 'Customization',
+    title: '造型、語音自訂',
     theme: { timestamp: false, toc: false},
   },
   'dan-courses': {
