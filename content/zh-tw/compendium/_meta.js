@@ -12,7 +12,7 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'effect-radar': {
-    title: '效果雷達（WIP）',
+    title: '雷達圖',
     theme: { timestamp: false, toc: false},
   },
   'game-modes': {
@@ -20,7 +20,7 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'gauge-options': {
-    title: '量表選項',
+    title: '量表選項（WIP）',
     theme: { timestamp: false, toc: false},
   },
   'insane-ksm': {

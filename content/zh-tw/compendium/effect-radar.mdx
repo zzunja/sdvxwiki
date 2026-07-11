@@ -1,50 +1,50 @@
-# 效果雷達
+# 雷達圖
 
 ## 目錄
 - [簡介](#intro)
-- [雷達類型](#radar-types)
+- [譜面雷達圖](#radar-types)
   - [NOTES](#notes)
   - [PEAK](#peak)
   - [TSUMAMI](#tsumami)
   - [ONE-HAND](#one-hand)
   - [HAND-TRIP](#hand-trip)
   - [TRICKY](#tricky)
-- [個人資料雷達](#profile-radar)
+- [玩家雷達圖](#profile-radar)
 
 ## 簡介 [#intro]
-目前遊戲中有 2 種雷達：個人資料雷達，以及每張譜面的雷達。
+雷達圖分為指示玩家能力的玩家雷達圖以及代表譜面各自特性的譜面雷達圖。
 
 <div className="flex items-center justify-center mt-3">
  <img src='/compendium/effect-radar/radar.png' width="400"/>
 </div>
 
-如上圖所示，每張譜面都有自己的雷達圖。雷達圖由 6 個項目組成：NOTES、PEAK、TSUMAMI、TRICKY、HAND-TRIP 與 ONE-HAND，分別代表不同技巧；某項的條形越長，表示該譜面越常出現相應技巧。
+如上圖所示，譜面雷達圖呈六邊形，由 6 個項目組成：NOTES、PEAK、TSUMAMI、TRICKY、HAND-TRIP 與 ONE-HAND，分別代表不同技巧；某項的頂點越向外延伸，表示該譜面出現相應技巧越多。
 
-## 雷達類型 [#radar-types]
+## 譜面雷達圖 [#radar-types]
 
 ### NOTES [#notes]
-NOTES 會根據歌曲長度與音符數量計算。音符很多的歌曲數值較高，而旋鈕或 ONE-HAND 配置較多的歌曲數值較低。
+NOTES 依據歌曲長度與音符數量計算。CHIP 很多的歌曲此數值較高，旋鈕或 ONE-HAND 配置較多的歌曲則較低。
 
 ### PEAK [#peak]
-PEAK 代表譜面中的最高音符密度。若譜面某個區段的音符非常密集，數值就會較高。
+PEAK 代表譜面中的最高音符密度。若譜面某個段落的音符非常密集，數值就會較高。
 
 ### TSUMAMI [#tsumami]
-TSUMAMI 代表旋鈕；旋鈕越多，雷達數值越高。以旋鈕為主的譜面，其雷達中的 TSUMAMI 區域會明顯偏向一側。
+TSUMAMI 代表旋鈕；旋鈕越多，雷達數值越高。以旋鈕為主的譜面，雷達圖會明顯偏向 TSUMAMI。
 
 ### ONE-HAND [#one-hand]
-ONE-HAND 代表需要單手按下的音符數量，也就是一隻手控制旋鈕、另一隻手按鍵的配置。
+ONE-HAND 代表需要單手按下的音符數量，也就是一隻手控制旋鈕、另一隻手按按鍵的配置。
 
 範例請見 [譜面配置中的 ONE-HAND](/terminology/patterns#one-hand)。
 
 ### HAND-TRIP [#hand-trip]
-HAND-TRIP 代表需要在控制器另一側按下的音符數量，例如交叉使用旋鈕、用右手按 BT-A 或 BT-B，以及用左手按 BT-C 或 BT-D。
+HAND-TRIP 代表需要使用相反側的手處理譜面的量，例如使用左手轉右側旋鈕、用右手按 BT-A 或 BT-B 或者用左手按 BT-C 或 BT-D。
 
 範例請見 [譜面配置中的 HAND-TRIP](/terminology/patterns#hand-trip)。
 
 ### TRICKY [#tricky]
-TRICKY 是其他未列出技巧的統稱，通常包括速度變化、縱連、旋轉與特殊演出等。
+TRICKY 是其他未列出技巧的統稱，通常包括變速、縱連、旋轉、特殊演出等。
 
-## 個人資料雷達 [#profile-radar]
-個人資料雷達只能在插卡查看個人資料時，以及遊玩結束畫面查看。這是獨立於 VOLFORCE 的系統，會取各類別最佳的 50 張譜面進行計算。
+## 玩家雷達圖 [#profile-radar]
+玩家雷達圖可在刷卡登入後以及遊玩結束的個人資料畫面查看。這是獨立於 VOLFORCE 的系統，會取各類別最佳的 50 張譜面進行計算。
 
-請注意，這套系統及其使用的公式目前沒有完整資料；目前只知道它使用 [EX SCORE](/startingout/scoring#ex-score)，而不是一般分數。
+相關系統及其使用的公式目前沒有完整資料；目前只知道它使用 [EX SCORE](/startingout/scoring#ex-score)，而不是一般分數。
