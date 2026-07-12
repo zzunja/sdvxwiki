@@ -4,7 +4,7 @@ export default{
     theme: { timestamp: false, toc: false},
   },
   valkandnemsys: {
-    title: 'Valkyrie 與 NEMSYS 機型',
+    title: 'Valkyrie 與 Nemsys 機型',
     theme: { timestamp: false, toc: false},
   },
 }

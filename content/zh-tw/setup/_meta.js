@@ -4,7 +4,7 @@ export default{
     theme: { timestamp: false, toc: false},
   },
   konasute: {
-    title: '家用版 - Konasute',
+    title: 'Konasute（家用版）',
     theme: { timestamp: false, toc: false},
   },
   simulators: {
