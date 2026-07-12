@@ -1,6 +1,7 @@
 import { Image } from "../../../components/Media";
 import { Table, Row, Header, Data } from "../../../components/Table";
 
+<a id="scoring"></a>
 # 計分方式
 
 ## 目錄
@@ -12,7 +13,7 @@ import { Table, Row, Header, Data } from "../../../components/Table";
 
 ## 一般分數 [#normal-score]
 
-這是每張譜面預設使用的計分方式，分數範圍為 `0 - 10,000,000`。它會影響你的 [VOLFORCE](/compendium/volforce)。分數計算公式如下：
+這是每張譜面預設採用的計分方式，分數範圍為 `0 - 10,000,000`，也會影響你的 [VOLFORCE](/compendium/volforce)。分數計算公式如下：
 
 <div className="text-center mt-4">
 ```
@@ -23,7 +24,7 @@ import { Table, Row, Header, Data } from "../../../components/Table";
 - [S-CRITICAL](/compendium/timing-windows#arcade-konasute) 視為與 CRITICAL 相同
 - `TOTAL` 指的是 `CHIP`、`LONG` 和 `TSUMAMI` 的總數
 
-### 範例計算
+### 計算範例
 
 <Image src="/startingout/scoring/normal_score.png" alt="一般分數" />
 
@@ -62,7 +63,7 @@ TOTAL = # CHIP + # LONG + # TSUMAMI
 
 ## EX SCORE [#ex-score]
 
-這是一套沒有固定上限的替代計分方式，每張譜面的 EX SCORE 上限都不同。它不會影響你的 [VOLFORCE](/compendium/volforce)，但會大幅影響你的 [玩家雷達圖](/compendium/effect-radar)。和一般分數不同，EX SCORE 會受到 [S-CRITICAL](/compendium/timing-windows#arcade-konasute) 的影響，而且每種判定的分值不同：
+這是一套沒有固定上限的替代計分方式，每張譜面的 EX SCORE 上限都不同。它不會影響你的 [VOLFORCE](/compendium/volforce)，但會大幅影響你的 [玩家雷達圖](/compendium/effect-radar)。與一般分數不同，EX SCORE 會受到 [S-CRITICAL](/compendium/timing-windows#arcade-konasute) 的影響，而且每種判定的分值不同：
 
 <div className="flex justify-center mt-4">
   <Table className="w-96 table-fixed text-center">
@@ -104,7 +105,7 @@ TOTAL = # CHIP + # LONG + # TSUMAMI
   </Table>
 </div>
 
-根據以上的分值表格，一張譜面的 EX SCORE 上限可用以下公式計算：
+根據上述分值表，一張譜面的 EX SCORE 上限可用以下公式計算：
 
 <div className="text-center mt-4">
 ```
@@ -112,9 +113,9 @@ TOTAL = # CHIP + # LONG + # TSUMAMI
 ```
 </div>
 
-和 EX SCORE 相關的指標還有 `MAX` 比率，代表 EX SCORE 與理論值（理論上該譜面能得到的最高 EX SCORE）的相對差距。當百分比高於 98% 時，畫面會改顯示為 `MAX-X`，表示與理論值的絕對差距。
+和 EX SCORE 相關的指標還有 `MAX` 比率，代表 EX SCORE 與理論值（該譜面理論上的最高 EX SCORE）的相對比例。當百分比高於 98% 時，畫面會改顯示為 `MAX-X`，表示與理論值的絕對差距。
 
-### 範例計算
+### 計算範例
 
 <Image src="/startingout/scoring/ex_score.png" alt="EX SCORE" />
 
@@ -144,12 +145,12 @@ MAX = (TOTAL / MAX) * 100%
 
 本節僅討論一般分數。
 
-分數高低取決於各種因素，但最主要的是譜面難度相對於你的實力。譜面難度大致上可以分成三種情況：
+分數高低取決於各種因素，但最主要的是譜面難度相對於你的實力。譜面難度大致可以分成三種情況：
 
 1. 剛進入新等級時會碰到的譜面，預期分數大約 `9,000,000 - 9,500,000`
 2. 你覺得中等難度的譜面，預期分數大約 `9,500,000 - 9,800,000`
 3. 在你「舒適圈」內的譜面，預期分數大約 `9,800,000+`
 
-其他因素像是技能差異和譜面構成（`LONG` 或 `TSUMAMI` 很多的譜面通常比較好拿分）也可能讓分數偏高或偏低，但重點還是要看**平均表現**。如果你覺得自己大多數在玩的譜面都落在第 2 或第 3 類，那大致上就可以嘗試下一個等級。反過來說，如果你分數*一直*偏低（落在第 1 類且偏低，或者更低），那可能還沒準備好。
+其他因素，例如技能差異和譜面構成（`LONG` 或 `TSUMAMI` 很多的譜面通常比較好拿分），也可能讓分數偏高或偏低，但重點還是要看**平均表現**。如果自己遊玩的譜面大多落在第 2 或第 3 類，大致上就可以嘗試下一個等級。反過來說，如果分數*一直*偏低（落在第 1 類且偏低，或者更低），可能還沒準備好。
 
-以上只是提供一個參考基準，你的目標無論如何還是一樣的：盡量把分數打高。努力刷新自己玩過的譜面的分數，或提升到新的等級，都是維持動力的好方法。
+以上僅供參考，你的目標無論如何還是一樣：盡量把分數打高。努力刷新自己玩過的譜面分數，或提升到新的等級，都是維持動力的好方法。
