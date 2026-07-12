@@ -20,7 +20,7 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'gauge-options': {
-    title: '量表選項（WIP）',
+    title: '血條選項',
     theme: { timestamp: false, toc: false},
   },
   'insane-ksm': {
@@ -40,7 +40,7 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'unlock-systems': {
-    title: '歌曲解鎖（WIP）',
+    title: '歌曲解鎖',
     theme: { timestamp: false, toc: false},
   },
   volforce: {
