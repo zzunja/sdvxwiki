@@ -24,7 +24,7 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'insane-ksm': {
-    title: '發狂 KSM 與 OS／US 難度表（WIP）',
+    title: '發狂 KSM 與 OS／US 難易度表',
     theme: { timestamp: false, toc: false},
   },
   'maintenance-downtime': {
