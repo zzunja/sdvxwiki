@@ -28,10 +28,13 @@ import { Image, Video } from "../../../components/Media";
   - [旋鈕](#knobs)
 - [一般術語](#general-terms)
   - [譜面／圖](#chartsmaps)
+  - [譜面難度](#chart-difficulties)
+    - [NOV、ADV、EXH、MXM](#nov-adv-exh-mxm)
+    - [INF、GRV、HVN、VVD、XCD、NBL](#inf-grv-hvn-vvd-xcd-nbl)
+    - [ULT](#ult)
   - [CHIP／音符／按鍵](#chipsnotesbuttons)
   - [Effector](#effector)
   - [MIRROR](#mirror)
-  - [難度縮寫](#nov-adv-exh-mxm-inf-grv-hvn-vvd-xcd-ult)
   - [RANDOM](#random)
   - [S-RANDOM](#s-random)
   - [TSUMAMI／つまみ／旋鈕](#tsumami-つまみlasersknobs)
@@ -81,7 +84,7 @@ import { Image, Video } from "../../../components/Media";
 
 ## 通關 [#clears]
     #### 一般通關／Clear／Effective Clear [#cleareffective-clear]
-    指以 0% 開始的血條通關，結束時血條須高於 70%。詳見 [血條選項](/compendium/gauge-options#excessive-rate) 頁面中的 Effective Gauge。
+    指以 0% 開始的血條通關，結束時血條須高於 70%。詳見 [血條選項](/compendium/gauge-options#effective-rate) 頁面中的 Effective Gauge。
 
     #### Crash／Fail [#crashfail]
     指未達 70% 血條、EXCESSIVE 血條歸零，或中途退出而未能通過譜面。
@@ -155,12 +158,20 @@ import { Image, Video } from "../../../components/Media";
     #### MIRROR [#mirror]
     能將軌道左右翻轉的遊戲選項，類似許多其他音樂遊戲。可用作挑戰，或用來克服手癖。
 
-    #### NOV、ADV、EXH、MXM、INF、GRV、HVN、VVD、XCD、ULT [#nov-adv-exh-mxm-inf-grv-hvn-vvd-xcd-ult]
-    代表不同譜面的難度；NOV（Novice）最低，MXM（Maximum）最高。
+    #### 譜面難度 [#chart-difficulties]
+
+    ##### NOV、ADV、EXH、MXM [#nov-adv-exh-mxm]
+    這 4 種是標準難度。NOV（Novice）最低，MXM（Maximum）最高。所有歌曲都有 NOV、ADV、EXH 難度的譜面。新歌曲的難度通常會是 MXM。
+
+    ##### INF、GRV、HVN、VVD、XCD、NBL [#inf-grv-hvn-vvd-xcd-nbl]
+    通常是舊有歌曲在後續版本新增更高難度譜面時會使用的第 4 種譜面難度，名稱對應新增該難度的版本。例如，在 SOUND VOLTEX VIVID WAVE 新增的譜面難度會是 VVD。
+
+    ##### ULT [#ult]
+    ULT（Ultimate）是 SOUND VOLTEX EXCEED GEAR 新增的特殊第 5 種難度。目前僅有 Everlasting Message 一首歌曲有對應的 ULT 譜面。
 
     各縮寫的全名如下：
     <div className="flex items-center justify-center mt-5">
-    | 縮寫 |   全名   |
+    | 縮寫 | 全名 |
     | :-----: | :------: |
     |   NOV   |  Novice  |
     |   ADV   | Advance  |
@@ -172,9 +183,8 @@ import { Image, Video } from "../../../components/Media";
     |   VVD   |  Vivid   |
     |   XCD   |  Exceed  |
     |   ULT   | Ultimate |
+    |   NBL   |  Nabla   |
     </div>
-
-    其中 INF～ULT 是在指定版本中新增的難度。例如在 SOUND VOLTEX VIVID WAVE 新增的譜面難度會是 VVD。
 
     #### RANDOM [#random]
     隨機交換各軌道與旋鈕位置的遊戲選項。BT 軌道只會和 BT 軌道交換，FX 軌道只會和 FX 軌道交換。
