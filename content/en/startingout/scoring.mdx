@@ -112,7 +112,7 @@ Using the S-CRITICAL score values, the maximum EX SCORE value for a chart is cal
 ```
 </div>
 
-Related to EX SCORE is the `MAX` metric which is what percentage of the maximum value were S-CRITICAL hits. For percentages above 98%, it is presented as `MAX-X` instead, where `X` is the amount of non-S-CRITICAL hits.
+Related to EX SCORE is the `MAX` metric, which is the percentage obtained by dividing your EX SCORE by the theoretical maximum. For percentages above 98%, it is presented as `MAX-X` instead, where `X` is the absolute difference between your EX SCORE and the theoretical maximum.
 
 ### Example Calculation
 
@@ -128,7 +128,7 @@ LONG & TSUMAMI EX SCORE = # S-CRITICAL * 2
                         = 1512
     
 TOTAL EX SCORE = CHIP EX SCORE + LONG & TSUMAMI EX SCORE
-               = 4759 + 1512
+               = 4763 + 1512
                = 6275
     
 MAX EX SCORE = (# CHIP * 5) + ([# LONG + # TSUMAMI] * 2)
