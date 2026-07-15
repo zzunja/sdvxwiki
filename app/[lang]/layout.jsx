@@ -1,6 +1,7 @@
 import { Footer, Layout, LocaleSwitch, Navbar } from 'nextra-theme-docs'
-import { Head, Banner } from 'nextra/components'
+import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
+import { LocalizedSearch } from '../../components/Search'
 import 'nextra-theme-docs/style.css'
 import './globals.css'
 
@@ -64,6 +65,7 @@ export default async function RootLayout({ children, params }) {
       <body>
         <Layout
           navbar={navbar}
+          search={<LocalizedSearch lang={lang} />}
           sidebar={{ 
             defaultMenuCollapseLevel: 1 
           }}
