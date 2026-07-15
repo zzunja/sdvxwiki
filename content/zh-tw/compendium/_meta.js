@@ -7,14 +7,6 @@ export default {
     title: '造型、語音自訂',
     theme: { timestamp: false, toc: false},
   },
-  'dan-courses': {
-    title: '段位曲目',
-    theme: { timestamp: false, toc: false},
-  },
-  'effect-radar': {
-    title: '雷達圖',
-    theme: { timestamp: false, toc: false},
-  },
   'game-modes': {
     title: '遊戲模式',
     theme: { timestamp: false, toc: false},
@@ -23,28 +15,36 @@ export default {
     title: '血條選項',
     theme: { timestamp: false, toc: false},
   },
-  'insane-ksm': {
-    title: '發狂 KSM 與 OS／US 難易度表',
+  'dan-courses': {
+    title: '段位曲目',
     theme: { timestamp: false, toc: false},
   },
-  'maintenance-downtime': {
-    title: '維護與停機',
+  volforce: {
+    title: 'Volforce',
     theme: { timestamp: false, toc: false},
   },
-  miscellaneous: {
-    title: '其他',
-    theme: { timestamp: false, toc: false},
-  },
-  'timing-windows': {
-    title: '判定範圍',
+  'effect-radar': {
+    title: '雷達圖',
     theme: { timestamp: false, toc: false},
   },
   'unlock-systems': {
     title: '歌曲解鎖',
     theme: { timestamp: false, toc: false},
   },
-  volforce: {
-    title: 'Volforce',
+  'timing-windows': {
+    title: '判定範圍',
+    theme: { timestamp: false, toc: false},
+  },
+  'maintenance-downtime': {
+    title: '維護與停機',
+    theme: { timestamp: false, toc: false},
+  },
+  'insane-ksm': {
+    title: '發狂 KSM 與 OS／US 難易度表',
+    theme: { timestamp: false, toc: false},
+  },
+  miscellaneous: {
+    title: '其他',
     theme: { timestamp: false, toc: false},
   },
 }
