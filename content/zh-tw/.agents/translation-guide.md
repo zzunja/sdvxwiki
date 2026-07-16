@@ -68,6 +68,7 @@
 
 - `gauge-options` 中，顯示介面使用「血條」，百分比數值使用「血量」；Blaster、VARIANT BAR 等進度系統仍可使用「量表」。
 - Valkyrie 機台底部的 deck 優先寫作「按鍵平台」。
+- `Valkyrie Model` 統一譯為「女武神框體」，「新框」僅作為補充術語；`Nemsys Model` 統一譯為「舊框」。
 - `HEXA DIVER` 一律使用全大寫並保留空格；網址 slug 維持小寫 `#hexadiver`。
 - 官方名稱使用 `HEXA OVER DRIVE`，保留空格並全大寫。
 - Variant 段位標記一律使用全大寫，例如 `RANK V`、`RANK IV`。

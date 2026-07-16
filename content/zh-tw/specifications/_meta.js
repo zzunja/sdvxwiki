@@ -4,7 +4,7 @@ export default{
     theme: { timestamp: false, toc: false},
   },
   valkandnemsys: {
-    title: 'Valkyrie 與 Nemsys 機型',
+    title: '女武神框體與舊框',
     theme: { timestamp: false, toc: false},
   },
 }
