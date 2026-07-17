@@ -40,7 +40,7 @@ export default {
     theme: { timestamp: false, toc: false},
   },
   'insane-ksm': {
-    title: '發狂 KSM 與 OS／US 難易度表',
+    title: '發狂 KSM 與 os／us 難易度表',
     theme: { timestamp: false, toc: false},
   },
   miscellaneous: {

@@ -97,7 +97,7 @@
 ## 發狂 KSM 頁面專用規則
 
 - 標題與首次提及使用「發狂 KSM（発狂KSM／Insane KSM）」；後文統一使用「發狂 KSM」。
-- 標題中的 `OS/US` 使用 `OS／US`（全大寫與全形斜線）；實際難度標記保留小寫，如 `os3`、`us18+`。
+- 標題中的 `os/us` 使用 `os／us`（全小寫與全形斜線）；實際難度標記同樣使用小寫，如 `os3`、`us18+`。
 - `insane-ksm` 頁面保留 `chordstreams`、`jumpstreams`、`streams` 等原文術語；`Hard Chordstreams` 譯為「困難的 Chordstreams」。一般頁面的 `stream` 依既有用語譯為「散打／亂打」。
 - `insane-ksm` 頁面的 `perfect` 依語境譯為 `PUC`，避免使用「擊出」。
 
