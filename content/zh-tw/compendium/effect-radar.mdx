@@ -1,0 +1,50 @@
+# 雷達圖
+
+## 目錄
+- [簡介](#intro)
+- [譜面雷達圖](#radar-types)
+  - [NOTES](#notes)
+  - [PEAK](#peak)
+  - [TSUMAMI](#tsumami)
+  - [ONE-HAND](#one-hand)
+  - [HAND-TRIP](#hand-trip)
+  - [TRICKY](#tricky)
+- [玩家雷達圖](#profile-radar)
+
+## 簡介 [#intro]
+雷達圖分為指示玩家能力的玩家雷達圖以及代表譜面各自特性的譜面雷達圖。
+
+<div className="flex items-center justify-center mt-3">
+ <img src='/compendium/effect-radar/radar.png' width="400"/>
+</div>
+
+如上圖所示，譜面雷達圖呈六邊形，由 6 個項目組成：NOTES、PEAK、TSUMAMI、TRICKY、HAND-TRIP 與 ONE-HAND，分別代表不同技巧；某項的頂點越向外延伸，表示譜面中對應技巧的比重越高。
+
+## 譜面雷達圖 [#radar-types]
+
+### NOTES [#notes]
+NOTES 依據歌曲長度與音符數量計算。CHIP 很多的歌曲此數值較高，旋鈕或 ONE-HAND 配置較多的歌曲則較低。
+
+### PEAK [#peak]
+PEAK 代表譜面中的最高音符密度。若譜面某個段落的音符非常密集，數值就會較高。
+
+### TSUMAMI [#tsumami]
+TSUMAMI 代表旋鈕；旋鈕越多，雷達數值越高。以旋鈕為主的譜面，雷達圖會明顯偏向 TSUMAMI。
+
+### ONE-HAND [#one-hand]
+ONE-HAND 代表需要單手按下的音符數量，也就是一隻手控制旋鈕、另一隻手按按鍵的配置。
+
+範例請見 [譜面配置中的 ONE-HAND](/terminology/patterns#one-hand)。
+
+### HAND-TRIP [#hand-trip]
+HAND-TRIP 代表需要使用相反側的手處理譜面的量，例如使用左手轉右側旋鈕、用右手按 BT-A 或 BT-B 或者用左手按 BT-C 或 BT-D。
+
+範例請見 [譜面配置中的 HAND-TRIP](/terminology/patterns#hand-trip)。
+
+### TRICKY [#tricky]
+TRICKY 是其他未列出技巧的統稱，通常包括變速、縱連、旋轉、特殊演出等。
+
+## 玩家雷達圖 [#profile-radar]
+玩家雷達圖可在刷卡登入後及遊玩結束時的個人資料畫面查看。這套系統獨立於 VOLFORCE，會取各類別最佳的 50 張譜面進行計算。
+
+目前相關系統及其使用公式的完整資料尚不確定，但可以知道的是除了一般分數以外也會使用 [EX SCORE](/startingout/scoring#ex-score)（[來源](https://note.com/cloudy_boy/n/n458e55e6a91b)）。

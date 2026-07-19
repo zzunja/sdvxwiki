@@ -1,0 +1,193 @@
+import { Callout } from 'nextra/components'
+import { Image } from '../../../components/Media'
+
+# 遊戲模式
+## 目錄
+- [簡介](#intro)
+- [Normal](#normal)
+- [Friend](#friend)
+- [Battles](#battles)
+  - [Single Battle](#single-battle)
+  - [Arena Battle](#arena-battle)
+  - [Megamix Battle](#megamix-battle)
+- [Premium Time](#premium-time)
+- [Blaster Start](#blaster-start)
+- [Skill Analyzer](#skill-analyzer)
+- [訓練模式](#training-mode)
+
+
+## 簡介 [#intro]
+除了 Normal 外，遊戲還有幾種不同模式。本節將介紹各模式的用途與差異。
+
+<Callout>Konasute 中只有 Normal 與 Skill Analyzer 兩種模式，本頁大多數內容不適用。</Callout>
+## Normal [#normal]
+Normal 是 SOUND VOLTEX 的預設模式，通常也是最便宜的選項。又分為 Light Start 與 Standard Start 兩種；Light Start 可能較便宜，但有以下限制：
+- 沒有 S-Critical、 [ARS](/compendium/gauge-options/#alternative-rate-system-ars) 與其他部分選項。
+- 每道最多 3 首歌曲，無法進入 EX-TRACK。
+- 歌曲失敗後該道遊玩會直接結束。
+
+在美國 Light Start 與 Standard Start 價格通常相同，這種情況下沒有選擇 Light Start 的必要。
+
+選擇歌曲後會進入配對畫面，可以等待其他玩家加入，或同時按下兩個 FX 按鍵略過配對。
+<div className="flex items-center justify-center">
+  ![lightandstandard](/compendium/game-modes/lightandstandard.png)
+</div>
+
+Standard Start 通關第 3 首歌曲後可進入 EX-TRACK。
+
+## Friend [#friend]
+此模式可以與同一間機廳的其他玩家配對遊玩。僅支援鄰近配對，也就是你和好友必須在同一間店的兩台街機機台上遊玩，規則與 Normal 相似。
+
+進入後，雙方會看到選曲畫面並可選擇歌曲。雙方都能看到彼此已解鎖的歌曲；例如玩家 A 沒有 666、玩家 B 已解鎖時，玩家 A 仍能看到並選擇 666。任一方選擇歌曲後，另一方的畫面上會顯示該歌曲，並可決定遊玩難度，接著雙方會一起進入配對。
+
+無論是否進入 EX-TRACK，雙方最多只能一起遊玩 3 首歌曲。進入 EX-TRACK 時，規則視同 Normal。
+
+## Battles [#battles]
+此模式可以與來自各地的其他玩家對戰，共有 Arena Battle、Single Battle 與 Megamix Battle 3 種。每種對戰都可選擇線上或鄰近；鄰近只會與同店玩家配對，線上則可與任何地區的玩家配對。選擇線上時，必須輸入 6 位數代碼，想加入房間的玩家也要輸入相同代碼。
+
+### Single Battle [#single-battle]
+與另一名玩家配對。雙方各自選擇想遊玩的譜面，選擇後隨機決定先遊玩哪一方的譜面。分數較高者獲勝並取得 1 顆星。最後一張譜面會隨機選擇，但通常接近前面遊玩的難度。
+
+### Arena Battle [#arena-battle]
+最多可與 4 名玩家配對。每名玩家選擇想遊玩的譜面後，系統會從所有玩家的選擇中隨機挑選一張。接著選擇遊玩難度並開始。
+
+兩人遊玩時，雙方各選擇一張主要譜面與一張次要譜面；兩張主要譜面遊玩完畢後，會遊玩敗方的次要譜面。三人遊玩時，每人選擇一張譜面。
+
+每張譜面結束時，第 1 名取得 2 顆星，第 2 名取得 1 顆星。4 張譜面結束時，星星最多者獲勝。
+
+線上遊玩時，如果玩家人數不足以填滿大廳，會由 CPU 補足；鄰近遊玩不會出現 CPU。CPU 通常會隨機選擇接近目前遊玩等級的譜面。
+
+Light Start 原本前兩首歌曲的等級限制已於 2025 年 12 月 23 日宣布取消，不再限制可選擇的等級與難度。
+
+### Megamix Battle [#megamix-battle]
+Megamix Battle 是完全不同的對戰模式。這是 1 對 1 的對戰，雙方各選擇 5 張想遊玩的譜面。與其他對戰不同，選擇的譜面難度會套用至雙方；總共會選出 10 張譜面。依玩家身分不同，會負責選擇開場或結尾譜面。
+
+進入後會先遊玩選定的開場譜面。該回合結束後，玩家 2 可在觸控螢幕上從自己選擇的 5 張譜面中挑選一張，也能在此選擇 MIRROR。除了開場與結尾譜面外，其他譜面只能選擇一次。
+
+共有 12 回合，每回合遊玩選定譜面約 30 秒的片段。該片段分數較高者取得 1 分；平手時雙方各得 1 分。
+
+畫面右側會顯示 EXCEED 量表，遊玩時會逐漸累積。每張譜面開始前，按下觸控螢幕上的「EXCEED」即可啟用 EXCEED 模式：
+- 分數改以 EX SCORE 計算；即使取得 PUC，若 EX SCORE 較低仍會輸掉該片段。
+- EX SCORE 會換算為一般分數顯示，因此即使 PUC，也必須達到 S-PUC 才會顯示 10,000,000 分。
+- 在 EXCEED 模式中獲勝時，會依 EXCEED 等級取得額外分數；等級越高，分數越多。
+- 如果輸掉，EXCEED 會關閉且不會獲得分數，對手只會取得 1 分。
+- EXCEED 具備逆轉機制；落後越多，EXCEED 量表累積越快。
+- 最後一回合一定會啟用 EXCEED 模式，雙方都會使用剩餘的 EXCEED 量表。
+
+這個模式的細節很多，觀看實際遊玩影片會更容易理解。如果感到困惑，建議觀看以下頂尖玩家的 Megamix Battle YouTube 影片：
+
+- [Potesatsu 在版本更新後初體驗 Megamix Battle](https://www.youtube.com/watch?v=SHUrTmyRAiQ)
+- [包含 YU11 vs STR 等 Megamix 的一整個播放清單](https://www.youtube.com/watch?v=LrQgOXj6BbM&list=PLx9MzlxDs2fywFGg2OV0hBfbsSRhiXkav)
+
+Megamix 另有以下注意事項：
+- 並非所有譜面都能在 Megamix 遊玩，尤其是近期推出的譜面通常不會收錄；Konami 會不定期將新譜面加入 Megamix。
+- 666 的軌道分離、Lachryma 的軌道線消失等 Boss 譜面特殊演出不會出現。
+- 不會改變下落速度；原本有變速的譜面會以你設定的下落速度遊玩。
+
+## Premium Time [#premium-time]
+Premium Time 通常是較昂貴的選項，主要優點是可以在 10 分鐘內不限次數遊玩。
+#### 優點
+- 以 10 分鐘計時，不限歌曲數量。
+- 具備 Standard Start 的所有功能。
+- 可使用 MAXXIVE RATE。
+- 同時按下兩個 FX 按鍵與 START，可隨時退出譜面。
+- 長按兩個 FX 按鍵與 START，可立即重新挑戰譜面。
+- 可設定 challenge；若已無法達成特定的門檻會自動失敗出局。例如設定 PUC 挑戰後，打出 NEAR 便會立即結束歌曲。
+- 在選曲畫面同時按下所有 BT 按鍵，可以提早結束該道。
+#### 缺點
+- 沒有 Blaster Gate。
+- 因為沒有 Blaster Gate，無法解鎖需要 Blaster 量表的歌曲。
+- 費用較高。
+
+Premium Time 適合用來刷分或練習通關，能重複遊玩同一張譜面多次。
+
+## Blaster Start [#blaster-start]
+Blaster Start 通常與 Premium Time 價格相同，主要用於解鎖歌曲。Blaster Start 的規則與 Normal 相同：遊玩 3～4 首歌曲，無法退出譜面；差別在於期間 Blaster 量表都會保持全滿，因此一道就能解鎖多首 Blaster Gate 歌曲。
+
+Blaster Start 也能使用 [MAXXIVE RATE](/compendium/gauge-options#maxxive-rate)。
+
+## Skill Analyzer [#skill-analyzer]
+
+若有其他音樂遊戲的經驗，可以把 Skill Analyzer 理解成 SOUND VOLTEX 的段位系統。每組段位曲目由 3 首歌曲組成，必須維持 [血條](/compendium/gauge-options#permissive-rate) 並連續通關 3 首歌曲；血量降至 0% 即挑戰失敗。
+
+<div className="flex items-center justify-center">
+ <img src='/compendium/game-modes/skillanalyzer.jpg' width="400"/>
+</div>
+選擇 Skill Analyzer 後，首先要挑選想挑戰的段位，段位名稱會顯示在畫面上方。選定段位後，可以從不同的段位曲目中選擇想挑戰的組別，並查看該組 3 首歌曲目前的最佳分數與通關紀錄。請注意，各組的歌曲需要事先解鎖才能挑戰。
+
+要解鎖暴龍天，必須先通關 Skill Analyzer 中或帝滅斗的任一組段位曲目。
+
+同時按下 4 個 BT 按鍵會開啟【神】模式，會切換成比一般段位血條更嚴苛的 [DIVINE RATE](/compendium/gauge-options#divine-rate)，只有 S-Critical 能恢復血量，打出 NEAR 即會扣血。此外，【神】後光所需的達成率會高 10%。
+
+每個段位還可依特定條件取得以下框體樣式：
+- 銀框：通關該段位最新推出的曲目組。
+- 金框：通關該段位的每一組曲目。
+- 後光：如表格所示，達成率達到指定值並通關所有段位曲目。
+- 【神】後光：如表格所示，達成率達到指定值並使用 [DIVINE RATE](/compendium/gauge-options#divine-rate) 通關所有段位曲目。
+<div className="flex items-center justify-center mt-5">
+  | 段位 | 岳翔～魔騎士 | 剛力羅 | 或帝滅斗 | 暴龍天 |
+  |:----:|:----:|:----:|:----:|:----:|
+  | 達成率 | 130% | 150% | 160% | 170% |
+  | 達成率【神】 | 140% | 160% | 170% | 180% |
+</div>
+
+以下是所有段位的圖片。銀框、金框、後光與【神】可套用至任何段位，圖中僅展示了框體樣式套用在暴龍天上的外觀。
+<Image src="/compendium/game-modes/dans.webp" className="h-125"/>
+
+## 訓練模式 [#training-mode]
+<Callout type="error" emoji="⚠️">
+這是 **[Konasute](/setup/konasute) 專屬**功能，且需要購買 [Premium Pass](/setup/konasute#konasute-premium-pass)。
+</Callout>
+
+訓練模式僅限 Konasute 使用，可用來練習完整譜面或指定區間。你可以：
+- 選擇要練習的小節
+- 調整譜面播放的速度
+- 移除視角與下落速度變化
+- 其他功能
+
+部分譜面無法使用訓練模式，主要是版權譜面，包括 BMS、東方與 Vocaloid 譜面。
+
+若要使用，必須先擁有 [Konasute](/setup/konasute) 與 [Premium Pass](/setup/konasute#konasute-premium-pass)，開啟 Konasute 後從遊戲模式選項中選擇 `Training`。
+
+<Image src="/zh-tw/compendium/game-modes/trainingmodefirstscreen.webp" className="w-90"/>
+
+開始譜面後會看到如下畫面，以下說明各項功能。
+
+操作方式如下：
+- `FX-L` 或 `ESC`：開啟選單
+- 旋鈕或左右方向鍵：捲動譜面；按住 `FX` 可加快移動
+- `BT-A`：設定循環起始小節
+- `BT-D`：設定循環結束小節
+- `FX-L + FX-R + START` 或小鍵盤的 `.`：開始循環；按住可回到起始小節重新開始
+
+畫面上方會顯示目前的判定分布，以及判定分布之間的平均毫秒差。
+
+左側會顯示目前的 S-Critical、Critical、Near 與 Error 判定。
+
+下方會顯示目前的譜面播放速度，以及是否啟用重複播放和自動遊玩。可透過選項選單或上下方向鍵調整譜面播放速度。
+
+開啟選項選單後會看到如下畫面。
+
+<Image src="/zh-tw/compendium/game-modes/trainingmodeoptions.webp" className="w-90"/>
+
+- `PLAY SPEED`：目前的譜面播放速度，可調整為 0.5～1.5。
+- `開始位置`：循環起始小節。
+- `終了位置`：循環結束小節。
+- `REPEAT`：到達結束小節時是否自動重播。
+- `AUTOPLAY`：自動遊玩譜面。
+- `固定LANE-SPEED`：移除 BPM 變化造成的下落速度變化。
+- `固定カメラ/レーン`：移除視角變化特效。
+- `レートスタイル`：血條類型。
+- `レート初期値`：血量初始值。
+- `全ての設定をリセット`：恢復所有設定為預設值。
+- `MUSIC SELECTへ戻る`：回到選歌畫面。
+
+再次按下 `FX-L` 可關閉此選單。
+
+按下 `FX-L + FX-R + START` 或 `.` 會開始遊玩譜面；按住會重新開始譜面，單次按下則會暫停譜面。
+
+這裡也能使用相同的鍵盤快捷鍵：`ESC` 開啟選單，上下方向鍵調整遊玩速度，左右方向鍵移動譜面位置。
+
+選取特定區間後遊玩，分數只會計算該區間。例如選取 5 小節並達成 PUC，分數會是 `10000000`，也就是 PUC。
+
+訓練模式中的分數不會上傳或顯示在任何地方，即使從譜面開頭開始遊玩也一樣；遊玩結束後不會進入分數結算畫面。

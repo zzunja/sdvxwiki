@@ -1,0 +1,273 @@
+import { Table, Row, Header, Data } from "../../../components/Table";
+import { Callout } from 'nextra/components'
+
+# 血條選項
+
+## 目錄
+- [簡介](#intro)
+- [EFFECTIVE RATE](#effective-rate)
+- [EXCESSIVE RATE](#excessive-rate)
+- [MAXXIVE RATE](#maxxive-rate)
+- [PERMISSIVE RATE](#permissive-rate)
+- [DIVINE RATE](#divine-rate)
+- [VARIATIVE RATE](#variative-rate)
+- [Alternative Rate System（ARS）](#alternative-rate-system-ars)
+- [血條增減對照表](#gainloss-breakdown)
+  - [VARIATIVE RATE](#variative-rate-breakdown)
+- [HEXATIVE RATE](#hexative-rate)
+
+## 簡介 [#intro]
+本文介紹 SOUND VOLTEX 中可使用的各種血條。一般遊玩可使用的主要血條有 EFFECTIVE RATE 與 EXCESSIVE RATE；其他血條僅能在特定遊戲模式或解鎖系統中使用。
+
+## EFFECTIVE RATE
+從 0% 開始，結束譜面時需達 70% 以上才算通關。
+
+也稱為一般血條。
+
+## EXCESSIVE RATE
+從 100% 開始，遊玩過程中維持高於 0% 直到完成譜面即可通關。
+
+俗稱的 HARD、困難血條。對應的通關徽章俗稱紫燈。
+
+## MAXXIVE RATE
+從 100% 開始，遊玩過程中維持高於 0% 直到完成譜面即可通關。只有 S-Critical 能回復血量，且 NEAR 就會扣血。
+
+須啟用 [S-Critical](/startingout/options#s-critical) 才能使用。
+
+俗稱的 EX-HARD 血條。對應的通關徽章俗稱白燈。
+
+## PERMISSIVE RATE
+從 100% 開始，遊玩過程中維持高於 0% 直到完成譜面即可通關。血量會延續 3 張譜面，因此比 EXCESSIVE RATE 容易。使用此血條遊玩的譜面不會獲得通關徽章。
+
+僅能在 [SKILL ANALYZER](/compendium/game-modes#skill-analyzer) 中使用。
+
+## DIVINE RATE
+從 100% 開始，遊玩過程中維持高於 0% 直到完成譜面即可通關。只有 S-Critical 能回復血量，且 NEAR 就會扣血。
+
+僅能在 [SKILL ANALYZER](/compendium/game-modes#skill-analyzer) 中使用。
+
+## VARIATIVE RATE
+從 100% 開始，遊玩過程中維持高於 0% 直到完成譜面即可通關。又分為 `RANK V`、`RANK IV` 到 `RANK I` 的五個等級；其中 `RANK V` 最難，無法回復血量。
+
+僅能在 [Variant Gate](/compendium/unlock-systems#variant-gate) 中使用。
+
+## Alternative Rate System（ARS） [#alternative-rate-system-ars]
+這項選項可搭配 MAXXIVE RATE 與 EXCESSIVE RATE 使用。血量降至 0% 時會切換至下一個較低階的血條，而不是直接失敗出局；切換後的血量會與一開始就使用該血條時相同。血條順序如下：
+
+- MAXXIVE RATE -> EXCESSIVE RATE -> EFFECTIVE RATE
+
+## 血條增減對照表 [#gainloss-breakdown]
+
+- CHIP 包含 BT 與 FX 的短音符物件。
+- 表中的數值皆為單次判定的血量增減量；LONG 與一般旋鈕物件會包含多個判定點。
+- **T**：不受譜面影響的固定值。
+- **n**：依譜面變化，計算式為 `(連鎖總數) + (CHIP 與直角旋鈕的數量) × 3`。
+
+<Table className="w-full mt-4 mb-4 text-center align-middle">
+  <thead>
+    <Row>
+      <Header rowSpan="2">血條類型</Header>
+      <Header colSpan="2">S-CRITICAL</Header>
+      <Header colSpan="2">CRITICAL</Header>
+      <Header >NEAR</Header>
+      <Header colSpan="2">ERROR</Header>
+    </Row>
+    <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
+      <Data>
+        <p>CHIP</p>
+        <p>直角旋鈕</p>
+      </Data>
+      <Data>
+        <p>LONG</p>
+        <p>一般旋鈕</p>
+      </Data>
+      <Data>
+        <p>CHIP</p>
+        <p>直角旋鈕</p>
+      </Data>
+      <Data>
+        <p>LONG</p>
+        <p>一般旋鈕</p>
+      </Data>
+      <Data>CHIP</Data>
+      <Data>
+        <p>CHIP</p>
+        <p>直角旋鈕</p>
+      </Data>
+      <Data>
+        <p>LONG</p>
+        <p>一般旋鈕</p>
+      </Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>EFFECTIVE</Data>
+      <Data rowSpan="5"><pre>+4T/n</pre></Data>
+      <Data rowSpan="5"><pre>+T/n</pre></Data>
+      <Data rowSpan="3"><pre>+4T/n</pre></Data>
+      <Data rowSpan="3"><pre>+T/n</pre></Data>
+      <Data rowSpan="3"><pre>+4T/3n</pre></Data>
+      <Data><pre>-2.00%</pre></Data>
+      <Data><pre>-0.50%</pre></Data>
+    </Row>
+    <Row>
+      <Data>EXCESSIVE</Data>
+      <Data><pre>-9.00% <sup>1</sup></pre></Data>
+      <Data><pre>-2.25% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>PERMISSIVE</Data>
+      <Data><pre>-3.40% <sup>1</sup></pre></Data>
+      <Data><pre>-0.85% <sup>1</sup></pre></Data>
+    </Row>
+
+    <Row>
+      <Data>DIVINE</Data>
+      <Data><pre>±0.00%</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-1.00%</pre></Data>
+      <Data><pre>-5.00% <sup>1</sup></pre></Data>
+      <Data><pre>-1.25% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>MAXXIVE</Data>
+      <Data><pre>±0.00%</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-4.00% <sup>2</sup></pre></Data>
+      <Data><pre>-20.00%</pre></Data>
+      <Data><pre>-5.00%</pre></Data>
+    </Row>
+  </tbody>
+</Table>
+
+<sup>1</sup> 血量低於 30% 時，扣血幅度會降低
+<sup>2</sup> 不會使血條歸零
+
+[Source](https://bemaniwiki.com/index.php?SOUND+VOLTEX+EXCEED+GEAR/%A5%B7%A5%B9%A5%C6%A5%E0#rate_style)
+
+### VARIATIVE RATE [#variative-rate-breakdown]
+
+<Table className="w-full mt-4 mb-4 text-center align-middle">
+  <thead>
+    <Row>
+      <Header rowSpan="2">RANK</Header>
+      <Header>S-CRITICAL</Header>
+      <Header>CRITICAL</Header>
+      <Header>NEAR</Header>
+      <Header colSpan="2">ERROR</Header>
+    </Row>
+    <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
+      <Data>CHIP</Data>
+      <Data>CHIP</Data>
+      <Data>CHIP</Data>
+      <Data>
+        <p>CHIP</p>
+        <p>直角旋鈕</p>
+      </Data>
+      <Data>
+        <p>LONG</p>
+        <p>一般旋鈕</p>
+      </Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>V</Data>
+      <Data><pre>±0.00%</pre></Data>
+      <Data><pre>-1.00%</pre></Data>
+      <Data><pre>-7.00%</pre></Data>
+      <Data><pre>-10.00%</pre></Data>
+      <Data><pre>-5.00%</pre></Data>
+    </Row>
+    <Row>
+      <Data>IV</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-3.00%</pre></Data>
+      <Data><pre>-15.00%</pre></Data>
+      <Data><pre>-3.75%</pre></Data>
+    </Row>
+    <Row>
+      <Data>III</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-9.50%</pre></Data>
+      <Data><pre>-2.38% <sup>1</sup></pre></Data>
+    </Row>
+    <Row>
+      <Data>II</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-6.00%</pre></Data>
+      <Data><pre>-1.50%</pre></Data>
+    </Row>
+    <Row>
+      <Data>I</Data>
+      <Data><pre>?</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-</pre></Data>
+      <Data><pre>-2.50%</pre></Data>
+      <Data><pre>-0.63% <sup>2</sup></pre></Data>
+    </Row>
+  </tbody>
+</Table>
+
+<sup>1</sup> 14 次 ERROR 後減少 33.3%
+<sup>2</sup> 14 次 ERROR 後減少 8.8%
+
+[Source](https://bemaniwiki.com/?SOUND+VOLTEX+EXCEED+GEAR/VARIANT+GATE#VARIATIVE_RATE)
+
+## HEXATIVE RATE [#hexative-rate]
+<Callout type="warning">這些系統在 Nabla 中不存在。</Callout>
+
+從 100% 開始，遊玩過程中維持高於 0% 直到完成譜面即可通關。可選擇 1～5 級的 [HEXA RANK](/compendium/unlock-systems#hexadiver) 調整血條難度；第 3 級只比 EXCESSIVE RATE 稍簡單，第 4、5 級則更難。
+
+僅能在 [HEXA DIVER](/compendium/unlock-systems#hexadiver) 中使用。
+- **H**：[HEXA RANK](/compendium/unlock-systems#hexadiver)
+
+{/* 排版調整：S-CRITICAL 與 CRITICAL 的數值相同，因此整合為同一組欄位。 */}
+<Table className="w-full mt-4 mb-4 text-center align-middle">
+  <thead>
+    <Row>
+      <Header rowSpan="2">血條類型</Header>
+      <Header colSpan="2">S-CRITICAL／CRITICAL</Header>
+      <Header >NEAR</Header>
+      <Header colSpan="2">ERROR</Header>
+    </Row>
+    <Row className="text-xs leading-3.5 font-semibold" noColor={true}>
+      <Data>
+        <p>CHIP</p>
+        <p>直角旋鈕</p>
+      </Data>
+      <Data>
+        <p>LONG</p>
+        <p>一般旋鈕</p>
+      </Data>
+      <Data>CHIP</Data>
+      <Data>
+        <p>CHIP</p>
+        <p>直角旋鈕</p>
+      </Data>
+      <Data>
+        <p>LONG</p>
+        <p>一般旋鈕</p>
+      </Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>HEXATIVE</Data>
+      <Data rowSpan="1"><pre>+4T/n</pre></Data>
+      <Data rowSpan="1"><pre>+T/n</pre></Data>
+      <Data className="leading-6">
+        <div><pre>H = 5: -1.00%</pre></div>
+        <div><pre>H ≤ 4: +4T/3n</pre></div>
+      </Data>
+      <Data><pre>-2.00% × H <sup>1</sup></pre></Data>
+      <Data><pre>-0.50% × H <sup>1</sup></pre></Data>
+    </Row>
+  </tbody>
+</Table>

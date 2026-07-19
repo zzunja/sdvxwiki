@@ -1,0 +1,231 @@
+import { Image, Video } from '../../../components/Media'
+import { Callout } from "nextra/components"
+
+<a id="options-page"></a>
+# 遊戲選項
+## 目錄
+- [選項](#options)
+    - [下落速度](#lane-speed)
+        - [理論](#theory)
+    - [Offset（判定時機調整）](#offset)
+        - [理論](#theory-1)
+    - [EARLY/LATE 判定顯示](#early-late-adjustment)
+    - [S-Critical](#s-critical)
+    - [預覽](#lane-preview)
+    - [系統語音](#system-voice)
+    - [顯示 SDVX Konasute／街機分數](#show-sdvx-konasutearcade-scores)
+    - [Valkyrie 特效](#valkyrie-effect)
+    - [EARLY/LATE 顏色](#early-late-color)
+    - [旋鈕顏色](#laser-colors)
+    - [背景亮度](#display-brightness)
+    - [名次顯示](#rank-display)
+    - [一般分數與 EX SCORE](#normal-scoring-and-ex-scoring)
+    - [RANDOM 與 MIRROR](#random-and-mirror)
+    - [血條](#effectiveexcessive-clear)
+    - [音量](#volume)
+    - [Challenge](#challenge-options)
+    - [目標分數](#target-score)
+- [備註](#additional-things-to-note)
+
+
+## 選項 [#options]
+在選歌畫面同時按下 `FX-L` 和 `FX-R`，即可叫出遊戲選項。所有設定也能透過觸控螢幕選單操作；在 Konasute 中可按 `F1` 開啟選單。本頁會介紹各選項的功能與建議設定。
+
+本頁介紹的是按下 `FX-L` 和 `FX-R` 時顯示的選單，因此版面可能和你看到的略有不同，但說明內容相同。
+
+### 下落速度 [#lane-speed]
+<Image src="/startingout/options/LaneSpeed.png"/>
+
+下落速度是指音符從出現到抵達畫面底部的速度，也稱為流速。設定範圍是 1 到 10，精確到小數點後兩位。
+
+下落速度並不是譜面本身的速度。即使使用 `1.00` 的下落速度，遊玩的譜面也和使用 `10.00` 下落速度時相同，差別只在視覺呈現。不同下落速度間的差異請參考下面的影片。
+
+<Video src="/startingout/options/lanespeedcomparision.webm"/>
+<div className="flex justify-center">
+<em>由左至右分別是 [JiminP 1.00 下落速度](https://www.youtube.com/watch?v=rjY1itUxA0s)，[DDX 6.90 下落速度](https://www.youtube.com/watch?v=HewBZrjtuDU) 與 [Mini 9.50 下落速度](https://www.youtube.com/watch?v=iLjAC0NUJAg)</em>
+</div>
+
+雖然看起來不一樣，但遊玩的都是同一張譜面，並不是「比較快」或「比較慢」的譜面。
+
+一開始通常會將下落速度設在 2 到 4 左右。隨著讀譜能力提升，可以逐漸調高數值，讓譜面更容易閱讀。
+
+按下數字鍵 `6` 可以鎖定下落速度。這樣每次重新開始遊戲或回到選歌畫面時，下落速度都會自動設定為鎖定的數值。
+
+#### 理論 [#theory]
+一般來說：
+<div className="text-center mt-3">
+**下落速度越高 = 畫面上的音符越少 = 譜面越容易閱讀**
+</div>
+**不過**，你也不會想把它調到變成「在反應」而不是「在讀譜」。
+
+下落速度取決於個人偏好。理論上應該把它往上調，但如果看不懂高速譜面，那也沒有意義。有的人能適應 9 以上，有的人則維持在 6 到 8。讀譜速度取決於許多不同因素。
+
+
+### Offset（判定時機調整） [#offset]
+<Image src="/startingout/options/Offset.png"/>
+
+offset 分為 Draw（`判定タイミング(描画)`）和 Judge（`判定タイミング(音)`）。Judge 會同時移動判定線和音訊，Draw 則只影響判定線。假如你單靠視覺讀譜，Draw 和 Judge 都會影響判定線，效果相同；而如果你單靠聽覺判斷節奏，則只有 Judge 會影響音訊。
+
+所以如果只想把音訊的時機調成 `+2`、而判定線維持預設，就要把 Judge 調成 `+2`、Draw 調成 `-2`。
+
+<Image src="/startingout/options/draw-example.png" className="w-100"/>
+
+`+` offset 時判定線會往上移，`-` offset 時判定線會往下移，中間是預設判定線。
+
+
+你可以按以下小鍵盤數字鍵來調整 offset：
+- `8`：Judge +
+- `2`：Judge -
+- `9`：Draw +
+- `3`：Draw -
+
+女武神框體可以直接在觸控螢幕上修改 offset 數值。
+
+相關的實機演示可以參考 [這部影片](https://www.youtube.com/watch?v=hp-0K3FR7FU)。
+
+#### 理論 [#theory-1]
+
+offset 有時會因日期、設備或譜面不同而改變。有時需要判斷究竟是要調整 offset，還是要調整自己的內在拍點。
+
+要注意的是，很多時候問題不在 offset，而是在下落速度或讀譜能力。如果發現自己一直打出很多 LATE 或 EARLY，可能是你目前還讀不順這張譜面，或是下落速度設定不當。
+
+如果在設定 offset 時遇到困難，或想進一步了解 offset，可以參考 [JiminP 的指南](https://r-g.kr/article/sync)。這份指南詳細介紹了 offset 的相關內容。
+
+### EARLY/LATE 判定顯示 [#early-late-adjustment]
+<Image src="/startingout/options/Earlylate.png"/>
+
+上圖中的三項設定，分別控制打點偏離判定時機時可顯示的 EARLY/LATE 提示、±ms 數值及這些資訊顯示在哪裡。
+
+<Image src="/startingout/options/Earlyexample.png"/>
+
+第一項設定 EARLY/LATE 提示的顯示時機。選擇 Critical 時，每次打到 Critical 或更差的判定都會顯示；選擇 Near 時，只會在 Near 或更差的判定顯示；選擇 Off 則不會顯示。
+
+<Image src="/startingout/options/msexmaple.png"/>
+第二項設定 ±ms 數值的顯示時機。選擇 All 時，所有判定都會顯示，包括 S-Critical；但 S-Critical 顯示的數值會是灰色。選擇 Critical 時，會在 Critical 或更差的判定顯示；選擇 Near 時，只會在 Near 或更差的判定顯示；選擇 Off 則不會顯示。
+
+第三項設定這些資訊在畫面上的顯示位置。UPPER 是最常見的選擇。
+
+一般來說，建議將其中一項設為只在 Near 時顯示，另一項則設為在所有情況或至少 Critical 時顯示。這樣比較容易分辨是否出現 Near，或只是稍微偏離判定時機。
+
+### S-Critical [#s-critical]
+<Image src="/startingout/options/SCrit.png"/>
+
+啟用一個比 Critical 更嚴格的判定。S-Critical 不會影響一般分數。關於判定時機，請參考 [這個頁面](/compendium/timing-windows)。
+
+注意 Light Start 中無法使用此選項；Konasute 不受此限制。只要條件允許，通常建議開啟此選項。
+
+### 預覽 [#lane-preview]
+<Image src="/startingout/options/Preview.png"/>
+可以在這裡預覽剛才調整的設定。系統會提供一張簡單的譜面，讓你查看下落速度、offset 與 EARLY/LATE 判定顯示的效果。建議善用預覽找出自己喜歡的設定。
+
+### 系統語音 [#system-voice]
+<Image src="/startingout/options/SystemVoice.png"/>
+
+選擇是否啟用領航員在選單中的語音，例如完成一張譜面時播放的語音。
+
+### 顯示 SDVX Konasute／街機分數 [#show-sdvx-konasutearcade-scores]
+<Image src="/startingout/options/ShowScores.png"/>
+
+決定是否顯示街機與 Konasute 的綜合最高分。啟用後，系統會合併街機與 Konasute 的分數，並顯示其中較高的分數。例如你在 Konasute 有 `9,978,132`，在街機有 `9,942,612`，畫面就會顯示 Konasute 的分數。
+
+請注意，Volforce 在兩邊是分開計算的。
+
+可以查看結算畫面的標記，判斷這個分數來自 Konasute 還是街機。
+
+<Image src="/startingout/options/ShowKonasuteScores.png"/>
+這裡顯示這個分數來自街機，因為 `ARCADE` 的標示亮著。
+
+如果你沒有把 Konasute 和街機資料連結，這個選項就不會出現。
+
+### Valkyrie 特效 [#valkyrie-effect]
+<Image src="/startingout/options/ValkyrieEffect.png"/>
+
+這個選項會改變旋鈕特效的外觀。開啟後，特效會更明顯。範例請見下面的影片。
+
+<Video src="/startingout/options/valkeffect.mp4"/>
+<em className="flex justify-center">[Inevitable Magic MXM 18](https://sdvx.in/06/06450m.htm)</em>
+
+### EARLY/LATE 顏色 [#early-late-color]
+<Image src="/startingout/options/Earlylateflip.png"/>
+
+互換 EARLY 和 LATE 的顏色。預設設定下 LATE 是藍色、EARLY 是紅色；開啟後會互換。
+
+### 旋鈕顏色 [#laser-colors]
+<Image src="/startingout/options/lasercolors.png"/>
+
+更改旋鈕顏色。第一個選項是左旋鈕，第二個是右旋鈕。大多數人不會修改這些設定，不過 Mini 的左旋鈕是綠色（預設是藍色）。
+
+### 背景亮度 [#display-brightness]
+<Image src="/startingout/options/displaybrightness.png"/>
+
+調整背景亮度。不同的背景亮度可以參考前面下落速度的影片。與 JiminP、DDX 相比，Mini 使用的背景更亮。
+
+### 名次顯示 [#rank-display]
+<Image src="/startingout/options/rankdisplay.png" className="w-50"/>
+決定是否在遊玩時顯示你在配對中的名次，以及你與對手（或[目標分數](#target-score)）之間的差距，範例如下圖。
+<Image src="/startingout/options/scoredifference-example.png" className="w-100"/>
+
+注意目標分數優先於對手分數，因此如果啟用目標分數又正在配對，顯示的會是目標分數差距，而不是對手分數差距。
+
+### 一般分數與 EX SCORE [#normal-scoring-and-ex-scoring]
+<Image src="/startingout/options/normalscoreexscore.png"/>
+
+切換一般分數和 EX SCORE 的顯示。一般分數會決定評級，也會用於計算 VOLFORCE。每張譜面的上限都是 10,000,000，基於 Critical、Near 和 Error 計算。EX SCORE 則是依照 S-Critical、Critical、Near 和 Error 計算。更多說明請見 [這裡](/startingout/scoring)。
+
+你必須啟用 S-Critical 功能才能啟用 EX SCORE。
+
+即使在這裡選擇顯示 EX SCORE，一般分數仍然會被計算，反之亦然（前提是 S-Critical 已開啟）。你可以在任何譜面的分數下方看到自己的 EX SCORE。
+
+若你才剛開始玩，建議先維持顯示一般分數。
+
+### RANDOM 與 MIRROR [#random-and-mirror]
+<Image src="/startingout/options/RandomMirror.png"/>
+
+這些選項會改變音符的排列方式。
+- MIRROR 會把譜面左右翻轉。比如原本是 1-2-3-4 的階梯，會變成 4-3-2-1
+- RANDOM 會隨機打亂音符落下的軌道。比如原本是 1-2-3-4 的階梯，可能變成 3-2-4-1
+- S-RANDOM 連音符本身也會完全隨機化，所以任何音符都可能出現在任何位置
+
+<Video src="/startingout/options/normalran.mp4"/>
+
+一般來說，MIRROR 是唯一比較實用的選項。RANDOM 和 S-RANDOM 很容易讓譜面出現 [非法配置](/terminology/patterns#illegal)。
+
+### 血條 [#effectiveexcessive-clear]
+<Image src="/startingout/options/ClearType.png"/>
+
+使用不同血條通關會得到不同的通關徽章。
+
+- **Effective Rate**：從 0% 開始累積，血條上升到 70% 以上就算通關
+- **Excessive Rate**：一開始是 100%，一旦途中掉到 0 就算失敗，維持到歌曲結束才算通關。和 Effective 相比，Error 扣的血量更多，也更難回補
+- **Excessive + ARS**：一開始是 Excessive Rate，若血量見底，則會自動降為 Effective Rate。切換血條時，系統會當作一開始就是 Effective Rate 來計算即時的血量，不會從 0% 重新開始累積
+
+通關徽章會影響你的 VOLFORCE。Excessive 較難，所以給的 VOLFORCE 也比較多。
+
+Light Start 模式無法使用 Excessive + ARS。不過如果你玩的是 Konasute，就沒有這個問題。
+
+只要條件允許，通常建議使用 Excessive + ARS。
+
+更多血條說明請見 [此頁面](/compendium/gauge-options)。
+
+### 音量 [#volume]
+<Image src="/startingout/options/audiolevels.png"/>
+
+設定音量。在 Konasute 中，這裡調整的是遊戲音量（如截圖所示）；街機則是耳機音量。若街機沒有插耳機，這個設定就不會起作用。
+
+### Challenge [#challenge-options]
+<Image src="/startingout/options/challenge.png"/>
+
+設定 Challenge 的門檻。在遊玩過程中，如果已經不可能達成所選門檻，就會自動失敗出局。例如選擇 UC challenge 時，只要漏打一個音符，就會自動判定失敗。
+
+### 目標分數 [#target-score]
+<Image src="/startingout/options/target-score.png" className="w-50"/>
+
+設定目標分數。你可以設定想要達成的數值，遊玩時會顯示與目標分數的差距，讓你知道自己還差多少。
+
+如果關閉了 [名次顯示](#rank-display)，即使選擇的比較目標不是配對對手，也不會顯示與目標分數的差距。
+
+## 備註 [#additional-things-to-note]
+
+這些設定大多都是個人偏好。雖然有一些通用的建議，但沒有絕對標準。多試幾種，看看自己喜歡哪一種。
+
+Valkyrie 和 Konasute 能調整的設定選項並不完全相同。

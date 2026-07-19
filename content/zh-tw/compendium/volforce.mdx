@@ -1,0 +1,138 @@
+import { Callout } from 'nextra/components'
+import { Image } from '../../../components/Media'
+
+# Volforce
+
+## 目錄
+- [Volforce](#volforce)
+- [查看 B50 的組成](#finding-your-best-50)
+- [Volforce 階級](#skill-ranks)
+- [VOLFORCE POTENTIAL 資料夾](#volforce-potential-folder)
+- [備註](#notes)
+
+## Volforce [#volforce]
+Volforce 是衡量實力的主要指標。當然並非百分之百準確，但理論上 Volforce 越高代表實力越強。
+
+玩家的 Volforce 由 VF 數值最高的 50 張譜面決定，這 50 張譜面稱為 B50（BEST 50）。每次遊玩後，遊戲都會使用以下公式計算該譜面的 Volforce。
+
+<Callout>
+嚴格來說，這個公式並不完全正確。系統並不是直接乘以 0.001，而是先將結果無條件捨去至整數，再把這個整數加總到 B50，最後將總和除以 1000。為了簡化計算，這裡直接在公式中加入 0.001；兩種方式算出的結果相同，只是計算流程不同。
+</Callout>
+<div className="text-center mt-3">
+```
+(譜面等級 * (一般分數 / 10,000,000) * (評級係數) * (通關徽章係數) * 20) * .001
+```
+</div>
+
+<div className="text-center mt-2">
+**評級係數**
+</div>
+
+<div className="flex justify-center mt-2">
+| S | AAA+ | AAA | AA+ | AA | A+ | A | B | C | D |
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|1.05|1.02|1.00|0.97|0.94|0.91|0.88|0.85|0.82|0.80|
+</div>
+
+<div className="text-center mt-2">
+**通關徽章係數**
+</div>
+
+<div className="flex justify-center mt-2">
+|PUC|UC|MAXXIVE RATE|EXCESSIVE RATE|EFFECTIVE RATE|Crash|
+|:--:|:--:|:--:|:--:|:--:|:--:|
+|1.10|1.06\*|1.04|1.02|1.00|0.50|
+</div>
+\* Konasute 中 UC 的係數為 1.05
+
+例如，在 `18.3` 級譜面以 `EXCESSIVE RATE` 通關並取得 `9,923,042（S）`，Volforce 的計算方式如下：
+<div className="text-center mt-3">
+```
+(譜面等級 * (一般分數 / 10,000,000) * (評級係數) * (通關徽章係數) * 20) * .001
+```
+</div>
+<div className="mt-3">
+```
+譜面等級　　    = 18.3
+一般分數　　    = 9,923,042
+評級係數　　    = S = 1.05
+通關徽章係數    = EXCESSIVE RATE = 1.02
+
+
+(18.3 * (9,923,042 / 10,000,000) * (1.05) * (1.02) * 20) * .001
+　　　　　　    = 0.388969354141
+```
+</div>
+結果為 `0.388969354141`。保留小數點後 3 位，無條件捨去其後的數字，得到 `.388`。
+
+計算出這個數值後，遊戲會將它與 B50 比較。如果這個數值高於 B50 中 Volforce 最低的譜面，就會獲得兩者的差值。假設 B50 中最低的 VF 是 `.370`，遊戲就會以這個數值取代該譜面原本的 Volforce，並獲得：
+<div className="flex justify-center mt-3">
+```
+.388 - .370 = 0.018 Volforce
+```
+</div>
+
+此時，增加的數值會顯示在畫面上的 Volforce 旁邊。
+
+注意計算 VOLFORCE 時只會考慮 **譜面等級、分數、評級與通關徽章**。
+
+此外，Volforce 會使用同一張譜面的 **最佳通關徽章與最高分數** 計算。舉例來說，如果再次遊玩上一個例子中的譜面，以 `UC` 取得 `9,899,320` 分，EXCESSIVE RATE 通關徽章會被替換為 UC，但一般分數欄位則是保留較高的 `9,923,042` 分。
+
+套用公式後如下：
+<div className="mt-3">
+```
+譜面等級　　    = 18.3
+一般分數　　    = 9,923,042 # 保留最高分
+評級係數　　    = S = 1.05
+通關徽章係數    = UC = 1.06 # 更新
+
+
+(18.3 * (9,923,042 / 10,000,000) * (1.05) * (1.06) * 20) * .001
+　　　　　　    = 0.404223054304
+```
+</div>
+結果為 `.404` VF。
+
+係數 `1.02` 變為 `1.06`，且分數仍維持使用原本較高的分數。因此藉由將 EXCESSIVE RATE 通關徽章提升為 UC，即使 UC 這次的分數較低，仍可獲得：
+<div className="flex justify-center mt-3">
+```
+.404 - .388 = .016 Volforce
+```
+</div>
+
+### 查看 B50 的組成 [#finding-your-best-50]
+畫面上紅圈標示的部分表示該譜面包含在你的 B50 中。
+
+<Image src='/compendium/volforce/best50.png'/>
+
+BEST 50 旁的符號會依目前 VF 而改變。
+
+遊戲中也有 VOLFORCE 資料夾放 B50，不過資料夾內部不會依 Volforce 排序，而是依你選擇的排序方式排列。
+
+## Volforce 階級 [#skill-ranks]
+Volforce 的不同里程碑會對應不同的階級，完整列表如下：
+
+<Image src='/compendium/volforce/volforceranks.png' className="w-100"/>
+
+每個階級內又細分為四顆星。
+
+到達 Imperial 的 `20.00 VF` 後，升階所需的增量會從每 `1.000 VF` 改為每 `4.000 VF`。這是目前 VF 階級的上限；即使所有譜面都取得 PUC，也無法超過 `24.000 VF`。
+
+目前達到 VF 理論最高值的兩位玩家是 [Mini](https://www.youtube.com/@minisdvx7740) 與 [Jakads](https://www.youtube.com/@Jakads_realkk)。由於 20 級譜面不到 50 首，他們除了 PUC 所有 20 級譜面外，還必須 PUC 一些 19 級譜面。
+
+## VOLFORCE POTENTIAL 資料夾 [#volforce-potential-folder]
+首次遊玩 Nabla 版本後，可能會出現名為「VOLFORCE POTENTIAL」的新資料夾。
+<Image src="/compendium/volforce/volforcepotential.png"/>
+
+VOLFORCE POTENTIAL 資料夾會列出原本有機會進入 B50、但目前尚未列入的分數。Nabla 版本新增了小數等級，並將 UC 的係數提高了 `0.01`，這些改動可能會影響 Volforce 數值。由於 Nabla 換代時不會重新計算 Volforce，可能有些譜面具備進入 B50 的條件，卻還沒有重新計算。
+
+例如，在 Exceed Gear 時，B50 全部都是 19 級 S 的 EXCESSIVE RATE 通關，當時每張譜面價值 `.402` VF。也就是說，必須取得高於 `.402` VF 的分數才能增加 VF。
+
+Nabla 換代後，由於加入小數等級，18.6 級 S + UC 現在價值 `.409` VF，高於 `.402` VF。只要重新遊玩並讓遊戲計算，就有機會進入 B50。取得的成績不必是 UC；遊玩一次即可觸發重新計算。
+
+## 備註 [#notes]
+Volforce 是在機台上計算的。也就是說，如果在新歌曲上取得提升 Volforce 的紀錄，之後在沒有該歌曲的機台遊玩，Volforce 會按照尚未遊玩該歌曲的狀態計算。
+
+基本上，刷卡登入時，所有分數都會傳送至機台並顯示，機台再根據收到的資料計算 Volforce。
+
+每筆分數的 Volforce 會在取得分數時計算。每完成一張譜面，遊戲就會計算該次遊玩的 Volforce 並與分數一起儲存。因此在 Nabla 中必須重新計算 Volforce，因為 Nabla 不會重新計算每筆分數的 Volforce，只會使用已知資料。

@@ -1,0 +1,67 @@
+# 判定範圍
+
+## 目錄
+- [簡介](#intro)
+- [街機版／Konasute（家用版）](#arcade-konasute)
+- [模擬器](#simulators)
+  - [Unnamed SDVX Clone（USC）](#usc)
+  - [K-Shoot MANIA（KSM）](#ksm)
+
+## 簡介 [#intro]
+本頁說明官方 SOUND VOLTEX 遊戲及模擬器的判定範圍。它們皆有 `CRITICAL`、`NEAR` 與 `ERROR` 判定，但只有官方遊戲支援 `S-CRITICAL`。此處僅列出 CHIP 物件的資料；直角旋鈕以及 LONG 開始與結尾的判定範圍尚未得知。
+
+以下均以毫秒（ms）為單位，並以 ± 表示判定範圍。例如 ±40 ms 代表提早或延後 40 ms 內按下皆有效：
+
+<div className="flex justify-center w-full mt-8">
+  <table className="w-120">
+    <thead className="border-b-2 h-8">
+      <tr>
+        <th className="border"><pre>-40</pre></th>
+        <th className="border"><pre>-30</pre></th>
+        <th className="border"><pre>-20</pre></th>
+        <th className="border"><pre>-10</pre></th>
+        <th className="border"><pre>0</pre></th>
+        <th className="border"><pre>+10</pre></th>
+        <th className="border"><pre>+20</pre></th>
+        <th className="border"><pre>+30</pre></th>
+        <th className="border"><pre>+40</pre></th>
+      </tr>
+    </thead>
+    <tbody className="border h-8">
+      <tr>
+        <td className="text-center" colSpan="9">此段時間內按下均有效</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## 街機版／Konasute（家用版） [#arcade-konasute]
+<div className="flex justify-center mt-8">
+| 判定 | 範圍 |
+| --- | --- |
+| S-CRITICAL | ± 20.8 ms |
+| CRITICAL | ± 41.6 ms |
+| NEAR | ± 150.0 ms |
+| ERROR | ? |
+</div>
+
+## 模擬器 [#simulators]
+
+### Unnamed SDVX Clone（USC） [#usc]
+<div className="flex justify-center mt-8">
+| 判定 | 範圍 |
+| --- | --- |
+| CRITICAL | ± 46 ms |
+| NEAR | ± 150 ms |
+| ERROR | ± 300 ms |
+</div>
+此為預設判定範圍，可於遊戲內調整。
+
+### K-Shoot MANIA（KSM） [#ksm]
+<div className="flex justify-center mt-8">
+| 判定 | 範圍 |
+| --- | --- |
+| CRITICAL | ± 43 ms |
+| NEAR | ± 113 ms |
+| ERROR | ± 260 ms |
+</div>

@@ -1,0 +1,199 @@
+import { Callout } from 'nextra/components'
+import { Image } from '../../../components/Media'
+
+# 解鎖系統
+
+## 目錄
+- [簡介](#intro)
+- [Blaster Gate](#blaster-gate)
+- [Variant Gate](#variant-gate)
+- [活動解鎖](#event-unlocks)
+  - [集章](#stamp)
+  - [Arena 商店](#arena-shop)
+  - [Triple Tribe 等跨遊戲聯動](#triple-tribecrossover)
+- [舊版解鎖系統](#old-unlocks)
+  - [Omega Dimension](#omega-dimension)
+  - [HEXA DIVER](#hexadiver)
+  - [Tama Adventure](#tama-adventure)
+
+## 簡介 [#intro]
+<Callout>
+Konasute 的解鎖方式不同，本頁大多數內容都不適用。Konasute 唯一的解鎖機制是 Blaster Gate。
+</Callout>
+<Callout>
+如果打算一口氣解鎖大量歌曲，建議購買 [Blaster Pass](https://p.eagate.573.jp/gate/p/eamusement/coop/mall.html?pid=367&fromdetails&dt=SOUND%20VOLTEX%2FBLASTER%20PASS%2F)，能大幅加快解鎖速度，節省不少費用。
+</Callout>
+歌曲有許多不同解鎖方式。有時很難找到特定歌曲的解鎖方法；通常可以搜尋歌曲名稱並查看 RemyWiki，頁面底部會列出解鎖方式。
+<div className="flex items-center justify-center text-center mt-3">
+![remywikiqq](/compendium/unlock-systems/remywikiqq.png)
+[以 QQ 為範例](https://remywiki.com/QQ)
+</div>
+
+本頁將介紹各種解鎖方式、它們的用途，以及使用方法。
+
+如需完整的解鎖指南，請參考這份 [表格](https://docs.google.com/spreadsheets/d/1VBYWSUaKqHUOyfCtvkHFYBSnEPwxhTh8-m4UlU8zUL0/edit?gid=594247546#gid=594247546)。
+
+
+## Blaster Gate [#blaster-gate]
+Blaster Gate 歌曲收錄在 Blaster Gate 資料夾中。被 Blaster Gate 鎖定的歌曲，在主選曲畫面會以鎖頭標示。若要開啟資料夾並解鎖其中的歌曲，必須填滿 Blaster 量表；歌曲結算畫面會顯示目前累積進度，如下圖。
+
+<div className="flex items-center justify-center mt-3">
+ <img src='/compendium/unlock-systems/blastergauge.png' width="400"/>
+</div>
+
+量表達到 100% 後，就能進入 Blaster Gate 資料夾遊玩想解鎖的歌曲。除非持有 Blaster Pass，否則必須通關譜面才能解鎖。通關較高難度也會一併解鎖較低難度。
+
+無論通關或失敗，Blaster 量表都會重設為 0。
+
+如果累積 20 次都未能通關該歌曲，歌曲會自動解鎖，無論通關或失敗。
+
+## Variant Gate [#variant-gate]
+<Image src="/compendium/unlock-systems/variant_charts.png"/>
+
+Variant Gate 是《SOUND VOLTEX》Exceed Gear 新增的解鎖系統。
+
+要解鎖前 3 首歌曲，必須依目標譜面的 [譜面雷達圖](/compendium/effect-radar) 填充 Variant 量表（`VARIANT POWER`）。在第一個 Variant Gate 中，前 3 首歌曲分別對應以下 3 組譜面雷達圖屬性：
+- TRICKY 與 NOTES
+- HAND-TRIP 與 TSUMAMI
+- ONE-HAND 與 PEAK
+
+通關譜面後，Variant 量表會依該譜面的譜面雷達圖填充。例如遊玩 `NOTES` 數值最高的譜面，就會填充 TRICKY 與 NOTES 屬性。
+
+每組雷達圖屬性都有對應歌曲。例如在第一個 Variant Gate 資料夾中，填充 `ONE-HAND` 或 `PEAK` 屬性就能解鎖 **Who then no 灯**。
+
+可以使用 [譜面雷達圖資料夾](/startingout/gameplay-screens#song-select-folders) 依雷達類型篩選譜面。
+
+<div className="mt-2 text-center">
+**未持有 Blaster Pass**
+<div className="flex items-center justify-center">
+|通關類型|Standard Start|Blaster Start|
+|:-:|:-:|:-:|
+|COMPLETE|+4%|+8%|
+|EXCESSIVE COMPLETE|+6%|+16%|
+|MAXXIVE COMPLETE、UC、PUC|+8%|+35%|
+</div>
+</div>
+<div className="mt-2 text-center">
+**持有 [Blaster Pass](/compendium/basic-premium-courses#blaster-pass)**
+<div className="flex items-center justify-center">
+|通關類型|Standard Start|Blaster Start|
+|:-:|:-:|:-:|
+|COMPLETE|+8%|+35%|
+|EXCESSIVE COMPLETE|+12%|+50%|
+|MAXXIVE COMPLETE、UC、PUC|+16%|+70%|
+</div>
+</div>
+[Source](https://bemaniwiki.com/?SOUND+VOLTEX+%E2%88%87/VARIANT+GATE#flow)
+
+填滿量表後，只有在 **EX-TRACK** 中才能進入 Variant 資料夾並選擇譜面。Variant 資料夾只會在 EX-TRACK 中顯示。不同的 RANK 代表不同的量表難度（見 [Variant Rate 詳細表格](/compendium/gauge-options#variative-rate-breakdown)）。初次選擇譜面時，會預設使用 `RANK V` 的血條。這是最困難的血條，無法回復血量，且打出 Critical 判定時會扣血。
+
+若挑戰失敗，下次遊玩該譜面時會降低一個 RANK。例如在 `RANK V` 失敗後，再次挑戰時會改為 `RANK IV`，最低會降至 `RANK I`。
+
+無論使用哪個 RANK，通關後都會解鎖該譜面及所有較低難度。
+
+要解鎖 20 級歌曲，必須通關前 3 張譜面的 MXM 獲得「刻印」。通關譜面後，可以選擇要挑戰的難度；血條一開始仍預設為 `RANK V`。
+
+前兩個 Variant Gate（神凪 與 Everlasting Message）的刻印會保留。其他 Variant Gate 在失敗後會失去刻印，必須再次以任意 RANK 通關所有前置譜面才能取得。之後可以從 `RANK IV` 開始挑戰；若在 `RANK IV` 失敗，下次就能從 `RANK III` 挑戰，依此類推。
+
+`VARIANT POWER` 最多可超量填充至 500%。累積到至少 200% 後，就可以開始選擇較低的初始血條 RANK。注意挑戰時就會消耗所有 `VARIANT POWER`。
+
+## 活動解鎖 [#event-unlocks]
+活動限定歌曲有特定的開放期間，之後會不定期復刻。有多種解鎖方式。
+
+以下僅介紹最常見的活動，並不包含所有活動；偶爾也會推出全新的歌曲解鎖活動。
+
+### 集章 [#stamp]
+這是最常見的活動。每首歌曲都有所需的集章數，並在一道結束時獲得集章。Standard Start 可獲得 1 枚，其他模式可獲得 2 枚。（沒有固定規律，但通常費用較高的模式會給予較多。）
+
+### Arena 商店 [#arena-shop]
+Arena 商店會不定期開放，販售不同歌曲，有時也會販售領航員。商品大多是 XCD。購買歌曲需要 AP；AP 只會在 Arena 商店開放期間取得，並依選擇的模式在一道結束時獲得。
+
+<div className="flex items-center justify-center mt-2">
+|AP|未持有 Blaster Pass|持有 Blaster Pass|
+|:-:|:-:|:-:|
+|Light Start|200 AP|1000 AP|
+|Standard Start|260 AP|1300 AP|
+|Premium Time Start|400 AP|2000 AP|
+|Blaster Start|400 AP|2000 AP|
+|Megamix Battle|500 AP|1000 AP|
+|任意 Battle + Standard Start|650 AP|1300 AP|
+|Ranked Match + Standard Start|1300 AP|-|
+|Ultimate Match|1300 AP|-|
+</div>
+
+### Triple Tribe 等跨遊戲聯動 [#triple-tribecrossover]
+Triple Tribe 等跨遊戲聯動活動通常是 SDVX、DDR 與 IIDX 之間的合作，不一定每次都包含所有遊戲。活動會為每款遊戲提供一條量表，填滿後即可解鎖歌曲。必須遊玩不同遊戲才能解鎖特定歌曲，且所有量表都填滿才能解鎖最後一首歌曲。
+
+## 舊版解鎖系統 [#old-unlocks]
+<Callout type="warning">這些系統已不存在於 Nabla。</Callout>
+### Omega Dimension [#omega-dimension]
+Omega Dimension 的運作方式與 Blaster Gate 相同，只是位於不同的資料夾。
+### HEXA DIVER [#hexadiver]
+HEXA DIVER 是 Exceed Gear 的解鎖系統之一。Blaster 量表達到 100% 後即可進入此資料夾。每個 HEXA DIVER 都是獨立資料夾，包含 7 張譜面，最後一張為 20 級譜面。
+
+首次進入 HEXA DIVER 時，只有 3 首歌曲可供解鎖；解鎖後才會出現其他歌曲。
+
+每首歌曲有 10000 HP。達到 1000（NOV）、2500（ADV）、5000（EXH）與 10000（MXM）傷害門檻後，便會解鎖對應難度。遊玩較高難度可以造成更多傷害，但最多只能解鎖目前遊玩的難度。例如遊玩 EXH 時，無法造成更多傷害，也無法超過 5000 HP 的 EXH 門檻，因此不能解鎖 MXM。
+
+選擇譜面後，還能選擇血條難度，以 HEXA RANK（簡稱 HR）表示。難度越高，造成的傷害越多，但也越難通關。一般來說，HR4 約等同於 EXCESSIVE，HR5 則更加困難。
+
+Akasha 之前的 HEXA DIVER 有部分專屬改動，具體包括 `幻想御伽篇` 至 `彩虹の銀幕篇` 的 HEXA DIVER 1～9：
+- **HEXA BLASTER**：同一道內可以多次遊玩 HEXA DIVER。
+- **HEXA CONTINUE**：歌曲失敗時不會消耗 Blaster Energy。
+- **HEXA OVER DRIVE**：每通關一次 HEXA DIVER 歌曲，傷害倍率就會增加；每天重設。
+<div className="text-center mb-2">
+ **HEXA OVER DRIVE 傷害倍率（每天重設）**
+</div>
+
+<div className="flex items-center justify-center mb-4">
+|HEXA OVER DRIVE 倍率|初始|1 次|2 次|3 次|4 次|5 次|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|未持有 Blaster Pass|1.0|1.1|1.2|1.3|1.4|1.5|
+|持有 Blaster Pass|1.5|1.6|1.7|1.8|1.9|2|
+</div>
+
+<div className="text-center mb-2">
+ **前 9 個 HEXA DIVER 的大致傷害如下（使用最大倍率）**
+</div>
+<div className="flex items-center justify-center mb-4">
+|Akasha 前的 HEXA DIVER（最大倍率）| HR1 | HR2 | HR3 | HR4 | HR5 |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|MXM 傷害|3000|3750|5250|7500|10000|
+|持有 Blaster Pass 時的 MXM 傷害|4000|5000|7000|10000|10000|
+</div>
+
+<div className="text-center mb-2">
+ **HeaveИ's Rain（Akasha）之後的 HEXA DIVER 傷害如下**
+</div>
+<div className="flex items-center justify-center mb-4">
+|HeaveИ's Rain 之後的 HEXA DIVER| HR1 | HR2 | HR3 | HR4 | HR5 |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|MXM 傷害|2000|2500|3500|5000|10000|
+|持有 Blaster Pass 時的 MXM 傷害|3000|3750|5250|7500|10000|
+</div>
+
+### Tama Adventure [#tama-adventure]
+Tama Adventure 是 Exceed Gear 的解鎖系統。開始一道前，可以選擇想解鎖的歌曲；進入選曲前，也能在 MY ROOM 中變更目標歌曲。每首歌曲都有解鎖所需的點數，可以透過完成任務或遊玩取得。達到不同點數門檻後，會依序解鎖較低難度。
+
+一道結束時，系統會統計點數並用於解鎖歌曲。不同難度所需的點數不同；Blaster Pass、Blaster Start 與 Premium Time 都能獲得更多點數。
+
+每首歌曲都有可取得額外點數的任務。選曲時，畫面底部會顯示任務內容；由於內容是日文，建議參考 [解鎖指南](https://docs.google.com/spreadsheets/d/1VBYWSUaKqHUOyfCtvkHFYBSnEPwxhTh8-m4UlU8zUL0/edit?gid=594247546#gid=594247546)。
+
+任務不是完成後直接給予固定點數，而是提高單一首歌曲可獲得的點數。
+
+每首歌曲基本可獲得 3 點，另加已完成的任務數量。例如完成 3 個任務後遊玩一首歌曲，該歌曲可獲得 `6` 點。
+
+<div className="text-center mb-2">
+ **一道結束後套用的倍率**
+</div>
+<div className="flex items-center justify-center">
+|條件|額外點數／倍率|
+|:-:|:-:|
+|Blaster Pass|+5|
+|Premium Time|2 倍|
+|Blaster Start|3 倍|
+|Megamix Start|3 倍|
+</div>
+
+注意 Megamix 只會當作一首歌曲計算。
+另外，此系統也有鼓勵連續遊玩的每日獎勵與每週獎勵。每日獎勵為 1～5 點，會依連續遊玩天數變動；每週獎勵為 5～10 點，會依連續遊玩週數變動。

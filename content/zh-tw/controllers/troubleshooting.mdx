@@ -1,0 +1,105 @@
+import { Callout } from 'nextra/components'
+
+# 控制器疑難排解
+
+## 目錄
+
+- [先看說明書！](#check-the-manual)
+- [更換按鍵、彈簧與微動開關](#replacing-buttons-springs-and-switches)
+  - [更換微動開關](#replacing-switches)
+  - [更換按鍵與彈簧](#replacing-buttons-and-springs)
+- [按鍵卡住了](#my-buttons-are-stuck)
+- [按鍵會被重複觸發](#my-switches-are-double-clicking)
+- [額外內容：為按鍵加上背景](#bonus-adding-stickers-to-your-buttons)
+- [（YuanCon）旋鈕太鬆／太緊](#yuancon-my-knobs-feel-too-loosetight)
+- [（YuanCon）USB-C 埠故障](#yuancon-my-usb-c-port-malfunctioned)
+- [已知軟體相關問題](#known-software-related-issues)
+- [資源](#resources)
+
+<Callout>
+本指南假設你使用的是可客製化的街機尺寸控制器。
+</Callout>
+
+## 先看說明書！ [#check-the-manual]
+
+新到貨控制器隨附的說明書，應已包含你所需的大部分重要資訊，例如切換模式與硬體規格。本指南專門介紹疑難排解，並說明未在說明書中明確提及的程序。
+
+若遺失說明書，以下是一些常見控制器的說明資料：
+- [Faucetwo+](https://www.gamo2.com/en/download/F2_plus_manual_en_mobile_20240415.pdf)
+- [Faucetwo](https://www.gamo2.com/en/download/Faucetwo_manual_en_20210106.pdf)
+- [YuanCon SDVX 12 與 SDVX LITE 3 資訊](https://rhythm-cons.wiki/commercial/yuancon/yuancon/)
+- [YuanCon SDVX LITE 3](https://www.youtube.com/watch?v=hen4Sb7_LIA)
+
+## 更換按鍵、彈簧與微動開關 [#replacing-buttons-springs-and-switches]
+
+[Sungblox 的影片指南](https://www.youtube.com/watch?v=tisDHA2fXfI)
+
+[Tokaku 的影片指南](https://www.youtube.com/watch?v=d3ThWetHoFM)
+
+更換按鍵、彈簧與微動開關都必須先*打開控制器的背板*。大部分控制器的背板以螺絲固定於機身，因此需要使用螺絲起子拆除；Faucetwo 的背板則以磁鐵固定，直接捏住並拉出即可。
+
+<img src="/controllers/interior.jpg" className="mt-3" alt="控制器內部" />
+
+控制器內部看似複雜，其實就是中央的 PCB（電路板）以 4-pin JST 線材連接 7 個按鍵和 2 個旋轉編碼器。更精確地說，PCB 連接的是按鍵的**微動開關**，而非按鍵本身。
+
+### 更換微動開關 [#replacing-switches]
+
+在仍連接線材的情況下，將微動開關逆時鐘（向左）旋轉，即可從按鍵中取出。
+
+Omron 微動開關應有 4 條線連至 4 個接點，其中 2 條供微動開關使用、2 條供 LED 使用。LED 固定座的接點在微動開關兩側，另外兩個接點則屬於微動開關本身。拔下連接這兩個接點的線材（不必記住各線對應哪個接點）。你也必須將 LED 固定座與微動開關分離，[請見影片](https://youtu.be/tisDHA2fXfI?t=185)。此時微動開關應已拆下，可換成想要的款式；將線材與 LED 固定座重新接回，並把微動開關裝回按鍵即可。
+
+OBSA-LHS1F 微動開關應使用 4-pin JST 接頭連接，因此只要記住對應的針腳，直接拔下接頭、更換微動開關，再裝回即可。
+
+<Callout type="warning">
+若控制器沒有附上 OBSA-LHS1F 微動開關專用線材，你必須先在 [此處](https://rhythm-cons.wiki/getting-started/connector-pinouts/#button-pins-2) 了解微動開關與 PCB 之間各針腳的對應關係，然後購買一組 4-pin 母對母 JST 線材並重新排列針腳。此步驟接錯可能造成短路。
+</Callout>
+
+### 更換按鍵與彈簧 [#replacing-buttons-and-springs]
+
+本節同樣需要取出微動開關，但可以保留線材連接。按鍵通常以螺紋環固定，必須旋下螺紋環才能取下及更換按鍵。
+
+[更換彈簧較難以文字說明，請參考這部教學影片](https://youtu.be/tisDHA2fXfI?t=73)。
+
+## 按鍵卡住了 [#my-buttons-are-stuck]
+
+[YuanCon 的影片指南](https://www.youtube.com/watch?v=Aft059Kdayo)
+
+按鍵卡住通常是因彈簧位置偏移，或灰塵妨礙按鍵順暢移動。無論哪種情況，都要拆下按鍵的白色部分（步驟與拆除彈簧類似），重新放置彈簧，並以布清除灰塵或殘留物。
+
+## 按鍵會被重複觸發 [#my-switches-are-double-clicking]
+
+你的微動開關可能已故障而需要更換，但更多時候只是灰塵或污垢所致。購買新微動開關前，先嘗試取出微動開關、拆下線材，並用布徹底清潔接點。
+
+另外，OBSA-LHS1F 微動開關似乎比 Omron 微動開關更容易出現重複觸發的情況。
+
+## 額外內容：為按鍵加上背景 [#bonus-adding-stickers-to-your-buttons]
+
+[YuanCon 的影片指南](https://www.youtube.com/watch?v=tuDYFqFrKyM)
+
+你可以設計自己的圖案，再以普通紙張印出。按鍵本身即可固定背景紙張。市面上大多數按鍵的尺寸如下：
+
+1. BT：44×44～45×45 mm
+2. FX：44×22～45×22 mm
+3. Start：22×22～23×23 mm
+
+## （YuanCon）旋鈕太鬆／太緊 [#yuancon-my-knobs-feel-too-loosetight]
+
+[YuanCon 的影片指南](https://youtu.be/hen4Sb7_LIA?t=181)
+
+你需要一把六角螺絲起子，控制器應有隨附；若沒有，也很容易在任何電子材料行找到。
+
+旋下旋鈕側邊的螺帽，將其從旋轉編碼器上拆下。你會看到一個套在軸上的橡膠環，透過夾住面板產生摩擦力。稍微往上抬會變鬆，往下壓則會變緊。
+
+## （YuanCon）USB-C 埠故障 [#yuancon-my-usb-c-port-malfunctioned]
+
+建議直接聯絡製造商取得替換零件；否則可購買支援 4-pin JST 連接的通用 USB-C 子板。
+
+## 已知軟體相關問題 [#known-software-related-issues]
+
+**Faucetwo 的 USC 相容性**：據回報，所有 Keyboard Mode 都有輸入問題；因此建議在 Konasute、USC 與 KSM 中主要使用 eAcloud Mode（BT-A Mode）。若仍有問題，也可使用 HID Joystick mode（BT-B mode）。
+
+**YuanCon 的 Konasute 相容性**：截至撰寫時，僅建議使用 BT-C Mode。
+
+## 資源 [#resources]
+
+[Rhythm Game Controller Wiki](https://rhythm-cons.wiki/)：收錄實用且完整的控制器資訊。

@@ -1,0 +1,118 @@
+import { Image, Video } from "../../../components/Media";
+
+# 譜面簡化技巧
+
+## 目錄
+- [抖旋鈕](#wiggling)
+- [餡蜜](#anmitsu)
+  - [常見配置](#general-patterns)
+    - [高速交互](#fast-trills)
+    - [三連階梯](#triple-stairs)
+  - [特定譜面](#specific-charts)
+    - [EROICA MXM 19](#eroica-mxm-19)
+    - [赫焉 MXM 19](#赫焉-mxm-19)
+    - [Everlasting Message ULT 20](#everlasting-message-ult-20)
+    - [NEMSYS ARENA World Hexathlon MXM 20](#nemsys-arena-world-hexathlon-mxm-20)
+    - [HE4VEN MXM 20](#he4ven-mxm-20)
+    - [Xronièr MXM 20](#xronièr-mxm-20)
+      - [前奏與尾奏](#intro-and-outro)
+      - [全 Critical](#full-crit)
+      - [中段 FX BT 組合鍵](#fx-bt-chords-in-center)
+- [其他](#miscellaneous)
+  - [間距較大的多押](#spaced-out-chords)
+  - [Everlasting Message GRV 19](#everlasting-message-grv-19)
+
+## 抖旋鈕 [#wiggling]
+<Image src="/guides/specific-pattern-cheese/wiggling.gif" className="w-160" />
+指快速左右來回轉動旋鈕的技巧，可說是「濫用」了遊戲對旋鈕輸入的寬容判定。具體來說，旋鈕輸入短暫偏離方向時，系統不會立刻判為失誤；因此轉得越快，輸入偏離軌道的時間越短，就越有機會避免失誤。
+
+## 餡蜜 [#anmitsu]
+
+餡蜜是指刻意提早或延後打點，將音符配置簡化為一連串組合鍵的方式。同樣「濫用」了 VOLTEX 的判定範圍，類似其他音樂遊戲（例如 osu!mania）中的「manip」。
+
+雖然有時可以透過餡蜜打出全 Critical，但通常都會出現 NEAR。因此，這項技巧通常是用來取得 Ultimate Chain 通關徽章或一般通關。
+
+有一個 [餡蜜計算器](https://kattrxvjxxde.github.io/an32_checker/)，可以根據譜面告訴你打出 Critical 或 NEAR 時可容許的誤差。輸入 BPM 和 [音符時值](/terminology/termsandvocab#n-th-notes)（16 分、24 分等），便能查看該在何時按下，以及可用時間有多少。
+
+### 常見配置 [#general-patterns]
+
+#### 高速交互 [#fast-trills]
+<Video src="/guides/specific-pattern-cheese/fasttrills.mp4"
+        vertical={true}
+        size="max-w-md"
+/>
+部分高速 [24 分](/terminology/termsandvocab#n-th-notes) 交互可視為 12 分縱連。
+
+#### 三連階梯 [#triple-stairs]
+<Image src="/guides/specific-pattern-cheese/triples.png"/>
+
+此例中，你可以將每組三連音中的兩個音符併成一個組合鍵，當成含雙押的交互處理。
+<Image src="/guides/specific-pattern-cheese/chordtriple.png"/>
+<em className="flex justify-center">左側為配置，右側為打法。</em>
+
+雙押部分靠後的誤差較小；換句話說，應該偏好將後兩個音符而非前兩個併成一組。詳情請見 [Mini 的文章](https://note.com/mini208/n/n3d77e9743e68)。
+
+另一個例子是 [I MXM 20](https://sdvx.in/04/04238m.htm)。
+<Image src="/guides/specific-pattern-cheese/Icheese.png"/>
+
+<p className="text-lg font-bold">譜面範例</p>
+
+- [BAYONEX MXM 19](https://sdvx.in/06/06102m.htm)：第 130–132 小節
+- [Absolute Domination MXM 19](https://sdvx.in/04/04324m.htm)：第 50–51 小節
+- [Xroniàl Xéro MXM 19](https://sdvx.in/05/05239m.htm)：第 80–87 小節
+
+### 特定譜面 [#specific-charts]
+
+#### 赫焉 MXM 19
+<Image src="/guides/specific-pattern-cheese/kakuen.png"/>
+
+針對 [赫焉 MXM 19](https://sdvx.in/06/06254m.htm) 的 Ultimate Chain，可以如上圖處理結尾的組合鍵。
+
+#### EROICA MXM 19
+<Image src="/guides/specific-pattern-cheese/eroica.webp"/>
+[EROICA MXM 19](https://sdvx.in/06/06619m.htm) 的連續長條可簡化為雙押。
+
+#### Everlasting Message ULT 20
+<Image src="/guides/specific-pattern-cheese/everlastingmessage.webp"/>
+像這樣簡化 [Everlasting Message ULT 20](https://sdvx.in/03/03075u.htm) 結尾可以維持 Ultimate Chain。
+
+
+#### NEMSYS ARENA World Hexathlon MXM 20
+<Image src="/guides/specific-pattern-cheese/hexathlon.png"/>
+
+針對 [NEMSYS ARENA World Hexathlon MXM 20](https://sdvx.in/06/06458m.htm) 的 Ultimate Chain 可以如上圖簡化前奏的 BT FX 多押串。
+
+#### HE4VEN MXM 20
+<Image src="/guides/specific-pattern-cheese/HE4VEN.png"/>
+
+針對 Ultimate Chain，[HE4VEN MXM 20](https://sdvx.in/04/04052m.htm) 中段的組合鍵可如上圖簡化。
+
+#### Xronièr MXM 20 [#xronièr-mxm-20]
+
+##### 前奏與尾奏 [#intro-and-outro]
+<Image src="/guides/specific-pattern-cheese/xronier.png"/>
+此配置有兩種簡化方式。若要以不少 NEAR 換取 UC，可照下圖打。
+<Image src="/guides/specific-pattern-cheese/xronier_uc_cheese.png"/>
+##### 全 Critical [#full-crit]
+全 Critical 的處理方式可以參考下圖。
+<Image src="/guides/specific-pattern-cheese/xronier_PUC_cheese.png"/>
+
+##### 中段 FX BT 組合鍵 [#fx-bt-chords-in-center]
+<Image src="/guides/specific-pattern-cheese/xronierchords.png"/>
+針對 Ultimate Chain 可以如上圖簡化。
+
+## 其他 [#miscellaneous]
+
+### 間距較大的多押 [#spaced-out-chords]
+<Image src="/guides/specific-pattern-cheese/space_chords.png"/>
+間距夠大的多押甚至可以直接同時按下所有六個按鍵來處理。音符之間的間距可避免 EARLY 失誤。
+
+譜面範例：
+
+- [BEAST BASS BOMB MXM 18](https://sdvx.in/04/04187m.htm)：第 1–11 小節
+- [Fire Storm MXM 18](https://sdvx.in/03/03167e.htm)：第 1–6 小節
+
+### Everlasting Message GRV 19
+<Image src="/guides/specific-pattern-cheese/everlastingmessage_chord.png"/>
+
+[Everlasting Message GRV 19](https://sdvx.in/03/03075m.htm) 的這個特定配置可以看成一個較單純的配置。

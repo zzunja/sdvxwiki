@@ -1,0 +1,136 @@
+import { Callout } from "nextra/components";
+import { Image } from "../../../components/Media";
+
+# 零件
+
+## 目錄
+
+- [簡介](#intro)
+- [零件](#parts-1)
+  - [按鍵](#buttons)
+    - [中國製（YuanCon 與 DJDAO 原廠按鍵）](#chinese-stock-yuancon-and-djdao-buttons)
+	- [台灣製（Uniana 機台按鍵）](#taiwan-uniana-cab-buttons)
+    - [Sanwa](#sanwa)
+  - [微動開關](#switches)
+    - [Honeywell](#honeywell)
+    - [OMRON](#omron)
+    - [OBSA-LHS1F](#obsa-lhs1f)
+  - [彈簧](#springs)
+  - [建議](#recommendations)
+- [購買管道](#where-to-buy)
+
+## 簡介 [#intro]
+<Callout>
+  本指南假設你擁有一台可客製化的街機尺寸控制器。
+</Callout>
+
+<Image src="/controllers/parts/breakdown.png" alt="按鍵組件拆解圖" />
+
+主要可客製化的零件有三項：按鍵、微動開關與彈簧。按鍵是實際按下、用來觸發微動開關的部件，內部的彈簧會賦予其重量感。微動開關本身也有重量，並提供「喀噠」的觸覺回饋，是整體按壓手感的主要來源。
+
+遊玩配置通常以「`微動開關重量／彈簧重量`」表示，兩者單位皆為公克。例如，100g 微動開關搭配 20g 彈簧稱為 `100/20` 配置。
+
+更換這些零件不需要工具。
+
+<div className="flex justify-center mt-8">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/jq8qG_f6xfs?si=Cs-V5e7PgaTQxXJh" title="YouTube 影片播放器" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+</div>
+
+## 零件 [#parts-1]
+
+### 按鍵 [#buttons]
+
+按鍵分為幾種類型：中國製（YuanCon 與 DJDAO 控制器所附的原廠按鍵）、台灣製（Uniana 製造的機台所用按鍵，例如韓國的機台），以及 Sanwa。官方 SOUND VOLTEX 街機機台使用 Sanwa 按鍵。按鍵通常只須購買一次，幾乎不會損壞或需要更換。
+
+
+#### 中國製（YuanCon 與 DJDAO 原廠按鍵） [#chinese-stock-yuancon-and-djdao-buttons]
+
+- **+** 較便宜
+- **-** 使用品質較低的塑膠製成
+- **-** 較容易卡鍵
+
+#### 台灣製（Uniana 機台按鍵） [#taiwan-uniana-cab-buttons]
+
+- **+** 較便宜
+- **+** 塑膠品質佳
+- **+** 與韓國街機採用相同的按鍵
+- **-** 較高，未必裝得進控制器
+- **-** 必須使用其專用的 60g 彈簧
+
+這類按鍵通常搭配 Samducksa 的 FX 按鍵使用。
+
+
+#### Sanwa [#sanwa]
+
+- **+** 高品質塑膠
+- **+** 與街機使用相同按鍵
+- **-** 昂貴（一整套約 100 美元）
+
+
+### 微動開關 [#switches]
+
+#### Honeywell
+- 便宜
+- 品質與耐用性差
+- 通常很輕，容易誤觸
+
+<Image className="w-48" src="/controllers/parts/honeywell.jpg" alt="Honeywell 微動開關" />
+
+#### OMRON
+- 街機尺寸控制器最常見的微動開關
+- 品質與耐用性佳
+
+<Image className="w-48" src="/controllers/parts/omron.webp" alt="OMRON 微動開關" />
+
+#### OBSA-LHS1F
+- 昂貴
+- 僅相容於 Sanwa 按鍵
+- 是街機使用的微動開關
+- 耐用性隨生產批次而異
+
+<Image className="w-48" src="/controllers/parts/lhs1f.webp" alt="OBSA-LHS1F 微動開關" />
+
+這類微動開關通常稱為「整合式」微動開關，因為微動開關是半永久地裝在按鍵座內：
+
+<Image src="/controllers/parts/integrated_switch.png" alt="整合式微動開關" />
+
+遺憾的是，若其中一個損壞，必須購買整組替換件，不能只更換微動開關。
+
+### 彈簧 [#springs]
+
+彈簧重量有 20g 至 100g 等多種選擇。較重的彈簧能讓按鍵更快回彈，使某些譜面配置更容易處理，但按久了可能疲勞；反之，較輕的彈簧回彈較慢，整體所需力氣也較少。
+
+<Image src="/controllers/parts/springs.png" alt="彈簧" />
+
+雖然這些彈簧由 Sanwa 製造，但同時相容於中國製與 Sanwa 按鍵，**不相容於台灣製按鍵**。
+
+### 建議 [#recommendations]
+
+微動開關與彈簧的搭配因人而異，許多不同組合都有人用得順手。手法等因素同樣重要，不要以為只要調整零件就能解決一切。
+
+話雖如此，最簡單的建議是複製女武神框體所用組態，將家用與街機的差異降至最低：
+
+- 世界上大多數地區：100g 微動開關搭配 20g 彈簧
+- 韓國：50g 微動開關搭配 60g 至 100g 的彈簧（似乎因店家而異）
+
+特定微動開關型號：
+
+- OMRON V-10-1A4（100g）
+- OMRON VX-01-1C23（50g）
+- OMRON VX-01-1A3（50g）
+- Sanwa OBSA-LHS1F（100g）
+
+所有 OMRON 微動開關皆相容於上列的所有 [按鍵](#buttons)。Sanwa 的 OBSA-LHS1F 微動開關**僅相容於 Sanwa 按鍵**，只建議給追求完整街機規格的玩家。
+
+
+## 購買管道 [#where-to-buy]
+
+[Rhythm Cons Wiki](https://rhythm-cons.wiki) 收錄了完整的零件購買管道清單：
+
+[BT 按鍵](https://rhythm-cons.wiki/parts/buttons/60-60-square-buttons/)
+
+[FX 按鍵](https://rhythm-cons.wiki/parts/buttons/50-33-rectangle-buttons/)
+
+[微動開關](https://rhythm-cons.wiki/parts/microswitches/)
+
+[彈簧](https://rhythm-cons.wiki/parts/springs/)

@@ -1,0 +1,410 @@
+import { Callout } from "nextra/components"
+import { Image, Video } from "../../../components/Media"
+
+<a id="charting-guide"></a>
+# 譜面製作指南
+
+## 目錄
+
+- [同步音訊](#syncing-audio)
+- [開始使用 KSM Editor](#starting-with-ksm-editor)
+- [製作譜面](#creating-a-chart)
+  - [metadata](#metadata)
+  - [使用編輯器](#using-the-editor)
+  - [旋鈕](#lasers)
+    - [曲線旋鈕產生器](#curve-generator)
+  - [鏡頭視角](#camera)
+    - [傾斜](#tilt)
+  - [額外效果](#bonus-effects)
+    - [軌道分離](#lane-split)
+    - [隱藏軌道（僅 USC）](#invisible-lane-usc-only)
+- [非法的譜面配置與製作方式](#illegal-patterns-and-charting-practices)
+- [參考資料](#references)
+
+## 同步音訊 [#syncing-audio]
+
+<Callout>本指南大量參考 [Ted 的指南](https://docs.google.com/document/d/1rDpndXsPxBsGQi_DkUmqAxq0PrmXjrPCWnK_zk639kQ/edit?tab=t.0#heading=h.z7y5vobdqtty)。若對本頁說明感到困惑，建議閱讀該指南；它採用稍微不同的歌曲同步方式。</Callout>
+
+{/* 本段 Audacity 介面用詞參考官方繁中語系檔：https://raw.githubusercontent.com/audacity/audacity/refs/heads/master/share/locale/audacity_zh_TW.ts */}
+
+開始製作譜面前，必須先同步歌曲音訊。本指南使用 [Audacity](https://www.audacityteam.org/)，但你也可以使用其他音訊編輯器。
+
+在 Audacity 開啟歌曲並建立新音軌，依序選擇上方選單的「生成」（Generate）→「節拍軌道」（Rhythm track）。將「節奏」（Tempo，BPM）設為歌曲的 BPM；若不清楚 BPM，可使用 Tap BPM 網站測量。
+<Video src="/charting/guide/firstpart.webm"/>
+
+接著在音軌中騰出空間，依序選擇「生成」→「靜音」（Silence），產生約 15 至 30 秒的靜音，再將歌曲與靜音片段排在一起。
+<Video src="/charting/guide/secondpart.webm"/>
+接著將第 2 小節對齊歌曲的第一個強拍。第 2 小節是 BPM 音軌上的第二個大刻度；按住 Alt 可放大檢視，以便精準對齊。若第 2 小節不夠用，也可改用第 3 小節。
+<Video src="/charting/guide/thirdpart.webm"/>
+接著刪除開頭的靜音，讓節拍軌道位於起點。對齊歌曲後，即可刪除節拍軌道，並匯出為 **WAV 或 OGG**。請使用 44100 Hz 匯出，否則譜面效果會出錯；不要使用 MP4。
+<Video src="/charting/guide/fourpart.webm"/>
+
+
+完成後，歌曲開頭應會有一小節靜音，時序也已精準對齊，因此不必再調整 offset。
+
+## 開始使用 KSM Editor [#starting-with-ksm-editor]
+
+開啟 KSM Editor 後，通常會先調整幾項設定。若介面顯示亂碼，需將 KSM 的語言設為英文：`Options` → `Display/Sound settings` → `Language`。
+
+編輯器的 `View` 選單可調整介面顯示。你可自行嘗試各項設定，但至少建議啟用 `Increase spacing between lanes`，讓旋鈕更容易編輯。
+
+
+## 製作譜面 [#creating-a-chart]
+
+接著建立譜面。先按 `File` → `Save`，詢問歌曲標題時可以先留白，直接按下確認。將譜面存入一個資料夾，並把要使用的歌曲檔與曲繪檔放進同一資料夾；若要使用其他效果檔，也一併放入該資料夾。
+
+<Image src="/charting/guide/examplefoldersetup.png" caption="資料夾配置範例"/>
+
+### metadata [#metadata]
+
+依序選擇 `Edit` → `Chart metadata - General`，可在此修改譜面的 metadata。
+
+<Image src="/charting/guide/blankmetadata.png" caption="一般 metadata 設定畫面（初始狀態）"/>
+
+- `Song Title`：歌曲名稱。
+- `Artist`：歌曲作曲者／演出者。
+- `Effected by`：譜面製作者。
+- `Jacket illust filepath`：曲繪路徑。若在同一資料夾，只填檔名即可。
+- `Illustrated by`：曲繪繪師。
+- `Difficulty`：譜面難度類別；Light = NOV、Challenge = ADV、Extended = EXH、Infinite = MXM。
+- `Level [1-20]`：譜面等級。
+- `BPM`：歌曲的**起始** BPM。
+- `Song filename`：歌曲檔名，必須包含 `.ogg` 或 `.wav` 副檔名，且歌曲檔須與譜面放在同一資料夾。
+- `Song volume`：歌曲音量。
+- `Offset[ms]`：套用到譜面的毫秒 offset；負值使歌曲延後，正值使歌曲提前。
+- `Sample start[ms]`：游標停在譜面上時播放的試聽片段開始位置，單位為毫秒。
+- `Sample length[ms]`：試聽片段重新循環前的長度，單位為毫秒。
+- `Background`：譜面背景。
+- `Foreground layer`：從軌道側邊掠過的圖片。
+
+請注意，不必填完所有欄位，譜面依然能運作；必要欄位只有 BPM 與 Song filename。
+
+
+在 `Edit` → `Chart metadata - Detail` 中還有其他 metadata 選項。
+
+<Image src="/charting/guide/blankmetadatadetail.png" caption="詳細 metadata 設定畫面（初始狀態）"/>
+
+- `Comments`：在 KSM 選曲畫面顯示的備註。
+- `Standard BPM of HiSpeed`：若歌曲有 BPM 變化，設定 HiSpeed 計算的基準 BPM。
+- `Reduce volume for narrow Laser slams`：直角旋鈕音效可能重疊，可用此選項降低音量。
+- `Peaking filter delay`：設定旋鈕的 PEAK filter 延遲長度。
+- `Total`：設定譜面的總血量。
+- `Genre icon filename`：曲風圖示的路徑，主要用於資料夾曲包中所有譜面共用同一圖示的情況。
+
+大部分設定維持預設值即可。
+
+### 使用編輯器 [#using-the-editor]
+
+先按空白鍵播放譜面，確認歌曲能正常播放。若沒有播放出聲音，請檢查譜面與歌曲是否位於同一資料夾，以及 metadata 中的檔名是否正確。
+
+<Image src="/charting/guide/modes.png" caption="模式"/>
+
+編輯器有 3 種模式：
+
+- 選取模式 `P`：反白並選取物件；按住 `Ctrl` 可選取多個物件。
+- 編輯模式 `N`：左鍵放置物件，右鍵移除物件。
+- 刪除模式 `E`：左鍵刪除物件。
+
+可按快捷鍵切換，也可直接點擊按鈕。
+
+<Image src="/charting/guide/selections.png" caption="工具選項"/>
+
+以下工具可用來放置或操作物件：
+
+- BPM `O`：設定 BPM，也會設定測試播放與預覽的起始位置。
+- BT-Chip `H`：操作 BT CHIP。
+- BT-Long `J`：操作 BT LONG。
+- FX-Chip `K`：操作 FX CHIP；按住 `Ctrl` 點擊可加入 SFX。
+- FX-Long `L`：操作 FX LONG；按住 `Ctrl` 點擊可加入 filter，按住 `Shift` 可修改其參數。
+- Laser-L `Q`：操作左側（藍色）旋鈕。
+- Laser-R `W`：操作右側（紅色）旋鈕。
+
+點擊向下箭頭會顯示更多選項：
+
+- Laser sounds/gain type `G`：設定旋鈕音量；按住 `Ctrl` 可變更 filter。
+- Laser slam sounds volume/sample `V`：設定直角旋鈕的音量；按住 `Ctrl` 可變更 filter。
+- Lane spin effect `S`：加入軌道旋轉效果；按住 `Ctrl` 可變更旋轉類型，按住 `Ctrl` 再按方向鍵可調整旋轉速度。
+- Lane tilt effect type `R`：設定譜面傾斜；按住 `Ctrl` 可設定自訂值。
+- Lane zoom (Top) `Z`：設定軌道上端的縮放／鏡頭視角；數值越高越近、越低越遠，也可為負值。
+- Lane zoom (Bottom) `X`：設定軌道下端的縮放／鏡頭視角；數值越高越近、越低越遠，也可為負值。
+- Horizontal lane movement `C`：左右移動軌道；正值向右，負值向左。
+- Pause `F`：設定停止下落效果，與 [Spatiotemporal ShockWAVE Syndrome...?](https://sdvx.in/05/05153m.htm) 中的停止效果相同。
+
+
+按下滑鼠中鍵可選擇預覽起始位置；按住中鍵並移動滑鼠，可選取一段譜面。
+
+選取的物件可用方向鍵移動，按 `Ctrl` + `R` 可鏡像，按 `Ctrl` + `Shift` + `R` 可隨機化。也可從 Edit 下拉選單選擇 `Reverse selected notes` 或 `Randomize selected notes`。
+
+若要為 FX 音符加入自訂 SFX，將音效檔放進譜面資料夾後，就會出現在下拉選單中。[此處](https://cdn.discordapp.com/attachments/547411265677557771/660121945488228363/sfx.rar?ex=68c8c6b8&is=68c77538&hm=e5e214ac87a2cfd85d1b7b72883d2f2e7594d241471525a193fc2f091ca2a7ce&) 提供常用 SFX 音效；需要的話可直接解壓縮到譜面資料夾。
+
+### 旋鈕 [#lasers]
+
+選擇旋鈕工具後，在任意位置按左鍵，會依照旋鈕預設的移動方向建立直角旋鈕。按住 `Ctrl` 並按方向鍵可調整旋鈕頭；按住 `Shift` 並按方向鍵可調整旋鈕起始位置。
+
+<Video src="/charting/guide/editinglasers.webm" vertical="true" size="h-50"/>
+
+按住左鍵拖曳，會依照旋鈕預設的移動方向建立斜向旋鈕；按住 `Ctrl` 可從任意位置開始旋鈕。
+<Video src="/charting/guide/placinglasers.webm" vertical="true" size="h-75"/>
+
+放置旋鈕時按住 `Ctrl` 與 `Shift` 可啟用延伸範圍；也可按住這兩鍵再左鍵點擊既有旋鈕來啟用。
+<Video src="/charting/guide/extendedlaser.webm" vertical="true" size="h-75"/>
+
+#### 曲線旋鈕產生器 [#curve-generator]
+
+曲線旋鈕產生器可輕鬆製作旋鈕曲線。雖然介面大多是日文，但理解後不難使用。
+
+先前往 [曲線旋鈕產生器網站](http://64bitosx.web.fc2.com/easeinout/run_ja.html)。
+
+<Image src="/zh-tw/charting/guide/curvegenerator.webp"/>
+
+以下按照順序說明上圖各項功能。若不了解 KSM 中旋鈕的運作方式，建議先閱讀 [旋鈕的說明](/charting/kshfile#laser) 再繼續。
+
+- 最上方顯示旋鈕範圍。
+- `範囲`：決定旋鈕的起始與結束位置；例如圖中旋鈕由最左側的 `0` 移至最右側的 `o`。若想讓它在中央結束，可將 `o` 改為接近 `P` 的字元。
+- `描画`：代表旋鈕的細分程度與持續時間。圖中的 `24` 表示以 24 分音符為單位，`12` 表示持續 12 個單位，因此本例會持續 12 個 24 分音符，也就是半小節。
+- `拍子`：旋鈕的拍號。
+- `形状`：旋鈕形狀。
+- `折り返し`：若希望曲線完整收尾，勾選即可建立圖示所示的完整收尾形狀。
+- `つまみ色`：用來選擇要使用哪一側旋鈕。
+
+設定完後按下 `曲線生成 + コピー` 會生成並複製。
+
+回到譜面，在要放置旋鈕的位置新增註解。選擇 BPM 工具後，按住 `Shift` 與 `Ctrl` 點擊目標位置，即可開啟註解視窗。寫下容易辨識的註解，作為 KSH 檔內的「標記」。
+
+<Image src="/charting/guide/lanecomment.png" caption="註解在 KSH 編輯器中的樣子"/>
+
+接著用文字編輯器開啟 `.ksh` 譜面，內容應類似下方：
+
+```jsx
+title=sdvx.org
+artist=mason
+effect=mason
+jacket=.jpg
+illustrator=mason
+difficulty=extended
+level=1
+t=100
+m=joyeuse.wav
+mvol=75
+o=0
+bg=desert
+layer=arrow
+po=0
+plength=10
+pfiltergain=50
+filtertype=peak
+chokkakuautovol=0
+chokkakuvol=50
+ver=171
+--
+beat=4/4
+0000|00|--
+--
+...
+```
+
+其餘內容可先忽略，按 `Ctrl` + `F`（或你的搜尋快捷鍵）搜尋剛才的註解。
+```jsx
+--
+//Mark here!
+0001|00|--
+0000|02|--
+0010|00|--
+0100|00|--
+0000|20|--
+1000|00|--
+0001|00|--
+0000|02|--
+--
+```
+這是範例結果。將網站生成的內容複製到此處，整個小節的內容會被這條旋鈕取代；請注意，該小節內原本放置的其他內容也會被取代。
+
+### 鏡頭視角 [#camera]
+
+KSM 的鏡頭視角可透過 Top 與 Bottom 調整。Top 會讓視角沿圓周移動，正值順時鐘、負值逆時鐘；Bottom 會改變圓的大小，也就是半徑，負值增加半徑、正值減少半徑。以下圖片與影片展示這些效果。
+
+<Image src="/charting/guide/camera.png" caption="取自 Ted 的指南"/>
+
+以下影片展示 Top 數值在 -100 與 100 之間變化的效果：
+<Video src="/charting/guide/topcamera.webm"/>
+
+以下影片展示 Bottom 數值在 -100 與 100 之間變化的效果：
+<Video src="/charting/guide/bottomcamera.webm"/>
+
+影片使用 -100 至 100 的範圍，但需要時可使用更大的數值。
+
+#### 傾斜 [#tilt]
+
+另外還有傾斜效果。直接左鍵點擊時有 7 個選項；`KEEP` 選項會保持目前傾斜位置，使新旋鈕不會影響傾斜。
+<Image src="/charting/guide/normaltilt.png" caption="一般傾斜"/>
+<Image src="/charting/guide/biggertilt.png" caption="較大傾斜"/>
+<Image src="/charting/guide/biggesttilt.png" caption="最大傾斜"/>
+
+按住 `Ctrl` 再左鍵點擊可輸入自訂傾斜值，設定方式與鏡頭視角類似。
+
+手動傾斜值如下：
+
+- 一般傾斜 = 100
+- 較大傾斜 = 175
+- 最大傾斜 = 250
+
+### 額外效果 [#bonus-effects]
+
+#### 軌道分離 [#lane-split]
+
+可建立類似 [666](https://sdvx.in/05/05186m.htm) 的軌道分離效果。選擇 BPM 工具後，按住 `Shift` 與 `Ctrl` 點擊想分離軌道的位置，會開啟註解視窗。寫下容易辨識的註解，作為 KSH 檔內的標記。
+
+<Image src="/charting/guide/lanecomment.png" caption="註解在 KSH 編輯器中的樣子"/>
+
+接著用文字編輯器開啟 `.ksh` 譜面，內容應類似下方：
+
+```jsx
+title=sdvx.org
+artist=mason
+effect=mason
+jacket=.jpg
+illustrator=mason
+difficulty=extended
+level=1
+t=100
+m=joyeuse.wav
+mvol=75
+o=0
+bg=desert
+layer=arrow
+po=0
+plength=10
+pfiltergain=50
+filtertype=peak
+chokkakuautovol=0
+chokkakuvol=50
+ver=171
+--
+beat=4/4
+0000|00|--
+--
+...
+```
+
+其餘內容可先忽略，按 `Ctrl` + `F`（或你的搜尋快捷鍵）搜尋剛才的註解。
+```jsx
+--
+//Mark here!
+0001|00|--
+0000|02|--
+0010|00|--
+0100|00|--
+0000|20|--
+1000|00|--
+0001|00|--
+0000|02|--
+--
+```
+這是範例結果。在註解下方加入 `center_split=(value)`，將 `(value)` 換成所需數值；數字越大，軌道分離程度越大。例如要設為 50：
+```jsx
+--
+//Mark here!
+center_split=50
+0001|00|--
+0000|02|--
+0010|00|--
+0100|00|--
+0000|20|--
+1000|00|--
+0001|00|--
+0000|02|--
+--
+```
+此效果不會在編輯器中顯示，但測試播放時會生效。註解能在編輯器中標示位置；不需要時也可刪除註解行。
+
+#### 隱藏軌道（僅 USC） [#invisible-lane-usc-only]
+
+可加入類似 [Lachryma](https://sdvx.in/03/03242m.htm) 的隱藏軌道。這是僅限 USC 的效果，不會在 KSM 中顯示。選擇 BPM 工具後，按住 `Shift` 與 `Ctrl` 點擊想隱藏軌道的位置，會開啟註解視窗。寫下容易辨識的註解，作為 KSH 檔內的標記。
+
+<Image src="/charting/guide/lanecomment.png" caption="註解在 KSH 編輯器中的樣子"/>
+
+接著用文字編輯器開啟 `.ksh` 譜面，內容應類似下方：
+
+```jsx
+title=sdvx.org
+artist=mason
+effect=mason
+jacket=.jpg
+illustrator=mason
+difficulty=extended
+level=1
+t=100
+m=joyeuse.wav
+mvol=75
+o=0
+bg=desert
+layer=arrow
+po=0
+plength=10
+pfiltergain=50
+filtertype=peak
+chokkakuautovol=0
+chokkakuvol=50
+ver=171
+--
+beat=4/4
+0000|00|--
+--
+...
+```
+
+其餘內容可先忽略，按 `Ctrl` + `F`（或你的搜尋快捷鍵）搜尋剛才的註解。
+```jsx
+--
+//Mark here!
+0001|00|--
+0000|02|--
+0010|00|--
+0100|00|--
+0000|20|--
+1000|00|--
+0001|00|--
+0000|02|--
+--
+```
+這是範例結果。在註解下方加入 `lane_toggle=(value)`，將 `(value)` 換成所需數值。再放置另一個相同設定，軌道就會重新出現。數值決定軌道消失或重新出現所需的時間；數值越小，消失越快。
+```jsx
+--
+//Mark here!
+lane_toggle=50
+0001|00|--
+0000|02|--
+0010|00|--
+0100|00|--
+0000|20|--
+1000|00|--
+0001|00|--
+0000|02|--
+--
+```
+此效果不會在編輯器中顯示，但測試播放時會生效。註解能在編輯器中標示位置；不需要時也可刪除註解行。
+
+## 非法的譜面配置與製作方式 [#illegal-patterns-and-charting-practices]
+
+KSM 的自由度很高，因此你可能無意或刻意製作出 [非法](/terminology/patterns#illegal) 或有爭議的配置。一般而言，同時操作兩個旋鈕與按鍵的配置都不合法。
+
+<Image src="/charting/guide/illegal.png"/>
+
+雖然技術上可以這樣做，但通常不是好主意。
+
+有時也可能製作出讓手來不及舒適移向旋鈕的配置，例如：
+<Image src="/charting/guide/illegal2.png"/>
+
+這些配置不好操作，因為從按鍵移到旋鈕的時間太短。經驗法則是：
+<div className="text-center">
+**每增加 125 BPM，所需間隔加倍**
+</div>
+
+例如：0 至 125 BPM 最少需要 16 分音符的間隔；125 至 250 BPM 最少需要 8 分音符的間隔。
+
+這不是硬性規則，仍須視情況而定。要判斷配置是否不佳，最好的方法是透過實際遊玩確認。
+
+## 參考資料 [#references]
+
+- [Ted 的指南](https://docs.google.com/document/d/1rDpndXsPxBsGQi_DkUmqAxq0PrmXjrPCWnK_zk639kQ/edit?tab=t.0#heading=h.z7y5vobdqtty)
+- [曲線旋鈕產生器](http://64bitosx.web.fc2.com/easeinout/run_ja.html)

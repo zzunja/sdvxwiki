@@ -1,0 +1,100 @@
+import { Callout } from "nextra/components";
+import { Image } from "../../../components/Media";
+
+<a id="arcade"></a>
+# 街機
+
+## 目錄 [#table-of-contents]
+- [尋找 SDVX 機台](#finding-an-sdvx-cabinet)
+  - [女武神框體與舊框](#valkyrie-vs-nemsys-model)
+    - [官方 Konami 伺服器](#official-konami-servers)
+    - [非官方／私人伺服器](#non-official--private-servers)
+- [初次遊玩街機 SDVX](#playing-in-an-arcade-for-the-first-time)
+  - [取得 e-amusement 卡](#get-an-e-amusement-card)
+- [初次刷卡登入](#creating-an-account)
+- [建立資料並開始遊玩](#creating-a-profile-and-playing-your-first-credit)
+- [將 e-amusement 卡片綁定到你的 Konami 帳號](#linking-your-e-amusement-to-your-konami-account)
+- [參考資料](#references)
+
+## 尋找 SDVX 機台 [#finding-an-sdvx-cabinet]
+
+視所在地而定，去街機遊玩通常是最便宜、也最方便的方式。
+
+### 女武神框體與舊框 [#valkyrie-vs-nemsys-model]
+
+目前可遊玩 SDVX 的機台主要有兩種：Valkyrie Model（女武神框體；新框）與 Nemsys Model（舊框）。兩者的詳細差異與圖片請參考 [女武神框體與舊框](/specifications/valkandnemsys)。簡單來說，女武神框體是新一代的機型，舊框則是舊款的機型。
+
+- 女武神框體配備 43 吋、120Hz 螢幕與觸控螢幕
+- 舊框配備 32 吋、60Hz 螢幕
+
+#### 官方 Konami 伺服器 [#official-konami-servers]
+
+如果想在官方 Konami 伺服器上遊玩，最好尋找女武神框體。雖然少數女武神框體並未連線到官方伺服器，但這種情況並不常見。要注意的是，菲律賓與南韓仍有使用官方伺服器的舊框。你可以透過 [zenius-i-vanisher](https://zenius-i-vanisher.com/v5.2/arcades.php) 搜尋附近的街機；搜尋 `SOUND VOLTEX EXCEED GEAR (Valkyrie Model)`，即可找到設有女武神框體的店家。
+
+<Image src="/arcade/zenius.png"/>
+
+也可以使用 [VMSearch](https://www.vmsearch.net/) 尋找女武神框體。
+
+在臺灣則可以使用 [Music Game Map](https://mgm.wind-chime.info/)。
+
+#### 非官方／私人伺服器 [#non-official--private-servers]
+
+如上所述，除了菲律賓與南韓以外，使用舊框的街機都不會連線到官方伺服器，例如 Eagle。有些店家會將舊框升級為 32 吋、120Hz 螢幕，並更換按鍵與旋鈕，讓遊玩手感更接近女武神框體。你也可以透過 [zenius-i-vanisher](https://zenius-i-vanisher.com/v5.2/arcades.php) 搜尋附近的街機；搜尋 `SOUND VOLTEX EXCEED GEAR`，即可找到使用 Nemsys Model 的店家。
+
+## 初次遊玩街機 SDVX [#playing-in-an-arcade-for-the-first-time]
+
+### 取得 e-amusement 卡 [#get-an-e-amusement-card]
+
+e-amusement 卡可用來儲存遊玩紀錄；除了 SDVX 外也能用於其他遊戲。通常可以在街機櫃檯購買。
+
+<Image src="/arcade/eamusementcard.png"/>
+
+請盡量選擇有左下角 Amusement IC 標誌的卡片。現在大多數卡片都有這個標誌，舊款卡片則已逐漸淘汰。如果買不到 e-amusement 卡，只要是有這個標誌的卡片就能使用，例如 Aime、Banapass 和 NESiCA。
+
+## 初次刷卡登入 [#creating-an-account]
+
+<Callout type="warning" emoji="⚠️">
+  如果你玩過 Konasute，**強烈**建議將 Konasute 資料轉移到這張卡片，而不要在卡片上建立新資料。卡片一旦已有資料，就無法將 Konasute 資料與街機資料合併。詳細說明請參考 [Konasute（家用版）](/setup/konasute#linking-arcade-and-konasute-data) 章節。
+</Callout>
+
+拿到 e-amusement 卡後，前往 SDVX 街機機台，將卡片輕觸感應區。
+
+<Image src="/arcade/e-amuse-scan.png"/>
+
+## 建立資料並開始遊玩 [#creating-a-profile-and-playing-your-first-credit]
+
+<Callout>
+  這裡的許多資訊都來自 [這份指南](https://voltexes.com/arcade-quick-start-guide-eg/)；如果有不清楚的地方，也可以參考原始指南。
+</Callout>
+如果是第一次刷卡，你需要建立玩家資料。系統會詢問你要轉移資料還是建立新資料。由於沒有可轉移的資料，直接選擇建立新資料即可。
+
+<Image src="/arcade/start1.jpg"/>
+
+接著設定一組密碼。這組密碼之後也會用於其他 BEMANI 遊戲。
+
+<Image src="/arcade/start2.jpg"/>
+
+下一步是設定玩家名稱。轉動旋鈕移動游標，按 `START` 選擇字元。選好名稱後，將游標移到 `END` 按鈕並完成資料建立。
+
+<Image src="/arcade/start3.jpg"/>
+
+完成後，系統會顯示許多選項。第一次遊玩時，建議選擇 `NORMAL` 再選擇 `STANDARD START`（或者若不選用 `STANDARD START` 可以選 `LIGHT START`）。`STANDARD START` 的功能較完整，可以使用 S-Critical、[ARS](/compendium/gauge-options/#alternative-rate-system-ars) 等功能。這些模式的詳細說明請見 [這裡](/compendium/game-modes#normal)。
+
+選擇模式後會進入 `MY ROOM` 畫面。你可以在這裡更換領航員（成績結算畫面上會出現的角色）、appeal card（頭像），以及查看 Tama Adventure（歌曲解鎖進度系統）；如果 Arena 商店已開放，也可以在此查看。最後選擇 `START`，即可開始這一道。
+
+## 將 e-amusement 卡片綁定到你的 Konami 帳號 [#linking-your-e-amusement-to-your-konami-account]
+<Callout>
+  本節說明不適用於非官方伺服器。雖然流程大致相同，但多半需要改用該伺服器的網站。
+</Callout>
+
+如果是遊玩官方伺服器的話，建議將 e-amusement 卡綁定到 Konami 帳號。請先註冊或登入 Konami 帳號，再打開 [這個頁面](https://p.eagate.573.jp/gate/eapass/attach.html)。關於註冊帳號的詳細資訊，請參考 [這裡](/setup/konasute#creating-a-konami-account)。
+
+在該頁面找到 `カードナンバー` 欄位，輸入 e-amusement 卡背面的數字，接著在下方標示為 `暗証番号` 的欄位輸入剛才設定的四位數密碼。最後點選下方的 `登録する` 按鈕，即可將該 e-amusement 卡綁定到該 Konami 帳號。
+
+如果仍有疑問，可以參考這份 [e-amusement 指南](https://3icecream.com/tutorial/check-eamuse)。雖然是以 DDR 為例，但 e-amusement 的設定方式適用於所有 BEMANI 遊戲。
+
+
+## 參考資料 [#references]
+
+- https://voltexes.com/arcade-quick-start-guide-eg/ 你的第一道 SOUND VOLTEX
+- https://3icecream.com/tutorial/check-eamuse 3icecream e-amusement 指南

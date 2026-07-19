@@ -1,0 +1,156 @@
+import { Image } from "../../../components/Media";
+import { Table, Row, Header, Data } from "../../../components/Table";
+
+<a id="scoring"></a>
+# 計分方式
+
+## 目錄
+- [一般分數](#normal-score)
+  - [評級](#grades)
+- [EX SCORE](#ex-score)
+- [正常遊玩的分數大約是多少？](#how-should-i-be-scoring)
+
+
+## 一般分數 [#normal-score]
+
+這是每張譜面預設採用的計分方式，分數範圍為 `0 - 10,000,000`，也會影響你的 [VOLFORCE](/compendium/volforce)。分數計算公式如下：
+
+<div className="text-center mt-4">
+```
+10,000,000 * [ (# CRITICAL + [# NEAR * 0.5]) / TOTAL ]
+```
+</div>
+
+- [S-CRITICAL](/compendium/timing-windows#arcade-konasute) 視為與 CRITICAL 相同
+- `TOTAL` 指的是 `CHIP`、`LONG` 和 `TSUMAMI` 的總數
+
+### 計算範例
+
+<Image src="/startingout/scoring/normal_score.png" alt="一般分數" />
+
+```
+# CRITICAL = # S-CRITICAL + # CRITICAL
+           = (829 + 451 + 305) + (149)
+           = 1734
+    
+# NEAR = 11
+    
+TOTAL = # CHIP + # LONG + # TSUMAMI
+      = (829 + 149 + 11) + (451) + (305)
+      = 1745
+    
+10,000,000 * [ (1734 + [11 * 0.5]) / 1745 ] = 9,968,481
+```
+
+### 評級 [#grades]
+
+評級會根據下列分數區間決定：
+
+<div className="flex justify-center mt-4">
+| 評級 | 分數 |
+|:-:|:-:|
+| S | <pre>9,900,000 - 10,000,000</pre> |
+| AAA+ | <pre>9,800,000 - 9,899,999</pre> |
+| AAA | <pre>9,700,000 - 9,799,999</pre> |
+| AA+ | <pre>9,500,000 - 9,699,999</pre> |
+| AA | <pre>9,300,000 - 9,499,999</pre> |
+| A+ | <pre>9,000,000 - 9,299,999</pre> |
+| A | <pre>8,700,000 - 8,999,999</pre> |
+| B | <pre>7,500,000 - 8,699,999</pre> |
+| C | <pre>6,500,000 - 7,499,999</pre> |
+| D | <pre>0 - 6,499,999</pre> |
+</div>
+
+## EX SCORE [#ex-score]
+
+這是一套沒有固定上限的替代計分方式，每張譜面的 EX SCORE 上限都不同。它不會影響你的 [VOLFORCE](/compendium/volforce)，但會大幅影響你的 [玩家雷達圖](/compendium/effect-radar)。與一般分數不同，EX SCORE 會受到 [S-CRITICAL](/compendium/timing-windows#arcade-konasute) 的影響，而且每種判定的分值不同：
+
+<div className="flex justify-center mt-4">
+  <Table className="w-96 table-fixed text-center">
+    <thead>
+      <Row>
+        <Header rowSpan="2">判定</Header>
+        <Header colSpan="2">分值</Header>
+      </Row>
+      <Row className="text-xs font-semibold" noColor={true}>
+        <Header>CHIP</Header>
+        <Header>
+          <p>LONG</p>
+          <p>TSUMAMI</p>
+        </Header>
+      </Row>
+    </thead>
+    <tbody>
+      <Row>
+        <Data>S-CRITICAL</Data>
+        <Data><pre>5</pre></Data>
+        <Data><pre>2</pre></Data>
+      </Row>
+      <Row>
+        <Data>CRITICAL</Data>
+        <Data><pre>4</pre></Data>
+        <Data><pre>-</pre></Data>
+      </Row>
+      <Row>
+        <Data>NEAR</Data>
+        <Data><pre>2</pre></Data>
+        <Data><pre>-</pre></Data>
+      </Row>
+      <Row>
+        <Data>ERROR</Data>
+        <Data><pre>0</pre></Data>
+        <Data><pre>0</pre></Data>
+      </Row>
+    </tbody>
+  </Table>
+</div>
+
+根據上述分值表，一張譜面的 EX SCORE 上限可用以下公式計算：
+
+<div className="text-center mt-4">
+```
+(# CHIP * 5) + ([# LONG + # TSUMAMI] * 2)
+```
+</div>
+
+和 EX SCORE 相關的指標還有 `MAX` 比率，代表 EX SCORE 與理論值（該譜面理論上的最高 EX SCORE）的相對比例。當百分比高於 98% 時，畫面會改顯示為 `MAX-X`，表示與理論值的絕對差距。
+
+### 計算範例
+
+<Image src="/startingout/scoring/ex_score.png" alt="EX SCORE" />
+
+``` 
+CHIP EX SCORE = (# S-CRITICAL * 5) + (# CRITICAL * 4) + (# NEAR * 2)
+              = (829 * 5) + (149 * 4) + (11 * 2)
+              = 4763
+    
+LONG & TSUMAMI EX SCORE = # S-CRITICAL * 2
+                        = (451 + 305) * 2
+                        = 1512
+    
+TOTAL EX SCORE = CHIP EX SCORE + LONG & TSUMAMI EX SCORE
+               = 4763 + 1512
+               = 6275
+    
+MAX EX SCORE = (# CHIP * 5) + ([# LONG + # TSUMAMI] * 2)
+             = ([829 + 149 + 11] * 5) + ([451 + 305] * 2)
+             = 6457
+    
+MAX = (TOTAL / MAX) * 100%
+    = (6275 / 6457) * 100%
+    = 97.1%
+```
+
+## 正常遊玩的分數大約是多少？ [#how-should-i-be-scoring]
+
+本節僅討論一般分數。
+
+分數高低取決於各種因素，但最主要的是譜面難度相對於你的實力。譜面難度大致可以分成三種情況：
+
+1. 剛進入新等級時會碰到的譜面，預期分數大約 `9,000,000 - 9,500,000`
+2. 你覺得中等難度的譜面，預期分數大約 `9,500,000 - 9,800,000`
+3. 在你「舒適圈」內的譜面，預期分數大約 `9,800,000+`
+
+其他因素，例如技能差異和譜面構成（`LONG` 或 `TSUMAMI` 很多的譜面通常比較好拿分），也可能讓分數偏高或偏低，但重點還是要看**平均表現**。如果自己遊玩的譜面大多落在第 2 或第 3 類，大致上就可以嘗試下一個等級。反過來說，如果分數*一直*偏低（落在第 1 類且偏低，或者更低），可能還沒準備好。
+
+以上僅供參考，你的目標無論如何還是一樣：盡量把分數打高。努力刷新自己玩過的譜面分數，或提升到新的等級，都是維持動力的好方法。
