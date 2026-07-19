@@ -9,19 +9,19 @@ const COURSES = {
       title: "Ok!! Hug Me",
       artist: "はるなば",
       diff: "MXM 18",
-      unlock: "Default"
+      unlock: "None"
     },
     {
       title: "Imitated Visions",
       artist: "荒谷サトル",
       diff: "MXM 18",
-      unlock: "Default"
+      unlock: "BLASTER GATE"
     },
     {
       title: "天鯨譚",
       artist: "テヅカ x otoshi.b",
       diff: "MXM 18",
-      unlock: "Blaster Gate"
+      unlock: "BLASTER GATE"
     },
   ],
   "01b": [
@@ -29,19 +29,19 @@ const COURSES = {
       title: "Kontrol Line",
       artist: "Yooh",
       diff: "MXM 18",
-      unlock: "Default"
+      unlock: "BLC"
     },
     {
       title: "Break Through Δpex",
       artist: "Halv feat.Kuroa*",
       diff: "MXM 18",
-      unlock: "Default"
+      unlock: "BLASTER GATE"
     },
     {
       title: "ムーニャポヨポヨスッポコニャーゴ",
       artist: "全日本スッポコニャーゴ親衛隊",
       diff: "VVD 18",
-      unlock: "Default"
+      unlock: "None"
     }
   ],
   },
@@ -51,19 +51,19 @@ const COURSES = {
         title: "αzalea",
         artist: "BlackY",
         diff: "MXM 19",
-        unlock: "Default"
+        unlock: "BLC"
       },
       {
         title: "シュレーディンガーの猫",
         artist: "Cait Sith",
         diff: "GRV 19",
-        unlock: "Default"
+        unlock: "BLC"
       },
       {
         title: "You Are My Best RivaL!!",
         artist: 'cosMo＠暴走P',
         diff: "MXM 20",
-        unlock: "Blaster Gate"
+        unlock: "BLC"
       },
     ],
     "01b": [
@@ -71,19 +71,19 @@ const COURSES = {
         title: "L2 -Reminiscence- (SDVX ver.)",
         artist: "Ice",
         diff: "MXM 19",
-        unlock: "PCB"
+        unlock: "BLC"
       },
       {
         title: "卑弥呼",
         artist: "朱雀 VS 玄武",
         diff: "MXM 19",
-        unlock: "Default"
+        unlock: "BLC"
       },
       {
         title: "I",
         artist: "黒魔",
         diff: "MXM 20",
-        unlock: "Default"
+        unlock: "BLC"
       },
     ],
   },
