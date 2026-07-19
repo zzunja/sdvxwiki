@@ -24,7 +24,7 @@ import { Callout } from "nextra/components"
 title=1001 -ESCAPE-
 artist=SOUND HOLIC feat. Nana Takahashi
 effect=MASON -ESCAPE-
-jacket=cannonballers.jpg
+jacket=cannonballers.webp
 illustrator=
 difficulty=infinite
 level=19
@@ -80,7 +80,7 @@ beat=4/4
 title=1001 -ESCAPE-
 artist=SOUND HOLIC feat. Nana Takahashi
 effect=MASON -ESCAPE-
-jacket=cannonballers.jpg
+jacket=cannonballers.webp
 illustrator=
 difficulty=infinite
 level=19
@@ -151,7 +151,7 @@ FX 的定義稍有不同：
 
 例如 `1000|00` 代表第一條 BT 軌有一個音符。FX 的原理相同，只是 FX 只有 2 個位置。以下是更多範例：
 
-<Image src="/charting/kshfile/examples.png" width={1000} height={1000} alt=""/>
+<Image src="/charting/kshfile/examples.webp" width={1000} height={1000} alt=""/>
 
 1. `1000|00`
 2. `0010|00`
@@ -215,7 +215,7 @@ FX 的定義稍有不同：
 
 
 以下是上述範例在編輯器中的樣子。
-<Image src="/charting/kshfile/example2.png" width={150} height={300} alt=""/>
+<Image src="/charting/kshfile/example2.webp" width={150} height={300} alt=""/>
 
 ### 小節 [#measures]
 
@@ -250,7 +250,7 @@ FX 的定義稍有不同：
 
 
 以下是上述範例在編輯器中的樣子：
-<Image src="/charting/kshfile/example3.png" width={150} height={100} alt=""/>
+<Image src="/charting/kshfile/example3.webp" width={150} height={100} alt=""/>
 
 在編輯器中，每小節以黃色線分隔，因此下半部是 4 行的區段，上半部則是 8 行的區段。
 
@@ -268,7 +268,7 @@ FX 的定義稍有不同：
 
 假設這個小節有 32 行，也就是使用 32 分音符。這條旋鈕會在一個 32 分音符內從左側移到右側，因此符合直角旋鈕的條件。
 
-<Image src="/charting/kshfile/example4.png" width={100} height={100} caption="上述範例在編輯器中的樣子" alt=""/>
+<Image src="/charting/kshfile/example4.webp" width={100} height={100} caption="上述範例在編輯器中的樣子" alt=""/>
 
 
 旋鈕也能延伸至正常範圍外。正常情況下，旋鈕最左側只能延伸到軌道旁邊；啟用延伸後則能移得更遠。請注意，這不會增加位置數量，只會把位置之間的距離拉大。
@@ -289,7 +289,7 @@ laserrange_r=2x
 ```
 以這個範例來看，第一小節的藍色旋鈕使用正常範圍；下一小節加入 `laserrange_r=2x`，使紅色旋鈕的範圍延伸。雖然兩條旋鈕的起訖位置與走向相同，紅色旋鈕仍會更長。以下是實際效果：
 
-<Image src="/charting/kshfile/example5.png" width={150} height={100} alt=""/>
+<Image src="/charting/kshfile/example5.webp" width={150} height={100} alt=""/>
 
 `laserrange` 只在旋鈕存在期間有效；旋鈕結束後，範圍會恢復正常。此外，將 `2x` 改成 `4x` 或其他值不會再進一步延伸範圍。
 

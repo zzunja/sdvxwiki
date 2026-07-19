@@ -20,7 +20,7 @@ import { Callout } from "nextra/components"
 title=1001 -ESCAPE-
 artist=SOUND HOLIC feat. Nana Takahashi
 effect=MASON -ESCAPE-
-jacket=cannonballers.jpg
+jacket=cannonballers.webp
 illustrator=
 difficulty=infinite
 level=19
@@ -74,7 +74,7 @@ For right now, we will look at this section of the data
 title=1001 -ESCAPE-
 artist=SOUND HOLIC feat. Nana Takahashi
 effect=MASON -ESCAPE-
-jacket=cannonballers.jpg
+jacket=cannonballers.webp
 illustrator=
 difficulty=infinite
 level=19
@@ -142,7 +142,7 @@ FX are slightly different
 
 So, for example, if a line looked like `1000|00`, there would be one note in the first lane. This is the same thing for FX as well, except there are only 2 positions a FX note can be in. Here are some more examples.
 
-<Image src="/charting/kshfile/examples.png" width={1000} height={1000} alt=""/>
+<Image src="/charting/kshfile/examples.webp" width={1000} height={1000} alt=""/>
 
 1. `1000|00`
 2. `0010|00`
@@ -204,7 +204,7 @@ Let's look at the right laser now. This starts at `o` or the farthest right and 
 
 
 Here is what the above example looks like in the editor.
-<Image src="/charting/kshfile/example2.png" width={150} height={300} alt=""/>
+<Image src="/charting/kshfile/example2.webp" width={150} height={300} alt=""/>
 
 ### Measures
 Let's talk more about sections and the format of `.ksh`. Each `.ksh` file is divided into sections, divided by `--`. You may have noticed this in the original example. For now, let's look at this.
@@ -238,7 +238,7 @@ The next section has 8 lines instead of 4. This means that the highest `x`-th no
 
 
 Here is what the above example looks like in the editor
-<Image src="/charting/kshfile/example3.png" width={150} height={100} alt=""/>
+<Image src="/charting/kshfile/example3.webp" width={150} height={100} alt=""/>
 
 In the editor, each measure is separated by the yellow line. So, the bottom half is the 4-line part, and the top half is the 8-line part.
 
@@ -255,7 +255,7 @@ There are a couple of other things to note. First slams. In KSM, a slam is a las
 
 Let's assume that this measure had 32 lines, meaning that it was in 32nd notes. This laser would go from the left side to the right side in a 32nd. This would become a slam as a laser that moves from one point to another as fast or faster than a 32nd turns into a slam.
 
-<Image src="/charting/kshfile/example4.png" width={100} height={100} caption="Above example in editor" alt=""/>
+<Image src="/charting/kshfile/example4.webp" width={100} height={100} caption="Above example in editor" alt=""/>
 
 
 Lasers can also be extended beyond their normal range. Normally, the farthest left it can be is right next to the lane. But, this can be extended much farther. Note that there aren't more points, just that the points are now extended and farther apart.
@@ -276,7 +276,7 @@ laserrange_r=2x
 ```
 Let's look at this. The first measure is a normal blue laser using a normal range. The next measure has a line `laserrange_r=2x`. This means that the laser range for the right laser is extended. Even though these lasers start and end with the same movement, the right one will be longer. It might be hard to visualize this, so here is what this looks like.
 
-<Image src="/charting/kshfile/example5.png" width={150} height={100} alt=""/>
+<Image src="/charting/kshfile/example5.webp" width={150} height={100} alt=""/>
 
 The `laserrange` only applies for as long as the laser goes. Once the laser ends, the range will be back to normal. Also, changing 2x to 4x or something else doesn't increase the range further.
 
