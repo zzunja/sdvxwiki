@@ -25,12 +25,13 @@ const metadataByLocale = {
   },
   'zh-tw': {
     title: 'Sound Voltex 維基',
-    description: '完整整理 Sound Voltex 節奏遊戲資訊的維基與指南。',
+    description: 'Sound Voltex 節奏遊戲的維基、指南、教學。',
     keywords: [
       'Sound Voltex',
       'SDVX',
       'SDVX 維基',
       'SDVX 指南',
+      'SDVX 教學',
       'Sound Voltex 攻略',
       'SDVX 遊戲玩法',
       'SDVX 遊戲機制',
