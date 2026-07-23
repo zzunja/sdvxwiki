@@ -5,26 +5,52 @@ import { LocalizedSearch } from '../../components/Search'
 import 'nextra-theme-docs/style.css'
 import './globals.css'
 
-export const metadata = {
-  title: 'Sound Voltex Wiki',
-  description: 'A comprehensive wiki for the rhythm game Sound Voltex.',
-  icons:{
-    icon: '/googlesearch/favicon.png',
-    apple: '/googlesearch/favicon.png'
-  } ,
-  //mostly auto generated
-  keywords: [
-    'Sound Voltex',
-    'SDVX',
-    'SDVX wiki',
-    'SDVX guide',
-    'Sound Voltex Guide',
-    'SDVX gameplay',
-    'SDVX mechanics',
-    'Sound Voltex Wiki',
-    'Nabla',
-    'Sound Voltex Nabla',
-  ],
+const metadataByLocale = {
+  en: {
+    title: 'Sound Voltex Wiki',
+    description: 'A comprehensive wiki for the rhythm game Sound Voltex.',
+    keywords: [
+      'Sound Voltex',
+      'SDVX',
+      'SDVX wiki',
+      'SDVX guide',
+      'Sound Voltex Guide',
+      'SDVX gameplay',
+      'SDVX mechanics',
+      'Sound Voltex Wiki',
+      'Nabla',
+      'Sound Voltex Nabla',
+    ],
+    openGraph: { locale: 'en_US' },
+  },
+  'zh-tw': {
+    title: 'Sound Voltex 維基',
+    description: 'Sound Voltex 節奏遊戲的維基、指南、教學。',
+    keywords: [
+      'Sound Voltex',
+      'SDVX',
+      'SDVX 維基',
+      'SDVX 指南',
+      'SDVX 教學',
+      'Sound Voltex 攻略',
+      'SDVX 遊戲玩法',
+      'SDVX 遊戲機制',
+      'Nabla',
+      'Sound Voltex Nabla',
+    ],
+    openGraph: { locale: 'zh_TW' },
+  },
+}
+
+export async function generateMetadata({ params }) {
+  const { lang } = await params
+  return {
+    ...(metadataByLocale[lang] ?? metadataByLocale.en),
+    icons: {
+      icon: '/googlesearch/favicon.png',
+      apple: '/googlesearch/favicon.png',
+    },
+  }
 }
 export const dynamicParams = false
 
