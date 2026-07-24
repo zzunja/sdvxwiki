@@ -1,17 +1,19 @@
 import { Callout } from 'nextra/components'
 import { Image } from '../../../components/Media'
+import { Table, Row, Header, Data } from '../../../components/Table'
 
 # Game Modes
 ## Table of Contents
 - [Intro](#intro)
 - [Normal](#normal)
+    - [EX-TRACK](#ex-track)
 - [Friend](#friend)
+- [Premium Time](#premium-time)
+- [Blaster Start](#blaster-start)
 - [Battles](#battles)
     - [Single battle](#single-battle)
     - [Arena battle](#arena-battle)
     - [Megamix battle](#megamix-battle)
-- [Premium Time](#premium-time)
-- [Blaster Start](#blaster-start)
 - [Skill Analyzer](#skill-analyzer)
 - [Training Mode](#training-mode)
 
@@ -20,13 +22,128 @@ import { Image } from '../../../components/Media'
 There are a couple different gamemodes other than just normal play. In this section, we will go over each one and what they are and what the difference between them all are.
 
 <Callout>If you are playing Konasute コナステ, the only two game modes available are normal and skill analyzer. Most of what is being said here does not apply to you.</Callout>
+
+<Table className="w-full table-fixed text-center align-middle text-sm">
+  <colgroup>
+    <col style={{ width: '20%' }} />
+    <col style={{ width: '20%' }} />
+    <col style={{ width: '20%' }} />
+    <col style={{ width: '20%' }} />
+    <col style={{ width: '20%' }} />
+  </colgroup>
+  <thead>
+    <Row>
+      <Header rowSpan="2">Mode</Header>
+      <Header colSpan="2">Normal / Friend</Header>
+      <Header rowSpan="2">Premium Time</Header>
+      <Header rowSpan="2">Blaster</Header>
+    </Row>
+    <Row className="text-xs" noColor={true}>
+      <Data>Light Start</Data>
+      <Data>Standard Start</Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>[S-CRITICAL](/startingout/options#s-critical)</Data>
+      <Data>✕</Data>
+      <Data colSpan="3">◯</Data>
+    </Row>
+    <Row>
+      <Data>[ARS](/compendium/gauge-options#alternative-rate-system-ars)</Data>
+      <Data>✕</Data>
+      <Data colSpan="3">◯</Data>
+    </Row>
+    <Row>
+      <Data>Continue after CRASH</Data>
+      <Data>✕<sup>1</sup></Data>
+      <Data colSpan="3">◯</Data>
+    </Row>
+    <Row>
+      <Data>Blaster Energy gain</Data>
+      <Data>✕</Data>
+      <Data>◯</Data>
+      <Data>◯</Data>
+      <Data>✕<sup>2</sup></Data>
+    </Row>
+    <Row>
+      <Data>[EX-TRACK](#ex-track)</Data>
+      <Data>✕</Data>
+      <Data>Available after clearing FINAL TRACK</Data>
+      <Data>✕<sup>3</sup></Data>
+      <Data>Guaranteed</Data>
+    </Row>
+  </tbody>
+</Table>
+
+<Table className="w-full table-fixed text-center align-middle text-sm">
+  <colgroup>
+    <col style={{ width: '20%' }} />
+    <col style={{ width: '16%' }} />
+    <col style={{ width: '16%' }} />
+    <col style={{ width: '16%' }} />
+    <col style={{ width: '16%' }} />
+    <col style={{ width: '16%' }} />
+  </colgroup>
+  <thead>
+    <Row>
+      <Header rowSpan="2">Mode</Header>
+      <Header colSpan="2">Arena Battle / Single Battle</Header>
+      <Header rowSpan="2">Megamix Battle<sup>4</sup></Header>
+      <Header colSpan="2">Skill Analyzer</Header>
+    </Row>
+    <Row className="text-xs" noColor={true}>
+      <Data>Light Start</Data>
+      <Data>Standard Start</Data>
+      <Data>Light Start</Data>
+      <Data>Standard Start</Data>
+    </Row>
+  </thead>
+  <tbody>
+    <Row>
+      <Data>[S-CRITICAL](/startingout/options#s-critical)</Data>
+      <Data>✕</Data>
+      <Data>◯</Data>
+      <Data>◯</Data>
+      <Data>✕</Data>
+      <Data>◯</Data>
+    </Row>
+    <Row>
+      <Data>[ARS](/compendium/gauge-options#alternative-rate-system-ars)</Data>
+      <Data>✕</Data>
+      <Data>◯</Data>
+      <Data>—</Data>
+      <Data colSpan="2">✕</Data>
+    </Row>
+    <Row>
+      <Data>Continue after CRASH</Data>
+      <Data colSpan="2">◯</Data>
+      <Data>—</Data>
+      <Data colSpan="2">✕</Data>
+    </Row>
+    <Row>
+      <Data>Blaster Energy gain</Data>
+      <Data colSpan="5">✕</Data>
+    </Row>
+    <Row>
+      <Data>[EX-TRACK](#ex-track)</Data>
+      <Data colSpan="5">✕</Data>
+    </Row>
+  </tbody>
+</Table>
+
+<sup>1</sup> When using [EFFECTIVE RATE](/compendium/gauge-options#effective-rate) on a chart of Lv7 or lower, you can still continue to the next track after failing (triggered at most once per credit).\
+<sup>2</sup> No Blaster Energy is gained, but Blaster Gate charts can be selected at any time.\
+<sup>3</sup> There is no EX-TRACK, but you can play an unlimited number of tracks for 10 minutes.\
+<sup>4</sup> Megamix Battle has no gauge.
+
 ## Normal
 Normal, or a normal play is the default play for Sound Voltex. Usually, this is
 the cheapest option. There exist 2 types of normal play, light and standard
 play. Light can be cheaper, but has some downsides. 
 - Light start doesn't have S-Crits, or [ARS](/compendium/gauge-options/#alternative-rate-system-ars) along with some other options
 - There is a max of 3 songs per credit, can't get ex-track.
-- If you fail a song, your credit will end
+- If you get a TRACK CRASH, your credit will end; during multiplayer play, if another player clears the track, it counts as SAVED and lets you continue to the next track.
 
 If you are in the US, most likely light and standard are the same amount of credits. There is no point in ever choosing light in that case.
 
@@ -36,7 +153,11 @@ After selecting a song, you will go into matching. Here you can wait for someone
   ![lightandstandard](/compendium/game-modes/lightandstandard.webp)
 </div>
 
-Clearing the 3rd song will grant you an EX-TRACK.
+
+### EX-TRACK [#ex-track]
+Standard Start guarantees three tracks and grants an EX-TRACK (the 4th song) after you clear the 3rd song, allowing you to play up to 4 songs on one credit. EX-TRACK also unlocks access to folders that only appear there, such as the [Variant Gate](/compendium/unlock-systems#variant-gate).
+
+In Blaster Start, you're guaranteed access to EX-TRACK. Light Start does not have an EX-TRACK mechanic and only allows you to play up to 3 songs.
 
 ## Friend
 Friend is how you can play with another person at your arcade. Friend is only
@@ -44,13 +165,39 @@ local meaning that both you and your friend have to be at the same arcade on two
 machines. This game mode works similarly to Normal play. 
 
 Once in, you both will see a song selection and can select a song. You will be able to 
-see everything you both have unlocked, so for example if Person A doesn't have 666 
-but Person B does, Person A will be able to see and select 666. Once someone
+see everything you both have unlocked, so for example if Person A doesn't have the song [666](https://sdvx.in/05/05186m.htm)
+but Person B does, Person A will be able to see and select it. Once someone
 selects something, it will show up on the other screen for them to choose what
 difficulty they want to play at. After selecting, you both will go into matching
 together. 
 
 You can play a max of 3 tracks together regardless of whether you both get an ex-track or not. If you get an ex-track, it will act as if you are just doing a normal credit.
+
+## Premium Time
+Premium time is usually the more expensive option. This comes with some perks with the main one being that you can play all you want for 10 minutes.
+#### Pros
+- 10-minute timer instead of a set amount of tracks
+- All the features of standard start
+- Access to MAXXIVE rate
+- Can exit a chart at any time by pressing both fx and start
+- Can instantly retry a chart by holding both fx and start
+- Can set a challenge where you will automatically crash out if you can no longer achieve the challenge (For example, if I set it to PUC challenge and then got a near, It would crash me out)
+- Pressing all BT buttons on Song Select can end your credit early
+#### Cons
+- No blaster gate
+- Because of no blaster gate, can't unlock any songs that make use of the blaster gauge
+- More expensive
+
+Premium time is nice for when you are grinding for a score or clear on a chart and want to be able to play and repeat the chart multiple times.
+
+## Blaster start
+Blaster start is usually the same price as a premium time. Blaster Start is
+mainly used to unlock stuff. Blaster Start works similarly to Standard Start, but guarantees
+4 charts (including EX-TRACK) and does not allow you to exit a chart, unlike Premium Time. The main
+difference is that your blaster gauge is always full, so you can unlock multiple
+Blaster Gate songs in one credit.
+
+Blaster Start also has access to [MAXXIVE rate](/compendium/gauge-options#maxxive-rate).
 
 ## Battles
 Battles is how you can play with other people from anywhere. There are 3
@@ -61,6 +208,9 @@ online, you will be forced to put in a 6-digit code, and everyone who wants to
 join the room also has to put in this 6-digit code.
 
 ### Single battle
+
+<Callout type="warning">Single Battle is not currently available in Nabla.</Callout>
+
 Match with one other person. Each person selects the chart they want to play. After selected, it is randomly decided whos chart goes first. Whoever scores higher wins and gets a star. The final chart is randomly selected, but usually is around the difficulty that was played. 
 
 ### Arena battle
@@ -114,31 +264,6 @@ Some other small things to note about Megamix
 - Not all charts are available for Megamix. Noteably recent charts are usually not in megamix. Konami does sometimes add all the new charts to Megamix.
 - Gimmicks from boss charts like 666 lane split, Lachyrma lane disappear, and other gimmicks do not show up.
 - There are no lane speed changes. So charts that normally have soflan are just played at whatever lane speed you are set to.
-
-## Premium Time
-Premium time is usually the more expensive option. This comes with some perks with the main one being that you can play all you want for 10 minutes.
-#### Pros
-- 10-minute timer instead of a set amount of tracks
-- All the features of standard start
-- Access to MAXXIVE rate
-- Can exit a chart at any time by pressing both fx and start
-- Can instantly retry a chart by holding both fx and start
-- Can set a challenge where you will automatically crash out if you can no longer achieve the challenge (For example, if I set it to PUC challenge and then got a near, It would crash me out)
-- Pressing all BT buttons on Song Select can end your credit early
-#### Cons 
-- No blaster gate
-- Because of no blaster gate, can't unlock any songs that make use of the blaster gauge
-- More expensive
-
-Premium time is nice for when you are grinding for a score or clear on a chart and want to be able to play and repeat the chart multiple times.
-
-## Blaster start
-Blaster start is usually the same price as a premium time. Blaster Start is
-mainly used to unlock stuff. Blaster start acts as a normal start, meaning 3-4
-charts, no resetting, etc. The main difference is that your blaster gauge is
-always full for all 3-4 charts. So, you can unlock multiple Blaster Gate songs in one credit.
-
-Blaster Start also has access to [MAXXIVE rate](/compendium/gauge-options#maxxive-rate).
 
 ## Skill Analyzer
 If you are familiar with other rhythm games, Skill Analyzer is essentially the dan of this game. It is a gauntlet of 3 songs that you have to beat in a row while keeping your [gauge](/compendium/gauge-options#permissive-rate). Once you hit 0% gauge you fail the course.
