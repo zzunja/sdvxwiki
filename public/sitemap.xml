@@ -168,5 +168,164 @@
   <priority>0.80</priority>
 </url>
 
-
+<url>
+  <loc>https://www.sdvx.org/zh-tw</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/setup</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/setup/arcade</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/setup/konasute</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/setup/simulators</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/controllers/purchasing-guide</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/controllers/parts</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/controllers/troubleshooting</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/startingout/gameplay-screens</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/startingout/options</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/startingout/scoring</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/basic-premium-courses</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/customization</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/dan-courses</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/effect-radar</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/game-modes</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/gauge-options</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/insane-ksm</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/maintenance-downtime</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/miscellaneous</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/timing-windows</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/unlock-systems</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/compendium/volforce</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/guides/hand-positioning</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/guides/ksm-controller-setup</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/guides/laser-simplifications</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/guides/pattern-simplification</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/terminology/termsandvocab</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/terminology/patterns</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/specifications/cabspecifications</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/specifications/valkandnemsys</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.sdvx.org/zh-tw/resources</loc>
+  <lastmod>2025-05-03T21:19:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 </urlset>
