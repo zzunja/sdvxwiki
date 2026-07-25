@@ -50,6 +50,13 @@ export async function generateMetadata({ params }) {
       icon: '/googlesearch/favicon.png',
       apple: '/googlesearch/favicon.png',
     },
+    alternates: {
+      canonical: `https://www.sdvx.org/${lang}`,
+      languages: {
+        'en': 'https://www.sdvx.org/en',
+        'zh-TW': 'https://www.sdvx.org/zh-tw',
+      },
+    }
   }
 }
 export const dynamicParams = false
