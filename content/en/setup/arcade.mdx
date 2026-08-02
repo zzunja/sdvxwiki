@@ -1,5 +1,6 @@
 import { Callout } from "nextra/components";
 import { Image } from "../../../components/Media";
+import { Button } from "../../../components/Button";
 
 # Arcade
 
@@ -87,10 +88,15 @@ After you scan your card, you will have to create your profile.
 <Image src="/arcade/start1.webp"/>
 
 You will be asked to either transfer data or create new data. Simply create new data since you don't have data to transfer.
+Use the knobs to select an option and press `START` to confirm.
 
 <Image src="/arcade/start2.webp"/>
 
 You will then create a PIN. This PIN will also be used in all other BEMANI games that you play.
+
+<Callout type="warning" emoji="⚠️">
+  If you have already set a PIN in another BEMANI game, you will be asked to enter it when scanning your card. Be sure to remember this PIN. If your e-amusement card is not linked to a Konami account, losing the PIN may make it impossible to recover the profile data on the card.
+</Callout>
 
 <Image src="/arcade/start3.webp"/>
 
@@ -104,9 +110,18 @@ available, select `LIGHT START`. `STANDARD START` is better as it lets you use S
 [ARS](/compendium/gauge-options/#alternative-rate-system-ars), among other things. For more information on what
 all those things are you can find out [here](/compendium/game-modes#normal).
 
-Once you choose a mode, you will be on the `MY ROOM` screen. Here, you can change your navigator (the character that appears on your result screens),
-appeal card (essentially a profile picture), check out tama adventure (a song unlock progression system), and if arena shop is open see that. Finally,
-you can select start and begin your credit.
+Once you choose a mode, you will be on the `MY ROOM` screen. Here, you can change your navigator (the character that appears on your result screens), modify your appeal card and appeal board (your profile picture and decorative board), check your achievement progress and claim rewards, and check the Arena Shop if it is open. Finally, select the `GAME START` option to begin your credit.
+
+<div className="flex justify-center mt-8">
+  <Button
+    href="/startingout/gameplay-screens"
+    icon="rocket"
+    theme="blue"
+    className="md:w-64"
+  >
+    Go to Gameplay Screens
+  </Button>
+</div>
 
 ## Linking your e-Amusement to your Konami account
 <Callout>
