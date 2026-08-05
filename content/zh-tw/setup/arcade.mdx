@@ -1,5 +1,6 @@
 import { Callout } from "nextra/components";
 import { Image } from "../../../components/Media";
+import { Button } from "../../../components/Button";
 
 <a id="arcade"></a>
 # 街機
@@ -66,11 +67,16 @@ e-amusement 卡可用來儲存遊玩紀錄；除了 SDVX 外也能用於其他�
 <Callout>
   這裡的許多資訊都來自 [這份指南](https://voltexes.com/arcade-quick-start-guide-eg/)；如果有不清楚的地方，也可以參考原始指南。
 </Callout>
-如果是第一次刷卡，你需要建立玩家資料。系統會詢問你要轉移資料還是建立新資料。由於沒有可轉移的資料，直接選擇建立新資料即可。
+
+如果是第一次刷卡，你需要建立玩家資料。系統會詢問你要轉移資料還是建立新資料。由於沒有可轉移的資料，直接選擇建立新資料即可。請轉動旋鈕選擇選項，按下 `START` 確認。
 
 <Image src="/arcade/start1.webp"/>
 
 接著設定一組密碼。這組密碼之後也會用於其他 BEMANI 遊戲。
+
+<Callout type="warning" emoji="⚠️">
+  如果你已經在其他 BEMANI 遊戲設定過密碼，刷卡時就會要求你輸入這組密碼。請務必記住這組密碼；如果 e-amusement 卡尚未綁定 Konami 帳號，遺失密碼後可能無法取回卡片上的玩家資料。
+</Callout>
 
 <Image src="/arcade/start2.webp"/>
 
@@ -80,7 +86,18 @@ e-amusement 卡可用來儲存遊玩紀錄；除了 SDVX 外也能用於其他�
 
 完成後，系統會顯示許多選項。第一次遊玩時，建議選擇 `NORMAL` 再選擇 `STANDARD START`（或者若不選用 `STANDARD START` 可以選 `LIGHT START`）。`STANDARD START` 的功能較完整，可以使用 S-Critical、[ARS](/compendium/gauge-options/#alternative-rate-system-ars) 等功能。這些模式的詳細說明請見 [這裡](/compendium/game-modes#normal)。
 
-選擇模式後會進入 `MY ROOM` 畫面。你可以在這裡更換領航員（成績結算畫面上會出現的角色）、appeal card（頭像），以及查看 Tama Adventure（歌曲解鎖進度系統）；如果 Arena 商店已開放，也可以在此查看。最後選擇 `START`，即可開始這一道。
+選擇模式後會進入 `MY ROOM` 畫面。你可以在這裡更換領航員（成績結算畫面上會出現的角色）、修改 appeal card 與 appeal board（頭像與裝飾板）、查看成就進度及領取獎勵；如果 Arena 商店已開放，也可以在此查看。最後選擇 `GAME START` 選項，即可開始這一道。
+
+<div className="flex justify-center mt-8">
+  <Button
+    href="/startingout/gameplay-screens"
+    icon="rocket"
+    theme="blue"
+    className="md:w-64"
+  >
+    進入遊戲畫面
+  </Button>
+</div>
 
 ## 將 e-amusement 卡片綁定到你的 Konami 帳號 [#linking-your-e-amusement-to-your-konami-account]
 <Callout>
