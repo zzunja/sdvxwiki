@@ -3,20 +3,17 @@ services:
     image: sdvxwiki
     ports:
       - "3000:3000"
-    environment:
-      CHOKIDAR_USEPOLLING: "true"      
-      CHOKIDAR_INTERVAL: 10             
-      WATCHPACK_POLLING: "true"
-      WATCHPACK_POLL_INTERVAL: 10      
     volumes:
       - .:/sdvxwiki:z
       - /sdvxwiki/node_modules
+      - /sdvxwiki/.next
     stdin_open: true
     tty: true
     command:
       - sh
       - -c
       - |
+        # Startup Banner 
         echo "           .___                                      "
         echo "  ______ __| _/__  _____  ___     ___________  ____  "
         echo " /  ___// __ |\\  \/ /\  \/  /    /  _ \\_  __ \/ ___\\ "
@@ -27,8 +24,29 @@ services:
         echo "Restart the container to update Pagefind for the search feature after making changes."
         echo -n "Starting..."
         sleep 1
-        echo -n "..."; sleep 1
-        echo -n "."; sleep 1
+        echo -n "..."; sleep 0.3
+        echo -n "."; sleep 0.3
         echo -n ".."; sleep 1
         echo ""
+
+        # WSLC Windows Directory Turbopack live reload patch
+        if grep -E " /sdvxwiki " /proc/mounts | grep -qE "9p|drvfs"; then
+          echo "************WSLC DETECTED************"
+          echo "*ENABLING WSLC LIVE RELOAD WORKAROUND PATCH*"
+          (
+            while true; do
+              find . -xdev \( -name node_modules -o -name .next -o -name .git \) -prune \
+                -o -type f -exec stat -c "%n:%Y" {} + 2>/dev/null | sort > /tmp/.watch_new
+              if [ -f /tmp/.watch_old ]; then
+                comm -13 /tmp/.watch_old /tmp/.watch_new | cut -d: -f1 | while read -r f; do
+                  touch -c "$$f"
+                done
+              fi
+              mv -f /tmp/.watch_new /tmp/.watch_old
+              sleep 1
+            done
+          ) &
+        fi
+
+        # Build & Start Dev Server
         npm run build && npm run dev
